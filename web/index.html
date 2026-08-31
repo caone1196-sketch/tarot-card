@@ -105,6 +105,11 @@
     filter: brightness(1.06);
   }
   .draw-btn:active { transform: translateY(0); }
+  .back-btn {
+    background: linear-gradient(180deg, #241f17, #1a1510);
+    color: var(--gold-soft);
+  }
+  .back-btn:hover { filter: brightness(1.25); }
 
   /* ---------- grid ---------- */
   main { max-width: 1500px; margin: 0 auto; padding: 30px 28px 80px; }
@@ -234,6 +239,7 @@
         <input id="search" type="text" placeholder="Tìm lá bài, biểu tượng, độ tuổi, chủ đề…" autocomplete="off">
       </div>
       <button class="draw-btn" id="drawBtn" title="Rút ngẫu nhiên một lá bài">✦ Rút một lá</button>
+      <button class="draw-btn back-btn" id="backBtn" title="Xem mặt sau lá bài">Mặt sau</button>
       <div class="tabs" id="tabs"></div>
     </div>
   </div>
@@ -242,6 +248,14 @@
 <main id="main"></main>
 
 <footer>Bộ bài 78 lá · Chuẩn cấu trúc The Star · 100% nhân vật nữ 18–25 · <span id="footCount"></span></footer>
+
+<!-- card back overlay -->
+<div class="lightbox" id="backLightbox">
+  <button class="lb-close" id="backClose" aria-label="Đóng">×</button>
+  <div class="lb-card" style="grid-template-columns: 1fr; max-width: 430px;">
+    <div class="lb-img"><img src="../cards/card-back.png" alt="Mặt sau lá bài"></div>
+  </div>
+</div>
 
 <!-- lightbox -->
 <div class="lightbox" id="lightbox">
@@ -433,6 +447,21 @@ document.getElementById('search').addEventListener('input', e => {
   applyFilter();
 });
 document.getElementById('drawBtn').addEventListener('click', drawRandom);
+
+// card back overlay
+const backLightbox = document.getElementById('backLightbox');
+document.getElementById('backBtn').addEventListener('click', () => {
+  backLightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+});
+function closeBack() {
+  backLightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('backClose').addEventListener('click', closeBack);
+backLightbox.addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeBack();
+});
 document.getElementById('lbClose').addEventListener('click', closeLightbox);
 document.getElementById('lbPrev').addEventListener('click', () => navLightbox(-1));
 document.getElementById('lbNext').addEventListener('click', () => navLightbox(1));

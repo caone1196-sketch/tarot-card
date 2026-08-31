@@ -23,7 +23,7 @@ def build_gallery():
     for img_path in image_files:
         base = os.path.basename(img_path)
         slug = os.path.splitext(base)[0]
-        if slug == "card-blank":
+        if slug in ("card-blank", "card-back"):
             continue
 
         card_info = cards_map.get(slug, {
