@@ -1,5 +1,5 @@
 {
-  "total": 64,
+  "total": 74,
   "cards": [
     {
       "slug": "00-fool",
@@ -360,6 +360,106 @@
       "hair": "long shimmering platinum-blonde hair falling straight like water to her thighs",
       "build": "slender and ethereal, narrow waist, serene and mystical queenly beauty",
       "scene": "a youthful adult queen seated on a shell throne at the water's edge, her shoulders bare beneath wet platinum-blonde hair, wearing a gown of antique WHITE SILK GAUZE so sheer and transparent that the light shines through it and the long line of her body reads clearly beneath, holding one lidded golden chalice in her lap, sea foam and breaking waves behind her"
+    },
+    {
+      "slug": "pentacles-02",
+      "title": "TWO OF PENTACLES",
+      "image": "pentacles-02.png",
+      "emblem": "two pentacles and an infinity ribbon",
+      "age": "19 years old",
+      "hair": "tousled sandy-gold curls bouncing with her dance",
+      "build": "agile, lithe and flexible young dancer balancing two coins in an infinity ribbon",
+      "scene": "a joyful 19-year-old young woman dancing on a seaside terrace, juggling two golden pentacles looped inside an infinity ribbon with ships in rolling surf behind"
+    },
+    {
+      "slug": "pentacles-03",
+      "title": "THREE OF PENTACLES",
+      "image": "pentacles-03.png",
+      "emblem": "three pentacles in an arch",
+      "age": "22 years old",
+      "hair": "dark auburn hair coiled in a practical braided crown",
+      "build": "focused, toned artisan shoulders, sculpted hands crafting the cathedral",
+      "scene": "a young woman sculptor in an open workshop apron slipping off one shoulder, hair loose, chiseling a column, a monk and an architect commenting, three coins set in the arch above"
+    },
+    {
+      "slug": "pentacles-04",
+      "title": "FOUR OF PENTACLES",
+      "image": "pentacles-04.png",
+      "emblem": "four pentacles, one on the head",
+      "age": "24 years old",
+      "hair": "neatly combed dark brown hair holding gold close",
+      "build": "solid, grounded seated posture guarding her wealth",
+      "scene": "a wealthy young woman seated on a stone bench, holding one golden pentacle tight to her chest, one on her crown, and two under her feet"
+    },
+    {
+      "slug": "pentacles-05",
+      "title": "FIVE OF PENTACLES",
+      "image": "pentacles-05.png",
+      "emblem": "five pentacles in a church window",
+      "age": "20 years old",
+      "hair": "long windswept dark-brown hair catching falling snow",
+      "build": "slender, shivering yet enduring silhouette under church window",
+      "scene": "two ragged beggars passing a glowing church in the snow, five coins shining in the tall stained-glass window"
+    },
+    {
+      "slug": "pentacles-06",
+      "title": "SIX OF PENTACLES",
+      "image": "pentacles-06.png",
+      "emblem": "six pentacles on a scale",
+      "age": "23 years old",
+      "hair": "well-groomed golden-brown hair in merchant styling",
+      "build": "prosperous, upright dignified posture distributing coins",
+      "scene": "a prosperous young woman in rich robes holding scales in one hand, distributing golden coins to two kneeling maidens"
+    },
+    {
+      "slug": "pentacles-07",
+      "title": "SEVEN OF PENTACLES",
+      "image": "pentacles-07.png",
+      "emblem": "seven pentacles on a vine",
+      "age": "22 years old",
+      "hair": "sweat-touched warm chestnut hair resting on hoe handle",
+      "build": "lean, hardworking farm-toned musculature, patient contemplative stance",
+      "scene": "a patient young woman leaning on her garden staff, contemplating seven golden pentacles blooming on a lush green vine"
+    },
+    {
+      "slug": "pentacles-08",
+      "title": "EIGHT OF PENTACLES",
+      "image": "pentacles-08.png",
+      "emblem": "eight pentacles in a row",
+      "age": "21 years old",
+      "hair": "chestnut hair bound in a neat, focused low chignon",
+      "build": "slender and meticulous, steady hands engraving coins at the workbench",
+      "scene": "a young woman apprentice in an apron slipping off one shoulder, sleeves rolled, her chestnut hair pinned in a neat low chignon, chiseling a plain stone disc at a bench, eight coins in one row along the bench edge, a town through the window"
+    },
+    {
+      "slug": "pentacles-09",
+      "title": "NINE OF PENTACLES",
+      "image": "pentacles-09.png",
+      "emblem": "nine pentacles on an arbor",
+      "age": "23 years old",
+      "hair": "long vine-dark espresso hair loosely curled with gold thread",
+      "build": "graceful, refined aristocratic hourglass build in blooming grape vineyard",
+      "scene": "an elegant woman in a sheer flowing gown that clings to breast and hip, a falcon on her gloved hand, her other hand touching ripe grapes, nine coins along the arbor beam, a snail at her feet"
+    },
+    {
+      "slug": "pentacles-10",
+      "title": "TEN OF PENTACLES",
+      "image": "pentacles-10.png",
+      "emblem": "ten pentacles in a tree-of-life pyramid",
+      "age": "22 years old",
+      "hair": "warm honey-brown hair in a thick braided crown",
+      "build": "content, gentle matriarchal beauty surrounded by familial wealth",
+      "scene": "a family hall — a patriarch seated, a couple standing with his hand at her waist, a child playing with two dogs — ten coins in a pyramid emblem on the wall behind them"
+    },
+    {
+      "slug": "pentacles-ace",
+      "title": "ACE OF PENTACLES",
+      "image": "pentacles-ace.png",
+      "emblem": "one pentacle coin in a hand",
+      "age": "",
+      "hair": "",
+      "build": "",
+      "scene": "a divine hand offering one large golden pentacle coin over a lush garden gateway with lilies, mountains beyond"
     },
     {
       "slug": "swords-02",
