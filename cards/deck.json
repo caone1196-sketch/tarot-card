@@ -1,5 +1,5 @@
 {
-  "total": 30,
+  "total": 36,
   "cards": [
     {
       "slug": "00-fool",
@@ -262,6 +262,16 @@
       "scene": "five athletic young women in light linen wraps engaged in dynamic friendly sparring with five living wands"
     },
     {
+      "slug": "wands-06",
+      "title": "SIX OF WANDS",
+      "image": "wands-06.png",
+      "emblem": "six slender wands standing side by side in one neat row, one of them crowned with a small laurel wreath — exactly six shafts, no more and no fewer",
+      "age": "22 years old",
+      "hair": "honey-gold hair billowing triumphantly in the wind",
+      "build": "commanding and proud, tall equestrian posture on horseback",
+      "scene": "a nude victorious woman on a white horse, hair loose over one bare shoulder, a laurel wreath on her brow, one crowned wand raised, five admirers behind her each holding one wand"
+    },
+    {
       "slug": "wands-07",
       "title": "SEVEN OF WANDS",
       "image": "wands-07.png",
@@ -282,6 +292,16 @@
       "scene": "eight wands with leaf tips flying in one parallel diagonal row across an open sky toward a river town below"
     },
     {
+      "slug": "wands-09",
+      "title": "NINE OF WANDS",
+      "image": "wands-09.png",
+      "emblem": "nine wands in a rampart row",
+      "age": "24 years old",
+      "hair": "dark brown hair pulled back with a simple leather tie",
+      "build": "broad, toned and battle-ready, watchful stance",
+      "scene": "a vigilant young woman warrior resting hands on one standing wand, eight wands upright behind her like a palisade"
+    },
+    {
       "slug": "wands-10",
       "title": "TEN OF WANDS",
       "image": "wands-10.png",
@@ -300,6 +320,46 @@
       "hair": "",
       "build": "",
       "scene": "a divine hand from a cloud offering a single living, sprouting wand, a rugged landscape and a distant castle below"
+    },
+    {
+      "slug": "wands-king",
+      "title": "KING OF WANDS",
+      "image": "wands-king.png",
+      "emblem": "a flaming wand rising from a lion head",
+      "age": "25 years old",
+      "hair": "dark bronze hair swept back in an ornate crown braid with fiery orange ribbons",
+      "build": "commanding, statuesque high queen with broad noble shoulders and authoritative presence",
+      "scene": "a powerful 25-year-old female sovereign with a lion-carved crown seated on a flame-carved throne, holding one blossoming wand"
+    },
+    {
+      "slug": "wands-knight",
+      "title": "KNIGHT OF WANDS",
+      "image": "wands-knight.png",
+      "emblem": "a wand over a horse",
+      "age": "22 years old",
+      "hair": "wind-whipped golden-brown curls peeking beneath a feathered diadem",
+      "build": "dashing athletic female knight, lean muscular core on a rearing golden steed",
+      "scene": "a daring 22-year-old bare-shouldered female knight in golden armor on a rearing horse, raising one flourishing living wand high"
+    },
+    {
+      "slug": "wands-page",
+      "title": "PAGE OF WANDS",
+      "image": "wands-page.png",
+      "emblem": "a wand with a feather plume",
+      "age": "18 years old",
+      "hair": "short tousled ginger-auburn hair cut in a playful textured bob",
+      "build": "petite and spirited, lithe youthful frame with eager stance",
+      "scene": "a graceful adult woman page standing farther back in the landscape so her whole figure sits smaller within the wide desert vista, wearing a transparent sheer gauze robe that the sun shines through, sliding off one shoulder, holding one living wand, desert dunes and pyramids behind her"
+    },
+    {
+      "slug": "wands-queen",
+      "title": "QUEEN OF WANDS",
+      "image": "wands-queen.png",
+      "emblem": "a sunflower wand between two flames",
+      "age": "24 years old",
+      "hair": "a magnificent mane of rich russet-red waves crowning her head",
+      "build": "voluptuous, commanding and fiery, proud posture on lion throne",
+      "scene": "a radiant nude queen with dark loosened hair on a lion-carved throne, one breast bared, one sunflower wand in her hand, a black cat at her feet"
     }
   ]
 }
