@@ -1,5 +1,5 @@
 {
-  "total": 24,
+  "total": 30,
   "cards": [
     {
       "slug": "00-fool",
@@ -222,6 +222,36 @@
       "scene": "a graceful adult woman dancer posed in a sinuous S-curve, one hip thrust out and one knee lifted, her body arched with the head tipped back and her shoulders and back bare, a flowing violet scarf swirling low around her hips and drifting behind her, one slim wand held out in each hand, dancing within a great oval laurel wreath, an angel, an eagle, a lion and a bull at the corners"
     },
     {
+      "slug": "wands-02",
+      "title": "TWO OF WANDS",
+      "image": "wands-02.png",
+      "emblem": "two crossed leafy wands",
+      "age": "22 years old",
+      "hair": "deep auburn hair falling in long loose ringlets over one shoulder",
+      "build": "slender and contemplative, upright posture looking out from the parapet",
+      "scene": "a bare-shouldered noblewoman on a battlement, sheer silk slipping from one shoulder, a globe of the world resting in one palm with her eyes lowered to look at the globe, one wand upright in her other hand, the second wand mounted on the wall behind her"
+    },
+    {
+      "slug": "wands-03",
+      "title": "THREE OF WANDS",
+      "image": "wands-03.png",
+      "emblem": "three leafy wands in a fan",
+      "age": "23 years old",
+      "hair": "warm caramel-brown hair loosely braided with golden cord",
+      "build": "tall and statuesque, long back line facing toward the horizon",
+      "scene": "a woman merchant in a slipping antique robe seen from behind on a cliff, her long bare back and one shoulder showing, her face turned to look far out to sea, three staves planted upright in a row beside her, sailing ships on a golden sea"
+    },
+    {
+      "slug": "wands-04",
+      "title": "FOUR OF WANDS",
+      "image": "wands-04.png",
+      "emblem": "four wands with a garland",
+      "age": "20 years old",
+      "hair": "blue-black hair piled high in a floral-pinned braided updo",
+      "build": "lithe and celebratory, joyful dancer waist and raised graceful arms",
+      "scene": "four garlanded wands forming a festive canopy, a graceful couple dancing beneath it, she slender and bare-shouldered in slipping silk with his hand at her waist, a manor beyond"
+    },
+    {
       "slug": "wands-05",
       "title": "FIVE OF WANDS",
       "image": "wands-05.png",
@@ -232,6 +262,26 @@
       "scene": "five athletic young women in light linen wraps engaged in dynamic friendly sparring with five living wands"
     },
     {
+      "slug": "wands-07",
+      "title": "SEVEN OF WANDS",
+      "image": "wands-07.png",
+      "emblem": "seven wands in a palisade",
+      "age": "21 years old",
+      "hair": "dark espresso hair cropped close at sides with messy curls on top",
+      "build": "lean, wiry and determined, athletic defensive stance",
+      "scene": "a determined young woman standing atop a high crag, holding one great wand with both hands to defend her position against six wands rising from below"
+    },
+    {
+      "slug": "wands-08",
+      "title": "EIGHT OF WANDS",
+      "image": "wands-08.png",
+      "emblem": "eight parallel wands",
+      "age": "",
+      "hair": "",
+      "build": "",
+      "scene": "eight wands with leaf tips flying in one parallel diagonal row across an open sky toward a river town below"
+    },
+    {
       "slug": "wands-10",
       "title": "TEN OF WANDS",
       "image": "wands-10.png",
@@ -240,6 +290,16 @@
       "hair": "damp chestnut hair clinging to brow from labor",
       "build": "strong athletic back, powerful shoulders bearing the bundle",
       "scene": "a strong young woman carrying a heavy bundle of ten wands toward a distant sunlit castle"
+    },
+    {
+      "slug": "wands-ace",
+      "title": "ACE OF WANDS",
+      "image": "wands-ace.png",
+      "emblem": "one leafy wand",
+      "age": "",
+      "hair": "",
+      "build": "",
+      "scene": "a divine hand from a cloud offering a single living, sprouting wand, a rugged landscape and a distant castle below"
     }
   ]
 }
