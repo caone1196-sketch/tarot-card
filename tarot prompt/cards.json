@@ -334,7 +334,7 @@
         "obj": "wand",
         "layout": "exactly one wand, sprouting and alive, held by the divine hand; no second staff anywhere, not even in the landscape"
       },
-      "scene": "a divine hand from a cloud offering a single living, sprouting wand, a rugged landscape and a distant castle below"
+      "scene": "a graceful feminine divine hand emerging from soft clouds offering a single living sprouting wand, a delicate transparent silk veil fluttering around the wrist, a serene landscape and a distant castle below"
     },
     {
       "n": "2",
@@ -348,10 +348,10 @@
         "obj": "wands",
         "layout": "exactly two wands: one held upright in her right hand, one mounted upright on the stone battlement to her left — 1 + 1 = 2; both shafts complete from base to tip, they do not cross"
       },
-      "scene": "a bare-shouldered noblewoman on a battlement, sheer silk slipping from one shoulder, a globe of the world resting in one palm with her eyes lowered to look at the globe, one wand upright in her other hand, the second wand mounted on the wall behind her",
+      "scene": "a serene noblewoman on a battlement, draped in a diaphanous transparent silk veil slipping from one shoulder, a globe of the world resting in one palm with her eyes lowered to look at it, one wand upright in her other hand, the second wand mounted on the wall behind her",
       "hair": "deep auburn hair falling in long loose ringlets over one shoulder",
       "age": "22 years old",
-      "build": "slender and contemplative, upright posture looking out from the parapet"
+      "build": "slender, serene and contemplative, gentle upright posture looking out from the parapet"
     },
     {
       "n": "3",
@@ -363,9 +363,9 @@
       "count": {
         "n": 3,
         "obj": "wands",
-        "layout": "exactly three wands planted upright in one straight diagonal row in front of the figure, evenly spaced, standing clear of his robe and his body, all three tips clear of the horizon, none overlapping — count them left to right: 1, 2, 3"
+        "layout": "exactly three wands planted upright in one straight diagonal row in front of the figure, evenly spaced, standing clear of her body, all three tips clear of the horizon, none overlapping — count them left to right: 1, 2, 3"
       },
-      "scene": "a woman merchant in a slipping antique robe seen from behind on a cliff, her long bare back and one shoulder showing, her face turned to look far out to sea, three staves planted upright in a row beside her, sailing ships on a golden sea",
+      "scene": "a serene woman merchant seen from behind on a cliff, draped only in a diaphanous transparent silk veil that clings and reveals her soft curves, her face turned gently to look far out to sea, three staves planted upright in a row beside her, sailing ships on a golden sea",
       "hair": "warm caramel-brown hair loosely braided with golden cord",
       "age": "23 years old",
       "build": "tall and statuesque, long back line facing toward the horizon"
@@ -382,7 +382,7 @@
         "obj": "wands",
         "layout": "exactly four wands as the four corner posts of a canopy — two on the left, two on the right — 2 + 2 = 4; draw the two rear posts slightly taller than the two front posts so no post is hidden behind another; all four shafts fully visible from ground to tip, their tops joined by one flower garland"
       },
-      "scene": "four garlanded wands forming a festive canopy, a graceful couple dancing beneath it, she slender and bare-shouldered in slipping silk with his hand at her waist, a manor beyond",
+      "scene": "four garlanded wands forming a festive canopy, two graceful young women dancing gently beneath it, both slender and draped in diaphanous transparent silk veils, a manor beyond",
       "hair": "blue-black hair piled high in a floral-pinned braided updo",
       "build": "lithe and celebratory, joyful dancer waist and raised graceful arms",
       "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
@@ -398,12 +398,12 @@
       "count": {
         "n": 5,
         "obj": "wands",
-        "layout": "exactly five wands, one gripped by each of the five youths — five figures, five wands, one per figure, nobody holds two; count them: 1, 2, 3, 4, 5"
+        "layout": "exactly five wands, one gripped by each of the five young women — five figures, five wands, one per figure, nobody holds two; count them: 1, 2, 3, 4, 5"
       },
-      "scene": "five athletic young women in light linen wraps engaged in dynamic friendly sparring with five living wands",
+      "scene": "five graceful young women draped in diaphanous transparent silk veils, gently and playfully twirling five living wands in a soft meadow",
       "age": "21 years old",
-      "hair": "short tousled copper-brown hair damp with exertion",
-      "build": "athletic, toned agile muscles, dynamic sparring stance"
+      "hair": "soft copper-brown hair loose in gentle waves",
+      "build": "slender, graceful and light, gentle dancing stance"
     },
     {
       "n": "6",
@@ -417,10 +417,10 @@
         "obj": "wands",
         "layout": "exactly six wands: one laurel-crowned wand raised in the heroine's hand plus five held by the five followers behind her — 1 + 5 = 6; each follower holds their wand upright and well above shoulder height so all five are separately countable against the sky, no wand resting on a shoulder"
       },
-      "scene": "a nude victorious woman on a white horse, hair loose over one bare shoulder, a laurel wreath on her brow, one crowned wand raised, five admirers behind her each holding one wand",
-      "hair": "honey-gold hair billowing triumphantly in the wind",
+      "scene": "a serene woman on a white horse, draped in a diaphanous transparent silk veil, a laurel wreath on her brow, one crowned wand raised gently in her hand, five admirers behind her each holding one wand",
+      "hair": "honey-gold hair flowing softly in the breeze",
       "age": "22 years old",
-      "build": "commanding and proud, tall equestrian posture on horseback"
+      "build": "graceful, poised and serene, elegant equestrian posture on horseback"
     },
     {
       "n": "7",
@@ -432,12 +432,12 @@
       "count": {
         "n": 7,
         "obj": "wands",
-        "layout": "exactly seven wands: one held in the young man's two hands plus six rising from below the cliff edge in front of him — 1 + 6 = 7; the six lower tips evenly spaced along the cliff line, none overlapping"
+        "layout": "exactly seven wands: one held in the young woman's two hands plus six rising from below the cliff edge in front of her — 1 + 6 = 7; the six lower tips evenly spaced along the cliff line, none overlapping"
       },
-      "scene": "a determined young woman standing atop a high crag, holding one great wand with both hands to defend her position against six wands rising from below",
+      "scene": "a serene young woman standing atop a high crag, draped in a diaphanous transparent silk veil, holding one great wand gently with both hands, six wands rising from below",
       "age": "21 years old",
-      "hair": "dark espresso hair cropped close at sides with messy curls on top",
-      "build": "lean, wiry and determined, athletic defensive stance"
+      "hair": "dark espresso hair falling in soft loose curls",
+      "build": "slender, serene and graceful, calm composed stance"
     },
     {
       "n": "8",
@@ -451,7 +451,7 @@
         "obj": "wands",
         "layout": "exactly eight wands in ONE single parallel diagonal row across the open sky — 1 row of 8, evenly spaced, all eight pointing the same way, none crossing, none cropped by the frame"
       },
-      "scene": "eight wands with leaf tips flying in one parallel diagonal row across an open sky toward a river town below"
+      "scene": "eight wands with leaf tips drifting in one parallel diagonal row across a soft open sky toward a river town below"
     },
     {
       "n": "9",
@@ -463,12 +463,12 @@
       "count": {
         "n": 9,
         "obj": "wands",
-        "layout": "exactly nine wands: eight planted upright in one straight palisade row BEHIND him, evenly spaced and clear of his body, plus the one he holds in front of him — 8 + 1 = 9; all nine countable against open sky"
+        "layout": "exactly nine wands: eight planted upright in one straight palisade row BEHIND her, evenly spaced and clear of her body, plus the one she holds in front of her — 8 + 1 = 9; all nine countable against open sky"
       },
-      "scene": "a vigilant young woman warrior resting hands on one standing wand, eight wands upright behind her like a palisade",
+      "scene": "a serene young woman draped in a diaphanous transparent silk veil, gently resting her hands on one standing wand, eight wands upright behind her like a palisade",
       "age": "24 years old",
-      "hair": "dark brown hair pulled back with a simple leather tie",
-      "build": "broad, toned and battle-ready, watchful stance"
+      "hair": "dark brown hair falling loose in soft waves",
+      "build": "slender, serene and watchful, gentle composed stance"
     },
     {
       "n": "10",
@@ -480,12 +480,12 @@
       "count": {
         "n": 10,
         "obj": "wands",
-        "layout": "exactly ten staves bound in ONE bundle on his back — the bundle fans open slightly at both ends so all ten cut ends are separated and can be counted: 5 ends at the top, 5 ends at the bottom, 5 + 5 = 10; no loose eleventh staff"
+        "layout": "exactly ten staves bound in ONE bundle on her back — the bundle fans open slightly at both ends so all ten cut ends are separated and can be counted: 5 ends at the top, 5 ends at the bottom, 5 + 5 = 10; no loose eleventh staff"
       },
-      "scene": "a strong young woman carrying a heavy bundle of ten wands toward a distant sunlit castle",
+      "scene": "a serene young woman draped in a diaphanous transparent silk veil, carrying a bundle of ten wands gracefully toward a distant sunlit castle",
       "age": "23 years old",
-      "hair": "damp chestnut hair clinging to brow from labor",
-      "build": "strong athletic back, powerful shoulders bearing the bundle"
+      "hair": "chestnut hair loose in soft waves",
+      "build": "slender, graceful and serene, gentle bearing carrying the bundle"
     },
     {
       "n": "P",
@@ -499,10 +499,10 @@
         "obj": "wand",
         "layout": "exactly one living wand; no second staff, no decorative staffs in the dunes"
       },
-      "scene": "a graceful adult woman page standing farther back in the landscape so her whole figure sits smaller within the wide desert vista, wearing a transparent sheer gauze robe that the sun shines through, sliding off one shoulder, holding one living wand, desert dunes and pyramids behind her",
-      "hair": "short tousled ginger-auburn hair cut in a playful textured bob",
+      "scene": "a serene adult woman page standing farther back in the landscape so her whole figure sits smaller within the wide desert vista, draped in a diaphanous transparent silk veil sliding off one shoulder, holding one living wand, desert dunes and pyramids behind her",
+      "hair": "soft ginger-auburn hair in a gentle textured bob",
       "age": "18 years old",
-      "build": "petite and spirited, lithe youthful frame with eager stance"
+      "build": "petite and serene, lithe youthful frame with a gentle stance"
     },
     {
       "n": "N",
@@ -514,12 +514,12 @@
       "count": {
         "n": 1,
         "obj": "wand",
-        "layout": "exactly one wand, raised high in his hand; no other staff"
+        "layout": "exactly one wand, raised gently in her hand; no other staff"
       },
-      "scene": "a daring 22-year-old bare-shouldered female knight in golden armor on a rearing horse, raising one flourishing living wand high",
+      "scene": "a serene 22-year-old female knight draped in a diaphanous transparent silk veil on a calm horse, gently raising one flourishing living wand in her hand",
       "age": "22 years old",
-      "hair": "wind-whipped golden-brown curls peeking beneath a feathered diadem",
-      "build": "dashing athletic female knight, lean muscular core on a rearing golden steed"
+      "hair": "soft golden-brown curls loose beneath a delicate feathered diadem",
+      "build": "slender, graceful and serene female knight on a calm steed"
     },
     {
       "n": "Q",
@@ -533,10 +533,10 @@
         "obj": "wand",
         "layout": "exactly one sunflower wand; no other staff"
       },
-      "scene": "a radiant nude queen with dark loosened hair on a lion-carved throne, one breast bared, one sunflower wand in her hand, a black cat at her feet",
-      "hair": "a magnificent mane of rich russet-red waves crowning her head",
+      "scene": "a serene queen with dark loosened hair on a lion-carved throne, draped only in a diaphanous transparent silk veil that clings to her soft curves, one sunflower wand held gently in her hand, a black cat at her feet",
+      "hair": "a magnificent mane of rich russet-red waves falling softly over her shoulders",
       "age": "24 years old",
-      "build": "voluptuous, commanding and fiery, proud posture on lion throne"
+      "build": "voluptuous, serene and warm, gentle poised posture on the lion throne"
     },
     {
       "n": "K",
@@ -550,10 +550,10 @@
         "obj": "wand",
         "layout": "exactly one living green wand; no other staff"
       },
-      "scene": "a powerful 25-year-old female sovereign with a lion-carved crown seated on a flame-carved throne, holding one blossoming wand",
+      "scene": "a serene 25-year-old female sovereign with a lion-carved crown seated on a flame-carved throne, draped in a diaphanous transparent silk veil, holding one blossoming wand gently in her hand",
       "age": "25 years old",
-      "hair": "dark bronze hair swept back in an ornate crown braid with fiery orange ribbons",
-      "build": "commanding, statuesque high queen with broad noble shoulders and authoritative presence"
+      "hair": "dark bronze hair swept back in a soft crown braid with fiery orange ribbons",
+      "build": "graceful, serene and noble high queen with soft gentle poise"
     },
     {
       "n": "A",
