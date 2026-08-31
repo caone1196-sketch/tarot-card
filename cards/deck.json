@@ -1,5 +1,5 @@
 {
-  "total": 11,
+  "total": 24,
   "cards": [
     {
       "slug": "00-fool",
@@ -52,6 +52,26 @@
       "scene": "a commanding 25-year-old bare-shouldered female emperor in an ornate golden cuirass and crimson velvet mantle, seated resolutely on a stone throne carved with ram heads, holding an ankh scepter in one hand, barren rugged mountains behind her"
     },
     {
+      "slug": "05-hierophant",
+      "title": "THE HIEROPHANT",
+      "image": "05-hierophant.png",
+      "emblem": "two crossed golden keys",
+      "age": "24 years old",
+      "hair": "thick espresso-brown waves falling over embroidered ceremonial vestments",
+      "build": "tall, noble and serene female high priestess with graceful dignified poise",
+      "scene": "a serene 24-year-old female high mystic priestess in rich red-and-gold ceremonial robes, raising one blessing hand, two kneeling female acolytes before her, sacred temple pillars behind"
+    },
+    {
+      "slug": "06-lovers",
+      "title": "THE LOVERS",
+      "image": "06-lovers.png",
+      "emblem": "an apple coiled by a serpent",
+      "age": "21 years old",
+      "hair": "warm chestnut-brown hair gathered in a loose romantic knot with soft wisps framing her cheeks",
+      "build": "slender hourglass silhouette, supple waist, graceful gentle curves beside her partner",
+      "scene": "a nude man and a nude woman standing hand in hand beneath a great winged angel, her body turned three-quarters toward the viewer with silk fallen to her hip and his hand at the small of her back, the tree of knowledge with a serpent behind her, the tree of flames behind him"
+    },
+    {
       "slug": "07-chariot",
       "title": "THE CHARIOT",
       "image": "07-chariot.png",
@@ -70,6 +90,86 @@
       "hair": "burnished copper-red long wavy hair flowing down like a lion's mane",
       "build": "lithe yet strong, defined muscular tone along the back, soft graceful curves",
       "scene": "a nude woman garlanded with roses, one knee raised, leaning in close to calmly close the jaws of a great golden lion, her bare back arched and her hip lit by low sun, an infinity sign glowing above her head"
+    },
+    {
+      "slug": "09-hermit",
+      "title": "THE HERMIT",
+      "image": "09-hermit.png",
+      "emblem": "a glowing lantern",
+      "age": "23 years old",
+      "hair": "ethereal silver-ash long hair, veiled beneath sheer white cowl gauze",
+      "build": "slender, mysterious and delicate silhouette, quiet meditative poise",
+      "scene": "a hermit woman standing on a bare mountain peak under a deep star-filled night sky, holding up a lit lantern with warm golden light pouring out of it, her head and body hooded and wrapped in a single sheet of WHITE TRANSPARENT SILK GAUZE that veils her head and falls in folds around her"
+    },
+    {
+      "slug": "10-wheel",
+      "title": "WHEEL OF FORTUNE",
+      "image": "10-wheel.png",
+      "emblem": "a spoked golden wheel",
+      "age": "22 years old",
+      "hair": "golden-amber braided hair crowned with mystic celestial laurels",
+      "build": "statuesque winged female guardian with poised mythological silhouette",
+      "scene": "a great spinning wheel of fortune inscribed with mystic letters, a winged female sphinx holding an upright sword atop it, a rising golden serpent on one side and a jackal deity on the other, four winged female watchers at the corners"
+    },
+    {
+      "slug": "11-justice",
+      "title": "JUSTICE",
+      "image": "11-justice.png",
+      "emblem": "balanced golden scales",
+      "age": "24 years old",
+      "hair": "sleek raven-black hair drawn back sharply into a high polished half-ponytail",
+      "build": "statuesque and regal, prominent collarbones, straight spine and austere balanced posture",
+      "scene": "a statuesque bare-shouldered queen, silk sliding off one shoulder to the curve of her breast, a sword upright in one hand and balanced scales in the other, seated on a stone throne between pillars"
+    },
+    {
+      "slug": "12-hanged",
+      "title": "THE HANGED MAN",
+      "image": "12-hanged.png",
+      "emblem": "an inverted living branch",
+      "age": "21 years old",
+      "hair": "golden-brown tousled locks cascading downward with gravity, glowing in ethereal light",
+      "build": "lean, lithe and supple young woman dancer physique, serene and peaceful poise",
+      "scene": "a serene nude 21-year-old young woman suspended upside-down by one ankle from a living tree shaped like a cross, one leg bent gracefully, a radiant halo of golden light glowing around her head"
+    },
+    {
+      "slug": "13-death",
+      "title": "DEATH",
+      "image": "13-death.png",
+      "emblem": "a five-petaled white rose",
+      "age": "22 years old",
+      "hair": "long bone-platinum hair flowing behind an ornate gothic helm",
+      "build": "tall, slender and formidable female dark knight silhouette in polished black armor",
+      "scene": "a striking 22-year-old pale female knight in ornate black armor riding a calm pale charger, holding a black banner adorned with a five-petaled white rose, a golden sunrise glowing between twin distant towers"
+    },
+    {
+      "slug": "14-temperance",
+      "title": "TEMPERANCE",
+      "image": "14-temperance.png",
+      "emblem": "a triangle within a square",
+      "age": "22 years old",
+      "hair": "pale fine ash-blonde hair floating weightlessly in the air",
+      "build": "ethereal and willowy, long slender limbs, arched supple spine, graceful angelic poise",
+      "scene": "a graceful winged adult figure with long loosened hair, wearing a sheer antique drape, standing in a THREE-QUARTER VIEW with her body turned toward the viewer, one knee bent with one foot on the rock and the other in the pool, her arms extended to either side pouring water between two golden chalices, irises blooming, warm sepia and ochre light"
+    },
+    {
+      "slug": "15-devil",
+      "title": "THE DEVIL",
+      "image": "15-devil.png",
+      "emblem": "an inverted pentagram",
+      "age": "21 years old",
+      "hair": "midnight-black wavy hair with deep wine-red undertones, wild and untamed",
+      "build": "sultry and curvaceous, arched back and soft full hips, magnetic alluring presence",
+      "scene": "a horned winged female arch-devil upon a dark pedestal; beside her two alluring nude young women arched in golden chains, their bodies glowing in candlelit shadow inside an obsidian cavern"
+    },
+    {
+      "slug": "16-tower",
+      "title": "THE TOWER",
+      "image": "16-tower.png",
+      "emblem": "a jagged lightning bolt",
+      "age": "20 years old",
+      "hair": "storm-dark chestnut hair blown dynamically backward by lightning winds",
+      "build": "taut and athletic, dynamic acrobatic physique arched mid-fall",
+      "scene": "a tall stone tower struck by a jagged bolt of lightning, its golden crown toppling in flames, two graceful young women falling through the storm and ash, their bodies illuminated by the brilliant flash"
     },
     {
       "slug": "17-the-star",
@@ -102,6 +202,16 @@
       "scene": "a joyful nude young woman with a wreath of red flowers riding a calm white horse, her bare torso turned toward the light, a red banner streaming, a radiant sun with a gentle face, a low sunflower wall"
     },
     {
+      "slug": "20-judgement",
+      "title": "JUDGEMENT",
+      "image": "20-judgement.png",
+      "emblem": "a golden trumpet",
+      "age": "22 years old",
+      "hair": "rich amber-honey hair in thick luminous waves catching golden rays",
+      "build": "statuesque, open-armed posture, noble and reborn classical anatomy",
+      "scene": "a radiant winged female angel blowing a golden trumpet with a white banner; below, rising from calm waters, three beautiful nude young women with open arms turning toward the divine light"
+    },
+    {
       "slug": "21-world",
       "title": "THE WORLD",
       "image": "21-world.png",
@@ -110,6 +220,26 @@
       "hair": "dark chocolate-chestnut hair swirling freely with violet silk ribbons",
       "build": "dancer's perfected physique, long toned legs, narrow waist, supple celebratory poise",
       "scene": "a graceful adult woman dancer posed in a sinuous S-curve, one hip thrust out and one knee lifted, her body arched with the head tipped back and her shoulders and back bare, a flowing violet scarf swirling low around her hips and drifting behind her, one slim wand held out in each hand, dancing within a great oval laurel wreath, an angel, an eagle, a lion and a bull at the corners"
+    },
+    {
+      "slug": "wands-05",
+      "title": "FIVE OF WANDS",
+      "image": "wands-05.png",
+      "emblem": "five wands crossed in a star",
+      "age": "21 years old",
+      "hair": "short tousled copper-brown hair damp with exertion",
+      "build": "athletic, toned agile muscles, dynamic sparring stance",
+      "scene": "five athletic young women in light linen wraps engaged in dynamic friendly sparring with five living wands"
+    },
+    {
+      "slug": "wands-10",
+      "title": "TEN OF WANDS",
+      "image": "wands-10.png",
+      "emblem": "ten wands in a bundle",
+      "age": "23 years old",
+      "hair": "damp chestnut hair clinging to brow from labor",
+      "build": "strong athletic back, powerful shoulders bearing the bundle",
+      "scene": "a strong young woman carrying a heavy bundle of ten wands toward a distant sunlit castle"
     }
   ]
 }

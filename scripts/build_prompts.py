@@ -68,18 +68,19 @@ def build_card_prompt_star_standard(card, use_reference=True):
     extra_text = (" " + " ".join(extra_directives)) if extra_directives else ""
 
     ref_clause = (
-        "built inside the reference frame, matching the EXACT open window display, scale, and lighting style of THE STAR: "
-        "keep the intricate thin golden line-art border in vintage gothic style and aged parchment background texture."
+        "built inside the reference frame, matching the EXACT border, oval medallion, ribbon banner, open window display, scale, and lighting style of THE HERMIT: "
+        "keep the intricate thin golden line-art border in vintage gothic style and aged parchment background texture, and match the Hermit's painterly fine-art inner rendering — warm glowing focal light against deep atmospheric shadow, high contrast, rich detail."
         if use_reference
-        else "ornate vintage gothic tarot card composition matching the open window style of THE STAR."
+        else "ornate vintage gothic tarot card composition matching the open window style of THE HERMIT."
     )
 
     return (
         f"A single tarot card \"{title}\" {ref_clause} "
         f"At the TOP: inside the oval medallion plate, {emblem} in glowing antique gold. "
         f"At the BOTTOM: inside the ribbon banner, the title \"{title}\" in clean antique gold lettering. "
-        f"In the large open center panel (filling the entire inner window edge to edge, matching the open space of The Star without heavy inner arch barriers): "
+        f"In the large open center panel (filling the entire inner window edge to edge and bleeding slightly beneath the golden border, matching the open space of The Hermit without heavy inner arch barriers): "
         f"{scene}.{extra_text} "
+        f"Depth layering: enlarge the scene so its edges extend slightly beneath the inner edge of the golden border, then paint the thin golden line-art border, corner flourishes, oval medallion and ribbon banner ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth. "
         f"Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, "
         f"symmetrical golden frame border, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail."
     )
