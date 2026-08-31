@@ -1,5 +1,5 @@
 {
-  "total": 59,
+  "total": 64,
   "cards": [
     {
       "slug": "00-fool",
@@ -412,6 +412,16 @@
       "scene": "a cloaked woman and a child being poled across a river by a ferryman, six swords upright along the boat"
     },
     {
+      "slug": "swords-07",
+      "title": "SEVEN OF SWORDS",
+      "image": "swords-07.png",
+      "emblem": "seven swords, two left behind",
+      "age": "20 years old",
+      "hair": "mischievous tousled dark chestnut hair",
+      "build": "light-footed, slender agile rogue build tiptoeing away",
+      "scene": "a nimble young woman stealthily carrying five swords in her arms while looking back at a military encampment where two swords remain upright"
+    },
+    {
       "slug": "swords-08",
       "title": "EIGHT OF SWORDS",
       "image": "swords-08.png",
@@ -450,6 +460,46 @@
       "hair": "",
       "build": "",
       "scene": "a divine hand grasping one upright sword, a jeweled crown hovering at its tip, barren peaks below"
+    },
+    {
+      "slug": "swords-king",
+      "title": "KING OF SWORDS",
+      "image": "swords-king.png",
+      "emblem": "a sword between two wings",
+      "age": "25 years old",
+      "hair": "clean-cut raven hair crowned with sharp golden circlet",
+      "build": "tall, imposing, sharp-eyed judicial female ruler with blade upright",
+      "scene": "a stern and majestic 25-year-old female supreme judge on a high stone throne, holding an upright sword of truth, clear blue skies behind"
+    },
+    {
+      "slug": "swords-knight",
+      "title": "KNIGHT OF SWORDS",
+      "image": "swords-knight.png",
+      "emblem": "a sword over a horse",
+      "age": "21 years old",
+      "hair": "dark hair streaming wildly back from beneath an open winged helmet",
+      "build": "fierce, athletic female knight in full gallant charge",
+      "scene": "a fierce 21-year-old female knight in gleaming steel armor charging on a galloping horse, sword held high into the storm winds"
+    },
+    {
+      "slug": "swords-page",
+      "title": "PAGE OF SWORDS",
+      "image": "swords-page.png",
+      "emblem": "a sword with a feather plume",
+      "age": "18 years old",
+      "hair": "windswept honey-brown hair cut in a sharp feathered pixie cut",
+      "build": "lithe, sharp and vigilant, athletic spring in her stance on rocky hill",
+      "scene": "an alert young woman page in a flowing cape on a windy mound holding one raised sword with both hands"
+    },
+    {
+      "slug": "swords-queen",
+      "title": "QUEEN OF SWORDS",
+      "image": "swords-queen.png",
+      "emblem": "a sword wrapped in laurel",
+      "age": "24 years old",
+      "hair": "deep mahogany-red hair in an intricate woven crown braid",
+      "build": "statuesque, sharp profile, austere elegant collarbones, stern intellectual beauty",
+      "scene": "a stern dignified adult queen whose body is wrapped in a single sheet of TRANSPARENT antique silk gauze, one shoulder and the curve of her breast left bare, posed with sensual grace yet enthroned with majesty, seated on a butterfly-carved stone throne above a sea of clouds, one upright sword held in her hand"
     },
     {
       "slug": "wands-02",
