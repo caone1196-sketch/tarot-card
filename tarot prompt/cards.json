@@ -382,9 +382,9 @@
         "obj": "wands",
         "layout": "exactly four wands as the four corner posts of a canopy — two on the left, two on the right — 2 + 2 = 4; draw the two rear posts slightly taller than the two front posts so no post is hidden behind another; all four shafts fully visible from ground to tip, their tops joined by one flower garland"
       },
-      "scene": "four garlanded wands forming a festive canopy, two graceful young women dancing gently beneath it, both slender and draped in diaphanous transparent silk veils, a manor beyond",
-      "hair": "blue-black hair piled high in a floral-pinned braided updo",
-      "build": "lithe and celebratory, joyful dancer waist and raised graceful arms",
+      "scene": "four garlanded wands forming a festive canopy, two graceful young women dancing gently beneath it, both draped in diaphanous transparent silk veils — one fair-skinned with flowing honey-gold hair and one deep-skinned with tight black coils, each with a distinct face and figure — a manor beyond",
+      "hair": "distinct per dancer: one with flowing honey-gold hair, one with tight black coils",
+      "build": "both lithe and celebratory, joyful dancer waists and graceful raised arms, distinct faces and figures",
       "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
       "age": "20 years old"
     },
@@ -398,12 +398,12 @@
       "count": {
         "n": 5,
         "obj": "wands",
-        "layout": "exactly five wands, one gripped by each of the five young women — five figures, five wands, one per figure, nobody holds two; count them: 1, 2, 3, 4, 5"
+        "layout": "exactly five wands in total, exactly one gripped in each of the five women's hands — five women, five wands, one wand per woman, nobody holds two, no extra wand on the ground, no wand leaning anywhere, no wand in the background — count the wands: 1, 2, 3, 4, 5 and no more"
       },
-      "scene": "five graceful young women draped in diaphanous transparent silk veils, gently and playfully twirling five living wands in a soft meadow",
+      "scene": "five graceful young women draped in diaphanous transparent silk veils dancing gently in a soft meadow, each woman distinct — one fair-skinned with flowing blonde hair, one warm-toned with dark auburn curls, one deep-skinned with tight black coils, one olive-skinned with straight black hair, and one rosy-skinned with copper waves — each holding exactly one wand",
       "age": "21 years old",
-      "hair": "soft copper-brown hair loose in gentle waves",
-      "build": "slender, graceful and light, gentle dancing stance"
+      "hair": "distinct per woman: one blonde, one dark auburn curls, one tight black coils, one straight black, one copper waves",
+      "build": "all slender, graceful and light with distinct faces and figures, gentle dancing stances"
     },
     {
       "n": "6",
