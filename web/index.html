@@ -91,6 +91,21 @@
   }
   .tab .n { opacity: 0.7; font-size: 0.66rem; margin-left: 4px; }
 
+  .draw-btn {
+    font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 1.2px;
+    color: #14100a; font-weight: 700; text-transform: uppercase;
+    background: linear-gradient(180deg, #e2c46a, #c9a24a);
+    border: 1px solid var(--gold); border-radius: 10px;
+    padding: 10px 18px; cursor: pointer; white-space: nowrap;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  }
+  .draw-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(212,175,55,0.35);
+    filter: brightness(1.06);
+  }
+  .draw-btn:active { transform: translateY(0); }
+
   /* ---------- grid ---------- */
   main { max-width: 1500px; margin: 0 auto; padding: 30px 28px 80px; }
   .group-label {
@@ -218,6 +233,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input id="search" type="text" placeholder="Tìm lá bài, biểu tượng, độ tuổi, chủ đề…" autocomplete="off">
       </div>
+      <button class="draw-btn" id="drawBtn" title="Rút ngẫu nhiên một lá bài">✦ Rút một lá</button>
       <div class="tabs" id="tabs"></div>
     </div>
   </div>
@@ -399,10 +415,24 @@ function navLightbox(d) {
   showLightbox();
 }
 
+function drawRandom() {
+  if (!DECK.length) return;
+  // reset filters to see the whole deck
+  currentGroup = 'all';
+  currentQuery = '';
+  document.getElementById('search').value = '';
+  document.querySelectorAll('.tab').forEach(x =>
+    x.classList.toggle('active', x.dataset.key === 'all'));
+  applyFilter();
+  lbIndex = Math.floor(Math.random() * filtered.length);
+  showLightbox();
+}
+
 document.getElementById('search').addEventListener('input', e => {
   currentQuery = e.target.value.trim();
   applyFilter();
 });
+document.getElementById('drawBtn').addEventListener('click', drawRandom);
 document.getElementById('lbClose').addEventListener('click', closeLightbox);
 document.getElementById('lbPrev').addEventListener('click', () => navLightbox(-1));
 document.getElementById('lbNext').addEventListener('click', () => navLightbox(1));
