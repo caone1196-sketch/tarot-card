@@ -13,11 +13,11 @@
       "n": "0",
       "slug": "00-fool",
       "group": "major",
-      "emblem": "a white rose",
+      "emblem": "a black rose",
       "title": "THE FOOL",
       "femme": true,
       "count": null,
-      "scene": "a nude young woman wanderer, a long silk scarf slipping off one shoulder and streaming behind her, a white rose lifted in one hand and her eyes lowered to look at the rose, her bare back and hip caught in the morning light, stepping lightly toward a cliff edge, a small white dog leaping at her heel, distant mountains under a golden morning sun",
+      "scene": "a nude young woman wanderer, a long silk scarf slipping off one shoulder and streaming behind her, a single black rose lifted in one hand and her eyes lowered to look at the black rose, her bare back and hip caught in the morning light, stepping lightly toward a cliff edge, a small white dog leaping at her heel, distant mountains under a golden morning sun",
       "hair": "loose wind-tossed honey-blonde waves down to her shoulder blades, sunlit and carefree",
       "age": "19 years old",
       "build": "petite and lithe, slender waist, youthful energy and light, springy step"
@@ -34,7 +34,7 @@
         "obj": "suit objects on the altar",
         "layout": "exactly four objects, one of each: one cup, one sword, one wand, one coin — all four resting on the altar table, all four wholly visible, no duplicates, nothing else on the table"
       },
-      "scene": "a nude young woman magician, bare torso with a length of silk slung low across her hips, one hand raising a wand to the sky and the other pointing down to the earth, the altar table before her laid with a cup, a sword, a wand and a pentacle, a rose garden behind her",
+      "scene": "a nude young woman magician, bare torso with a length of silk slung low across her hips, one hand raising a wand to the sky and the other pointing down to the earth, the altar table before her laid with a cup, a sword, a wand and a pentacle, a garden of black roses behind her",
       "hair": "jet-black straight hair falling past her waist like a sleek silk curtain, center-parted",
       "age": "22 years old",
       "build": "statuesque and commanding, elegant elongated proportions with poised posture"
@@ -73,7 +73,7 @@
       "title": "THE EMPEROR",
       "femme": true,
       "count": null,
-      "scene": "a commanding 25-year-old bare-shouldered female emperor in an ornate golden cuirass and crimson velvet mantle, seated resolutely on a stone throne carved with ram heads, holding an ankh scepter in one hand, barren rugged mountains behind her",
+      "scene": "a commanding 25-year-old female emperor, a crimson velvet mantle slipping from her bare shoulders and a sheer golden drape clinging over her sculpted bare torso, seated resolutely on a stone throne carved with ram heads, holding an ankh scepter in one hand, barren rugged mountains behind her",
       "age": "25 years old",
       "hair": "sleek dark bronze-brown hair in a sharp warrior braid, crowned with a golden ram-horn circlet",
       "build": "powerful, broad-shouldered, athletic and commanding female sovereign with sculpted physique"
@@ -86,7 +86,7 @@
       "title": "THE HIEROPHANT",
       "femme": true,
       "count": null,
-      "scene": "a serene 24-year-old female high mystic priestess in rich red-and-gold ceremonial robes, raising one blessing hand, two kneeling female acolytes before her, sacred temple pillars behind",
+      "scene": "a serene 24-year-old female high mystic priestess in sheer red-and-gold ceremonial vestments that leave her shoulders and the curve of one breast bare, raising one blessing hand, two kneeling female acolytes before her, sacred temple pillars behind",
       "age": "24 years old",
       "hair": "thick espresso-brown waves falling over embroidered ceremonial vestments",
       "build": "tall, noble and serene female high priestess with graceful dignified poise"
@@ -112,7 +112,7 @@
       "title": "THE CHARIOT",
       "femme": true,
       "count": null,
-      "scene": "a heroic bare-shouldered woman charioteer in fine steel under a starry canopy, standing in a stone chariot between two sphinxes, a walled city behind her",
+      "scene": "a heroic bare-shouldered woman charioteer wrapped in loose sheer white silk with no armor, standing tall in a stone chariot between two sphinxes under a starry canopy, a walled city behind her",
       "hair": "dark sable-brown hair tightly plaited in a single thick warrior braid over one shoulder",
       "age": "22 years old",
       "build": "athletic and toned, sculpted shoulders and taut waist, resolute and heroic stance"
@@ -138,8 +138,8 @@
       "title": "THE HERMIT",
       "femme": true,
       "count": null,
-      "scene": "a hermit woman standing on a bare mountain peak under a deep star-filled night sky, holding up a lit lantern with warm golden light pouring out of it, her head and body hooded and wrapped in a single sheet of WHITE TRANSPARENT SILK GAUZE that veils her head and falls in folds around her",
-      "hair": "ethereal silver-ash long hair, veiled beneath sheer white cowl gauze",
+      "scene": "a hermit woman standing on a bare mountain peak under a deep star-filled night sky, holding up a lit lantern with warm golden light pouring out of it, draped only in a loose sheer white silk gauze that slips from her bare shoulders and pools low around her hips, her bare back and the curve of one breast veiled and revealed by the golden lantern light",
+      "hair": "ethereal silver-ash long hair falling loose in soft waves",
       "age": "23 years old",
       "build": "slender, mysterious and delicate silhouette, quiet meditative poise"
     },
@@ -172,7 +172,7 @@
         "obj": "sword",
         "layout": "exactly one sword, held upright in her left hand; no other blade on the card"
       },
-      "scene": "a statuesque bare-shouldered queen, silk sliding off one shoulder to the curve of her breast, a sword upright in one hand and balanced scales in the other, seated on a stone throne between pillars",
+      "scene": "a statuesque bare-shouldered queen, a length of sheer silk sliding fully off one shoulder to bare one breast and one hip, a sword upright in one hand and balanced scales in the other, seated on a stone throne between pillars",
       "hair": "sleek raven-black hair drawn back sharply into a high polished half-ponytail",
       "age": "24 years old",
       "build": "statuesque and regal, prominent collarbones, straight spine and austere balanced posture"
@@ -198,10 +198,10 @@
       "title": "DEATH",
       "femme": true,
       "count": null,
-      "scene": "a striking 22-year-old pale female knight in ornate black armor riding a calm pale charger, holding a black banner adorned with a five-petaled white rose, a golden sunrise glowing between twin distant towers",
+      "scene": "a striking 22-year-old pale female figure draped in sheer black silk that veils and reveals her bare form, riding a calm pale charger, holding a black banner adorned with a five-petaled white rose, a golden sunrise glowing between twin distant towers",
       "age": "22 years old",
-      "hair": "long bone-platinum hair flowing behind an ornate gothic helm",
-      "build": "tall, slender and formidable female dark knight silhouette in polished black armor"
+      "hair": "long bone-platinum hair flowing loose and free",
+      "build": "tall, slender and formidable female silhouette wrapped in sheer black silk"
     },
     {
       "n": "XIV",
@@ -215,7 +215,7 @@
         "obj": "chalices",
         "layout": "exactly two chalices, one in each hand, both bowls fully visible and un-occluded"
       },
-      "scene": "a graceful winged adult figure with long loosened hair, wearing a sheer antique drape, standing in a THREE-QUARTER VIEW with her body turned toward the viewer, one knee bent with one foot on the rock and the other in the pool, her arms extended to either side pouring water between two golden chalices, irises blooming, warm sepia and ochre light",
+      "scene": "a graceful winged adult figure with long loosened hair, wearing a sheer antique drape, standing balanced on one foot atop the rock with her other leg lifted gracefully behind her and her back arched, both arms raised pouring a continuous arc of water between two golden chalices, irises blooming around the pool, warm sepia and ochre light",
       "hair": "pale fine ash-blonde hair floating weightlessly in the air",
       "age": "22 years old",
       "build": "ethereal and willowy, long slender limbs, arched supple spine, graceful angelic poise"
@@ -228,7 +228,7 @@
       "title": "THE DEVIL",
       "femme": true,
       "count": null,
-      "scene": "a horned winged female arch-devil upon a dark pedestal; beside her two alluring nude young women arched in golden chains, their bodies glowing in candlelit shadow inside an obsidian cavern",
+      "scene": "a horned winged female arch-devil draped in sheer black silk upon a dark pedestal; beside her two alluring nude young women arched in golden chains, their bodies glowing in candlelit shadow inside an obsidian cavern",
       "hair": "midnight-black wavy hair with deep wine-red undertones, wild and untamed",
       "age": "21 years old",
       "build": "sultry and curvaceous, arched back and soft full hips, magnetic alluring presence"
@@ -299,7 +299,7 @@
       "title": "JUDGEMENT",
       "femme": true,
       "count": null,
-      "scene": "a radiant winged female angel blowing a golden trumpet with a white banner; below, rising from calm waters, three beautiful nude young women with open arms turning toward the divine light",
+      "scene": "a radiant winged female angel blowing a golden trumpet with a white banner; below, rising from calm waters, three beautiful nude young women with open arms turning toward the divine light — one fair-skinned with flowing blonde hair, one warm-toned with dark auburn curls, and one deep-skinned with tight black coils — each with a distinct face and figure",
       "hair": "rich amber-honey hair in thick luminous waves catching golden rays",
       "age": "22 years old",
       "build": "statuesque, open-armed posture, noble and reborn classical anatomy"
