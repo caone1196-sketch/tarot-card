@@ -1,5 +1,5 @@
 {
-  "total": 50,
+  "total": 59,
   "cards": [
     {
       "slug": "00-fool",
@@ -360,6 +360,96 @@
       "hair": "long shimmering platinum-blonde hair falling straight like water to her thighs",
       "build": "slender and ethereal, narrow waist, serene and mystical queenly beauty",
       "scene": "a youthful adult queen seated on a shell throne at the water's edge, her shoulders bare beneath wet platinum-blonde hair, wearing a gown of antique WHITE SILK GAUZE so sheer and transparent that the light shines through it and the long line of her body reads clearly beneath, holding one lidded golden chalice in her lap, sea foam and breaking waves behind her"
+    },
+    {
+      "slug": "swords-02",
+      "title": "TWO OF SWORDS",
+      "image": "swords-02.png",
+      "emblem": "two crossed swords",
+      "age": "21 years old",
+      "hair": "jet-black hair drawn back into a sleek, flawless high knot",
+      "build": "slender, perfectly balanced, taut core and crossed arms holding dual blades",
+      "scene": "a blindfolded adult woman in a very thin veil of antique silk gauze, almost transparent, her shoulders bare, seated on a stone seat by the sea, two long swords crossed over her chest, the moon rising behind her"
+    },
+    {
+      "slug": "swords-03",
+      "title": "THREE OF SWORDS",
+      "image": "swords-03.png",
+      "emblem": "three swords through a heart",
+      "age": "",
+      "hair": "",
+      "build": "",
+      "scene": "a large anatomical heart pierced by three swords, rain and storm clouds behind"
+    },
+    {
+      "slug": "swords-04",
+      "title": "FOUR OF SWORDS",
+      "image": "swords-04.png",
+      "emblem": "three swords on a wall, one below",
+      "age": "22 years old",
+      "hair": "deep sable hair spread neatly around her resting head on stone",
+      "build": "slender, peaceful reclined effigy silhouette in sacred stillness",
+      "scene": "a graceful adult woman in a flowing antique gown lying at rest on a stone tomb in a chapel, her hands folded, three swords mounted on the wall above her and one lying beneath her, a stained-glass window behind"
+    },
+    {
+      "slug": "swords-05",
+      "title": "FIVE OF SWORDS",
+      "image": "swords-05.png",
+      "emblem": "five swords, two discarded",
+      "age": "22 years old",
+      "hair": "wind-blown dark brown hair with a subtle confident smirk",
+      "build": "lean, agile and sharp-shouldered, turning with collected blades",
+      "scene": "a confident young woman holding three swords over her shoulder and watching two retreating female companions on a stormy coastline, two swords lying in the sand"
+    },
+    {
+      "slug": "swords-06",
+      "title": "SIX OF SWORDS",
+      "image": "swords-06.png",
+      "emblem": "six swords in a boat",
+      "age": "21 years old",
+      "hair": "light ash-brown hair gathered softly in a misty veil",
+      "build": "slender, quiet passenger silhouette seated in the ferry boat",
+      "scene": "a cloaked woman and a child being poled across a river by a ferryman, six swords upright along the boat"
+    },
+    {
+      "slug": "swords-08",
+      "title": "EIGHT OF SWORDS",
+      "image": "swords-08.png",
+      "emblem": "eight swords in a ring",
+      "age": "20 years old",
+      "hair": "dark brown hair bound loosely with a crimson ribbon",
+      "build": "slender, delicate and vulnerable silhouette surrounded by upright blades",
+      "scene": "a blindfolded woman in a flowing gown loosened from one shoulder and loosely bound, standing in a ring of eight swords, a fortress on the cliff behind"
+    },
+    {
+      "slug": "swords-09",
+      "title": "NINE OF SWORDS",
+      "image": "swords-09.png",
+      "emblem": "nine swords on a wall",
+      "age": "22 years old",
+      "hair": "long black hair falling in sorrowful waves over her weeping hands",
+      "build": "slender, delicate nightgown silhouette seated in emotional release",
+      "scene": "a distressed woman sitting up in bed at night, her bare shoulder and back above the sheet, face in her hands, nine swords mounted in rows on the dark wall"
+    },
+    {
+      "slug": "swords-10",
+      "title": "TEN OF SWORDS",
+      "image": "swords-10.png",
+      "emblem": "ten swords along a back",
+      "age": "23 years old",
+      "hair": "dark silky hair strewn across shoreline sand",
+      "build": "lean peaceful reclining maiden silhouette bathed in golden morning horizon light",
+      "scene": "a peaceful young woman lying draped in crimson silk on a shoreline at dawn beneath ten upright swords, golden sunlight breaking across dark waters"
+    },
+    {
+      "slug": "swords-ace",
+      "title": "ACE OF SWORDS",
+      "image": "swords-ace.png",
+      "emblem": "one upright sword with a crown",
+      "age": "",
+      "hair": "",
+      "build": "",
+      "scene": "a divine hand grasping one upright sword, a jeweled crown hovering at its tip, barren peaks below"
     },
     {
       "slug": "wands-02",
