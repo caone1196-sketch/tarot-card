@@ -1,5 +1,5 @@
 {
-  "total": 74,
+  "total": 78,
   "cards": [
     {
       "slug": "00-fool",
@@ -460,6 +460,46 @@
       "hair": "",
       "build": "",
       "scene": "a divine hand offering one large golden pentacle coin over a lush garden gateway with lilies, mountains beyond"
+    },
+    {
+      "slug": "pentacles-king",
+      "title": "KING OF PENTACLES",
+      "image": "pentacles-king.png",
+      "emblem": "a pentacle above a bull head",
+      "age": "25 years old",
+      "hair": "dark wavy hair woven with golden laurel leaves and ripe grapes",
+      "build": "robust, wealthy sovereign seated comfortably in lush castle gardens",
+      "scene": "a wealthy 25-year-old female queen of wealth seated on a bull-carved throne amid blooming grapevines and castle walls, holding a golden pentacle in her lap"
+    },
+    {
+      "slug": "pentacles-knight",
+      "title": "KNIGHT OF PENTACLES",
+      "image": "pentacles-knight.png",
+      "emblem": "a pentacle on a draft horse",
+      "age": "23 years old",
+      "hair": "dark bronze hair braided under an oak-leaf crested helmet",
+      "build": "sturdy, athletic female knight on a calm heavy warhorse",
+      "scene": "a steadfast 23-year-old female knight in dark armor holding a golden pentacle with calm reverence in a plowed field"
+    },
+    {
+      "slug": "pentacles-page",
+      "title": "PAGE OF PENTACLES",
+      "image": "pentacles-page.png",
+      "emblem": "a pentacle held by two hands",
+      "age": "18 years old",
+      "hair": "golden-blonde hair falling loose past shoulders, catching meadow sun",
+      "build": "petite, earnest scholar-student frame, holding coin aloft with reverence",
+      "scene": "a studious young woman page in an open robe studying one large pentacle coin held in both hands, a plowed field behind her"
+    },
+    {
+      "slug": "pentacles-queen",
+      "title": "QUEEN OF PENTACLES",
+      "image": "pentacles-queen.png",
+      "emblem": "a pentacle entwined with roses",
+      "age": "24 years old",
+      "hair": "deep chocolate hair with a ruddy golden sheen, crowned in blooming vines",
+      "build": "voluptuous, maternal, generous warm feminine curves on carved beast throne",
+      "scene": "a warm nude queen with a flower crown on a goat-carved throne, one breast bared, one pentacle resting in her lap, a rabbit in the garden"
     },
     {
       "slug": "swords-02",
