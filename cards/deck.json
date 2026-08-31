@@ -1,5 +1,5 @@
 {
-  "total": 42,
+  "total": 50,
   "cards": [
     {
       "slug": "00-fool",
@@ -222,6 +222,26 @@
       "scene": "a graceful adult woman dancer posed in a sinuous S-curve, one hip thrust out and one knee lifted, her body arched with the head tipped back and her shoulders and back bare, a flowing violet scarf swirling low around her hips and drifting behind her, one slim wand held out in each hand, dancing within a great oval laurel wreath, an angel, an eagle, a lion and a bull at the corners"
     },
     {
+      "slug": "cups-02",
+      "title": "TWO OF CUPS",
+      "image": "cups-02.png",
+      "emblem": "two interlocked rings",
+      "age": "21 years old",
+      "hair": "soft ash-brown hair worn in a low intertwined romantic braid",
+      "build": "slender and graceful, gentle curving silhouette leaning in communion",
+      "scene": "a nude young woman and a nude young man facing one another, her body turned three-quarters toward the viewer with one arm across her breast, each raising one chalice in a toast, a caduceus with a lion head above them"
+    },
+    {
+      "slug": "cups-03",
+      "title": "THREE OF CUPS",
+      "image": "cups-03.png",
+      "emblem": "three chalices in a triangle",
+      "age": "20 years old",
+      "hair": "rich chocolate-brown, golden-blonde, and copper hair among the three maidens",
+      "build": "harmonious, curvaceous, dancing together with joyful feminine grace",
+      "scene": "three nude maidens with flower wreaths dancing in a circle, their bodies turned to the light, each raising one chalice, fruits on the ground"
+    },
+    {
       "slug": "cups-04",
       "title": "FOUR OF CUPS",
       "image": "cups-04.png",
@@ -272,6 +292,26 @@
       "scene": "a solitary young woman in a deep crimson cloak walking away with a staff, leaving eight stacked cups behind to journey toward misty moonlit peaks"
     },
     {
+      "slug": "cups-09",
+      "title": "NINE OF CUPS",
+      "image": "cups-09.png",
+      "emblem": "nine chalices in an arc",
+      "age": "24 years old",
+      "hair": "warm honey-brown hair in a relaxed loose chignon",
+      "build": "luxurious, soft feminine curves, content and smiling seated posture",
+      "scene": "a content adult woman with bare shoulders seated at a banquet table, silk slipping from one shoulder, before nine golden chalices proudly arranged in a neat grid on a shelf behind her"
+    },
+    {
+      "slug": "cups-10",
+      "title": "TEN OF CUPS",
+      "image": "cups-10.png",
+      "emblem": "ten chalices under a rainbow",
+      "age": "22 years old",
+      "hair": "warm hazel-brown hair cascading in silky ripples",
+      "build": "graceful, tender motherly poise with slender loving frame",
+      "scene": "a blissful couple embracing in a meadow, she in slipping silk with one bare shoulder and the long line of her back to the light, his arms around her waist, ten chalices along a rainbow arc, a cottage and dancing children beyond"
+    },
+    {
       "slug": "cups-ace",
       "title": "ACE OF CUPS",
       "image": "cups-ace.png",
@@ -280,6 +320,46 @@
       "hair": "",
       "build": "",
       "scene": "a divine hand offering one ornate chalice, a dove descending, five streams overflowing into a pool of lilies"
+    },
+    {
+      "slug": "cups-king",
+      "title": "KING OF CUPS",
+      "image": "cups-king.png",
+      "emblem": "a chalice between two fish",
+      "age": "25 years old",
+      "hair": "deep-wave dark espresso hair crowned in sea-gold and pearls",
+      "build": "calm, statuesque oceanic sovereign with serene noble presence",
+      "scene": "a serene 25-year-old oceanic queen on a throne floating upon rolling waves, holding a lotus scepter and a golden cup, a dolphin leaping in the distance"
+    },
+    {
+      "slug": "cups-knight",
+      "title": "KNIGHT OF CUPS",
+      "image": "cups-knight.png",
+      "emblem": "a chalice on a horseshoe",
+      "age": "22 years old",
+      "hair": "fair sandy-blonde hair falling in soft romantic waves across her brow",
+      "build": "poetic, slender and noble athletic female knight offering the chalice",
+      "scene": "a graceful 22-year-old female knight in winged silver armor riding a calm white steed beside a stream, extending a golden chalice of peace"
+    },
+    {
+      "slug": "cups-page",
+      "title": "PAGE OF CUPS",
+      "image": "cups-page.png",
+      "emblem": "a chalice with a fish",
+      "age": "18 years old",
+      "hair": "dark glossy hair in a single side fishtail braid over the collarbone",
+      "build": "petite, curious and dreamy, delicate limbs holding the chalice",
+      "scene": "a graceful young woman page by the sea in an open robe sliding off one shoulder, holding one chalice from which a curious fish looks out"
+    },
+    {
+      "slug": "cups-queen",
+      "title": "QUEEN OF CUPS",
+      "image": "cups-queen.png",
+      "emblem": "a lidded chalice between waves",
+      "age": "23 years old",
+      "hair": "long shimmering platinum-blonde hair falling straight like water to her thighs",
+      "build": "slender and ethereal, narrow waist, serene and mystical queenly beauty",
+      "scene": "a youthful adult queen seated on a shell throne at the water's edge, her shoulders bare beneath wet platinum-blonde hair, wearing a gown of antique WHITE SILK GAUZE so sheer and transparent that the light shines through it and the long line of her body reads clearly beneath, holding one lidded golden chalice in her lap, sea foam and breaking waves behind her"
     },
     {
       "slug": "wands-02",
