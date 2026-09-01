@@ -10,7 +10,9 @@ import io
 import json
 import subprocess
 import sys
+import base64
 
+import requests
 import streamlit as st
 import numpy as np
 import cv2
@@ -20,6 +22,12 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 CARDS_DIR = os.path.join(ROOT, "cards")
 DECK_JSON = os.path.join(CARDS_DIR, "deck.json")
 STAR_REF = os.path.join(CARDS_DIR, "17-the-star.png")
+
+# Thư viện lá bài trên GitHub (nguồn chính), local là dự phòng.
+GITHUB_REPO = "caone1196-sketch/tarot-card"
+GITHUB_REF = "arena/01a058af-tarot-card"
+GITHUB_API = f"https://api.github.com/repos/{GITHUB_REPO}/contents/cards"
+GITHUB_RAW = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_REF}/cards"
 GROUPS = [
     ("major", "Ẩn Chính"),
     ("wands", "Gậy"),
@@ -32,10 +40,35 @@ st.set_page_config(page_title="Sensual Gothic Tarot", page_icon="🔮", layout="
 
 
 # ---------------------------------------------------------------- helpers
-@st.cache_data(show_spinner=False)
+@st.cache_data(ttl=600, show_spinner=False)
 def load_deck():
-    with open(DECK_JSON, "r", encoding="utf-8") as f:
-        return json.load(f)
+    # 1) local (đồng bộ với các commit đã push; upload ghi vào local)
+    if os.path.exists(DECK_JSON):
+        try:
+            with open(DECK_JSON, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    # 2) fallback: thư viện trên GitHub (api.github.com — đọc được từ server)
+    try:
+        r = requests.get(
+            f"{GITHUB_API}/deck.json", params={"ref": GITHUB_REF}, timeout=12
+        )
+        if r.status_code == 200:
+            d = r.json()
+            if d.get("encoding") == "base64":
+                return json.loads(base64.b64decode(d["content"]).decode("utf-8"))
+    except Exception:
+        pass
+    return {"total": 0, "cards": []}
+
+
+def card_image_src(card):
+    """Ảnh lá bài: local nếu có, nếu không thì dùng thư viện GitHub (raw)."""
+    local = os.path.join(CARDS_DIR, card["image"])
+    if os.path.exists(local):
+        return local
+    return f"{GITHUB_RAW}/{card['image']}"
 
 
 def group_of(slug: str) -> str:
@@ -91,6 +124,7 @@ with st.sidebar:
     )
     st.divider()
     st.caption("Chuẩn khung: The Star · 100% nhân vật nữ 18–25")
+    st.caption(f"Thư viện lá bài: github.com/{GITHUB_REPO} · nhánh `{GITHUB_REF}`")
 
 # ---------------------------------------------------------------- gallery
 if page == "🖼️ Bộ sưu tập":
@@ -130,9 +164,7 @@ if page == "🖼️ Bộ sưu tập":
             cols = st.columns(n_cols)
             for j, c in enumerate(filtered[i:i + n_cols]):
                 with cols[j]:
-                    img_path = os.path.join(CARDS_DIR, c["image"])
-                    if os.path.exists(img_path):
-                        st.image(img_path, width=200)
+                    st.image(card_image_src(c), width=200)
                     st.markdown(f"**{c['title']}**")
                     st.caption(c.get("age", "—"))
                     if st.button("Chi tiết", key=f"detail_{c['slug']}"):
@@ -145,7 +177,7 @@ if page == "🖼️ Bộ sưu tập":
             st.divider()
             left, right = st.columns([1, 2])
             with left:
-                st.image(os.path.join(CARDS_DIR, c["image"]), width=360)
+                st.image(card_image_src(c), width=360)
             with right:
                 st.subheader(c["title"])
                 st.markdown(f"*Huy hiệu:* {c.get('emblem', '—')}")
@@ -234,7 +266,7 @@ elif page == "🎴 Rút một lá":
     if c:
         left, right = st.columns([1, 2])
         with left:
-            st.image(os.path.join(CARDS_DIR, c["image"]), width=380)
+            st.image(card_image_src(c), width=380)
         with right:
             st.subheader(c["title"])
             st.markdown(f"*Huy hiệu:* {c.get('emblem', '—')}")

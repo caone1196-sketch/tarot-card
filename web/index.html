@@ -247,13 +247,13 @@
 
 <main id="main"></main>
 
-<footer>Bộ bài 78 lá · Chuẩn cấu trúc The Star · 100% nhân vật nữ 18–25 · <span id="footCount"></span></footer>
+<footer>Bộ bài 78 lá · Chuẩn cấu trúc The Star · 100% nhân vật nữ 18–25 · Nguồn: GitHub caone1196-sketch/tarot-card · <span id="footCount"></span></footer>
 
 <!-- card back overlay -->
 <div class="lightbox" id="backLightbox">
   <button class="lb-close" id="backClose" aria-label="Đóng">×</button>
   <div class="lb-card" style="grid-template-columns: 1fr; max-width: 430px;">
-    <div class="lb-img"><img src="../cards/card-back.png" alt="Mặt sau lá bài"></div>
+    <div class="lb-img"><img src="https://raw.githubusercontent.com/caone1196-sketch/tarot-card/arena/01a058af-tarot-card/cards/card-back.png" alt="Mặt sau lá bài" onerror="this.onerror=null;this.src='../cards/card-back.png'"></div>
   </div>
 </div>
 
@@ -285,6 +285,15 @@ const GROUPS = [
 ];
 const RANK = ['ace','02','03','04','05','06','07','08','09','10','page','knight','queen','king'];
 
+// Thư viện lá bài trên GitHub (nguồn chính), local là dự phòng.
+const GITHUB_RAW = 'https://raw.githubusercontent.com/caone1196-sketch/tarot-card/arena/01a058af-tarot-card/cards';
+function imgTag(image, alt, lazy) {
+  const local = '../cards/' + image;
+  const remote = GITHUB_RAW + '/' + image;
+  const lz = lazy ? ' loading="lazy"' : '';
+  return `<img src="${remote}" alt="${alt}"${lz} onerror="this.onerror=null;this.src='${local}'">`;
+}
+
 let DECK = [];
 let filtered = [];
 let currentGroup = 'all';
@@ -311,10 +320,13 @@ function sortKey(slug) {
 
 async function load() {
   let data = null;
-  try {
-    const res = await fetch('../cards/deck.json');
-    data = await res.json();
-  } catch (e) { /* fall back below */ }
+  const urls = [GITHUB_RAW + '/deck.json', '../cards/deck.json'];
+  for (const u of urls) {
+    try {
+      const res = await fetch(u);
+      if (res.ok) { data = await res.json(); break; }
+    } catch (e) { /* try next */ }
+  }
   if (!data || !Array.isArray(data.cards)) {
     // graceful fallback: empty with message
     DECK = [];
@@ -392,7 +404,7 @@ function cardHtml(c) {
   return `
     <div class="card" data-slug="${c.slug}">
       <div class="frame">
-        <img src="../cards/${c.image}" alt="${c.title}" loading="lazy">
+        ${imgTag(c.image, c.title, true)}
         <div class="shade"></div>
         <div class="meta">
           <div class="title">${c.title}</div>
@@ -409,7 +421,9 @@ function openLightbox(i) {
 function showLightbox() {
   const c = filtered[lbIndex];
   if (!c) return;
-  document.getElementById('lbImg').src = '../cards/' + c.image;
+  const lb = document.getElementById('lbImg');
+  lb.onerror = () => { lb.onerror = null; lb.src = '../cards/' + c.image; };
+  lb.src = GITHUB_RAW + '/' + c.image;
   document.getElementById('lbTitle').textContent = c.title;
   document.getElementById('lbEmblem').textContent = 'Huy hiệu: ' + (c.emblem || '—');
   document.getElementById('lbAge').textContent = c.age || '—';
