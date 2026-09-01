@@ -25,7 +25,7 @@ STAR_REF = os.path.join(CARDS_DIR, "17-the-star.png")
 
 # Thư viện lá bài trên GitHub (nguồn chính), local là dự phòng.
 GITHUB_REPO = "caone1196-sketch/tarot-card"
-GITHUB_REF = "arena/01a058af-tarot-card"
+GITHUB_REF = "arena/01a05b2b-tarot-card"
 GITHUB_API = f"https://api.github.com/repos/{GITHUB_REPO}/contents/cards"
 GITHUB_RAW = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_REF}/cards"
 GROUPS = [
