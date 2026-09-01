@@ -60,11 +60,20 @@ def build_card_prompt_star_standard(card, use_reference=True):
     count_str = format_count_lock(card.get("count"))
     char_str = format_character_spec(card)
 
+    anatomy_lock = (
+        "ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; "
+        "every joint (shoulder, elbow, wrist, hip, knee, ankle) connects naturally to the body — "
+        "NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing or amputated arms, "
+        "NO deformed joints, NO wrong finger counts; keep both arms clearly separated from the torso "
+        "with visible armpits, elbows and wrists."
+    )
+
     extra_directives = []
     if char_str:
         extra_directives.append(char_str)
     if count_str:
         extra_directives.append(count_str)
+    extra_directives.append(anatomy_lock)
     extra_text = (" " + " ".join(extra_directives)) if extra_directives else ""
 
     ref_clause = (
