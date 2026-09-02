@@ -108,16 +108,16 @@ QUALITY_LOCK = (
 # Cách diễn đạt ĐÃ THÀNH CÔNG (từ các phương án render được chấp nhận) — giữ
 # nguyên văn để các lần generate sau đi đúng quỹ đạo này.
 STAR_SCENE_LOCK = (
-    "the scene is painted as an ADULT CLASSICAL FIGURE STUDY: UNCLOTHED HUMAN FORM, elegant natural "
-    "pose, realistic anatomy, Renaissance-inspired fine art, soft chiaroscuro lighting, museum-quality "
-    "composition, non-sexual artistic presentation — a graceful young woman standing waist-deep in a "
-    "calm moonlit lake, long pale gold wet hair flowing down her back, S-CURVE stance — hips swayed, "
-    "torso softly leaning, one leg lightly bent; her face tilted slightly BACK, chin raised toward the "
-    "stars; her right arm raised high overhead, hand gripping a golden pitcher, a silvery stream "
-    "pouring from its spout ONTO her neck, gliding down her collarbone and torso like liquid glass, "
-    "falling from her waist into the lake; her left arm hangs relaxed down and BEHIND her back, hand "
-    "holding a second golden pitcher tilted slightly — NO water flows from it; she wears no cloth — "
-    "the stream of water is her only garment; no veil, no silk, no fabric, no water-veil, no drape."
+    "the scene is painted as an ADULT CLASSICAL FIGURE STUDY: natural human form, elegant anatomical "
+    "study, graceful Renaissance pose, realistic proportions, sculptural aesthetics, soft chiaroscuro "
+    "lighting, museum-quality fine art, classical life-drawing style, non-sexual artistic composition "
+    "— a graceful young woman standing waist-deep in a calm moonlit lake, long pale gold wet hair "
+    "flowing down her back, S-CURVE stance — hips swayed, torso softly leaning, one leg lightly bent; "
+    "her face tilted slightly BACK, chin raised toward the stars; her right arm raised high overhead, "
+    "hand gripping a golden pitcher, a silvery stream pouring from its spout ONTO her neck, gliding "
+    "down her collarbone and torso like liquid glass, falling from her waist into the lake; her left "
+    "arm hangs relaxed down and BEHIND her back, hand holding a second golden pitcher tilted "
+    "slightly — NO water flows from it; she wears no cloth — the stream of water is her only garment."
 )
 STAR_SKY_RIPPLE_LOCK = (
     "SKY LOCK: one large radiant EIGHT-POINTED gold star directly above her head, with SEVEN "
