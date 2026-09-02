@@ -104,6 +104,31 @@ QUALITY_LOCK = (
     "and title, no soft blur, no motion blur on the figure."
 )
 
+# ---------------------------------------------------------------- card locks
+# Cách diễn đạt ĐÃ THÀNH CÔNG (từ các phương án render được chấp nhận) — giữ
+# nguyên văn để các lần generate sau đi đúng quỹ đạo này.
+STAR_SCENE_LOCK = (
+    "the scene is painted as a CLASSICAL ALLEGORICAL OIL PAINTING of a water nymph at night, "
+    "in the manner of Victorian allegorical art / tasteful luminous style of old master paintings; "
+    "a graceful young woman standing waist-deep in a calm moonlit lake, long pale gold wet hair "
+    "flowing down her back, S-CURVE stance — hips swayed, torso softly leaning, one leg lightly bent; "
+    "her face tilted slightly BACK, chin raised toward the stars; "
+    "her right arm raised high overhead, hand gripping a golden pitcher, a silvery stream pouring "
+    "from its spout ONTO her neck, gliding down her collarbone and torso like liquid glass, falling "
+    "from her waist into the lake; "
+    "her left arm hangs relaxed down and BEHIND her back, hand holding a second golden pitcher "
+    "tilted slightly — NO water flows from it."
+)
+STAR_SKY_RIPPLE_LOCK = (
+    "SKY LOCK: one large radiant EIGHT-POINTED gold star directly above her head, with SEVEN "
+    "smaller stars arranged around it, ONLY these eight stars — NO moon, NO crescent. "
+    "RIPPLE RULE (HARD): ripples appear ONLY in two zones — a circle of gentle ripples where her "
+    "body meets the water surface, and a circle where the falling stream meets the water surface; "
+    "NO other ripples anywhere, no ripple rings on her body."
+)
+CARD_LOCKS = {"17-the-star": (STAR_SCENE_LOCK, STAR_SKY_RIPPLE_LOCK)}
+
+
 # ---------------------------------------------------------------- formatting
 def format_count_lock(count_info):
     if not count_info:
@@ -148,6 +173,9 @@ def format_character_spec(card: dict, spec: dict | None) -> str:
 def build_card_prompt_new_frame(card: dict, spec: dict | None):
     title = card.get("title", "")
     scene = card.get("scene", "")
+    scene_locks = CARD_LOCKS.get(card.get("slug"), ())
+    if scene_locks:
+        scene = " ".join(scene_locks)
     count_str = format_count_lock(card.get("count"))
     char_str = format_character_spec(card, spec)
 

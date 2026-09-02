@@ -34,6 +34,10 @@
 - **KHÔNG còn oval medallion / huy hiệu / biểu tượng ở đỉnh** (khung biểu tượng đã bỏ).
 - **GỢN MỜ GẦN VẬT THỂ (mọi prompt)**: giữ halo/quầng mềm quanh vật thể (gợn nước quanh bình,
   quầng sáng quanh đèn/nến/vàng, bloom gần sao/lửa) — mượt, khu trú, KHÔNG phải nhiễu/grain.
+- **CÁCH DIỄN ĐẠT THÀNH CÔNG (The Star)**: `STAR_SCENE_LOCK` + `STAR_SKY_RIPPLE_LOCK` trong
+  `scripts/build_prompts.py` là nguyên văn đã sinh ra các phương án được chấp nhận (S-curve,
+  rót lên cổ, nước trượt da, bình sau lưng khô nghiêng; SKY LOCK 1+7 sao không trăng; RIPPLE
+  RULE 2 vùng chỉ ở thân-nước và dòng nước-nước). Không thay đổi lời lẽ khi render lại.
 - **THÔNG SỐ CHẤT LƯỢNG (mọi prompt)**: GLOSSY (da bóng dầu vẽ, specular ướt),
   DETAIL siêu chi tiết, **không film grain / noise / speckle / jpeg artifact**,
   SHARPNESS mép sắc, focus tuyệt đối — xem `QUALITY_LOCK` trong `scripts/build_prompts.py`.

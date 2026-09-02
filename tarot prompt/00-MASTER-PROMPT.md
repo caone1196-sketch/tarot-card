@@ -48,6 +48,20 @@ Quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài Tarot — **khung 
      nến, đồ vàng, bloom nhẹ gần sao/lửa, phản chiếu mờ nơi vật chạm nước.
      Đây là hiệu ứng **cố ý** — không xoá, giữ mượt, có chủ đích, khu trú
      (⚠️ không phải nhiễu / grain / sharp blur).
+   * **CÁCH DIỄN ĐẠT ĐÃ THÀNH CÔNG (The Star)**: lời lẽ dưới đây là **nguyên văn
+     đã sinh ra các phương án được chấp nhận** — giữ nguyên khi render lại lá
+     này (đã đóng vào `STAR_SCENE_LOCK` / `STAR_SKY_RIPPLE_LOCK` trong
+     `scripts/build_prompts.py` và `scene` trong `tarot prompt/cards.json`):
+     * *classical allegorical oil painting of a water nymph at night, Victorian
+       allegorical art, tasteful luminous old-master style; S-CURVE stance —
+       hips swayed, torso softly leaning, one leg lightly bent; face tilted
+       slightly BACK toward the stars; right arm raised high, stream pouring
+       ONTO her neck and gliding down collarbone/torso like liquid glass into
+       the lake; left arm relaxed down and BEHIND her back with a second
+       golden pitcher tilted slightly, NO water flows from it.*
+     * **SKY LOCK**: 1 sao 8 cánh lớn + 7 sao nhỏ, **không trăng**. **RIPPLE
+       RULE**: gợn sóng CHỈ ở 2 vùng — nơi thân chạm mặt nước và nơi dòng
+       nước chạm mặt nước; không gợn nào khác.
 
 4. **Thông số chất lượng (QUALITY & SURFACE LOCK — áp dụng mọi lá)**:
    * **Độ bóng (GLOSSY)**: da có độ bóng dầu vẽ ánh sáng, điểm specular "ướt"
@@ -71,9 +85,14 @@ A single tarot card "{TITLE}" in vintage gothic fine-art style, portrait 7:12 as
 PAINT IT AS 4 LAYERS, background to foreground:
 LAYER 1 — BACKGROUND: an aged parchment / vellum texture covering the WHOLE card, sepia-warm, subtle stains and fibres.
 LAYER 2 — CONTENT (FULL BLEED): {SCENE}. {CHARACTER_SPECIFICATION} {COUNT_LOCK} — the scene is enlarged FULL-BLEED so its edges reach the card edges and slip slightly beneath the thin golden frame.
-LAYER 3 — FRAME: a very thin, delicate golden line-art gothic frame sitting close to the card edge, symmetrical, with small filigree corner flourishes — painted ON TOP of the scene edges (foreground ornament over background content). NO medallion, NO emblem, NO icon, NO crest anywhere on the card.
-LAYER 4 — TITLE BAND: at the BOTTOM, an ornamental golden ribbon banner; inside it the title "{TITLE}" in clean antique gothic gold lettering.
+LAYER 3 — FRAME: a very thin, delicate METALLIC ANTIQUE-GOLD line-art gothic frame sitting close to the card edge, symmetrical, with small filigree corner flourishes — rich deep gold stroke with dark rim, bright core and a faint warm halo — painted ON TOP of the scene edges (foreground ornament over background content); stays THIN. NO medallion, NO emblem, NO icon, NO crest anywhere on the card.
+LAYER 4 — TITLE: at the BOTTOM, the title "{TITLE}" in antique blackletter gold lettering whose baseline gently CURVES (letters rise at the ends, sag in the middle), placed DIRECTLY on the scene — NO title frame, NO plate, NO ribbon, NO cartouche, NO border around the text; clean carved edges with a thin shadow.
 
-{STRICT_ANATOMY}
-Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, no heavy inner arch barriers, vintage gothic fine-art illustration, high detail.
+{SOFT_OBJECT_HALO}
+
+{QUALITY_LOCK}
+
+STRICT ANATOMY (HARD RULE): exactly two arms, two legs, one head and one torso per character; every joint (shoulder, elbow, wrist, hip, knee, ankle) must connect naturally to the body — NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing/amputated arms, NO deformed joints, NO wrong finger counts. Keep both arms clearly separated from the torso with visible armpits, elbows and wrists.
+
+Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, no heavy inner arch barriers, vintage gothic fine-art illustration, ultra-high detail.
 ```
