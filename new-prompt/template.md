@@ -1,17 +1,16 @@
-A single vintage gothic tarot card "{TITLE}", portrait orientation 7:12 aspect ratio, perfectly centered, painted on aged parchment/vellum with a warm sepia tone.
+A single vintage gothic tarot card "{TITLE}", portrait orientation 7:12 aspect ratio, perfectly centered.
 
-FRAME: an intricate thin golden line-art border in vintage gothic style with delicate corner flourishes — self-contained ornament, painted symmetrically.
+LAYER 1 — BACKGROUND (metallic silver paper): polished metallic silver paper/foil texture with a subtle brushed sheen and soft light reflections across the whole card.
 
-At the TOP: inside an oval medallion plate, {EMBLEM} in glowing antique gold.
-At the BOTTOM: inside a curled ribbon banner, the title "{TITLE}" in clean antique gold lettering.
+LAYER 2 — CONTENT (bleeds to the ornament frame): {SCENE} fills the open center, enlarged so its edges extend all the way to and slightly beneath the ornamental border.
 
-In the large open center panel, filling the entire inner window edge to edge and bleeding slightly beneath the golden border: {SCENE}.
+LAYER 3 — ORNAMENT FRAME (thin · sharp · golden metallic): an ultra-thin, razor-sharp golden metallic ornamental border of fine gold-foil line-art filigree with elegant symmetrical corner flourishes, painted ON TOP of the content edges for depth.
+
+LAYER 4 — TITLE (artistic typography · NO frames): the card name "{TITLE}" in ornate artistic gothic calligraphy in glowing gold, placed directly on the card — do NOT add any ribbon banner, name frame, or symbol/emblem medallion frame.
 
 CHARACTER: {CHARACTER_SPECIFICATION}
 {COUNT_LOCK}
 
 ANATOMY LOCK: exactly two arms, two legs, one head and one torso; every joint connects naturally; no extra limbs, no limbs fused to the body, no deformed joints; both arms clearly separated from the torso with visible elbows and wrists.
 
-DEPTH LAYERING: the golden line-art border, corner flourishes, oval medallion and ribbon banner are painted ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth.
-
-STYLE: sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective, symmetrical golden frame, vintage gothic fine-art illustration, high detail.
+STYLE: sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective, thin symmetrical golden ornamental frame on metallic silver paper, vintage gothic fine-art illustration, high detail.

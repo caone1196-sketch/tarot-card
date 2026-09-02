@@ -1,44 +1,39 @@
-# 🌟 Prompt Mới — Tạo lá bài KHÔNG dùng lá bài cũ
+# 🌟 Prompt Mới — Tạo lá bài KHÔNG dùng lá bài cũ (Chuẩn 4 lớp — Bạc & Vàng)
 
 Thư mục này chứa **quy trình tạo lá bài bằng prompt mới**: prompt hoàn toàn tự mô tả
 (self-contained), **không tham chiếu bất kỳ ảnh lá bài cũ nào** — chỉ **kế thừa quy trình tạo**
-đã có trong repo.
+có trong repo. Nhân vật được làm giàu từ `tarot prompt/02-CHARACTER-SPECS.md`.
 
-## Vì sao có thư mục này
+## Chuẩn 4 lớp mới (theo yêu cầu)
 
-Yêu cầu: tạo lá bài **The Star** bằng một **prompt mới**, **không sử dụng lá bài cũ**
-(không dùng ảnh `cards/17-the-star.png` làm khung chuẩn tham chiếu), chỉ lấy lại **quy trình tạo**.
-
-> Ghi chú: session gắn cố định với nhánh `arena/01a05ffa-tarot-card` nên không tạo nhánh Git
-> mới được — mọi thứ được đặt gọn trong thư mục `new-prompt/` để tách biệt với bộ bài cũ.
-
-## Khác gì so với prompt cũ
-
-| | Prompt cũ (`prompts/out/`) | Prompt mới (`new-prompt/`) |
+| Lớp | Nội dung | Yêu cầu |
 |---|---|---|
-| Khung viền | "built inside the reference frame … matching THE STAR" — **trỏ vào ảnh lá cũ** | Mô tả hoàn toàn bằng chữ: *thin golden gothic line-art border + corner flourishes + aged parchment* |
-| Nhân vật | chỉ tuổi / tóc / vóc dáng | **bổ sung** mắt, màu da, nét riêng (signature), không khí (aura) từ `tarot prompt/02-CHARACTER-SPECS.md` |
-| Quy trình 4 lớp, medallion, ruy băng, count lock, anatomy lock, 7:12 | giữ nguyên | **giữ nguyên** (kế thừa quy trình tạo) |
+| **1. Nền** | Giấy kim loại ánh bạc | metallic silver paper/foil, vân chải nhẹ, phản quang mềm |
+| **2. Nội dung** | Cảnh lá bài | phóng to, **tràn viền tới phần họa tiết** (bleed dưới mép khung) |
+| **3. Khung họa tiết** | Viền trang trí | **thanh mảnh · sắc nét · ánh vàng kim** (gold-foil filigree + hoa văn góc) |
+| **4. Tên lá bài** | Chữ nghệ thuật | kiểu chữ gothic calligraphy vàng — **KHÔNG khung tên, KHÔNG khung ký hiệu** (bỏ ribbon + medallion) |
+
+> Khác chuẩn cũ: bỏ hẳn **oval medallion** (khung ký hiệu) và **ribbon banner** (khung tên).
+> Nền đổi từ giấy da cổ (parchment) sang **giấy kim loại ánh bạc**.
 
 ## Kế thừa từ quy trình tạo cũ
 
-- Cấu trúc 4 lớp chiều sâu (`tarot prompt/00-MASTER-PROMPT.md`): nền giấy da → nội dung
-  tràn nhẹ dưới khung → khung vàng đè lên mép nội dung → medallion + ruy băng tên.
 - Khoá số lượng (`COUNT LOCK`): đúng 2 bình nước cho The Star.
 - Khoá giải phẫu (`ANATOMY LOCK`): đúng 2 tay, 2 chân, 1 đầu, 1 thân.
-- Tỷ lệ 7:12 (784×1360), huy hiệu `an eight-pointed star`, tên `THE STAR`.
-
-## Nội dung lá The Star (từ nguồn chuẩn)
-
-- `scene`: từ `tarot prompt/cards.json` → `17-the-star`.
-- `CHARACTER` (mắt · da · nét riêng · không khí): từ `tarot prompt/02-CHARACTER-SPECS.md`
-  → mắt **starlight grey-blue, wide-set** · da **ivory** · tóc vàng ánh bạc ướt rủ qua vai ·
-  **chòm tàn nhang vàng trên hai vai** · không khí *nước đêm – sao – làn da ướt* · vóc dáng **A (thanh mảnh)**.
+- Tỷ lệ 7:12 (784×1360).
+- Nhân vật (`CHARACTER`): tuổi/tóc/vóc dáng từ `01-CARD-TABLE.md` + mắt/da/nét riêng/không khí
+  từ `02-CHARACTER-SPECS.md`.
 
 ## File
 
 | File | Ý nghĩa |
 |---|---|
-| `template.md` | Template prompt mới tái sử dụng (điền `{TITLE}` `{EMBLEM}` `{SCENE}` `{CHARACTER_SPECIFICATION}` `{COUNT_LOCK}`) |
+| `template.md` | Template prompt mới (điền `{TITLE}` `{SCENE}` `{CHARACTER_SPECIFICATION}` `{COUNT_LOCK}`) |
 | `17-the-star.txt` | Prompt mới hoàn chỉnh cho lá The Star |
-| `17-the-star.png` | Ảnh lá The Star được tạo từ prompt mới |
+| `frame-template.png` | **Mẫu khung nền + khung họa tiết** (Lớp 1 + Lớp 3), trống ở giữa để ghép nội dung |
+| `17-the-star.png` | Ảnh The Star bản cũ (parchment) — sẽ thay bằng bản mới khi cần |
+
+## Ghi chú
+
+Session gắn cố định với nhánh `arena/01a05ffa-tarot-card` nên không tạo nhánh Git mới được;
+mọi thứ được đặt gọn trong `new-prompt/` để tách biệt với bộ bài cũ.
