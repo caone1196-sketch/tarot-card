@@ -52,13 +52,15 @@ Quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài Tarot — **khung 
      đã sinh ra các phương án được chấp nhận** — giữ nguyên khi render lại lá
      này (đã đóng vào `STAR_SCENE_LOCK` / `STAR_SKY_RIPPLE_LOCK` trong
      `scripts/build_prompts.py` và `scene` trong `tarot prompt/cards.json`):
-     * *classical allegorical oil painting of a water nymph at night, Victorian
-       allegorical art, tasteful luminous old-master style; S-CURVE stance —
-       hips swayed, torso softly leaning, one leg lightly bent; face tilted
-       slightly BACK toward the stars; right arm raised high, stream pouring
-       ONTO her neck and gliding down collarbone/torso like liquid glass into
-       the lake; left arm relaxed down and BEHIND her back with a second
-       golden pitcher tilted slightly, NO water flows from it.*
+     * *ADULT CLASSICAL FIGURE STUDY: unclothed human form, elegant natural pose,
+       realistic anatomy, Renaissance-inspired fine art, soft chiaroscuro
+       lighting, museum-quality composition, non-sexual artistic presentation —
+       S-CURVE stance; face tilted slightly BACK toward the stars; right arm
+       raised high, stream pouring ONTO her neck and gliding down
+       collarbone/torso like liquid glass into the lake; left arm relaxed down
+       and BEHIND her back with a second golden pitcher tilted slightly, NO
+       water flows from it; she wears no cloth — the stream of water is her
+       only garment.*
      * **SKY LOCK**: 1 sao 8 cánh lớn + 7 sao nhỏ, **không trăng**. **RIPPLE
        RULE**: gợn sóng CHỈ ở 2 vùng — nơi thân chạm mặt nước và nơi dòng
        nước chạm mặt nước; không gợn nào khác.
