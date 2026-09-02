@@ -224,6 +224,37 @@ def build_card_prompt_new_frame(card: dict, spec: dict | None):
     )
 
 
+def build_content_prompt(card: dict, spec: dict | None):
+    """Prompt CHỈ NỘI DUNG (không khung/tên) — dùng cho generate_image trực tiếp."""
+    title = card.get("title", "")
+    scene = card.get("scene", "")
+    scene_locks = CARD_LOCKS.get(card.get("slug"), ())
+    if scene_locks:
+        scene = " ".join(scene_locks)
+    count_str = format_count_lock(card.get("count"))
+    char_str = format_character_spec(card, spec)
+
+    anatomy_lock = (
+        "ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; "
+        "every joint (shoulder, elbow, wrist, hip, knee, ankle) connects naturally to the body — "
+        "NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing or amputated arms, "
+        "NO deformed joints, NO wrong finger counts; keep both arms clearly separated from the torso "
+        "with visible armpits, elbows and wrists."
+    )
+    extras = " ".join(x for x in (char_str, SOFT_OBJECT_HALO, count_str, anatomy_lock) if x)
+
+    return (
+        f"Fine-art oil painting of \"{title}\" in old-master allegorical style, portrait 7:12 "
+        f"PORTRAIT orientation, FULL-BLEED artwork covering the whole canvas — no border, no frame, "
+        f"no text, no watermark.\n\n"
+        f"SCENE: {SAFE_ART_STYLE} {scene}. {extras}\n\n"
+        f"{QUALITY_LOCK}\n\n"
+        f"Serene, dignified old-master presentation: painterly warm lighting against soft subtle "
+        f"shadows, rich atmospheric perspective and depth, non-sexual artistic composition, "
+        f"ultra-high detail."
+    )
+
+
 def main():
     if len(sys.argv) < 2:
         print(__doc__)
@@ -260,6 +291,17 @@ def main():
             with open(os.path.join(OUT_DIR, f"{slug}.txt"), "w", encoding="utf-8") as f:
                 f.write(p + "\n")
         print(f"Generated {len(cards)} prompts (4-layer frame, no emblem) in {OUT_DIR}/")
+
+    elif cmd == "content":
+        if len(sys.argv) < 3:
+            print("Usage: python3 scripts/build_prompts.py content <slug>")
+            sys.exit(1)
+        slug = sys.argv[2]
+        match = next((c for c in cards if c["slug"] == slug), None)
+        if not match:
+            print(f"Card '{slug}' not found.")
+            sys.exit(1)
+        print(build_content_prompt(match, specs.get(slug)))
 
     elif cmd == "md":
         print("| Slug | Title | Age | Eyes | Hair | Physique | Skin | Signature | Aura |")
