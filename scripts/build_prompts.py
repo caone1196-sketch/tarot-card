@@ -84,6 +84,24 @@ SKIN_RULE = (
     "warm peach, light olive, sand, warm tan, honey, light bronze, amber-gold); "
     "NEVER dark, brown-black or black skin, even in shadow."
 )
+# Tấm lụa trong suốt — phụ kiện chuẩn cho mọi nhân vật nude nghệ thuật
+SILK_ACCESSORY = (
+    "SHEER SILK ACCESSORY: every nude fine-art figure carries a transparent gossamer silk veil — "
+    "draped over one shoulder, slung low across the hips, or flowing behind her — luminous, "
+    "translucent, painterly, clinging softly over skin; never flat, never opaque."
+)
+# Thông số chất lượng: độ bóng · chi tiết · khử hạt/nhiễu · độ sắc nét
+QUALITY_LOCK = (
+    "QUALITY & SURFACE LOCK (HARD RULE): "
+    "GLOSSY — luminous oil-paint sheen on skin, wet-glass specular highlights on shoulders, "
+    "collarbones, hips and lips, no flat matte finish; "
+    "DETAIL — ultra-high fine detail on hair strands, silk fibres, skin pores, jewellery and "
+    "background textures; "
+    "NOISE — perfectly clean image: NO film grain, NO sensor noise, NO speckles, NO dither artifacts, "
+    "NO jpeg artefacts, NO chromatic fringing; smooth buttery gradients everywhere; "
+    "SHARPNESS — razor-sharp crisp edges, high-contrast micro detail, tack-sharp focus on the figure "
+    "and title, no soft blur, no motion blur on the figure."
+)
 
 # ---------------------------------------------------------------- formatting
 def format_count_lock(count_info):
@@ -140,7 +158,9 @@ def build_card_prompt_new_frame(card: dict, spec: dict | None):
         "with visible armpits, elbows and wrists."
     )
 
-    extras = " ".join(x for x in (char_str, count_str, anatomy_lock) if x)
+    # chỉ thêm lụa trong suốt khi lá có nhân vật (spec tồn tại)
+    silk = SILK_ACCESSORY if spec else ""
+    extras = " ".join(x for x in (char_str, silk, count_str, anatomy_lock) if x)
 
     return (
         f'A single tarot card "{title}" in vintage gothic fine-art style, portrait 7:12 aspect ratio, '
@@ -160,8 +180,10 @@ def build_card_prompt_new_frame(card: dict, spec: dict | None):
         f"whose baseline gently CURVES (letters rise at the ends, sag in the middle), placed DIRECTLY on "
         f"the scene — NO title frame, NO plate, NO ribbon, NO cartouche, NO border around the text; "
         f"clean carved edges with a thin shadow.\n\n"
+        f"{QUALITY_LOCK}\n"
         f"Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric "
-        f"perspective and depth, no heavy inner arch barriers, vintage gothic fine-art illustration, high detail."
+        f"perspective and depth, no heavy inner arch barriers, vintage gothic fine-art illustration, "
+        f"ultra-high detail."
     )
 
 

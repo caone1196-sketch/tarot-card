@@ -32,6 +32,11 @@
   (viền tối + lõi sáng + quầng ấm mảnh — nổi bật nhưng giữ nét mảnh) đè lên nội dung ·
   ④ khung tên: dải băng vàng kim + tên lá chữ Gothic.
 - **KHÔNG còn oval medallion / huy hiệu / biểu tượng ở đỉnh** (khung biểu tượng đã bỏ).
+- **LỤA TRONG SUỐT**: mọi nhân vật nude nghệ thuật đều có tấm lụa gossamer trong suốt
+  (vai / hông / bay sau) — luminous, translucent, không phẳng/đặc.
+- **THÔNG SỐ CHẤT LƯỢNG (mọi prompt)**: GLOSSY (da bóng dầu vẽ, specular ướt),
+  DETAIL siêu chi tiết, **không film grain / noise / speckle / jpeg artifact**,
+  SHARPNESS mép sắc, focus tuyệt đối — xem `QUALITY_LOCK` trong `scripts/build_prompts.py`.
 - So khung: neo theo `cards/17-the-star.png` — RMSE trên **mask khung dùng chung**
   (`variants/frame-kit/03-frame-thin-clean.png`) ≤ 0.04.
 - **Khoá số lượng**: số vật thể (gậy/cốc/kiếm/tiền) trong nội dung phải đúng con số của lá đó.
