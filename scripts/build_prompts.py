@@ -84,19 +84,20 @@ SKIN_RULE = (
     "warm peach, light olive, sand, warm tan, honey, light bronze, amber-gold); "
     "NEVER dark, brown-black or black skin, even in shadow."
 )
-# Tấm lụa trong suốt — phụ kiện chuẩn cho mọi nhân vật nude nghệ thuật
-SILK_ACCESSORY = (
-    "SHEER SILK ACCESSORY: every nude fine-art figure carries a transparent gossamer silk veil — "
-    "draped over one shoulder, slung low across the hips, or flowing behind her — luminous, "
-    "translucent, painterly, clinging softly over skin; never flat, never opaque."
+# QUẦNG MỀM GẦN VẬT THỂ — giữ gợn mờ / halo mềm quanh đồ vật, nguồn sáng (không phải nhiễu)
+SOFT_OBJECT_HALO = (
+    "SOFT OBJECT HALO: keep a gentle blurred halo / subtle haze close to objects — water ripples "
+    "around jugs and vessels, soft glow around lamps, candles and gold, light bloom near stars and "
+    "flames, faint soft reflection where objects meet water; these soft ambient ripples near objects "
+    "are INTENTIONAL — do not remove them, but keep them smooth, painterly and localized (NOT noise, "
+    "NOT grain, NOT sharp blur)."
 )
 # Thông số chất lượng: độ bóng · chi tiết · khử hạt/nhiễu · độ sắc nét
 QUALITY_LOCK = (
     "QUALITY & SURFACE LOCK (HARD RULE): "
     "GLOSSY — luminous oil-paint sheen on skin, wet-glass specular highlights on shoulders, "
     "collarbones, hips and lips, no flat matte finish; "
-    "DETAIL — ultra-high fine detail on hair strands, silk fibres, skin pores, jewellery and "
-    "background textures; "
+    "DETAIL — ultra-high fine detail on hair strands, skin pores, jewellery and background textures; "
     "NOISE — perfectly clean image: NO film grain, NO sensor noise, NO speckles, NO dither artifacts, "
     "NO jpeg artefacts, NO chromatic fringing; smooth buttery gradients everywhere; "
     "SHARPNESS — razor-sharp crisp edges, high-contrast micro detail, tack-sharp focus on the figure "
@@ -158,9 +159,8 @@ def build_card_prompt_new_frame(card: dict, spec: dict | None):
         "with visible armpits, elbows and wrists."
     )
 
-    # chỉ thêm lụa trong suốt khi lá có nhân vật (spec tồn tại)
-    silk = SILK_ACCESSORY if spec else ""
-    extras = " ".join(x for x in (char_str, silk, count_str, anatomy_lock) if x)
+    # luôn giữ "gợn mờ gần vật thể" (soft object halo) — mọi lá
+    extras = " ".join(x for x in (char_str, SOFT_OBJECT_HALO, count_str, anatomy_lock) if x)
 
     return (
         f'A single tarot card "{title}" in vintage gothic fine-art style, portrait 7:12 aspect ratio, '

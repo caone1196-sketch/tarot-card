@@ -43,10 +43,11 @@ Quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài Tarot — **khung 
      không ngón sai số. Ưu tiên tư thế 2 tay tách rõ khỏi thân.
    * **NÉT RIÊNG**: mỗi nhân vật đúng **1** chi tiết nhận diện (nốt ruồi, sẹo nhỏ,
      tàn nhang, xăm, khuyên, bớt…), không trùng giữa các lá.
-   * **LỤA TRONG SUỐT (SHEER SILK ACCESSORY)**: mọi nhân vật nude nghệ thuật đều
-     có **tấm lụa mỏng trong suốt (gossamer silk veil)** làm phụ kiện — vắt qua
-     một vai, quấn ngang hông, hoặc bay phía sau; ánh, trong, bám mềm lên da,
-     **không bao giờ phẳng / đặc**.
+   * **GỢN MỜ GẦN VẬT THỂ (SOFT OBJECT HALO)**: giữ **quầng sáng / halo mờ mềm
+     ngay cạnh các vật thể** — gợn nước quanh bình/chén, quầng sáng quanh đèn,
+     nến, đồ vàng, bloom nhẹ gần sao/lửa, phản chiếu mờ nơi vật chạm nước.
+     Đây là hiệu ứng **cố ý** — không xoá, giữ mượt, có chủ đích, khu trú
+     (⚠️ không phải nhiễu / grain / sharp blur).
 
 4. **Thông số chất lượng (QUALITY & SURFACE LOCK — áp dụng mọi lá)**:
    * **Độ bóng (GLOSSY)**: da có độ bóng dầu vẽ ánh sáng, điểm specular "ướt"
