@@ -62,6 +62,10 @@ Quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài Tarot — **khung 
      * **SKY LOCK**: 1 sao 8 cánh lớn + 7 sao nhỏ, **không trăng**. **RIPPLE
        RULE**: gợn sóng CHỈ ở 2 vùng — nơi thân chạm mặt nước và nơi dòng
        nước chạm mặt nước; không gợn nào khác.
+     * **CLOTH RULE (HARD)**: tuyệt đối **không veil / lụa / vải / áo / khăn
+       quấn / drapery** trên người — **BARE SKIN ONLY**; dòng nước là nước
+       trong chảy trên da trần, **KHÔNG** diễn giải thành váy nước mờ /
+       sarong / áo lụa / water-veil / drape.
 
 4. **Thông số chất lượng (QUALITY & SURFACE LOCK — áp dụng mọi lá)**:
    * **Độ bóng (GLOSSY)**: da có độ bóng dầu vẽ ánh sáng, điểm specular "ướt"

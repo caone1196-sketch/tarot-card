@@ -117,7 +117,11 @@ STAR_SCENE_LOCK = (
     "from its spout ONTO her neck, gliding down her collarbone and torso like liquid glass, falling "
     "from her waist into the lake; "
     "her left arm hangs relaxed down and BEHIND her back, hand holding a second golden pitcher "
-    "tilted slightly — NO water flows from it."
+    "tilted slightly — NO water flows from it. "
+    "CLOTH RULE (HARD): NO veil, NO silk, NO fabric, NO dress, NO chemise, NO drapery, NO wrap, "
+    "NO cloth of any kind on her body — BARE SKIN ONLY; do NOT render the water stream as a "
+    "translucent garment, sarong or gown — the stream is transparent liquid water running over bare "
+    "skin, NOT wet cloth; no diaphanous gown, no chiffon, no water-veil, no flowing drape."
 )
 STAR_SKY_RIPPLE_LOCK = (
     "SKY LOCK: one large radiant EIGHT-POINTED gold star directly above her head, with SEVEN "
