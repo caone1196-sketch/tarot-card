@@ -7,8 +7,8 @@ Bộ bài **78 lá** theo khung bài mới: **4 lớp, vàng kim, KHÔNG biểu 
 
 | Thư mục | Nội dung |
 |---|---|
-| `official-deck/major/` | **22 lá Ẩn Chính** (hoàn chỉnh, khung mới) |
-| `official-deck/content/` | Ảnh nội dung **full-bleed chưa khung** (trung gian, có thể tái sinh) |
+| `official-deck/major/` | **22 lá Ẩn Chính** (780×1360, khung mới) |
+| `official-deck/content/` | Ảnh nội dung **full-bleed chưa khung** (trung gian, gitignore) |
 | `cards/` | Thư viện lịch sử / anchor The Star + các lá đã nâng cấp |
 
 ## 🎴 Khung bài chính thức (4 lớp)
@@ -30,13 +30,13 @@ Bộ bài **78 lá** theo khung bài mới: **4 lớp, vàng kim, KHÔNG biểu 
 | 5 | THE HIEROPHANT | `05-hierophant.png` | ✅ |
 | 6 | THE LOVERS | `06-lovers.png` | ✅ |
 | 7 | THE CHARIOT | `07-chariot.png` | ✅ |
-| 8 | STRENGTH | `08-strength.png` | 🔄 đang tạo |
+| 8 | STRENGTH | `08-strength.png` | ✅ |
 | 9 | THE HERMIT | `09-hermit.png` | ✅ |
-| 10 | WHEEL OF FORTUNE | `10-wheel.png` | ⏳ |
-| 11 | JUSTICE | `11-justice.png` | ⏳ |
-| 12 | THE HANGED MAN | `12-hanged.png` | ⏳ |
-| 13 | DEATH | `13-death.png` | ⏳ |
-| 14 | TEMPERANCE | `14-temperance.png` | ⏳ |
+| 10 | WHEEL OF FORTUNE | `10-wheel.png` | ✅ |
+| 11 | JUSTICE | `11-justice.png` | ✅ |
+| 12 | THE HANGED MAN | `12-hanged.png` | ✅ |
+| 13 | DEATH | `13-death.png` | ✅ |
+| 14 | TEMPERANCE | `14-temperance.png` | ✅ |
 | 15 | THE DEVIL | `15-devil.png` | ⏳ |
 | 16 | THE TOWER | `16-tower.png` | ⏳ |
 | 17 | THE STAR | `17-the-star.png` | ✅ |
