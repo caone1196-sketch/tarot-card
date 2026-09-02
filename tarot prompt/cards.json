@@ -17,7 +17,7 @@
    "title": "THE FOOL",
    "femme": true,
    "count": null,
-   "scene": "a carefree 19-year-old woman wanderer draped only in a transparent silk veil so fine it clings and reveals her bare body beneath, the veil slipping from one shoulder and streaming behind her, a white rose lifted in one hand and her eyes lowered to look at it, stepping lightly toward a cliff edge, a small white dog leaping at her heel, distant mountains under a golden morning sun",
+   "scene": "a carefree 19-year-old woman wanderer her bare body clad only in morning light and wind, one shoulder turned toward the sun, a white rose lifted in one hand and her eyes lowered to look at it, stepping lightly toward a cliff edge, a small white dog leaping at her heel, distant mountains under a golden morning sun",
    "hair": "loose wind-tossed honey-blonde waves down to her shoulder blades, sunlit and carefree",
    "age": "19 years old",
    "build": "petite and lithe, slender waist, youthful energy and light, springy step"
@@ -34,7 +34,7 @@
     "obj": "suit objects on the altar",
     "layout": "exactly four objects, one of each: one cup, one sword, one wand, one coin — all four resting on the altar table, all four wholly visible, no duplicates, nothing else on the table"
    },
-   "scene": "a nude young woman magician, bare torso with a length of silk slung low across her hips, one hand raising a wand to the sky and the other pointing down to the earth, the altar table before her laid with a cup, a sword, a wand and a pentacle, a garden of black roses behind her",
+   "scene": "a nude young woman magician, her bare form veiled only by soft garden shadow, one hand raising a wand to the sky and the other pointing down to the earth, the altar table before her laid with a cup, a sword, a wand and a pentacle, a garden of black roses behind her",
    "hair": "jet-black straight hair falling past her waist like a sleek silk curtain, center-parted",
    "age": "22 years old",
    "build": "statuesque and commanding, elegant elongated proportions with poised posture"
@@ -47,7 +47,7 @@
    "title": "THE HIGH PRIESTESS",
    "femme": true,
    "count": null,
-   "scene": "a serene nude priestess, bare shoulders and the soft line of her breasts veiled only by a drift of sheer gauze, seated between two stone pillars, a scroll of mystery resting in her lap, a silver crescent moon at her feet",
+   "scene": "a serene nude priestess, bare shoulders softened by moonlight and shadow, seated between two stone pillars, a scroll of mystery resting in her lap, a silver crescent moon at her feet",
    "hair": "deep auburn hair with soft natural waves, cascading beneath a sheer gossamer veil",
    "age": "23 years old",
    "build": "serene, slender and graceful, long neck and soft classical feminine curves"
@@ -73,7 +73,7 @@
    "title": "THE EMPEROR",
    "femme": true,
    "count": null,
-   "scene": "a serene 25-year-old female emperor reclining gracefully on a stone throne carved with ram heads, draped only in a diaphanous transparent silk veil so fine it clings to her soft curves and glows with warm light against her skin, the gossamer fabric slipping from one shoulder, holding an ankh scepter loosely in one hand, barren rugged mountains behind her",
+   "scene": "a serene 25-year-old female emperor reclining gracefully on a stone throne carved with ram heads, her bare form clad only in warm light and shadow, holding an ankh scepter loosely in one hand, barren rugged mountains behind her",
    "age": "25 years old",
    "hair": "sleek dark bronze-brown hair in soft loose waves, crowned with a golden ram-horn circlet",
    "build": "graceful, soft and refined female sovereign with gently sculpted curves and a serene, tender composure"
@@ -86,7 +86,7 @@
    "title": "THE HIEROPHANT",
    "femme": true,
    "count": null,
-   "scene": "a serene 24-year-old female high mystic priestess draped only in a diaphanous transparent red silk veil so fine it clings to her curves and glows with warm candlelight against her skin, the gossamer-thin fabric slipping from one shoulder, raising one blessing hand, two kneeling female acolytes before her, sacred temple pillars behind",
+   "scene": "a serene 24-year-old female high mystic priestess her bare form clad only in candlelight and incense haze, raising one blessing hand, two kneeling female acolytes before her, sacred temple pillars behind",
    "age": "24 years old",
    "hair": "thick espresso-brown waves falling loose over her bare shoulders and back",
    "build": "tall, noble and serene female high priestess with graceful dignified poise"
@@ -99,7 +99,7 @@
    "title": "THE LOVERS",
    "femme": true,
    "count": null,
-   "scene": "a nude man and a nude woman standing hand in hand beneath a great winged angel, her body turned three-quarters toward the viewer with silk fallen to her hip and his hand at the small of her back, the tree of knowledge with a serpent behind her, the tree of flames behind him",
+   "scene": "a nude man and a nude woman standing hand in hand beneath a great winged angel, her body turned three-quarters toward the viewer one bare hip turned into soft shadow and his hand at the small of her back, the tree of knowledge with a serpent behind her, the tree of flames behind him",
    "hair": "warm chestnut-brown hair gathered in a loose romantic knot with soft wisps framing her cheeks",
    "age": "21 years old",
    "build": "slender hourglass silhouette, supple waist, graceful gentle curves beside her partner"
@@ -112,7 +112,7 @@
    "title": "THE CHARIOT",
    "femme": true,
    "count": null,
-   "scene": "a heroic bare-shouldered woman charioteer wrapped in loose sheer white silk with no armor, standing tall in a stone chariot between two sphinxes under a starry canopy, a walled city behind her",
+   "scene": "a heroic bare-shouldered woman charioteer bare-armed in the night wind, no armor, standing tall in a stone chariot between two sphinxes under a starry canopy, a walled city behind her",
    "hair": "dark sable-brown hair tightly plaited in a single thick warrior braid over one shoulder",
    "age": "22 years old",
    "build": "athletic and toned, sculpted shoulders and taut waist, resolute and heroic stance"
@@ -138,7 +138,7 @@
    "title": "THE HERMIT",
    "femme": true,
    "count": null,
-   "scene": "a hermit woman standing on a bare mountain peak under a deep star-filled night sky, holding up a lit lantern with warm golden light pouring out of it, draped only in a loose sheer white silk gauze that slips from her bare shoulders and pools low around her hips, her bare back and the curve of one breast veiled and revealed by the golden lantern light",
+   "scene": "a hermit woman standing on a bare mountain peak under a deep star-filled night sky, holding up a lit lantern with warm golden light pouring out of it, her bare form clad only in golden lantern light",
    "hair": "ethereal silver-ash long hair falling loose in soft waves",
    "age": "23 years old",
    "build": "slender, mysterious and delicate silhouette, quiet meditative poise"
@@ -155,7 +155,7 @@
     "obj": "sword",
     "layout": "exactly one sword, held upright by the sphinx on top of the wheel; no other blade anywhere on the card"
    },
-   "scene": "a great golden wheel of fortune inscribed with mystic letters, a serene winged female sphinx draped only in a diaphanous transparent silk veil that clings to her soft curves and glows with warm light, seated gently atop the wheel holding a single upright sword loosely in one hand, a rising golden serpent on one side and a jackal deity on the other, four graceful winged female watchers in flowing transparent silk reclining softly at the four corners",
+   "scene": "a great golden wheel of fortune inscribed with mystic letters, a serene winged female sphinx clad only in warm light and shadow, seated gently atop the wheel holding a single upright sword loosely in one hand, a rising golden serpent on one side and a jackal deity on the other, four graceful winged female watchers in soft light reclining softly at the four corners",
    "age": "22 years old",
    "hair": "golden-amber hair in soft loose waves, crowned with delicate celestial laurels",
    "build": "graceful, soft and serene winged female guardian with gently sculpted curves and a tender, dreamy composure"
@@ -172,7 +172,7 @@
     "obj": "sword",
     "layout": "exactly one sword, held upright in her left hand; no other blade on the card"
    },
-   "scene": "a statuesque bare-shouldered queen, a length of sheer silk sliding fully off one shoulder to bare one breast and one hip, a sword upright in one hand and balanced scales in the other, seated on a stone throne between pillars",
+   "scene": "a statuesque bare-shouldered queen, bare shoulders and one hip turned into the light, a sword upright in one hand and balanced scales in the other, seated on a stone throne between pillars",
    "hair": "sleek raven-black hair drawn back sharply into a high polished half-ponytail",
    "age": "24 years old",
    "build": "statuesque and regal, prominent collarbones, straight spine and austere balanced posture"
@@ -198,7 +198,7 @@
    "title": "DEATH",
    "femme": true,
    "count": null,
-   "scene": "a striking 22-year-old pale female figure draped in sheer black silk that veils and reveals her bare form, riding a calm black charger, holding a black banner adorned with a five-petaled white rose, a golden sunrise glowing between twin distant towers",
+   "scene": "a striking 22-year-old pale female figure her bare form clad only in night and shadow, riding a calm black charger, holding a black banner adorned with a five-petaled white rose, a golden sunrise glowing between twin distant towers",
    "age": "22 years old",
    "hair": "long bone-platinum hair flowing loose and free",
    "build": "tall, slender and formidable female silhouette wrapped in sheer black silk"
@@ -215,7 +215,7 @@
     "obj": "chalices",
     "layout": "exactly two chalices, one in each hand, both bowls fully visible and un-occluded"
    },
-   "scene": "a graceful winged figure with long loosened hair, draped in a diaphanous transparent silk veil, seated gracefully on a mossy stone by the pool with one leg trailing into the water, pouring from a golden chalice tilted high in her raised hand while her other hand holds a second golden chalice positioned directly beneath the upper chalice's lip so that its open mouth catches the falling water, a single smooth unbroken stream of water pouring straight down from the tilted upper chalice and landing inside the lower chalice's bowl, irises blooming around the pool, warm sepia and ochre light",
+   "scene": "a graceful winged figure with long loosened hair, her bare form clad only in the falling water, seated gracefully on a mossy stone by the pool with one leg trailing into the water, pouring from a golden chalice tilted high in her raised hand while her other hand holds a second golden chalice positioned directly beneath the upper chalice's lip so that its open mouth catches the falling water, a single smooth unbroken stream of water pouring straight down from the tilted upper chalice and landing inside the lower chalice's bowl, irises blooming around the pool, warm sepia and ochre light",
    "hair": "pale fine ash-blonde hair floating weightlessly in the air",
    "age": "22 years old",
    "build": "ethereal and willowy, long slender limbs, arched supple spine, graceful angelic poise"
@@ -228,7 +228,7 @@
    "title": "THE DEVIL",
    "femme": true,
    "count": null,
-   "scene": "a horned winged female arch-devil draped in sheer black silk upon a dark pedestal; beside her two alluring nude young women arched in golden chains, their bodies glowing in candlelit shadow inside an obsidian cavern",
+   "scene": "a horned winged female arch-devil in shadow and dark haze upon a dark pedestal; beside her two alluring nude young women arched in golden chains, their bodies glowing in candlelit shadow inside an obsidian cavern",
    "hair": "midnight-black wavy hair with deep wine-red undertones, wild and untamed",
    "age": "21 years old",
    "build": "sultry and curvaceous, arched back and soft full hips, magnetic alluring presence"
@@ -258,7 +258,7 @@
     "obj": "jugs",
     "layout": "exactly two golden jugs, one in each hand — the raised one pouring onto her neck, the one behind her back dry and tilted; nothing else floats"
    },
-   "scene": "an ADULT CLASSICAL FIGURE STUDY: natural human form, elegant anatomical study, graceful Renaissance pose, realistic proportions, sculptural aesthetics, soft chiaroscuro lighting, museum-quality fine art, classical life-drawing style, non-sexual artistic composition — a graceful young woman standing waist-deep in a calm moonlit lake, long pale gold wet hair flowing down her back, S-CURVE stance, hips swayed, torso softly leaning, one leg lightly bent; her face tilted slightly BACK, chin raised toward the stars; her right arm raised high overhead gripping a golden pitcher, a silvery stream pouring from its spout onto her neck, gliding down her collarbone and torso like liquid glass, falling from her waist into the lake; her left arm hangs relaxed down and BEHIND her back, hand holding a second golden pitcher tilted slightly — NO water flows from it; she wears no cloth — the stream of water is her only garment; a large radiant eight-pointed gold star directly above her head with seven smaller stars arranged around it, no moon",
+   "scene": "an OLD-MASTER ALLEGORICAL PAINTING of a water-spirit maiden at night, serene, dignified, museum-quality fine art, soft chiaroscuro lighting — a graceful young woman standing waist-deep in a calm moonlit lake, long pale gold wet hair flowing down her back, S-CURVE stance, hips swayed, torso softly leaning, one leg lightly bent; her face tilted slightly BACK, chin raised toward the stars; her right arm raised high overhead gripping a golden pitcher, a silvery stream pouring from its spout onto her neck, gliding down her collarbone and torso like liquid glass, falling from her waist into the lake; her left arm hangs relaxed down and BEHIND her back, hand holding a second golden pitcher tilted slightly — NO water flows from it; the stream of water is her only garment; a large radiant eight-pointed gold star directly above her head with seven smaller stars around it, no moon",
    "hair": "very long pale shimmering gold hair, wet and silky, cascading down past one bare shoulder",
    "age": "20 years old",
    "build": "slender and lithe, narrow waist, long graceful legs, luminous maiden proportions"
@@ -299,7 +299,7 @@
    "title": "JUDGEMENT",
    "femme": true,
    "count": null,
-   "scene": "a serene winged female angel draped only in a diaphanous transparent silk veil that clings to her soft curves and glows with warm light, gently lifting a golden trumpet with a white banner; below, rising from calm waters, three beautiful young women with softly open arms turning toward the divine light — one fair-skinned with flowing blonde hair, one warm-toned with dark auburn curls, and one deep-skinned with tight black coils — each with a distinct face and figure, each draped in sheer transparent silk",
+   "scene": "a serene winged female angel clad only in warm light and shadow, gently lifting a golden trumpet with a white banner; below, rising from calm waters, three beautiful young women with softly open arms turning toward the divine light — one fair-skinned with flowing blonde hair, one warm-toned with dark auburn curls, and one deep-skinned with tight black coils — each with a distinct face and figure, each clad only in mist and rising light",
    "hair": "rich amber-honey hair in soft luminous waves catching gentle golden rays",
    "age": "22 years old",
    "build": "graceful, soft and serene winged angel with gently sculpted curves and a tender, uplifting composure"
@@ -316,7 +316,7 @@
     "obj": "wands",
     "layout": "exactly two wands, one gripped in each hand, both shafts visible from hand to tip"
    },
-   "scene": "a serene adult woman dancer posed gracefully with a gentle curve, one hip softly out and one knee lightly lifted, her body relaxed with her head tilted back, draped only in a diaphanous transparent white silk veil that clings to her soft curves and streams softly behind her, one slim wand held lightly in each hand, dancing within a great oval laurel wreath, an angel, an eagle, a lion and a bull at the corners",
+   "scene": "a serene adult woman dancer posed gracefully with a gentle curve, one hip softly out and one knee lightly lifted, her body relaxed with her head tilted back, clad only in moonlight and flowing air, one slim wand held lightly in each hand, dancing within a great oval laurel wreath, an angel, an eagle, a lion and a bull at the corners",
    "build": "graceful, soft and serene dancer's physique, gentle curves, supple tender poise",
    "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
    "hair": "dark chocolate-chestnut hair in soft loose waves drifting gently with white silk ribbons",
@@ -334,7 +334,7 @@
     "obj": "wand",
     "layout": "exactly one wand, sprouting and alive, held by the divine hand; no second staff anywhere, not even in the landscape"
    },
-   "scene": "a graceful feminine divine hand emerging from soft clouds offering a single living sprouting wand, a delicate transparent silk veil fluttering around the wrist, a serene landscape and a distant castle below"
+   "scene": "a graceful feminine divine hand emerging from soft clouds offering a single living sprouting wand, a wisp of cloud drifting around the wrist, a serene landscape and a distant castle below"
   },
   {
    "n": "2",
@@ -348,7 +348,7 @@
     "obj": "wands",
     "layout": "exactly two wands: one held upright in her right hand, one mounted upright on the stone battlement to her left — 1 + 1 = 2; both shafts complete from base to tip, they do not cross"
    },
-   "scene": "a serene noblewoman on a battlement, draped in a diaphanous transparent silk veil slipping from one shoulder, a globe of the world resting in one palm with her eyes lowered to look at it, one wand upright in her other hand, the second wand mounted on the wall behind her",
+   "scene": "a serene noblewoman on a battlement, her bare form clad only in the falling water slipping from one shoulder, a globe of the world resting in one palm with her eyes lowered to look at it, one wand upright in her other hand, the second wand mounted on the wall behind her",
    "hair": "deep auburn hair falling in long loose ringlets over one shoulder",
    "age": "22 years old",
    "build": "slender, serene and contemplative, gentle upright posture looking out from the parapet"
@@ -365,7 +365,7 @@
     "obj": "wands",
     "layout": "exactly three wands planted upright in one straight diagonal row across the foreground, evenly spaced and widely separated, all three tips clear of the horizon, none overlapping or crossing — count them left to right: 1, 2, 3"
    },
-   "scene": "a serene woman merchant seen from behind on a high rocky headland, standing tall with her long back line turned to us, draped only in a diaphanous transparent silk veil that clings and reveals her soft curves and streams in the sea wind, one hand resting high on the staff beside her and the other raised to shade her eyes as she gazes far out to sea, three staves planted upright in a row around her, sailing ships on a golden sea",
+   "scene": "a serene woman merchant seen from behind on a high rocky headland, standing tall with her long back line turned to us, clad only in sea light and wind, one hand resting high on the staff beside her and the other raised to shade her eyes as she gazes far out to sea, three staves planted upright in a row around her, sailing ships on a golden sea",
    "hair": "warm caramel-brown hair loosely braided with golden cord",
    "age": "23 years old",
    "build": "tall and statuesque, long back line facing toward the horizon"
@@ -382,7 +382,7 @@
     "obj": "wands",
     "layout": "exactly four wands as the four corner posts of a canopy — two on the left, two on the right — 2 + 2 = 4; draw the two rear posts slightly taller than the two front posts so no post is hidden behind another; all four shafts fully visible from ground to tip, their tops joined by one flower garland"
    },
-   "scene": "four garlanded wands forming a festive canopy, two graceful young women dancing gently beneath it, both draped in diaphanous transparent silk veils and both with fair skin tones — one porcelain-skinned with flowing honey-gold hair and one rosy ivory-skinned with deep auburn ringlets, each with a distinct face and figure — a manor beyond",
+   "scene": "four garlanded wands forming a festive canopy, two graceful young women dancing gently beneath it, both clad only in soft light and both with fair skin tones — one porcelain-skinned with flowing honey-gold hair and one rosy ivory-skinned with deep auburn ringlets, each with a distinct face and figure — a manor beyond",
    "hair": "distinct per dancer: one with flowing honey-gold hair, one with tight black coils",
    "build": "both lithe and celebratory, joyful dancer waists and graceful raised arms, distinct faces and figures",
    "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
@@ -400,7 +400,7 @@
     "obj": "wands",
     "layout": "exactly five wands in total, exactly one gripped in each of the five women's hands — five women, five wands, one wand per woman, nobody holds two, no extra wand on the ground, no wand leaning anywhere, no wand in the background — count the wands: 1, 2, 3, 4, 5 and no more"
    },
-   "scene": "five graceful young women draped in diaphanous transparent silk veils standing in a loose circle in a soft meadow, each woman distinct and every one with fair skin tones — one porcelain-skinned with long platinum-blonde hair, one rosy ivory-skinned with copper-red waves, one warm ivory-skinned with deep chocolate-brown hair, one fair-skinned with raven-black straight hair, and one light golden-skinned with strawberry-blonde hair — each holding exactly one wand planted upright beside her",
+   "scene": "five graceful young women clad only in soft meadow light standing in a loose circle in a soft meadow, each woman distinct and every one with fair skin tones — one porcelain-skinned with long platinum-blonde hair, one rosy ivory-skinned with copper-red waves, one warm ivory-skinned with deep chocolate-brown hair, one fair-skinned with raven-black straight hair, and one light golden-skinned with strawberry-blonde hair — each holding exactly one wand planted upright beside her",
    "age": "21 years old",
    "hair": "distinct per woman: one blonde, one dark auburn curls, one tight black coils, one straight black, one copper waves",
    "build": "all slender, graceful and light with distinct faces and figures, gentle dancing stances"
@@ -417,7 +417,7 @@
     "obj": "wands",
     "layout": "exactly six wands: one laurel-crowned wand raised in the heroine's hand plus five held by the five followers behind her — 1 + 5 = 6; each follower holds their wand upright and well above shoulder height so all five are separately countable against the sky, no wand resting on a shoulder"
    },
-   "scene": "a serene woman on a white horse, draped in a diaphanous transparent silk veil, a laurel wreath on her brow, one crowned wand raised gently in her hand, five admirers behind her each holding one wand",
+   "scene": "a serene woman on a white horse, her bare form clad only in the falling water, a laurel wreath on her brow, one crowned wand raised gently in her hand, five admirers behind her each holding one wand",
    "hair": "honey-gold hair flowing softly in the breeze",
    "age": "22 years old",
    "build": "graceful, poised and serene, elegant equestrian posture on horseback"
@@ -434,7 +434,7 @@
     "obj": "wands",
     "layout": "exactly seven wands: one held in the young woman's two hands plus six rising from below the cliff edge in front of her — 1 + 6 = 7; the six lower tips evenly spaced along the cliff line, none overlapping"
    },
-   "scene": "a serene young woman standing atop a high crag, draped in a diaphanous transparent silk veil, holding one great wand gently with both hands, six wands rising from below",
+   "scene": "a serene young woman standing atop a high crag, her bare form clad only in the falling water, holding one great wand gently with both hands, six wands rising from below",
    "age": "21 years old",
    "hair": "dark espresso hair falling in soft loose curls",
    "build": "slender, serene and graceful, calm composed stance"
@@ -465,7 +465,7 @@
     "obj": "wands",
     "layout": "exactly nine wands: eight planted upright in one straight palisade row BEHIND her, evenly spaced and clear of her body, plus the one she holds in front of her — 8 + 1 = 9; all nine countable against open sky"
    },
-   "scene": "a serene young woman draped in a diaphanous transparent silk veil, gently resting her hands on one standing wand, eight wands upright behind her like a palisade",
+   "scene": "a serene young woman her bare form clad only in the falling water, gently resting her hands on one standing wand, eight wands upright behind her like a palisade",
    "age": "24 years old",
    "hair": "dark brown hair falling loose in soft waves",
    "build": "slender, serene and watchful, gentle composed stance"
@@ -482,7 +482,7 @@
     "obj": "wands",
     "layout": "exactly ten wands in one natural bundle tied at the middle — count the ten tips of the fan: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10; no nine, no eleven"
    },
-   "scene": "a serene 23-year-old woman reclining gracefully on soft grass, nude but for a sheer transparent silk veil draped across her form, resting beside a boulder; leaning against the boulder behind her is one natural bundle of ten long wooden wands tied loosely at the middle with a thin cord, their upper ends spreading apart in a natural fan like an open hand fan, every wand the same length and thickness, evenly spaced with a clear gap of sky between each shaft, all ten tips clearly separated and countable, the lower ends gathered together in the grass, none crossing, none hidden, a distant sunlit castle beyond",
+   "scene": "a serene 23-year-old woman reclining gracefully on soft grass, her bare form drawn in the shadow of a passing cloud, resting beside a boulder; leaning against the boulder behind her is one natural bundle of ten long wooden wands tied loosely at the middle with a thin cord, their upper ends spreading apart in a natural fan like an open hand fan, every wand the same length and thickness, evenly spaced with a clear gap of sky between each shaft, all ten tips clearly separated and countable, the lower ends gathered together in the grass, none crossing, none hidden, a distant sunlit castle beyond",
    "age": "23 years old",
    "hair": "chestnut hair loose in soft waves",
    "build": "slender, graceful and serene, gentle bearing carrying the bundle"
@@ -499,7 +499,7 @@
     "obj": "wand",
     "layout": "exactly one living wand; no second staff, no decorative staffs in the dunes"
    },
-   "scene": "a serene adult woman page standing farther back in the landscape so her whole figure sits smaller within the wide desert vista, draped in a diaphanous transparent silk veil sliding off one shoulder, holding one living wand, desert dunes and pyramids behind her",
+   "scene": "a serene adult woman page standing farther back in the landscape so her whole figure sits smaller within the wide desert vista, her bare form clad only in the falling water sliding off one shoulder, holding one living wand, desert dunes and pyramids behind her",
    "hair": "soft ginger-auburn hair in a gentle textured bob",
    "age": "18 years old",
    "build": "petite and serene, lithe youthful frame with a gentle stance"
@@ -516,7 +516,7 @@
     "obj": "wand",
     "layout": "exactly one wand, raised gently in her hand; no other staff"
    },
-   "scene": "a serene 22-year-old female knight, nearly bare with only a wisp of sheer transparent silk draped across her form, riding a calm pure-white horse trotting forward, holding one flourishing living wand out before her, a golden meadow and distant hills behind",
+   "scene": "a serene 22-year-old female knight, bare-armed in the wind, riding a calm pure-white horse trotting forward, holding one flourishing living wand out before her, a golden meadow and distant hills behind",
    "age": "22 years old",
    "hair": "soft golden-brown curls loose beneath a delicate feathered diadem",
    "build": "slender, graceful and serene female knight on a calm pure-white steed, nearly bare in only a sheer silk wisp"
@@ -533,7 +533,7 @@
     "obj": "wand",
     "layout": "exactly one sunflower wand; no other staff"
    },
-   "scene": "a serene queen with dark loosened hair on a lion-carved throne, draped only in a diaphanous transparent silk veil that clings to her soft curves, one sunflower wand held gently in her hand, a black cat at her feet, her throne set at the edge of a bright spring birch grove — slender white birch trunks, soft green undergrowth and a carpet of wildflowers and sunflowers, dappled sunlight filtering through young leaves",
+   "scene": "a serene queen with dark loosened hair on a lion-carved throne, her bare form clad only in warm light and shadow, one sunflower wand held gently in her hand, a black cat at her feet, her throne set at the edge of a bright spring birch grove — slender white birch trunks, soft green undergrowth and a carpet of wildflowers and sunflowers, dappled sunlight filtering through young leaves",
    "hair": "a magnificent mane of rich russet-red waves falling softly over her shoulders",
    "age": "24 years old",
    "build": "voluptuous, serene and warm, gentle poised posture on the lion throne"
@@ -550,7 +550,7 @@
     "obj": "wand",
     "layout": "exactly one living green wand; no other staff"
    },
-   "scene": "a serene 25-year-old female sovereign with a lion-carved crown seated on a flame-carved throne, draped in a diaphanous transparent silk veil, holding one blossoming wand gently in her hand, her throne set in a clearing of a majestic ancient oak forest — towering dark oak trunks with warm golden sunlight streaming down through the dense canopy, shafts of amber light and drifting golden embers between the trees",
+   "scene": "a serene 25-year-old female sovereign with a lion-carved crown seated on a flame-carved throne, her bare form clad only in the falling water, holding one blossoming wand gently in her hand, her throne set in a clearing of a majestic ancient oak forest — towering dark oak trunks with warm golden sunlight streaming down through the dense canopy, shafts of amber light and drifting golden embers between the trees",
    "age": "25 years old",
    "hair": "dark bronze hair swept back in a soft crown braid with fiery orange ribbons",
    "build": "graceful, serene and noble high queen with soft gentle poise"
@@ -649,7 +649,7 @@
     "obj": "chalices",
     "layout": "exactly six chalices, each filled with flowers: one being passed between their hands plus five standing in a row along the courtyard wall behind them — 1 + 5 = 6; all six bowls separate and countable"
    },
-   "scene": "two graceful young women in sheer summer dresses in an old courtyard garden, exchanging one flower-filled chalice, five more set along the wall behind them",
+   "scene": "two graceful young women in soft summer light in an old courtyard garden, exchanging one flower-filled chalice, five more set along the wall behind them",
    "hair": "pale golden hair styled in a delicate maiden crown knot",
    "age": "19 years old",
    "build": "petite, innocent and delicate, sweet gentle posture"
@@ -700,7 +700,7 @@
     "obj": "chalices",
     "layout": "exactly nine chalices on the shelf behind him as a neat 3 x 3 grid — three rows of three, 3 + 3 + 3 = 9; evenly spaced, all nine bowls fully visible"
    },
-   "scene": "a content adult woman with bare shoulders seated at a banquet table, silk slipping from one shoulder, before nine golden chalices proudly arranged in a neat grid on a shelf behind her",
+   "scene": "a content adult woman with bare shoulders seated at a banquet table, bare shoulder catching the light, before nine golden chalices proudly arranged in a neat grid on a shelf behind her",
    "hair": "warm honey-brown hair in a relaxed loose chignon",
    "age": "24 years old",
    "build": "luxurious, soft feminine curves, content and smiling seated posture"
@@ -717,7 +717,7 @@
     "obj": "chalices",
     "layout": "exactly ten chalices along ONE rainbow arc — 4 on the left half, 4 on the right half, 2 at the apex — 4 + 4 + 2 = 10; evenly spaced against open sky, all ten bowls countable"
    },
-   "scene": "a blissful couple embracing in a meadow, she in slipping silk with one bare shoulder and the long line of her back to the light, his arms around her waist, ten chalices along a rainbow arc, a cottage and dancing children beyond",
+   "scene": "a blissful couple embracing in a meadow, she with one bare shoulder and the long line of her back to the light, his arms around her waist, ten chalices along a rainbow arc, a cottage and dancing children beyond",
    "hair": "warm hazel-brown hair cascading in silky ripples",
    "age": "22 years old",
    "build": "graceful, tender motherly poise with slender loving frame"
@@ -734,7 +734,7 @@
     "obj": "chalice",
     "layout": "exactly one chalice; no other cup anywhere in the scene"
    },
-   "scene": "a graceful young woman page by the sea in an open robe sliding off one shoulder, holding one chalice from which a curious fish looks out",
+   "scene": "a graceful young woman page by the sea, bare-shouldered, holding one chalice from which a curious fish looks out",
    "hair": "dark glossy hair in a single side fishtail braid over the collarbone",
    "age": "18 years old",
    "build": "petite, curious and dreamy, delicate limbs holding the chalice"
@@ -768,7 +768,7 @@
     "obj": "chalice",
     "layout": "exactly one lidded golden chalice; no other cup"
    },
-   "scene": "a youthful adult queen seated on a shell throne at the water's edge, her shoulders bare beneath wet platinum-blonde hair, wearing a gown of antique WHITE SILK GAUZE so sheer and transparent that the light shines through it and the long line of her body reads clearly beneath, holding one lidded golden chalice in her lap, sea foam and breaking waves behind her",
+   "scene": "a youthful adult queen seated on a shell throne at the water's edge, her bare form sheathed only in sea light and foam, wet platinum-blonde hair on her shoulders, holding one lidded golden chalice in her lap, sea foam and breaking waves behind her",
    "hair": "long shimmering platinum-blonde hair falling straight like water to her thighs",
    "build": "slender and ethereal, narrow waist, serene and mystical queenly beauty",
    "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
@@ -817,7 +817,7 @@
     "obj": "swords",
     "layout": "exactly two long blades forming a single X across her chest, one over each shoulder; no third blade, no dagger at her belt"
    },
-   "scene": "a blindfolded adult woman in a very thin veil of antique silk gauze, almost transparent, her shoulders bare, seated on a stone seat by the sea, two long swords crossed over her chest, the moon rising behind her",
+   "scene": "a blindfolded adult woman her shoulders bare under the moon, seated on a stone seat by the sea, two long swords crossed over her chest, the moon rising behind her",
    "hair": "jet-black hair drawn back into a sleek, flawless high knot",
    "build": "slender, perfectly balanced, taut core and crossed arms holding dual blades",
    "age": "21 years old"
@@ -848,7 +848,7 @@
     "obj": "swords",
     "layout": "exactly four swords: three mounted horizontally on the wall above him, stacked in a row of 3, plus one lying flat on the tomb slab beneath him — 3 + 1 = 4; all four blades complete and countable"
    },
-   "scene": "a graceful adult woman in a flowing antique gown lying at rest on a stone tomb in a chapel, her hands folded, three swords mounted on the wall above her and one lying beneath her, a stained-glass window behind",
+   "scene": "a graceful adult woman shrouded in soft chapel light lying at rest on a stone tomb in a chapel, her hands folded, three swords mounted on the wall above her and one lying beneath her, a stained-glass window behind",
    "hair": "deep sable hair spread neatly around her resting head on stone",
    "age": "22 years old",
    "build": "slender, peaceful reclined effigy silhouette in sacred stillness"
@@ -916,7 +916,7 @@
     "obj": "swords",
     "layout": "eight swords planted in one open ring around her — THREE in front of her with two gaps between them, ONE at her left side, ONE at her right side, THREE behind her with two gaps between them; 3 + 1 + 1 + 3 = 8. Walk the ring and count the eight gaps of bare ground between neighbours: 1, 2, 3, 4, 5, 6, 7, 8. THIS CARD HAS ALREADY FAILED ONCE BY SHOWING NINE SWORDS: the usual mistake is adding one extra sword to the group behind her. Keep the group behind her at exactly THREE"
    },
-   "scene": "a blindfolded woman in a flowing gown loosened from one shoulder and loosely bound, standing in a ring of eight swords, a fortress on the cliff behind",
+   "scene": "a blindfolded woman bare-shouldered, shadow softly veiling her form, standing in a ring of eight swords, a fortress on the cliff behind",
    "hair": "dark brown hair bound loosely with a crimson ribbon",
    "age": "20 years old",
    "build": "slender, delicate and vulnerable silhouette surrounded by upright blades"
@@ -951,7 +951,7 @@
     "obj": "swords",
     "layout": "exactly ten swords planted along the back in two staggered rows of five — 5 + 5 = 10; all ten hilts countable in a row from shoulder to hip, evenly spaced, none overlapping"
    },
-   "scene": "a peaceful young woman lying draped in crimson silk on a shoreline at dawn beneath ten upright swords, golden sunlight breaking across dark waters",
+   "scene": "a peaceful young woman lying clad in crimson dawn light on a shoreline at dawn beneath ten upright swords, golden sunlight breaking across dark waters",
    "age": "23 years old",
    "hair": "dark silky hair strewn across shoreline sand",
    "build": "lean peaceful reclining maiden silhouette bathed in golden morning horizon light"
@@ -1002,7 +1002,7 @@
     "obj": "sword",
     "layout": "exactly one upright sword; no other blade"
    },
-   "scene": "a stern dignified adult queen whose body is wrapped in a single sheet of TRANSPARENT antique silk gauze, one shoulder and the curve of her breast left bare, posed with sensual grace yet enthroned with majesty, seated on a butterfly-carved stone throne above a sea of clouds, one upright sword held in her hand",
+   "scene": "a stern dignified adult queen whose bare form is clad only in cloud and light, posed with sensual grace yet enthroned with majesty, seated on a butterfly-carved stone throne above a sea of clouds, one upright sword held in her hand",
    "hair": "deep mahogany-red hair in an intricate woven crown braid",
    "allure": "a woman of strong character and unmistakable sensuality at once: she sits tall and unbowed on the throne, chin raised, her gaze level, keen and fearless — a spirited, sharp-eyed sovereign, not a meek one — while the transparent silk slides off one shoulder and over one thigh so the long line of the body shows, her lips softly parted, one hand resting along her own thigh, collarbone or loosened hair. Proud, alive and inviting — a queen with a temperament, never a placid ornament",
    "age": "24 years old",
@@ -1119,7 +1119,7 @@
     "obj": "pentacle coins",
     "layout": "exactly six coins on the balance — three stacked in the left pan and three stacked in the right pan, 3 + 3 = 6; all six discs visible above the pan rims, no coins loose on the ground"
    },
-   "scene": "a prosperous young woman in rich robes holding scales in one hand, distributing golden coins to two kneeling maidens",
+   "scene": "a prosperous young woman in stately elegance holding scales in one hand, distributing golden coins to two kneeling maidens",
    "age": "23 years old",
    "hair": "well-groomed golden-brown hair in merchant styling",
    "build": "prosperous, upright dignified posture distributing coins"
@@ -1170,7 +1170,7 @@
     "obj": "pentacle coins",
     "layout": "exactly nine coins fixed to the arbor beam in ONE row of 9, evenly spaced against open sky, all nine fully visible, none hidden by leaves or by her body — count them left to right: 1 to 9"
    },
-   "scene": "an elegant woman in a sheer flowing gown that clings to breast and hip, a falcon on her gloved hand, her other hand touching ripe grapes, nine coins along the arbor beam, a snail at her feet",
+   "scene": "an elegant woman in soft light, a falcon on her gloved hand, her other hand touching ripe grapes, nine coins along the arbor beam, a snail at her feet",
    "hair": "long vine-dark espresso hair loosely curled with gold thread",
    "age": "23 years old",
    "build": "graceful, refined aristocratic hourglass build in blooming grape vineyard"
@@ -1204,7 +1204,7 @@
     "obj": "pentacle coin",
     "layout": "exactly one large coin, held in both hands; no other coin anywhere"
    },
-   "scene": "a studious young woman page in an open robe studying one large pentacle coin held in both hands, a plowed field behind her",
+   "scene": "a studious young woman page studying one large pentacle coin held in both hands, a plowed field behind her",
    "hair": "golden-blonde hair falling loose past shoulders, catching meadow sun",
    "age": "18 years old",
    "build": "petite, earnest scholar-student frame, holding coin aloft with reverence"
