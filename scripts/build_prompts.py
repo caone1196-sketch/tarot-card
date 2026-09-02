@@ -105,15 +105,16 @@ QUALITY_LOCK = (
 )
 
 # ---------------------------------------------------------------- card locks
-# Cách diễn đạt AN TOÀN đã thành công (old-master allegory, "only garment" — không bị
+# Cách diễn đạt AN TOÀN đã thành công (old-master allegory — không bị
 # content-moderation chặn) — dùng làm chuẩn diễn đạt cho TOÀN BỘ 78 lá.
 SAFE_ART_STYLE = (
     "the scene is painted as an OLD-MASTER ALLEGORICAL PAINTING, serene, dignified, "
     "museum-quality fine art, soft chiaroscuro lighting, elegant natural pose, realistic "
-    "proportions, non-sexual artistic composition; figures wear no cloth — natural elements "
-    "are their only garment (water, mist, shadows, light, fire — depending on the card); "
-    "no translucent fabric, no silk, no veil, no drape; keep glossy luminous skin, smooth "
-    "painterly gradients and rich atmospheric depth."
+    "proportions, non-sexual artistic composition; ATTIRE RULE: every figure wears EITHER a "
+    "MINIMAL SHEER TRANSLUCENT SILK garment — a thin diaphanous gossamer silk drape over one "
+    "shoulder, around the hips, or across the torso, semi-transparent so the form reads through "
+    "it — OR NOTHING AT ALL (bare skin); NO bulky, opaque or heavy clothing, no robes, no gowns, "
+    "no dresses; keep glossy luminous skin, smooth painterly gradients and rich atmospheric depth."
 )
 STAR_SCENE_LOCK = (
     "the scene is painted as an OLD-MASTER ALLEGORICAL PAINTING of a water-spirit maiden at night, "

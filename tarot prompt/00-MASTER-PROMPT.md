@@ -51,13 +51,12 @@ Quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài Tarot — **khung 
    * **CÁCH DIỄN ĐẠT AN TOÀN — TOÀN BỘ 78 LÁ (chuẩn chính)**: mọi lá dùng
      phong cách **OLD-MASTER ALLEGORICAL PAINTING** — serene, dignified,
      museum-quality fine art, soft chiaroscuro lighting, elegant natural pose,
-     realistic proportions, **non-sexual artistic composition**; nhân vật
-     **không mặc vải — chỉ dùng yếu tố thiên nhiên làm "y phục"** (nước, sương,
-     bóng tối, ánh sáng, lửa — tuỳ lá); không translucent fabric / silk / veil /
-     drape. Đây là cách diễn đạt **đã vượt content-moderation ổn định** (thay
-     cho "adult classical figure study / unclothed human form / bare skin only"
-     — các cụm này bị chặn). Đã đóng vào `SAFE_ART_STYLE` +
-     `STAR_SCENE_LOCK` trong `scripts/build_prompts.py`.
+     realistic proportions, **non-sexual artistic composition**.
+     **ATTIRE RULE**: mỗi nhân vật mặc **HOẶC trang phục tối giản lụa mỏng
+     trong suốt** (một dải gossamer silk mỏng qua vai / quấn hông / ngang thân,
+     bán trong suốt để thấy rõ đường nét cơ thể) — **HOẶC không mặc gì**
+     (da trần); **KHÔNG** quần áo dày/đặc/kín (no robes, no gowns, no dresses).
+     Đã đóng vào `SAFE_ART_STYLE` trong `scripts/build_prompts.py`.
      * **The Star (nguyên văn thành công)**: *OLD-MASTER ALLEGORICAL PAINTING
        of a water-spirit maiden at night… S-CURVE stance; face tilted slightly
        BACK; right arm raised high, stream pouring ONTO her neck and gliding
