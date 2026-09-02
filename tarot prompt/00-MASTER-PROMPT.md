@@ -1,40 +1,62 @@
-# 🔮 SENSUAL TAROT 78 LÁ — MASTER PROMPT SPECIFICATION
+# 🔮 SENSUAL TAROT 78 LÁ — MASTER PROMPT SPECIFICATION (KHUNG BÀI MỚI)
 
-Bản chuẩn hóa quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài Tarot:
+Quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài Tarot — **khung 4 lớp, KHÔNG huy hiệu**.
 
-1. **Quy chuẩn hiển thị nội dung & khung viền (Visual Anchor Standard — THE STAR)**:
-   * Lấy lá **`cards/17-the-star.png`** làm quy chuẩn DUY NHẤT cho toàn bộ bộ bài — chuẩn cho cả **phần ảnh bên trong** lẫn **phần viền bên ngoài**.
-   * **Phần viền ngoài**: khung viền mạ vàng Gothic mỏng, sắc nét, đối xứng hoàn hảo trên nền giấy da cổ (*aged parchment/vellum*).
-   * **Phần ảnh bên trong**: phong cách hội họa fine-art của The Star — phối cảnh thoáng đãng, ánh sáng ấm, chiều sâu không gian lùi dần về hậu cảnh, chi tiết sắc nét. Mỗi lá vẫn giữ bối cảnh và bảng màu riêng của mình, chỉ chuẩn hóa về chất lượng nét vẽ, cách đổ sáng và độ chi tiết theo The Star.
-   * Vùng hiển thị nội dung mở rộng tối đa, phủ kín toàn bộ vòm trung tâm từ mép này sang mép kia của khung viền Gothic mỏng.
-   * **Loại bỏ cổng vòm / cột đá phụ chiếm diện tích**: Không dùng cột đá nhân tạo đóng khung gò bó, để không gian khoáng đạt, tự nhiên theo đúng bối cảnh của từng lá bài.
+1. **Quy chuẩn khung (Visual Anchor Standard — THE STAR, bản khung mới)**:
+   * Lấy lá **`cards/17-the-star.png`** làm quy chuẩn DUY NHẤT cho khung lá bài —
+     chuẩn cho cả **khung 4 lớp** lẫn **chất lượng nội dung**.
+   * Mẫu nền trống: **`cards/card-blank.png`** (4 lớp, không nội dung, không tên).
+   * Kích thước lá: **784 × 1360** (tỷ lệ 7:12), PNG.
 
-2. **Quy chuẩn tạo hình nhân vật (Sensual Fine-Art Figure Standard)**:
-   * Kế thừa phong cách tạo hình sống động, gợi cảm và cổ điển từ tài liệu gốc `01-CARD-TABLE.md` (hình mẫu tiêu biểu như lá **The Empress**: *"a voluptuous nude empress, one breast bared, a crown of flowers in loosened hair, reclining on a velvet throne amid ripe golden wheat and fruits, a heart-shaped shield of Venus leaning beside her"*).
-   * **100% Nhân vật nữ** trong độ tuổi thanh xuân từ **18 đến 25 tuổi**.
-   * Mỗi lá bài giữ nét đặc trưng độc bản về vóc dáng (*slender, voluptuous, athletic, statuesque*), mái tóc và thần thái.
-   * **CẤM CƠ THỂ BỊ DI DẠNG (ANATOMY LOCK — HARD RULE)**: Mỗi nhân vật chỉ được có **tối đa 2 tay, 2 chân, 1 đầu, 1 thân**; mọi khớp (vai, khuỷu, cổ tay, hông, gối, cổ chân) phải nối tự nhiên với thân, **không thừa chi, không chi mọc dính vào sườn/hông/ngực, không tay cụt, không khớp biến dạng, không ngón tay sai số lượng**. Kiểm tra giải phẫu kỹ trước khi chốt ảnh: nếu thấy 3 tay / tay dính thân / chân sai khớp → **vẽ lại**, không chấp nhận bản lỗi. Ưu tiên tư thế 2 tay tách rõ khỏi thân (có nách, khuỷu, cổ tay rõ ràng) để giảm nguy cơ lỗi.
+2. **Cấu trúc 4 LỚP (từ dưới lên)**:
+   * **Lớp 1 — NỀN**: giấy da cổ (*aged parchment/vellum*) nhuốm màu thời gian
+     sepia ấm, phủ **kín toàn bộ** lá bài.
+   * **Lớp 2 — NỘI DUNG TRÀN VIỀN**: phối cảnh tự nhiên, thoáng đãng, ánh sáng ấm,
+     chiều sâu không gian lùi dần về hậu cảnh. Nội dung được **PHÓNG TO TRÀN VIỀN**
+     tới sát mép lá và **chui nhẹ xuống dưới mép trong của khung vàng**.
+   * **Lớp 3 — KHUNG HỌA TIẾT MẢNH SÁT LỀ (VÀNG KIM NỔI BẬT)**: khung viền
+     **vàng kim metallic** Gothic **rất mảnh**, sắc nét, đối xứng hoàn hảo,
+     **sát lề lá bài**, hoa văn filigree nhỏ ở 4 góc. Tông vàng đậm có viền tối
+     + lõi sáng + quầng vàng ấm mảnh quanh nét → nổi bật trên mọi nền nhưng
+     **vẫn giữ nét mảnh** (không làm dày nét). Khung **ĐÈ LÊN TRÊN** mép nội dung
+     (foreground ornament over background scene) để tạo chiều sâu phân lớp —
+     khung nổi phía trước, cảnh lùi ra sau.
+   * **Lớp 4 — TÊN LÁ**: tên lá bài bằng chữ **Blackletter (UnifrakturCook)**
+     mạ vàng cổ, **baseline chữ CONG** (hai đầu nhô lên, giữa võng xuống ≈6px),
+     đặt **trực tiếp trên nội dung** ở đáy lá — **KHÔNG có khung chữ**
+     (không plate, không dải băng, không cartouche, không viền bao quanh chữ).
+     Chữ nổi bằng nét vàng kim + bóng đổ mảnh.
+     **KHÔNG còn oval medallion / huy hiệu / biểu tượng ở đỉnh** — đã bỏ khung biểu tượng.
 
-3. **Cấu trúc 4 Lớp Chiều Sâu (4-Layer Depth)**:
-   * **Lớp 1 (Nền)**: Giấy da cổ (*Aged parchment/vellum*) nhuốm màu thời gian sepia ấm áp.
-   * **Lớp 2 (Nội dung)**: Phối cảnh tự nhiên, thoáng đãng với ánh sáng ấm áp và chiều sâu không gian lùi dần về hậu cảnh. **Nội dung được PHÓNG TO, tràn nhẹ xuống dưới mép trong của khung viền vàng.**
-   * **Lớp 3 (Khung viền)**: Khung viền mạ vàng Gothic mỏng, sắc nét, đối xứng hoàn hảo — **lấy chuẩn từ lá The Star**. **Hoa văn viền vàng ĐÈ LÊN TRÊN mép nội dung (foreground ornament over background scene) để tạo chiều sâu phân lớp — khung nổi phía trước, cảnh lùi ra sau.**
-   * **Lớp 4 (Huy hiệu & Tên)**: Oval Medallion ở đỉnh chứa huy hiệu mạ vàng + Dải ruy băng cuộn ở đáy chứa tên lá bài.
+3. **Quy chuẩn tạo hình nhân vật (nguồn: `02-CHARACTER-SPECS.md`)**:
+   * **100% nhân vật nữ**, độ tuổi **18–25** (bảng 72 nhân vật — 6 lá vật thể thuần).
+   * Mỗi lá dùng đúng tổ hợp: **đôi mắt · kiểu tóc · vóc dáng (A–D) · màu da ·
+     nét riêng (1 chi tiết) · không khí** theo bảng chuẩn `02-CHARACTER-SPECS.md`
+     (tuổi + kiểu tóc giữ nguyên 100% so với `01-CARD-TABLE.md`).
+   * **DA — HARD RULE**: chỉ 10 tông sáng → nâu vàng nhạt (porcelain → amber-gold);
+     **cấm da đen / da sẫm** kể cả dưới ánh sáng mạnh.
+   * **VÓC DÁNG — HARD RULE**: trần là "trung bình" (A → D), **không plus-size,
+     không béo, không phóng đại**. Gợi cảm nằm ở đường cong tự nhiên, làn da bóng,
+     tư thế và ánh mắt.
+   * **ANATOMY LOCK — HARD RULE**: mỗi nhân vật tối đa 2 tay, 2 chân, 1 đầu, 1 thân;
+     mọi khớp nối tự nhiên; không thừa chi, không chi dính thân, không tay cụt,
+     không ngón sai số. Ưu tiên tư thế 2 tay tách rõ khỏi thân.
+   * **NÉT RIÊNG**: mỗi nhân vật đúng **1** chi tiết nhận diện (nốt ruồi, sẹo nhỏ,
+     tàn nhang, xăm, khuyên, bớt…), không trùng giữa các lá.
 
 ---
 
-## Master Prompt Template (Chuẩn The Star)
+## Master Prompt Template (Chuẩn The Star — Khung 4 lớp, không huy hiệu)
 
 ```text
-A single tarot card "{TITLE}" built inside the reference frame, matching the EXACT open window display, scale, and lighting style of THE STAR: keep the intricate thin golden line-art border in vintage gothic style and aged parchment background texture.
+A single tarot card "{TITLE}" in vintage gothic fine-art style, portrait 7:12 aspect ratio, high detail, perfectly centered.
 
-At the TOP: inside the oval medallion plate, {EMBLEM} in glowing antique gold.
-At the BOTTOM: inside the ribbon banner, the title "{TITLE}" in clean antique gold lettering.
+PAINT IT AS 4 LAYERS, background to foreground:
+LAYER 1 — BACKGROUND: an aged parchment / vellum texture covering the WHOLE card, sepia-warm, subtle stains and fibres.
+LAYER 2 — CONTENT (FULL BLEED): {SCENE}. {CHARACTER_SPECIFICATION} {COUNT_LOCK} — the scene is enlarged FULL-BLEED so its edges reach the card edges and slip slightly beneath the thin golden frame.
+LAYER 3 — FRAME: a very thin, delicate golden line-art gothic frame sitting close to the card edge, symmetrical, with small filigree corner flourishes — painted ON TOP of the scene edges (foreground ornament over background content). NO medallion, NO emblem, NO icon, NO crest anywhere on the card.
+LAYER 4 — TITLE BAND: at the BOTTOM, an ornamental golden ribbon banner; inside it the title "{TITLE}" in clean antique gothic gold lettering.
 
-In the large open center panel (filling the entire inner window edge to edge and bleeding slightly beneath the golden border, matching the open space of The Star without heavy inner arch barriers):
-{SCENE}. {CHARACTER_SPECIFICATION} {COUNT_LOCK}
-
-Depth layering: enlarge the scene so its edges extend slightly beneath the inner edge of the golden border, then paint the thin golden line-art border, corner flourishes, oval medallion and ribbon banner ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth.
-
-Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, symmetrical golden frame border, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail.
+{STRICT_ANATOMY}
+Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, no heavy inner arch barriers, vintage gothic fine-art illustration, high detail.
 ```

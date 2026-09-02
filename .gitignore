@@ -1,2 +1,5 @@
 __pycache__/
 samples/
+variants/frame-kit/
+variants/*-content-*.png
+official-deck/content/

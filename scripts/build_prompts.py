@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 """
-Build Tarot Card Prompts using the THE STAR ANCHOR STANDARD:
-- Full open window display matching the scale and expansive open space of The Star.
-- Rich, sensual fine-art character poses based on 01-CARD-TABLE.md (The Empress standard).
-- 100% Female cast aged strictly between 18 and 25 years old.
-- Natural, unconstrained environments without artificial inner column barriers.
-- Symmetrical golden gothic line-art frame border, top medallion emblem, bottom ribbon title.
+Build Tarot Card Prompts — KHUNG BÀI MỚI (4 LỚP · KHÔNG HUY HIỆU).
+
+Quét dữ liệu từ:
+- `tarot prompt/02-CHARACTER-SPECS.md` — bảng thông số 72 nhân vật
+  (mắt · tóc · vóc dáng A–D · màu da · nét riêng · không khí) — nguồn chuẩn.
+- `tarot prompt/cards.json` — title / scene / count / emblem (huy hiệu KHÔNG
+  còn dùng trong khung, chỉ giữ dữ liệu lịch sử).
+
+Mỗi prompt theo mẫu khung 4 lớp:
+  1. NỀN            — giấy da cổ phủ kín lá
+  2. NỘI DUNG TRÀN VIỀN — cảnh phủ sát mép, chui xuống dưới khung vàng
+  3. KHUNG HỌA TIẾT MẢNH — viền vàng mảnh sát lề, vẽ ĐÈ lên nội dung
+  4. KHUNG TÊN       — dải băng vàng ở đáy chứa tên lá (KHÔNG medallion/huy hiệu)
 
 Usage:
     python3 scripts/build_prompts.py check
@@ -16,15 +23,69 @@ Usage:
 
 import json
 import os
+import re
 import sys
 
 CARDS_JSON = "tarot prompt/cards.json"
+SPECS_MD = "tarot prompt/02-CHARACTER-SPECS.md"
 OUT_DIR = "prompts/out"
 
+# ---------------------------------------------------------------- data
 def load_data():
     with open(CARDS_JSON, "r", encoding="utf-8") as f:
         return json.load(f)
 
+
+def parse_character_specs() -> dict[str, dict]:
+    """Đọc bảng chính trong 02-CHARACTER-SPECS.md thành dict theo slug.
+
+    Cột: Lá | Tuổi | Đôi mắt | Kiểu tóc (chuẩn) | Vóc dáng | Màu da | Nét riêng | Không khí
+    """
+    specs = {}
+    with open(SPECS_MD, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line.startswith("|") or line.startswith("|--"):
+                continue
+            cells = [c.strip() for c in line.strip("|").split("|")]
+            if len(cells) != 8:
+                continue
+            m = re.search(r"`([a-z0-9\-]+)`", cells[0])
+            if not m:
+                continue
+            slug = m.group(1)
+
+            # Vóc dáng: tháo grade A/B/C/D khỏi mô tả
+            build_cell = cells[4]
+            g = re.match(r"\*\*([A-D])\*\*\s*(.*)", build_cell)
+            grade, build = (g.group(1), g.group(2).strip()) if g else ("", build_cell)
+
+            specs[slug] = {
+                "age": int(cells[1]),
+                "eyes": cells[2],
+                "hair": cells[3],
+                "grade": grade,
+                "build": build,
+                "skin": cells[5],
+                "signature": cells[6],
+                "aura": cells[7],
+            }
+    return specs
+
+
+GRADE_EN = {
+    "A": "A — slender / delicate",
+    "B": "B — lean / toned",
+    "C": "C — average soft",
+    "D": "D — average shapely (ceiling: never plus-size)",
+}
+SKIN_RULE = (
+    "SKIN TONES LOCK: only the 10 light-to-warm tones (porcelain, ivory, fair, "
+    "warm peach, light olive, sand, warm tan, honey, light bronze, amber-gold); "
+    "NEVER dark, brown-black or black skin, even in shadow."
+)
+
+# ---------------------------------------------------------------- formatting
 def format_count_lock(count_info):
     if not count_info:
         return ""
@@ -33,32 +94,43 @@ def format_count_lock(count_info):
     layout = count_info.get("layout")
     return f"COUNT LOCK (EXACTLY {n} {obj}): {layout}."
 
-def format_character_spec(card):
-    age = card.get("age")
-    hair = card.get("hair")
-    build = card.get("build")
 
-    specs = []
-    if age:
-        specs.append(f"Age: {age} (strictly young adult, aged 18 to 25)")
-    if hair:
-        specs.append(f"Hair: {hair}")
-    if build:
-        specs.append(f"Physique: {build}")
+def format_character_spec(card: dict, spec: dict | None) -> str:
+    """CHARACTER SPEC từ 02-CHARACTER-SPECS.md (fallback: cards.json)."""
+    if spec:
+        grade = GRADE_EN.get(spec["grade"], spec["grade"])
+        return (
+            f"CHARACTER SPECIFICATION (source: 02-CHARACTER-SPECS.md): "
+            f"a female figure, {spec['age']} years old (strictly 18-25, 100% female); "
+            f"EYES: {spec['eyes']}; "
+            f"HAIR: {spec['hair']}; "
+            f"PHYSIQUE ({grade}): {spec['build']}; "
+            f"SKIN: {spec['skin']}; "
+            f"UNIQUE SIGNATURE (exactly one): {spec['signature']}; "
+            f"ATMOSPHERE: {spec['aura']}. "
+            f"{SKIN_RULE}"
+        )
 
-    specs.append(
+    parts = []
+    if card.get("age"):
+        parts.append(f"Age: {card['age']} (strictly young adult, aged 18 to 25)")
+    if card.get("hair"):
+        parts.append(f"Hair: {card['hair']}")
+    if card.get("build"):
+        parts.append(f"Physique: {card['build']}")
+    parts.append(
         "Sensuality: render with heightened yet tasteful fine-art sensuality — "
         "confident, poised, soft classical anatomy, painterly skin in warm golden lighting"
     )
+    return "CHARACTER SPECIFICATION: " + "; ".join(parts) + "."
 
-    return "CHARACTER SPECIFICATION: " + "; ".join(specs) + "."
 
-def build_card_prompt_star_standard(card, use_reference=True):
-    emblem = card.get("emblem", "an ornate heraldic symbol")
+# ---------------------------------------------------------------- template
+def build_card_prompt_new_frame(card: dict, spec: dict | None):
     title = card.get("title", "")
     scene = card.get("scene", "")
     count_str = format_count_lock(card.get("count"))
-    char_str = format_character_spec(card)
+    char_str = format_character_spec(card, spec)
 
     anatomy_lock = (
         "ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; "
@@ -68,78 +140,83 @@ def build_card_prompt_star_standard(card, use_reference=True):
         "with visible armpits, elbows and wrists."
     )
 
-    extra_directives = []
-    if char_str:
-        extra_directives.append(char_str)
-    if count_str:
-        extra_directives.append(count_str)
-    extra_directives.append(anatomy_lock)
-    extra_text = (" " + " ".join(extra_directives)) if extra_directives else ""
-
-    ref_clause = (
-        "built inside the reference frame, matching the EXACT open window display, scale, and lighting style of THE STAR: "
-        "keep the intricate thin golden line-art border in vintage gothic style and aged parchment background texture."
-        if use_reference
-        else "ornate vintage gothic tarot card composition matching the open window style of THE STAR."
-    )
+    extras = " ".join(x for x in (char_str, count_str, anatomy_lock) if x)
 
     return (
-        f"A single tarot card \"{title}\" {ref_clause} "
-        f"At the TOP: inside the oval medallion plate, {emblem} in glowing antique gold. "
-        f"At the BOTTOM: inside the ribbon banner, the title \"{title}\" in clean antique gold lettering. "
-        f"In the large open center panel (filling the entire inner window edge to edge and bleeding slightly beneath the golden border, matching the open space of The Star without heavy inner arch barriers): "
-        f"{scene}.{extra_text} "
-        f"Depth layering: enlarge the scene so its edges extend slightly beneath the inner edge of the golden border, then paint the thin golden line-art border, corner flourishes, oval medallion and ribbon banner ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth. "
-        f"Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, "
-        f"symmetrical golden frame border, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail."
+        f'A single tarot card "{title}" in vintage gothic fine-art style, portrait 7:12 aspect ratio, '
+        f"high detail, perfectly centered.\n\n"
+        f"PAINT IT AS 4 LAYERS, background to foreground:\n"
+        f"LAYER 1 — BACKGROUND: an aged parchment / vellum texture covering the WHOLE card, "
+        f"sepia-warm, subtle stains and fibres.\n"
+        f'LAYER 2 — CONTENT (FULL BLEED): {scene}. {extras} '
+        f"The scene is enlarged FULL-BLEED so its edges reach the card edges and slip slightly "
+        f"beneath the thin golden frame.\n"
+        f"LAYER 3 — FRAME: a very thin, delicate METALLIC ANTIQUE-GOLD line-art gothic frame sitting "
+        f"close to the card edge, symmetrical, with small filigree corner flourishes — rich deep gold "
+        f"stroke with dark rim, bright core and a faint warm halo — painted ON TOP of the scene edges "
+        f"(foreground ornament over background content); stays THIN. NO medallion, NO emblem, NO icon, "
+        f"NO crest anywhere on the card.\n"
+        f"LAYER 4 — TITLE: at the BOTTOM, the title \"{title}\" in antique blackletter gold lettering "
+        f"whose baseline gently CURVES (letters rise at the ends, sag in the middle), placed DIRECTLY on "
+        f"the scene — NO title frame, NO plate, NO ribbon, NO cartouche, NO border around the text; "
+        f"clean carved edges with a thin shadow.\n\n"
+        f"Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric "
+        f"perspective and depth, no heavy inner arch barriers, vintage gothic fine-art illustration, high detail."
     )
+
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 scripts/build_prompts.py [check | prompt <slug> | all | md]")
+        print(__doc__)
         sys.exit(1)
 
     cmd = sys.argv[1]
     data = load_data()
     cards = data.get("cards", [])
+    specs = parse_character_specs()
 
     if cmd == "check":
-        print(f"Loaded {len(cards)} cards successfully.")
-        with_age = sum(1 for c in cards if c.get("age"))
-        with_hair = sum(1 for c in cards if c.get("hair"))
-        with_build = sum(1 for c in cards if c.get("build"))
-        print(f"- Cards with defined Age (18-25): {with_age}")
-        print(f"- Cards with defined Hair: {with_hair}")
-        print(f"- Cards with defined Build: {with_build}")
-        print("All card character definitions are valid.")
+        print(f"Loaded {len(cards)} cards from cards.json.")
+        print(f"Loaded {len(specs)} character specs from 02-CHARACTER-SPECS.md.")
+        missing = [c["slug"] for c in cards if c["slug"] not in specs]
+        print(f"Cards without character spec (object-only, expected 6): {missing}")
+        print("All frame templates now use the 4-layer structure WITHOUT emblem medallion.")
 
     elif cmd == "prompt":
         if len(sys.argv) < 3:
-            print("Please specify card slug, e.g. python3 scripts/build_prompts.py prompt 00-fool")
+            print("Usage: python3 scripts/build_prompts.py prompt <slug>")
             sys.exit(1)
         slug = sys.argv[2]
         match = next((c for c in cards if c["slug"] == slug), None)
         if not match:
             print(f"Card '{slug}' not found.")
             sys.exit(1)
-        print("=== THE STAR ANCHOR STANDARD PROMPT ===")
-        print(build_card_prompt_star_standard(match, use_reference=True))
+        print(build_card_prompt_new_frame(match, specs.get(slug)))
 
     elif cmd == "all":
         os.makedirs(OUT_DIR, exist_ok=True)
         for c in cards:
             slug = c["slug"]
-            p = build_card_prompt_star_standard(c, use_reference=True)
+            p = build_card_prompt_new_frame(c, specs.get(slug))
             with open(os.path.join(OUT_DIR, f"{slug}.txt"), "w", encoding="utf-8") as f:
                 f.write(p + "\n")
-        print(f"Generated {len(cards)} Star-standard prompt files in {OUT_DIR}/")
+        print(f"Generated {len(cards)} prompts (4-layer frame, no emblem) in {OUT_DIR}/")
 
     elif cmd == "md":
-        print("| Slug | Title | Age | Hair Style & Color | Physique / Build |")
-        print("|---|---|---|---|---|")
+        print("| Slug | Title | Age | Eyes | Hair | Physique | Skin | Signature | Aura |")
+        print("|---|---|---|---|---|---|---|---|---|")
         for c in cards:
-            if c.get("age"):
-                print(f"| `{c['slug']}` | **{c['title']}** | {c.get('age')} | {c.get('hair', '')[:40]}... | {c.get('build', '')[:40]}... |")
+            s = specs.get(c["slug"])
+            if not s:
+                continue
+            print(f"| `{c['slug']}` | **{c['title']}** | {s['age']} | {s['eyes'][:38]}… "
+                  f"| {s['hair'][:38]}… | {s['grade']} {s['build'][:30]}… | {s['skin']} "
+                  f"| {s['signature'][:34]}… | {s['aura'][:34]}… |")
+
+    else:
+        print(__doc__)
+        sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

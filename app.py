@@ -80,15 +80,33 @@ def group_of(slug: str) -> str:
     return "other"
 
 
+# Mask khung dùng chung (hoạ tiết vàng mảnh) — so sánh đúng phần khung, bỏ nội dung tràn viền.
+FRAME_MASK = os.path.join(ROOT, "variants", "frame-kit", "03-frame-thin-clean.png")
+
+
+@st.cache_data(ttl=600, show_spinner=False)
+def _frame_mask() -> np.ndarray | None:
+    if not os.path.exists(FRAME_MASK):
+        return None
+    m = cv2.imread(FRAME_MASK, cv2.IMREAD_UNCHANGED)
+    if m is None:
+        return None
+    # chỉ nét vàng đặc (alpha>=240): rìa/quầng sáng bán trong suốt blend với nền
+    # nội dung khác nhau giữa các lá nên không đưa vào phép đo.
+    return m[..., 3] >= 240
+
+
 def frame_rmse(img_path: str, ref: str = STAR_REF) -> float | None:
-    """RMSE of the left 60px border strip vs the Star anchor (0..1)."""
+    """RMSE trên MASK khung dùng chung (hoạ tiết mảnh sát lề) vs The Star (0..1)."""
     a = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
     b = cv2.imread(ref, cv2.IMREAD_GRAYSCALE)
-    if a is None or b is None:
+    mask = _frame_mask()
+    if a is None or b is None or mask is None or a.shape != b.shape:
         return None
-    a = a[:, :60]
-    b = b[:, :60]
-    return float(np.sqrt(np.mean((a.astype(np.float64) - b.astype(np.float64)) ** 2)) / 255.0)
+    if mask.shape != a.shape:
+        return None
+    d = a[mask].astype(np.float64) - b[mask].astype(np.float64)
+    return float(np.sqrt(np.mean(d ** 2)) / 255.0)
 
 
 def rebuild_gallery():
