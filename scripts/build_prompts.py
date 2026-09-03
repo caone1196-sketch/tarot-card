@@ -2,9 +2,9 @@
 """
 Build Tarot Card Prompts using the THE STAR ANCHOR STANDARD:
 - Full open window display matching the scale and expansive open space of The Star.
-- Thông số nhân vật (tuổi · mắt · tóc · vóc A–D · da · nét riêng · không khí) lấy từ
-  `tarot prompt/02-CHARACTER-SPECS.md` — chuẩn nhân vật từ 2026-09-03 (thay cho 01-CARD-TABLE.md).
-  `scene`/`count`/`title`/`emblem` lấy NGUYÊN VĂN từ `cards.json` (không sửa file đó).
+- MỌI trường (tuổi · tóc · vóc · huy hiệu · tên · cảnh · `count`) lấy từ ĐÚNG MỘT nguồn:
+  `tarot prompt/cards.json`. Không script nào đọc `01-CARD-TABLE.md` / `02-CHARACTER-SPECS.md`
+  để ghi đè dữ liệu — hai file đó là tài liệu đọc, muốn đổi gì thì sửa `cards.json`.
 - 100% Female cast aged strictly between 18 and 25 years old.
 - Natural, unconstrained environments without artificial inner column barriers.
 - Symmetrical golden gothic line-art frame border, top medallion emblem, bottom ribbon title.
@@ -18,10 +18,8 @@ Usage:
 
 import json
 import os
+import re
 import sys
-
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import card_specs  # noqa: E402  — chuẩn thông số nhân vật: 02-CHARACTER-SPECS.md
 
 CARDS_JSON = "tarot prompt/cards.json"
 OUT_DIR = "prompts/out"
@@ -49,16 +47,21 @@ def format_count_lock(count_info):
     layout = count_info.get("layout")
     return f"COUNT LOCK (EXACTLY {n} {obj}): {layout}."
 
-def format_character_spec(card, specs=None):
-    """Khối CHARACTER SPECIFICATION.
-
-    Từ 2026-09-03: thông số nhân vật lấy từ `tarot prompt/02-CHARACTER-SPECS.md`
-    (tuổi · mắt · tóc · vóc A–D · da · nét riêng · không khí). `scene`/`title`/
-    `emblem`/`count` vẫn lấy NGUYÊN VĂN từ cards.json — 02 không được sửa cards.json.
-    """
-    specs = card_specs.load_specs() if specs is None else specs
-    eff, _notes = card_specs.merge(card, specs)
-    return card_specs.character_block(eff)
+def format_character_spec(card):
+    """Khối CHARACTER SPECIFICATION — CHỈ đọc `cards.json` (age · hair · build)."""
+    bits = []
+    if card.get("age"):
+        age = re.sub(r"[^0-9]", "", str(card["age"])) or str(card["age"]).strip()
+        bits.append(f"Age: {age} (strictly young adult, aged 18 to 25)")
+    if card.get("hair"):
+        bits.append(f"Hair: {str(card['hair']).strip()}")
+    if card.get("build"):
+        bits.append(f"Physique: {str(card['build']).strip()}")
+    if not bits:
+        return ""
+    bits.append("Sensuality: render with heightened yet tasteful fine-art sensuality — "
+                "confident, poised, soft classical anatomy, painterly skin in warm golden lighting")
+    return "CHARACTER SPECIFICATION (source: cards.json): " + "; ".join(bits) + "."
 
 def frame_clause(std, use_reference=True):
     """Mô tả khung = đúng những gì đo được ở lá neo (standards/…/standard.json)."""
@@ -95,12 +98,12 @@ def frame_clause(std, use_reference=True):
                           f"standards/{std['anchor_card']['slug']}/standard.json).")
 
 
-def build_card_prompt_star_standard(card, use_reference=True, specs=None, std=None):
+def build_card_prompt_star_standard(card, use_reference=True, std=None):
     emblem = card.get("emblem", "an ornate heraldic symbol")
     title = card.get("title", "")
     scene = card.get("scene", "")           # NGUYÊN VĂN từ cards.json — không file nào được sửa
     count_str = format_count_lock(card.get("count"))
-    char_str = format_character_spec(card, specs)
+    char_str = format_character_spec(card)
     std = load_standard() if std is None else std
     framed_like_star = bool(std and not std.get("plates", {}).get("medallion", {}).get("present")
                             and not std.get("plates", {}).get("ribbon", {}).get("present"))
@@ -157,13 +160,9 @@ def main():
     data = load_data()
     cards = data.get("cards", [])
 
-    specs = card_specs.load_specs()
-
     if cmd == "check":
         print(f"Loaded {len(cards)} cards successfully.")
-        print(f"- Nguon thong so nhan vat: 02-CHARACTER-SPECS.md -> {len(specs)} dong")
-        print(f"- La duoc ghi de thong so tu 02: {len([s for s in specs if s in {c['slug'] for c in cards}])}")
-        print(f"- La khong co trong 02 (giu nguyen cards.json): {len([c for c in cards if c['slug'] not in specs])}")
+        print("- Nguon duy nhất: tarot prompt/cards.json (khong doc 01/02 de ghi de)")
         std = load_standard()
         print("- Chuan khung: " + (f"{std['anchor_card']['slug']} · {std['frame_style']} · "
               f"rule line {std['frame']['rule_offset_left_px']}px · medallion={std['plates']['medallion']['present']} · "

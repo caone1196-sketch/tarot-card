@@ -14,26 +14,22 @@
 
 | Nội dung | File |
 |---|---|
-| **DỮ LIỆU GỐC của prompt**: `title` · `emblem` · `scene` · `count` (78 lá) | `tarot prompt/cards.json` ← **đọc-ghi tay ở đây**; **không script nào được sửa file này** |
-| **CHUẨN THÔNG SỐ NHÂN VẬT** (tuổi · mắt · tóc · vóc A–D · da · nét riêng · không khí) | `tarot prompt/02-CHARACTER-SPECS.md` ← **đọc-ghi tay ở đây**; 72/78 lá (6 lá thuần vật thể không có người) |
-| Bảng tra nhanh 78 lá cho người đọc | `tarot prompt/01-CARD-TABLE.md` ← **file DẪN XUẤT** = `cards.json` + `02`, sinh bằng `python3 scripts/generate_card_table.py` (đừng sửa tay, sẽ bị ghi đè) |
+| **NGUỒN DUY NHẤT** cho mọi prompt + mọi dữ liệu lá (78 lá): `n` · `group` · `title` · `emblem` · `scene` · `count` · `age` · `hair` · `build` · `femme` | `tarot prompt/cards.json` ← **đọc-ghi tay ở đây**; **không script nào được sửa file này, và không file nào được ghi đè lên nó** |
+| Bảng tra nhanh 78 lá cho người đọc | `tarot prompt/01-CARD-TABLE.md` ← **file DẪN XUẤT sinh từ `cards.json`** bằng `python3 scripts/generate_card_table.py` (đừng sửa tay, sẽ bị ghi đè) |
+| Tài liệu đọc thêm — **KHÔNG** phải nguồn pipeline | `tarot prompt/02-CHARACTER-SPECS.md` (72 nhân vật, thang vóc A–D, 10 tông da, mắt · nét riêng · không khí) |
 | Quy chuẩn prompt, 4 lớp chiều sâu, template | `tarot prompt/00-MASTER-PROMPT.md`, `tarot prompt/template.md` |
 | **CHUẨN KHUNG VIỀN (đo bằng số)** | `standards/17-the-star/standard.json` + `frame-mask.png` — sinh từ `cards/17-the-star.png` **hiện tại** |
 
-> **2026-09-03 (lần 2):** nguồn thông số nhân vật chuyển từ `01-CARD-TABLE.md` sang
-> **`02-CHARACTER-SPECS.md`**. `01` chỉ còn là bảng tra dẫn xuất (sinh từ `cards.json` + `02`),
-> không còn là chuẩn. **`cards.json` giữ nguyên 100 %** — `scene`/`count`/`title`/`emblem`
-> trong prompt là nguyên văn từ đó; 02 chỉ được phép định hình khối CHARACTER SPECIFICATION.
+> **2026-09-03 (chốt):** `cards.json` là nguồn **duy nhất**. `build_prompts.py` và
+> `generate_card_table.py` **không** đọc `01`/`02` để lấy dữ liệu (bộ gộp
+> `scripts/card_specs.py` đã bị xoá khỏi repo, còn trong lịch sử git).
 >
-> Quy tắc gộp (định nghĩa trong `scripts/card_specs.py`, chạy `check` để xem lệch):
-> - 02 thắng ở 4 trường: `age` · `hair` · `build` (+ cấp A–D) và cung cấp 4 trường mới:
->   `eyes` · `skin` · `signature` · `aura`.
-> - 6 lá thuần vật thể (`wands-ace`, `wands-08`, `cups-ace`, `swords-ace`, `swords-03`,
->   `pentacles-ace`) không có trong 02 → giữ theo `cards.json`, không có khối CHARACTER.
-> - Lá có nhiều nhân vật mà `cards.json` ghi `distinct per …` (`wands-04`, `wands-05`):
->   **giữ `cards.json`** cho tóc/dáng, vì 02 chỉ mô tả một người.
-> - Lệch hiện ghi nhận (chỉ báo cáo, không tự sửa): **0** chỗ tuổi, **15** chỗ tóc
->   (02 dùng tóc búi/tết/áo giáp, `cards.json` đã được làm mềm thành tóc xoã).
+> `02-CHARACTER-SPECS.md` giữ nguyên làm tài liệu cho người vẽ, và **lệch** `cards.json`:
+> 0 chỗ tuổi · **15 chỗ tóc** (02 ghi tóc tết/búi + mũ giáp; `cards.json` đã làm mềm thành tóc xoã)
+> · vóc dáng dùng thang A–D thay chuỗi mô tả tự do · 4 trường mà `cards.json` không có
+> (mắt · da · nét riêng · không khí) → **không** đi vào prompt.
+> Chỉ **báo cáo** lệch, không tự đồng bộ. Muốn thông tin nào của 02 hiện lên ảnh → ghi vào
+> `cards.json` trước, rồi chạy lại `build_prompts.py all` + `generate_card_table.py`.
 
 ## 3. Chuẩn kỹ thuật cho mỗi lá bài
 
@@ -70,10 +66,9 @@
 |---|---|
 | `scripts/build_frame_standard.py` | **Sinh bộ chuẩn khung** từ lá neo (`--anchor`, mặc định 17-the-star) → `standards/<neo>/`; có `--force`, `--copy-anchor` |
 | `scripts/check_frame_standard.py` | **QA khung** theo chuẩn: 6 chỉ tiêu/lá, in bảng hoặc `--json`, ghi `frame-report.{json,md}`; exit 1 nếu có lá lệch (dùng được trong CI) |
-| `scripts/card_specs.py` | **Đọc `02-CHARACTER-SPECS.md`** + gộp vào `cards.json` (`check` để báo lệch, `show <slug>` để xem một lá) |
-| `scripts/build_prompts.py` | Sinh prompt: `scene`/`count` nguyên văn từ `cards.json` + CHARACTER từ `02` + khung theo `standards/17-the-star/standard.json` → `prompts/out/` (`all`, `prompt <slug>`, `check`, `md`) |
+| `scripts/build_prompts.py` | Sinh prompt **chỉ từ `cards.json`** (`scene`/`count`/`age`/`hair`/`build` nguyên văn) + câu khung theo `standards/17-the-star/standard.json` → `prompts/out/` (`all`, `prompt <slug>`, `check`, `md`) |
 | `scripts/build_gallery.py` | Sinh lại `cards/deck.json` + `cards/index.html` từ `cards.json` + ảnh trong `cards/` |
-| `scripts/generate_card_table.py` | Sinh lại bảng tra `tarot prompt/01-CARD-TABLE.md` **từ `cards.json` + `02-CHARACTER-SPECS.md`** |
+| `scripts/generate_card_table.py` | Sinh lại `tarot prompt/01-CARD-TABLE.md` **từ `cards.json`** |
 | `scripts/place_wands.py` | Tách sprite khỏi nền trắng, xoay/scale, ghép **đúng n vật thể** theo hàng |
 | `scripts/rebuild_emblem.py` | Vẽ lại huy hiệu medallion với **đúng n vạch** (fit ellipse, inpaint nền plate) |
 | `scripts/check_card.py` | Kiểm tra kích thước/tỷ lệ (cần `identify` của ImageMagick) |
@@ -88,7 +83,6 @@ rồi `python3 scripts/check_frame_standard.py --standard standards/<slug>/stand
 **Sau khi sửa dữ liệu lá, chạy bộ regenerate:**
 
 ```bash
-python3 scripts/card_specs.py check && \
 python3 scripts/build_prompts.py all && \
 python3 scripts/build_gallery.py && \
 python3 scripts/generate_card_table.py && \
@@ -105,5 +99,5 @@ python3 scripts/check_frame_standard.py
 | *File dẫn xuất* (2026-09-03) | `prompts/out/*` của 77 lá thiếu `ANATOMY LOCK`; `01-CARD-TABLE.md` là bản diễn giải 72 nhân vật chứ không phải bảng 78 lá | Regenerate `prompts/out/` + `cards/deck.json` + `cards/index.html` + `01-CARD-TABLE.md` theo `cards.json` hiện tại (`deck.json`/`index.html` không đổi byte nào) |
 | *Batch 1 — 3 lá Ẩn Chính* (2026-09-03) | Lá cũ dùng khung gân vàng dày + medallion + ruy băng → **lệch chuẩn The Star** (ink_iou 0.49) | Vẽ lại `00-fool`, `01-magician`, `02-priestess` full-bleed theo khung The Star: `ink_iou` 0.645 / 0.912 / 0.925 → **ĐẠT**; `01-magician` đúng COUNT LOCK (cốc · kiếm · 1 gậy · tiền). Bản cũ xem `git show HEAD~1:cards/<slug>.png` |
 | *Cảnh mô tả trong `cards.json`* (batch 1) | `scene` của 3 lá trên vẫn ghi khỏa thân (`nude`, `bare`, `draped only`) trong khi ảnh mới vẽ nàng khoác lụa | **ĐÃ CHỐT: giữ nguyên văn bản `cards.json`.** Prompt vẫn emit `scene` nguyên văn; việc khoác lụa/do sáng xử lý ở bước render, không sửa nguồn |
-| *Nguồn thông số nhân vật* (2026-09-03, lần 2) | Prompt lấy CHARACTER từ `cards.json`/bảng `01`, bỏ lỡ 4 thuộc tính (mắt · da · nét riêng · không khí) và thang vóc A–D của `02` | Thêm `scripts/card_specs.py` (đọc 02), nối vào `build_prompts.py` + `generate_card_table.py`; `01` giáng cấp thành bảng tra; regenerate 78 file `prompts/out/*` (verify: `scene`/`title`/`emblem`/`count` nguyên văn 78/78) |
+| *Nguồn dữ liệu* (2026-09-03) | Đã thử nối `02-CHARACTER-SPECS.md` làm chuẩn nhân vật → hai nguồn tranh nhau (`02` đè 15 chỗ tóc, `cards.json` là file gốc lại bị ghi đè) | **Thu hồi theo yêu cầu "chỉ sử dụng cards.json"**: xoá `scripts/card_specs.py`, `build_prompts.py` + `generate_card_table.py` đọc đúng một nguồn `cards.json`, regenerate 78 file `prompts/out/*` |
 | `scripts/count_wands.py` | Hard-code `root = "<repo>/raw"` + 4 slug → chạy trên fresh clone in `MISSING` cả 4 | **Chưa sửa** — cần bạn quyết (đổi sang argv/`--dir` hay xoá) |
