@@ -47,6 +47,8 @@ PLATE_COVER = 0.35   # độ phủ kim tuyến trong ROI để coi là "có đĩ
 INSET = 4            # px thu thêm khi xác định cửa sổ nội dung
 MAX_SCAN = 200       # chỉ quét trong 200px tính từ mép để tìm nét kẻ viền
 GOLD_HSV = (12, 35, 80, 48, 255, 255)   # hmin,smin,vmin,hmax,smax,vmax
+PEAK_SCAN = 60       # chỉ tìm đỉnh đạo hàm (vị trí nét kẻ) trong 60px sát mép — ngoài vùng đó
+                     # mọi chuyển sắc của bức tranh đều dễ bị nhầm là "nét viền"
 
 
 def gold_mask(img_bgr: np.ndarray) -> np.ndarray:
@@ -124,9 +126,19 @@ def measure(img_bgr: np.ndarray) -> dict:
     win = [int(x0) + INSET, int(y0) + INSET, int(x1) - INSET, int(y1) - INSET]
     win = [max(0, win[0]), max(0, win[1]), min(w, win[2]), min(h, win[3])]
 
+    # "mép lá có bị viền vàng lấp kín không": The Star để cảnh tràn ra tới mép (edge_touch ~ 0),
+    # kiểu viền gân vàng dày thì kim tuyến phủ kín 10px ngoài cùng (edge_touch ~ 1).
+    # Đây là chỉ số gần như bất biến với màu của bức tranh, nên dùng để phân loại khung.
+    EDGE_TOUCH_W = 10
+
+    def edge_touch(a):
+        return float(np.mean(a[:EDGE_TOUCH_W]))
+
     return {
         "size_wh": [int(w), int(h)],
         "aspect": round(w / h, 5),
+        "edge_touch": {"left": round(edge_touch(col), 4), "top": round(edge_touch(row), 4),
+                       "right": round(edge_touch(col[::-1]), 4), "bottom": round(edge_touch(row[::-1]), 4)},
         "gold_coverage_total": round(float(cov.mean()), 4),
         "lines": {
             "vertical_runs": [[int(a), int(b)] for a, b in left_runs],
@@ -136,6 +148,12 @@ def measure(img_bgr: np.ndarray) -> dict:
         },
         "rule_offset_left_px": int(left_runs[0][0]) if left_runs else None,
         "rule_offset_top_px": int(top_runs[0][0]) if top_runs else None,
+        # vi tri net ke DOC/NGANG co cuong do lon nhat (bat bien voi mau nen):
+        # la dinh cua |dao ham| cua ho do phu kim tuyen, chi do trong 200px tu mép.
+        "rule_peak_left_px": int(np.argmax(np.abs(np.diff(col[:PEAK_SCAN])))) if col.size else None,
+        "rule_peak_top_px": int(np.argmax(np.abs(np.diff(row[:PEAK_SCAN])))) if row.size else None,
+        "rule_peak_right_px": int((w - 1) - np.argmax(np.abs(np.diff(col[w - PEAK_SCAN:][::-1])))) if col.size else None,
+        "rule_peak_bottom_px": int((h - 1) - np.argmax(np.abs(np.diff(row[h - PEAK_SCAN:][::-1])))) if row.size else None,
         "frame_band_px": {"left": int(win[0]), "right": int(w - win[2]),
                           "top": int(win[1]), "bottom": int(h - win[3])},
         "content_window_xyxy": win,
@@ -203,7 +221,7 @@ def main(argv=None) -> int:
                comments="# ")
 
     std = {
-        "schema": 1,
+        "schema": 2,
         "anchor_card": {"slug": name, "file": os.path.relpath(anchor, ROOT).replace(os.sep, "/")},
         "anchor_sha256": digest,
         "anchor_bytes": len(raw),
@@ -215,6 +233,8 @@ def main(argv=None) -> int:
             "gold_coverage_total": m["gold_coverage_total"],
             "rule_offset_left_px": m["rule_offset_left_px"],
             "rule_offset_top_px": m["rule_offset_top_px"],
+            "rule_peak_px": {"left": m["rule_peak_left_px"], "top": m["rule_peak_top_px"],
+                            "right": m["rule_peak_right_px"], "bottom": m["rule_peak_bottom_px"]},
             "band_px": m["frame_band_px"],
             "content_window_xyxy": m["content_window_xyxy"],
             "lines": m["lines"],
@@ -222,11 +242,16 @@ def main(argv=None) -> int:
         "plates": m["plates"],
         "frame_style": "thin-line-art" if m["gold_coverage_total"] < 0.20 else "heavy-filigree",
         "tolerance": {
-            "gold_coverage_abs": 0.05,      # |độ phủ kim tuyến − chuẩn| tối đa
-            "rule_offset_px": 6,            # độ dày dải viền mỗi phía lệch tối đa
-            "band_struct_corr_min": 0.90,   # tương quan hồ sơ viền (bất biến màu nền)
-            "frame_ink_iou_min": 0.55,      # mức chồng khít của mực viền trong vùng khung
+            # --- chi tiet QUYET DINH DAT/LECH (bat bien voi mau cua canh) ---
+            "edge_touch_max": 0.50,         # mép lá không được bị kim tuyến lấp kín (full-bleed)
+            "rule_peak_px": 12,             # net ke manh nhat nam trong ±12px quanh vi tri chuan
+            "frame_ink_iou_min": 0.55,      # mực viền chồng khít trong vùng khung
+            "band_struct_corr_min": 0.90,   # (info) tương quan hồ sơ viền
+            "gold_coverage_abs": 0.05,      # (info) |độ phủ kim tuyến toàn lá − chuẩn|
+            "rule_offset_px": 6,            # (info) độ dày dải viền mỗi phía
         },
+        "gating_checks": ["size", "ink_iou"],
+        "info_checks": ["coverage", "struct_corr", "band", "plates", "edge_touch", "rule_peak"],
         "measure_hints": {
             "fallback_used": m["_fallback_used"],
             "line_cover_thr": LINE_COVER,

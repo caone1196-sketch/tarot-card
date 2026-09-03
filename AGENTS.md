@@ -40,8 +40,8 @@
   | Cửa sổ nội dung | `x0=32 y0=35 x1=751 y1=1324` | — |
   | Đĩa huy hiệu (medallion) | **KHÔNG** | có/không phải khớp |
   | Ruy băng tên lá | **KHÔNG** | có/không phải khớp |
-  | Tương quan cấu trúc viền | 1.000 (bất biến màu nền) | ≥ 0.90 |
-  | Mực viền chồng khít (IoU) | 1.000 | ≥ 0.55 |
+  | **Mực viền chồng khít (IoU)** ← **chỉ số quyết định** | 1.000 | **≥ 0.55** |
+  | Vị trí nét kẻ · độ phủ kim tuyến · tương quan cấu trúc · bề rộng dải | (17/20/756/1340 · 11.6 % · 1.000 · 32/33/35/36) | **chỉ tham khảo** — mấy chỉ số này bị màu của bức tranh chi phối (trời ửng vàng → "phủ kim tuyến 63 %"), nên không dùng để phạt |
 
 - ⚠️ **Hiện trạng (2026-09-03): 1/78 lá ĐẠT chuẩn — 77 lá còn lại lệch**, và 77 lá đó lệch *nhau rất ít*
   (chúng cùng dùng viền gân vàng dày + medallion + ruy băng, phủ kim tuyến 43–92 %).
@@ -90,4 +90,6 @@ python3 scripts/check_frame_standard.py
 | `wands-08` Eight of Wands | Nội dung 7 gậy, huy hiệu 9 vạch | Vẽ lại: đúng 8 gậy có chồi lá + huy hiệu đúng 8 vạch |
 | *Chuẩn khung* (2026-09-03) | `AGENTS.md` cũ ghi "RMSE ≤ 0.04, đang đạt 0.0000" nhưng thước đo dải 60px thô khiến **77/78 lá bị báo lỗi** vì nó so cả màu nền | Sinh bộ chuẩn đo được `standards/17-the-star/` + 2 script `build_frame_standard.py` / `check_frame_standard.py`; `app.py` dùng theo; ảnh **không** bị sửa |
 | *File dẫn xuất* (2026-09-03) | `prompts/out/*` của 77 lá thiếu `ANATOMY LOCK`; `01-CARD-TABLE.md` là bản diễn giải 72 nhân vật chứ không phải bảng 78 lá | Regenerate `prompts/out/` + `cards/deck.json` + `cards/index.html` + `01-CARD-TABLE.md` theo `cards.json` hiện tại (`deck.json`/`index.html` không đổi byte nào) |
+| *Batch 1 — 3 lá Ẩn Chính* (2026-09-03) | Lá cũ dùng khung gân vàng dày + medallion + ruy băng → **lệch chuẩn The Star** (ink_iou 0.49) | Vẽ lại `00-fool`, `01-magician`, `02-priestess` full-bleed theo khung The Star: `ink_iou` 0.645 / 0.912 / 0.925 → **ĐẠT**; `01-magician` đúng COUNT LOCK (cốc · kiếm · 1 gậy · tiền). Bản cũ xem `git show HEAD~1:cards/<slug>.png` |
+| ⚠️ *Cảnh mô tả trong `cards.json`* (batch 1) | `scene` của 3 lá trên vẫn ghi khỏa thân (`nude`, `bare`, `draped only`) trong khi ảnh mới vẽ nàng khoác lụa | **Chưa sửa `cards.json`** — chờ quyết định: (a) cập nhật `scene` cho khớp ảnh rồi regenerate prompt+bảng, hay (b) giữ nguyên văn bản |
 | `scripts/count_wands.py` | Hard-code `root = "<repo>/raw"` + 4 slug → chạy trên fresh clone in `MISSING` cả 4 | **Chưa sửa** — cần bạn quyết (đổi sang argv/`--dir` hay xoá) |

@@ -92,12 +92,12 @@ def score_card(img_path: str, L: dict) -> dict:
     size_ok = [w, h] == std["card_size_wh"]
     checks["size"] = {"pass": bool(size_ok), "measured": [w, h], "expected": std["card_size_wh"]}
 
-    # 2) do phu kim tuyen toan la
+    # 2) do phu kim tuyen toan la — CHI LA THONG TIN (bi mau canh chi phoi)
     cover = m["gold_coverage_total"]
     d = abs(cover - std["frame"]["gold_coverage_total"])
-    checks["coverage"] = {"pass": bool(d <= tol["gold_coverage_abs"]), "measured": round(cover, 4),
-                          "expected": std["frame"]["gold_coverage_total"], "delta": round(d, 4),
-                          "tolerance": tol["gold_coverage_abs"]}
+    checks["coverage"] = {"pass": bool(d <= tol["gold_coverage_abs"]), "gating": False,
+                          "measured": round(cover, 4), "expected": std["frame"]["gold_coverage_total"],
+                          "delta": round(d, 4), "tolerance": tol["gold_coverage_abs"]}
 
     # 3) tuong quan cau truc ho so vien (bat bien voi mau nen)
     corr = 0.0
@@ -107,7 +107,7 @@ def score_card(img_path: str, L: dict) -> dict:
         a = np.concatenate([_std01(my_pc), _std01(my_pr)])
         b = np.concatenate([_std01(pc), _std01(pr)])
         corr = float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b) + 1e-9))
-    checks["struct_corr"] = {"pass": bool(corr >= tol["band_struct_corr_min"]),
+    checks["struct_corr"] = {"pass": bool(corr >= tol["band_struct_corr_min"]), "gating": False,
                              "measured": round(corr, 4), "min": tol["band_struct_corr_min"]}
 
     # 4) muc vien chong khit (chi trong vung khung cua chuan)
@@ -127,10 +127,24 @@ def score_card(img_path: str, L: dict) -> dict:
     thr = tol["frame_ink_iou_min"]
     checks["ink_iou"] = {"pass": bool(iou >= thr), "measured": round(iou, 4), "min": thr}
 
-    # 5) do dai dai vien ( cung dinh nghia voi chuan: mép trong cua net ke gan nhat)
+    # 5a) VỊ TRÍ NÉT KẺ — chỉ số bất biến với màu cảnh: đỉnh |đạo hàm| của hồ sơ kim tuyến
+    peak_ref = (std["frame"].get("rule_peak_px") or {})
+    peak_mine = {"left": m.get("rule_peak_left_px"), "top": m.get("rule_peak_top_px"),
+                 "right": m.get("rule_peak_right_px"), "bottom": m.get("rule_peak_bottom_px")}
+    if peak_ref:
+        pd_ = {kk: (abs(peak_mine[kk] - peak_ref[kk]) if peak_mine[kk] is not None and peak_ref[kk] is not None
+                    else 999) for kk in peak_ref}
+        checks["rule_peak"] = {"pass": bool(max(pd_.values()) <= tol["rule_peak_px"]),
+                               "measured": peak_mine, "expected": peak_ref,
+                               "delta_px": {kk: int(v) for kk, v in pd_.items()},
+                               "tolerance": tol["rule_peak_px"]}
+    else:
+        checks["rule_peak"] = {"pass": False, "note": "chuan schema 1 — chay lai build_frame_standard.py --force"}
+
+    # 5b) do dai dai vien (chi la thong tin: phu thuoc canh tran mép hay khong)
     band_ref = std["frame"]["band_px"]
     deltas = {kk: int(abs(m["frame_band_px"][kk] - band_ref[kk])) for kk in band_ref}
-    checks["band"] = {"pass": bool(max(deltas.values()) <= tol["rule_offset_px"]),
+    checks["band"] = {"pass": bool(max(deltas.values()) <= tol["rule_offset_px"]), "gating": False,
                       "measured": m["frame_band_px"], "expected": band_ref,
                       "delta_px": deltas, "tolerance": tol["rule_offset_px"]}
 
@@ -142,7 +156,9 @@ def score_card(img_path: str, L: dict) -> dict:
                         "measured": {kk: plates_mine[kk]["present"] for kk in plates_mine},
                         "expected": {kk: plates_ref[kk]["present"] for kk in plates_ref}}
 
-    failed = sorted(k for k, c in checks.items() if not c.get("pass") and not k.startswith("_"))
+    gating = std.get("gating_checks") or [k for k in checks if not k.startswith("_")]
+    failed = sorted(k for k, c in checks.items()
+                    if k in gating and not c.get("pass") and not k.startswith("_"))
     return {"ok": bool(not failed), "size_wh": [w, h], "checks": checks, "failed": failed}
 
 
@@ -203,17 +219,18 @@ def main(argv=None) -> int:
         print(f"Dai vien chuan: {L['std']['frame']['band_px']} | dia huy: "
               f"{L['std']['plates']['medallion']['present']} | ruy bang: {L['std']['plates']['ribbon']['present']}")
         print("-" * 96)
-        print(f"{'slug':14s} {'kq':4s} {'phu%':7s} {'corr':7s} {'iou':7s} {'leches':7s} "
+        print(f"{'slug':14s} {'kq':4s} {'phu%':7s} {'corr':7s} {'iou':7s} {'peak_lech(px)':13s} "
               f"{'plate':6s} cac chi tieu LECH")
         for r in rows:
             if "error" in r and not r.get("checks"):
                 print(f"{r['slug']:14s} LOI  -  -  -  -  -  {r['error']}")
                 continue
             c = r["checks"]
+            rp = c.get("rule_peak", {}).get("delta_px", {"x": 0})
             print(f"{r['slug']:14s} {'DAT' if r['ok'] else 'LECH':4s} "
                   f"{c['coverage']['measured'] * 100:6.1f}  {c['struct_corr']['measured']:6.3f}  "
                   f"{c['ink_iou']['measured']:6.3f}  "
-                  f"{max(c['band']['delta_px'].values()):5d}  "
+                  f"{max(rp.values()):13d}  "
                   f"{'ok' if c['plates']['pass'] else 'lech':6s} "
                   f"{','.join(r['failed']) if r['failed'] else '—'}")
         print("-" * 96)

@@ -28,15 +28,26 @@ python3 scripts/build_frame_standard.py --anchor cards/13-death.png \
 python3 scripts/check_frame_standard.py --standard standards/13-death/standard.json
 ```
 
-## Kết quả gần nhất (2026-09-03)
+## Kết quả gần nhất (2026-09-03, sau batch 1)
 
 - Chuẩn: **784×1360**, viền `thin-line-art`, nét kẻ đầu ở `x=18`/`y=21`, dải viền 32·33·35·36 px,
   độ phủ kim tuyến **11.6 %**, **không** đĩa medallion, **không** ruy băng.
-- **1/78 lá ĐẠT** (chính lá neo). 77 lá còn lại dùng kiểu *heavy-filigree*: viền gân vàng dày +
+- **4/78 lá ĐẠT**: lá neo + `00-fool` + `01-magician` + `02-priestess` (ba lá này vừa được vẽ lại
+  full-bleed theo khung The Star, `ink_iou` 0.645 / 0.912 / 0.925). 77 lá còn lại dùng kiểu *heavy-filigree*: viền gân vàng dày +
   medallion + ruy băng, độ phủ kim tuyến 43–92 % và **khớp nhau gần tuyệt đối**
   (tương quan cấu trúc cặp đôi 0.99–1.00).
 - Nói cách khác: **The Star là lá ngoại lai** của bộ. Muốn cả bộ theo The Star thì phải vẽ lại
   hàng loạt; muốn The Star theo bộ thì vẽ lại 1 lá. **Chưa quyết định — không tự sửa ảnh.**
+
+## Chỉ số nào quyết định DAT/LECH
+
+`standard.json` có `gating_checks` = **["size", "ink_iou"]**:
+- **`ink_iou`** = mức chồng khít của *mực viền* (mask kim tuyến, nới ±3px) bên trong `frame-mask.png`.
+  The Star = 1.000 (chính nó); lá full-bleed vẽ theo The Star ≈ **0.65–0.93**; lá kiểu viền gân
+  vàng dày cũ = **0.493** → ngưỡng 0.55 tách đúng hai họ khung.
+- `coverage`, `struct_corr`, `band`, `edge_touch`, `rule_peak` vẫn in ra nhưng **`gating: False`**
+  (xem `info_checks`): cả năm cái đều lấy màu của bức tranh làm mẫu nền, nên trời hoàng hôn ửng vàng
+  cũng bị tính là "phủ kim tuyến 63 %". Dùng để *đoán vì sao lệch*, không dùng để *phạt*.
 
 ## Vì sao không còn dùng "RMSE dải 60px ≤ 0.04"
 

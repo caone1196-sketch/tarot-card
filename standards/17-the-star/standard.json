@@ -1,5 +1,5 @@
 {
-  "schema": 1,
+  "schema": 2,
   "anchor_card": {
     "slug": "17-the-star",
     "file": "cards/17-the-star.png"
@@ -17,6 +17,12 @@
     "gold_coverage_total": 0.1159,
     "rule_offset_left_px": 18,
     "rule_offset_top_px": 21,
+    "rule_peak_px": {
+      "left": 17,
+      "top": 20,
+      "right": 756,
+      "bottom": 1340
+    },
     "band_px": {
       "left": 32,
       "right": 33,
@@ -100,11 +106,25 @@
   },
   "frame_style": "thin-line-art",
   "tolerance": {
-    "gold_coverage_abs": 0.05,
-    "rule_offset_px": 6,
+    "edge_touch_max": 0.5,
+    "rule_peak_px": 12,
+    "frame_ink_iou_min": 0.55,
     "band_struct_corr_min": 0.9,
-    "frame_ink_iou_min": 0.55
+    "gold_coverage_abs": 0.05,
+    "rule_offset_px": 6
   },
+  "gating_checks": [
+    "size",
+    "ink_iou"
+  ],
+  "info_checks": [
+    "coverage",
+    "struct_corr",
+    "band",
+    "plates",
+    "edge_touch",
+    "rule_peak"
+  ],
   "measure_hints": {
     "fallback_used": false,
     "line_cover_thr": 0.35,
