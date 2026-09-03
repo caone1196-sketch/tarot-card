@@ -11,17 +11,18 @@ import json
 import subprocess
 import sys
 import base64
+import re
 
 import requests
 import streamlit as st
-import numpy as np
-import cv2
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CARDS_DIR = os.path.join(ROOT, "cards")
 DECK_JSON = os.path.join(CARDS_DIR, "deck.json")
-STAR_REF = os.path.join(CARDS_DIR, "17-the-star.png")
+# Bộ chuẩn khung (viền) do scripts/build_frame_standard.py sinh từ lá neo hiện tại.
+STANDARD_DIR = os.path.join(ROOT, "standards", "17-the-star")
+CARD_NAME_RE = re.compile(r"^[A-Za-z0-9._-]+$")
 
 # Thư viện lá bài trên GitHub (nguồn chính), local là dự phòng.
 GITHUB_REPO = "caone1196-sketch/tarot-card"
@@ -64,11 +65,12 @@ def load_deck():
 
 
 def card_image_src(card):
-    """Ảnh lá bài: local nếu có, nếu không thì dùng thư viện GitHub (raw)."""
-    local = os.path.join(CARDS_DIR, card["image"])
-    if os.path.exists(local):
+    """Ảnh lá bài: local nếu có (tên phải an toàn), nếu không thì dùng thư viện GitHub (raw)."""
+    local = safe_card_path(card.get("image", ""))
+    if local and os.path.exists(local):
         return local
-    return f"{GITHUB_RAW}/{card['image']}"
+    name = os.path.basename(str(card.get("image", "")))
+    return f"{GITHUB_RAW}/{name}"
 
 
 def group_of(slug: str) -> str:
@@ -80,15 +82,40 @@ def group_of(slug: str) -> str:
     return "other"
 
 
-def frame_rmse(img_path: str, ref: str = STAR_REF) -> float | None:
-    """RMSE of the left 60px border strip vs the Star anchor (0..1)."""
-    a = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
-    b = cv2.imread(ref, cv2.IMREAD_GRAYSCALE)
-    if a is None or b is None:
+def safe_card_path(image_name: str) -> str | None:
+    """Đường dẫn ảnh trong cards/ — chặn `..` và đường dẫn tuyệt đối (deck.json là dữ liệu)."""
+    if not isinstance(image_name, str) or not CARD_NAME_RE.fullmatch(image_name):
         return None
-    a = a[:, :60]
-    b = b[:, :60]
-    return float(np.sqrt(np.mean((a.astype(np.float64) - b.astype(np.float64)) ** 2)) / 255.0)
+    p = os.path.realpath(os.path.join(CARDS_DIR, image_name))
+    return p if p.startswith(os.path.realpath(CARDS_DIR) + os.sep) else None
+
+
+@st.cache_resource(show_spinner=False)
+def load_frame_standard():
+    """Bộ chuẩn khung sinh bởi scripts/build_frame_standard.py (neo: The Star hiện tại)."""
+    std_file = os.path.join(STANDARD_DIR, "standard.json")
+    if not os.path.exists(std_file):
+        return None
+    try:
+        sys.path.insert(0, os.path.join(ROOT, "scripts"))
+        from check_frame_standard import load_standard  # noqa: PLC0415
+        return load_standard(std_file)
+    except Exception as e:                     # thiếu cv2/numpy, chuẩn hỏng…
+        st.session_state["_std_err"] = f"{type(e).__name__}: {e}"
+        return None
+
+
+def frame_deviation(img_path: str):
+    """Chấm khung viền 1 lá theo bộ chuẩn. Trả dict của check_frame_standard hoặc None."""
+    L = load_frame_standard()
+    if L is None or not img_path or not os.path.exists(img_path):
+        return None
+    try:
+        sys.path.insert(0, os.path.join(ROOT, "scripts"))
+        from check_frame_standard import score_card  # noqa: PLC0415
+        return score_card(img_path, L)
+    except Exception:
+        return None
 
 
 def rebuild_gallery():
@@ -97,6 +124,28 @@ def rebuild_gallery():
         cwd=ROOT, capture_output=True, text=True,
     )
     return res.returncode == 0, (res.stdout + res.stderr).strip()
+
+
+def _fmt_metric(key: str, v: dict) -> str:
+    """Diễn giải 1 chỉ tiêu kiểm khung cho người dùng phổ thông."""
+    if key == "size":
+        return f"{v['measured'][0]}×{v['measured'][1]} (chuẩn {v['expected'][0]}×{v['expected'][1]})"
+    if key == "coverage":
+        return (f"độ phủ kim tuyến {v['measured'] * 100:.1f}% "
+                f"(chuẩn {v['expected'] * 100:.1f}%, cho phép ±{v['tolerance'] * 100:.0f}%)")
+    if key == "struct_corr":
+        return f"tương quan cấu trúc viền {v['measured']:.3f} (tối thiểu {v['min']:.2f})"
+    if key == "ink_iou":
+        return f"mực viền chồng khít {v['measured']:.3f} (tối thiểu {v['min']:.2f})"
+    if key == "band":
+        d = v["delta_px"]
+        return (f"độ dày dải viền lệch " + ", ".join(f"{k} {n}px" for k, n in d.items())
+                + f" (cho phép ±{v['tolerance']}px)")
+    if key == "plates":
+        got = ", ".join(f"{k}={'có' if p else 'không'}" for k, p in v["measured"].items())
+        return f"đĩa huy hiệu/ruy băng: {got} (chuẩn: " + ", ".join(
+            f"{k}={'có' if p else 'không'}" for k, p in v["expected"].items()) + ")"
+    return json.dumps(v, ensure_ascii=False)
 
 
 def all_slugs():
@@ -123,7 +172,7 @@ with st.sidebar:
         label_visibility="collapsed",
     )
     st.divider()
-    st.caption("Chuẩn khung: The Star · 100% nhân vật nữ 18–25")
+    st.caption("Chuẩn khung: `standards/17-the-star` · sinh từ lá The Star hiện tại")
     st.caption(f"Thư viện lá bài: github.com/{GITHUB_REPO} · nhánh `{GITHUB_REF}`")
 
 # ---------------------------------------------------------------- gallery
@@ -185,10 +234,17 @@ if page == "🖼️ Bộ sưu tập":
                 st.markdown(f"**Mái tóc:** {c.get('hair', '—')}")
                 st.markdown(f"**Thân hình:** {c.get('build', '—')}")
                 st.markdown(f"**Cảnh / chủ đề:** {c.get('scene', '—')}")
-                rmse = frame_rmse(os.path.join(CARDS_DIR, c["image"]))
-                if rmse is not None:
-                    ok = "✅" if rmse <= 0.04 else "⚠️"
-                    st.markdown(f"**Khung viền (RMSE vs The Star):** {rmse:.4f} {ok}")
+                fr = frame_deviation(safe_card_path(c["image"]) or "")
+                if fr:
+                    st.markdown("**Khung viền** (so với `standards/17-the-star`): "
+                                + ("✅ ĐẠT chuẩn" if fr["ok"] else "⚠️ LỆCH chuẩn"))
+                    for k, v in fr["checks"].items():
+                        if k.startswith("_"):
+                            continue
+                        st.caption(("· ✅ " if v.get("pass") else "· ⚠️ ")
+                                   + f"`{k}`: {_fmt_metric(k, v)}")
+                else:
+                    st.caption("Chưa có bộ chuẩn khung — chạy `python3 scripts/build_frame_standard.py --force`.")
             if st.button("Đóng chi tiết"):
                 del st.session_state["detail_slug"]
 
@@ -196,7 +252,7 @@ if page == "🖼️ Bộ sưu tập":
 elif page == "📤 Tải lên lá bài":
     st.header("📤 Tải lên / thay thế lá bài")
     st.write("Tải ảnh PNG/JPG lên để thay thế một lá có sẵn, hoặc thêm lá mới. "
-             "Ảnh sẽ được kiểm tra khung viền so với chuẩn The Star.")
+             "Ảnh sẽ được chấm khung viền theo bộ chuẩn `standards/17-the-star/standard.json`.")
 
     up = st.file_uploader("Chọn ảnh lá bài", type=["png", "jpg", "jpeg"])
     if up is not None:
@@ -235,13 +291,20 @@ elif page == "📤 Tải lên lá bài":
                 else:
                     st.caption("(chưa có ảnh — sẽ thêm mới)")
 
-            # preview frame RMSE
-            tmp = "/tmp/_upload_preview.png"
-            pil.save(tmp)
-            rmse = frame_rmse(tmp)
-            if rmse is not None:
-                ok = "✅ khớp tốt" if rmse <= 0.04 else "⚠️ lệch nhiều"
-                st.markdown(f"**Khung viền RMSE vs The Star:** {rmse:.4f} — {ok}")
+            # preview theo bộ chuẩn khung
+            import tempfile
+            with tempfile.TemporaryDirectory(prefix="tarot-prev-") as td:
+                tmp = os.path.join(td, "preview.png")
+                pil.save(tmp)
+                fr = frame_deviation(tmp)
+            if fr:
+                st.markdown("**Khung viền** (so với `standards/17-the-star`): "
+                            + ("✅ ĐẠT chuẩn" if fr["ok"] else "⚠️ LỆCH chuẩn"))
+                for k, v in fr["checks"].items():
+                    if not k.startswith("_"):
+                        st.caption(("· ✅ " if v.get("pass") else "· ⚠️ ") + f"`{k}`: {_fmt_metric(k, v)}")
+            else:
+                st.caption("Chưa đo được khung viền (thiếu bộ chuẩn hoặc ảnh không đọc được).")
 
             if st.button("💾 Lưu vào bộ bài", type="primary"):
                 dest = os.path.join(CARDS_DIR, target + ".png")
@@ -277,31 +340,59 @@ elif page == "🎴 Rút một lá":
 
 # ---------------------------------------------------------------- frame check
 elif page == "ℹ️ Kiểm tra khung viền":
-    st.header("ℹ️ Kiểm tra khung viền (RMSE vs The Star)")
-    st.write("Đo độ lệch khung viền của từng lá so với lá chuẩn The Star. "
-             "RMSE ≤ 0.04 được xem là khớp tốt.")
+    st.header("ℹ️ Kiểm tra khung viền (theo bộ chuẩn The Star)")
+    std = load_frame_standard()
+    if std is None:
+        st.warning(
+            "Chưa tìm thấy bộ chuẩn khung ở `standards/17-the-star/`. Sinh lại bằng:\n\n"
+            "```\npython3 scripts/build_frame_standard.py --force\n```"
+        )
+        st.stop()
     cards = deck["cards"]
-    if st.button("🔎 Quét toàn bộ 78 lá"):
+    s_ = std["std"]
+    st.caption(
+        f"Chuẩn: `{s_['anchor_card']['slug']}` · {s_['card_size_wh'][0]}×{s_['card_size_wh'][1]} · "
+        f"kiểu viền **{s_['frame_style']}** · độ phủ kim tuyến "
+        f"{s_['frame']['gold_coverage_total'] * 100:.1f}% · dải viền {s_['frame']['band_px']} · "
+        f"đĩa huy hiệu {s_['plates']['medallion']['present']}, ruy băng {s_['plates']['ribbon']['present']}"
+    )
+    st.caption(
+        "Ngưỡng: độ phủ ±"
+        f"{s_['tolerance']['gold_coverage_abs'] * 100:.0f}% · tương quan cấu trúc ≥"
+        f"{s_['tolerance']['band_struct_corr_min']} · mực viền chồng khít ≥"
+        f"{s_['tolerance']['frame_ink_iou_min']} · độ dày dải ±{s_['tolerance']['rule_offset_px']}px"
+    )
+    if st.button("🔎 Quét toàn bộ", type="primary"):
         rows = []
         prog = st.progress(0.0, text="Đang quét…")
         for i, c in enumerate(cards):
-            p = os.path.join(CARDS_DIR, c["image"])
-            r = frame_rmse(p)
-            rows.append((c["slug"], c["title"], r))
-            prog.progress((i + 1) / len(cards), text=f"Đang quét {i + 1}/{len(cards)}")
+            p = safe_card_path(c["image"]) or ""
+            r = frame_deviation(p)
+            ck = (r or {}).get("checks", {})
+            rows.append({
+                "Slug": c["slug"], "Tên": c["title"],
+                "Đạt": "✅" if (r or {}).get("ok") else "⚠️",
+                "Phủ kim tuyến %": round(100 * ck.get("coverage", {}).get("measured", 0), 1),
+                "Tương quan": round(ck.get("struct_corr", {}).get("measured", 0), 3),
+                "Chồng khít": round(ck.get("ink_iou", {}).get("measured", 0), 3),
+                "Lệch dải (px)": max(ck.get("band", {}).get("delta_px", {"x": 0}).values()),
+                "Chỉ tiêu lệch": ", ".join((r or {}).get("failed", ["—"])),
+            })
+            prog.progress((i + 1) / max(1, len(cards)), text=f"Đang quét {i + 1}/{len(cards)}")
         prog.empty()
         st.session_state["frame_rows"] = rows
 
     rows = st.session_state.get("frame_rows")
     if rows:
         import pandas as pd
-        df = pd.DataFrame(rows, columns=["Slug", "Tên", "RMSE"])
-        df["Trạng thái"] = df["RMSE"].apply(
-            lambda r: "✅" if (r is not None and r <= 0.04) else ("⚠️" if r is not None else "?"))
-        st.dataframe(df, use_container_width=True)
+        df = pd.DataFrame(rows)
+        n_ok = int((df["Đạt"] == "✅").sum())
+        st.info(f"{n_ok}/{len(df)} lá ĐẠT chuẩn · {len(df) - n_ok} lá lệch. "
+                "Lệch khung ở đây là **lệch thị giác thật**, không phải lỗi kích thước.")
+        st.dataframe(df, width="stretch")
         st.download_button(
             "📥 Tải xuống CSV",
             df.to_csv(index=False).encode("utf-8"),
-            "frame_rmse.csv",
+            "frame_check.csv",
             "text/csv",
         )
