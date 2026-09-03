@@ -24,8 +24,8 @@ def load_panel_config():
 
 def compose_card(raw_path, out_path, config):
     panel = config["panel"]      # [x, y, w, h]
-    emblem = config["emblem"]    # [x, y, w, h]
-    title = config["title"]      # [x, y, w, h]
+    emblem = config.get("emblem")  # [x, y, w, h] or null when the deck has no top emblem/icon
+    title = config.get("title")    # [x, y, w, h] or null when title is not composited separately
     feather = config.get("feather", 3)
     size = config.get("size", [848, 1264])
 
@@ -37,29 +37,33 @@ def compose_card(raw_path, out_path, config):
         temp_raw
     ], check=True)
 
-    # Crop out the 3 specific regions from the raw card
+    # Crop configured regions from the raw card.
+    # `emblem: null` means the updated deck should NOT transplant any top icon/symbol.
+    # `title` is still allowed: it is only the plain title lettering directly on the scene,
+    # not a ribbon/banner/plaque/frame.
     temp_panel = f"/tmp/panel_{os.path.basename(raw_path)}"
-    temp_emblem = f"/tmp/emblem_{os.path.basename(raw_path)}"
-    temp_title = f"/tmp/title_{os.path.basename(raw_path)}"
+    temp_emblem = f"/tmp/emblem_{os.path.basename(raw_path)}" if emblem else None
+    temp_title = f"/tmp/title_{os.path.basename(raw_path)}" if title else None
 
     subprocess.run(["convert", temp_raw, "-crop", f"{panel[2]}x{panel[3]}+{panel[0]}+{panel[1]}", "+repage", temp_panel], check=True)
-    subprocess.run(["convert", temp_raw, "-crop", f"{emblem[2]}x{emblem[3]}+{emblem[0]}+{emblem[1]}", "+repage", temp_emblem], check=True)
-    subprocess.run(["convert", temp_raw, "-crop", f"{title[2]}x{title[3]}+{title[0]}+{title[1]}", "+repage", temp_title], check=True)
+    if emblem:
+        subprocess.run(["convert", temp_raw, "-crop", f"{emblem[2]}x{emblem[3]}+{emblem[0]}+{emblem[1]}", "+repage", temp_emblem], check=True)
+    if title:
+        subprocess.run(["convert", temp_raw, "-crop", f"{title[2]}x{title[3]}+{title[0]}+{title[1]}", "+repage", temp_title], check=True)
 
-    # Composite the 3 regions onto the base template frame
-    cmd = [
-        "convert", TEMPLATE_FRAME,
-        temp_panel, "-geometry", f"+{panel[0]}+{panel[1]}", "-composite",
-        temp_emblem, "-geometry", f"+{emblem[0]}+{emblem[1]}", "-composite",
-        temp_title, "-geometry", f"+{title[0]}+{title[1]}", "-composite",
-        "-quality", "92",
-        out_path
-    ]
+    # Composite configured regions onto the base template frame.
+    cmd = ["convert", TEMPLATE_FRAME,
+           temp_panel, "-geometry", f"+{panel[0]}+{panel[1]}", "-composite"]
+    if emblem:
+        cmd.extend([temp_emblem, "-geometry", f"+{emblem[0]}+{emblem[1]}", "-composite"])
+    if title:
+        cmd.extend([temp_title, "-geometry", f"+{title[0]}+{title[1]}", "-composite"])
+    cmd.extend(["-quality", "92", out_path])
     subprocess.run(cmd, check=True)
 
     # Cleanup temp files
     for p in [temp_raw, temp_panel, temp_emblem, temp_title]:
-        if os.path.exists(p):
+        if p and os.path.exists(p):
             os.remove(p)
 
     print(f"Composed card: {raw_path} -> {out_path}")
