@@ -3,3 +3,4 @@ samples/
 
 # vùng staging cho ảnh đang regenerate (không commit trùng với cards/)
 cards/_regen/
+cards1/

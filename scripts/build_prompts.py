@@ -98,6 +98,13 @@ def frame_clause(std, use_reference=True):
                           f"standards/{std['anchor_card']['slug']}/standard.json).")
 
 
+QUALITY_DIRECTIVE = (
+    "RENDER QUALITY (HARD): produce the final image in crisp 4K ultra-high resolution with every edge, "
+    "filament and texture razor sharp; completely remove film grain and sensor noise for a clean, smooth "
+    "fine-art surface; maximize fine micro-detail in hair strands, water droplets, foliage, lace and gold "
+    "embossing; professional studio-grade clarity, saturation and contrast, no artifacts, no speckle."
+)
+
 def build_card_prompt_star_standard(card, use_reference=True, std=None):
     emblem = card.get("emblem", "an ornate heraldic symbol")
     title = card.get("title", "")
@@ -122,6 +129,7 @@ def build_card_prompt_star_standard(card, use_reference=True, std=None):
     if count_str:
         extra_directives.append(count_str)
     extra_directives.append(anatomy_lock)
+    extra_directives.append(QUALITY_DIRECTIVE)
     extra_text = (" " + " ".join(extra_directives)) if extra_directives else ""
 
     ref_clause = frame_clause(std, use_reference)

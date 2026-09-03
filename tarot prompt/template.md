@@ -10,4 +10,6 @@ Depth layering: enlarge the scene so its edges extend slightly beneath the inner
 
 STRICT ANATOMY (HARD RULE): exactly two arms, two legs, one head and one torso per character; every joint (shoulder, elbow, wrist, hip, knee, ankle) must connect naturally to the body — NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing/amputated arms, NO deformed joints, NO wrong finger counts. Keep both arms clearly separated from the torso with visible armpits, elbows and wrists.
 
+RENDER QUALITY (HARD): produce the final image in crisp 4K ultra-high resolution with every edge, filament and texture razor sharp; completely remove film grain and sensor noise for a clean, smooth fine-art surface; maximize fine micro-detail in hair strands, water droplets, foliage, lace and gold embossing; professional studio-grade clarity, saturation and contrast, no artifacts, no speckle.
+
 Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, symmetrical golden frame border, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail.

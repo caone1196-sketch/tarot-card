@@ -21,7 +21,15 @@ Bản chuẩn hóa quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài
    * **Lớp 3 (Khung viền)**: Khung viền mạ vàng Gothic mỏng, sắc nét, đối xứng hoàn hảo — **lấy chuẩn từ lá The Star**. **Hoa văn viền vàng ĐÈ LÊN TRÊN mép nội dung (foreground ornament over background scene) để tạo chiều sâu phân lớp — khung nổi phía trước, cảnh lùi ra sau.**
    * **Lớp 4 (Huy hiệu & Tên)**: Oval Medallion ở đỉnh chứa huy hiệu mạ vàng + Dải ruy băng cuộn ở đáy chứa tên lá bài.
 
+3b. **Quy chuẩn chất lượng render (RENDER QUALITY — HARD)**:
+   * Độ phân giải đầu ra **4K ultra-high** (784 × 1360 theo tỷ lệ 7:12, render nội bộ ở độ phân giải cao gấp bội).
+   * **Loại bỏ hoàn toàn nhiễu hạt (film grain) và nhiễu cảm biến (sensor noise)** → bề mặt fine-art sạch, mịn.
+   * **Tăng tối đa chi tiết mịn (micro-detail)**: từng sợi tóc, giọt nước, lá cây, ren vải, chạm khắc vàng đều nét căng.
+   * Độ trong trẻo, độ bão hoà và tương phản chuẩn studio; **không** có artifact, không speckle.
+
 ---
+
+
 
 ## Master Prompt Template (Chuẩn The Star)
 
@@ -35,6 +43,8 @@ In the large open center panel (filling the entire inner window edge to edge and
 {SCENE}. {CHARACTER_SPECIFICATION} {COUNT_LOCK}
 
 Depth layering: enlarge the scene so its edges extend slightly beneath the inner edge of the golden border, then paint the thin golden line-art border, corner flourishes, oval medallion and ribbon banner ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth.
+
+RENDER QUALITY (HARD): produce the final image in crisp 4K ultra-high resolution with every edge, filament and texture razor sharp; completely remove film grain and sensor noise for a clean, smooth fine-art surface; maximize fine micro-detail in hair strands, water droplets, foliage, lace and gold embossing; professional studio-grade clarity, saturation and contrast, no artifacts, no speckle.
 
 Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, symmetrical golden frame border, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail.
 ```

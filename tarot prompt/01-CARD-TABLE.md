@@ -1,7 +1,7 @@
 # Bảng 78 Lá — Đặc Điểm Nhân Vật (Độ Tuổi 18–25, Mái Tóc, Thân Hình) & Bố Cục Chuẩn
 
-Tất cả các lá bài được chuẩn hóa theo cấu trúc **4 Lớp Chiều Sâu** và **Khóa bố cục The Magician**.
-Nhân vật trên mỗi lá bài đều có nhận diện độc bản với độ tuổi cố định trong khoảng **18 đến 25 tuổi**.
+Nguồn dữ liệu duy nhất: `tarot prompt/cards.json`. Mọi lá bài được chuẩn hóa theo chuẩn khung **THE STAR** (`standards/17-the-star`): nội dung phủ kín toàn lá (full-bleed), viền gothic mạ vàng mảnh (thin-line-art) cùng hoạ tiết góc, **không còn** đĩa huy hiệu (medallion) hay dải ruy băng tên — tên lá được viết trực tiếp lên phần dưới cảnh, huy hiệu vẽ đè lên cảnh.
+Nhân vật trong bộ đều là **nữ**, độ tuổi cố định trong khoảng **18 đến 25 tuổi**; mỗi lá giữ vóc dáng, mái tóc và thần thái độc bản.
 
 ## 1. MAJOR ARCANA — 22 Lá Ẩn Chính
 
