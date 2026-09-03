@@ -11,38 +11,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "prompts", "out")
 DST = os.path.join(ROOT, "cards", "_regen")
 
-# slug -> [(chuỗi gốc trong cards.json/prompt, chuỗi thay thế)]
-SUBS = {
-    "00-fool": [(
-        "draped only in a transparent silk veil so fine it clings and reveals her bare body beneath, "
-        "the veil slipping from one shoulder",
-        "draped in a diaphanous silk over-veil over a floor-length ivory gown, the over-veil slipping "
-        "from one shoulder",
-    )],
-    "01-magician": [(
-        "a nude young woman magician, bare torso with a length of silk slung low across her hips",
-        "a young woman magician wearing a sleeveless ivory-and-gold gown with a length of silk slung "
-        "low across her hips",
-    )],
-    "02-priestess": [(
-        "a serene nude priestess, bare shoulders and the soft line of her breasts veiled only by a "
-        "drift of sheer gauze",
-        "a serene priestess in a pale blue floor-length gown, her shoulders and neckline veiled by a "
-        "drift of sheer gauze",
-    )],
-    "03-empress": [(
-        "a slender nude empress, breast bared",
-        "a slender empress in a softly draped ivory-and-gold silk gown with a low, covered neckline",
-    )],
-    "04-emperor": [(
-        "draped only in a diaphanous transparent silk veil so fine it clings to her soft curves and "
-        "glows with warm light against her skin, the gossamer fabric slipping from one shoulder",
-        "draped in a diaphanous silk over-veil over a gold-trimmed ivory gown, the fabric glowing with "
-        "warm light, slipping from one shoulder",
-    )],
-}
-
-
 def build(slug: str) -> str:
     with open(os.path.join(SRC, f"{slug}.txt"), encoding="utf-8") as f:
         t = f.read().strip()
