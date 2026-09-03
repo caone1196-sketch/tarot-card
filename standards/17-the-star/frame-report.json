@@ -2,311 +2,8 @@
   "standard": "standards/17-the-star/standard.json",
   "anchor": "17-the-star",
   "total": 78,
-  "pass": 1,
+  "pass": 4,
   "results": [
-    {
-      "ok": false,
-      "size_wh": [
-        784,
-        1360
-      ],
-      "checks": {
-        "size": {
-          "pass": true,
-          "measured": [
-            784,
-            1360
-          ],
-          "expected": [
-            784,
-            1360
-          ]
-        },
-        "coverage": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.8304,
-          "expected": 0.1159,
-          "delta": 0.7145,
-          "tolerance": 0.05
-        },
-        "struct_corr": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.1848,
-          "min": 0.9
-        },
-        "ink_iou": {
-          "pass": false,
-          "measured": 0.4927,
-          "min": 0.55
-        },
-        "rule_peak": {
-          "pass": false,
-          "measured": {
-            "left": 50,
-            "top": 49,
-            "right": 740,
-            "bottom": 1313
-          },
-          "expected": {
-            "left": 17,
-            "top": 20,
-            "right": 756,
-            "bottom": 1340
-          },
-          "delta_px": {
-            "left": 33,
-            "top": 29,
-            "right": 16,
-            "bottom": 27
-          },
-          "tolerance": 12
-        },
-        "band": {
-          "pass": false,
-          "gating": false,
-          "measured": {
-            "left": 204,
-            "right": 205,
-            "top": 204,
-            "bottom": 205
-          },
-          "expected": {
-            "left": 32,
-            "right": 33,
-            "top": 35,
-            "bottom": 36
-          },
-          "delta_px": {
-            "left": 172,
-            "right": 172,
-            "top": 169,
-            "bottom": 169
-          },
-          "tolerance": 6
-        },
-        "plates": {
-          "pass": false,
-          "measured": {
-            "medallion": true,
-            "ribbon": true
-          },
-          "expected": {
-            "medallion": false,
-            "ribbon": false
-          }
-        }
-      },
-      "failed": [
-        "ink_iou",
-        "rule_peak"
-      ],
-      "slug": "00-fool",
-      "title": "THE FOOL"
-    },
-    {
-      "ok": false,
-      "size_wh": [
-        784,
-        1360
-      ],
-      "checks": {
-        "size": {
-          "pass": true,
-          "measured": [
-            784,
-            1360
-          ],
-          "expected": [
-            784,
-            1360
-          ]
-        },
-        "coverage": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.6921,
-          "expected": 0.1159,
-          "delta": 0.5762,
-          "tolerance": 0.05
-        },
-        "struct_corr": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.1464,
-          "min": 0.9
-        },
-        "ink_iou": {
-          "pass": false,
-          "measured": 0.4927,
-          "min": 0.55
-        },
-        "rule_peak": {
-          "pass": false,
-          "measured": {
-            "left": 58,
-            "top": 67,
-            "right": 725,
-            "bottom": 1313
-          },
-          "expected": {
-            "left": 17,
-            "top": 20,
-            "right": 756,
-            "bottom": 1340
-          },
-          "delta_px": {
-            "left": 41,
-            "top": 47,
-            "right": 31,
-            "bottom": 27
-          },
-          "tolerance": 12
-        },
-        "band": {
-          "pass": false,
-          "gating": false,
-          "measured": {
-            "left": 204,
-            "right": 205,
-            "top": 204,
-            "bottom": 205
-          },
-          "expected": {
-            "left": 32,
-            "right": 33,
-            "top": 35,
-            "bottom": 36
-          },
-          "delta_px": {
-            "left": 172,
-            "right": 172,
-            "top": 169,
-            "bottom": 169
-          },
-          "tolerance": 6
-        },
-        "plates": {
-          "pass": false,
-          "measured": {
-            "medallion": true,
-            "ribbon": true
-          },
-          "expected": {
-            "medallion": false,
-            "ribbon": false
-          }
-        }
-      },
-      "failed": [
-        "ink_iou",
-        "rule_peak"
-      ],
-      "slug": "01-magician",
-      "title": "THE MAGICIAN"
-    },
-    {
-      "ok": false,
-      "size_wh": [
-        784,
-        1360
-      ],
-      "checks": {
-        "size": {
-          "pass": true,
-          "measured": [
-            784,
-            1360
-          ],
-          "expected": [
-            784,
-            1360
-          ]
-        },
-        "coverage": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.5189,
-          "expected": 0.1159,
-          "delta": 0.403,
-          "tolerance": 0.05
-        },
-        "struct_corr": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.1751,
-          "min": 0.9
-        },
-        "ink_iou": {
-          "pass": false,
-          "measured": 0.4927,
-          "min": 0.55
-        },
-        "rule_peak": {
-          "pass": false,
-          "measured": {
-            "left": 58,
-            "top": 67,
-            "right": 717,
-            "bottom": 1313
-          },
-          "expected": {
-            "left": 17,
-            "top": 20,
-            "right": 756,
-            "bottom": 1340
-          },
-          "delta_px": {
-            "left": 41,
-            "top": 47,
-            "right": 39,
-            "bottom": 27
-          },
-          "tolerance": 12
-        },
-        "band": {
-          "pass": false,
-          "gating": false,
-          "measured": {
-            "left": 204,
-            "right": 205,
-            "top": 204,
-            "bottom": 205
-          },
-          "expected": {
-            "left": 32,
-            "right": 33,
-            "top": 35,
-            "bottom": 36
-          },
-          "delta_px": {
-            "left": 172,
-            "right": 172,
-            "top": 169,
-            "bottom": 169
-          },
-          "tolerance": 6
-        },
-        "plates": {
-          "pass": false,
-          "measured": {
-            "medallion": true,
-            "ribbon": true
-          },
-          "expected": {
-            "medallion": false,
-            "ribbon": false
-          }
-        }
-      },
-      "failed": [
-        "ink_iou",
-        "rule_peak"
-      ],
-      "slug": "02-priestess",
-      "title": "THE HIGH PRIESTESS"
-    },
     {
       "ok": false,
       "size_wh": [
@@ -348,8 +45,8 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
-            "right": 672,
+            "top": 56,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -360,8 +57,8 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
-            "right": 84,
+            "top": 36,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -402,8 +99,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "03-empress",
       "title": "THE EMPRESS"
@@ -449,7 +145,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 125,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -461,7 +157,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 105,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -503,8 +199,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "04-emperor",
       "title": "THE EMPEROR"
@@ -550,7 +245,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -562,7 +257,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -604,8 +299,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "05-hierophant",
       "title": "THE HIEROPHANT"
@@ -651,7 +345,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -663,7 +357,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -705,8 +399,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "06-lovers",
       "title": "THE LOVERS"
@@ -752,7 +445,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -764,7 +457,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -806,8 +499,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "07-chariot",
       "title": "THE CHARIOT"
@@ -852,9 +544,9 @@
         "rule_peak": {
           "pass": false,
           "measured": {
-            "left": 103,
-            "top": 67,
-            "right": 717,
+            "left": 42,
+            "top": 56,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -864,9 +556,9 @@
             "bottom": 1340
           },
           "delta_px": {
-            "left": 86,
-            "top": 47,
-            "right": 39,
+            "left": 25,
+            "top": 36,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -907,8 +599,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "08-strength",
       "title": "STRENGTH"
@@ -954,7 +645,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -966,7 +657,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -1008,8 +699,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "09-hermit",
       "title": "THE HERMIT"
@@ -1055,7 +745,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -1067,7 +757,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -1109,8 +799,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "10-wheel",
       "title": "WHEEL OF FORTUNE"
@@ -1156,7 +845,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -1168,7 +857,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -1210,8 +899,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "11-justice",
       "title": "JUSTICE"
@@ -1256,9 +944,9 @@
         "rule_peak": {
           "pass": false,
           "measured": {
-            "left": 111,
-            "top": 67,
-            "right": 672,
+            "left": 58,
+            "top": 56,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -1268,9 +956,9 @@
             "bottom": 1340
           },
           "delta_px": {
-            "left": 94,
-            "top": 47,
-            "right": 84,
+            "left": 41,
+            "top": 36,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -1311,8 +999,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "12-hanged",
       "title": "THE HANGED MAN"
@@ -1358,7 +1045,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -1370,7 +1057,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -1412,8 +1099,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "13-death",
       "title": "DEATH"
@@ -1459,7 +1145,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -1471,7 +1157,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -1513,8 +1199,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "14-temperance",
       "title": "TEMPERANCE"
@@ -1560,7 +1245,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
+            "top": 49,
             "right": 740,
             "bottom": 1313
           },
@@ -1572,7 +1257,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
+            "top": 29,
             "right": 16,
             "bottom": 27
           },
@@ -1614,8 +1299,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "15-devil",
       "title": "THE DEVIL"
@@ -1661,8 +1345,8 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
-            "right": 672,
+            "top": 56,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -1673,8 +1357,8 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
-            "right": 84,
+            "top": 36,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -1715,8 +1399,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "16-tower",
       "title": "THE TOWER"
@@ -1761,9 +1444,9 @@
         "rule_peak": {
           "pass": false,
           "measured": {
-            "left": 111,
-            "top": 67,
-            "right": 672,
+            "left": 58,
+            "top": 56,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -1773,9 +1456,9 @@
             "bottom": 1340
           },
           "delta_px": {
-            "left": 94,
-            "top": 47,
-            "right": 84,
+            "left": 41,
+            "top": 36,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -1816,8 +1499,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "18-moon",
       "title": "THE MOON"
@@ -1863,8 +1545,8 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
-            "right": 717,
+            "top": 56,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -1875,8 +1557,8 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
-            "right": 39,
+            "top": 36,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -1917,8 +1599,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "19-sun",
       "title": "THE SUN"
@@ -1964,7 +1645,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 125,
+            "top": 56,
             "right": 725,
             "bottom": 1313
           },
@@ -1976,7 +1657,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 105,
+            "top": 36,
             "right": 31,
             "bottom": 27
           },
@@ -2018,8 +1699,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "20-judgement",
       "title": "JUDGEMENT"
@@ -2065,7 +1745,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -2077,7 +1757,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -2119,8 +1799,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "21-world",
       "title": "THE WORLD"
@@ -2166,7 +1845,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 68,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -2178,7 +1857,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 48,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -2220,8 +1899,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-02",
       "title": "TWO OF CUPS"
@@ -2321,8 +1999,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-03",
       "title": "THREE OF CUPS"
@@ -2368,7 +2045,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 68,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -2380,7 +2057,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 48,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -2422,8 +2099,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-04",
       "title": "FOUR OF CUPS"
@@ -2469,8 +2145,8 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 68,
-            "right": 672,
+            "top": 49,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -2481,8 +2157,8 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 48,
-            "right": 84,
+            "top": 29,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -2523,8 +2199,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-05",
       "title": "FIVE OF CUPS"
@@ -2624,8 +2299,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-06",
       "title": "SIX OF CUPS"
@@ -2671,7 +2345,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -2683,7 +2357,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -2725,8 +2399,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-07",
       "title": "SEVEN OF CUPS"
@@ -2772,7 +2445,7 @@
           "pass": false,
           "measured": {
             "left": 50,
-            "top": 67,
+            "top": 49,
             "right": 740,
             "bottom": 1313
           },
@@ -2784,7 +2457,7 @@
           },
           "delta_px": {
             "left": 33,
-            "top": 47,
+            "top": 29,
             "right": 16,
             "bottom": 27
           },
@@ -2826,8 +2499,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-08",
       "title": "EIGHT OF CUPS"
@@ -2872,8 +2544,8 @@
         "rule_peak": {
           "pass": false,
           "measured": {
-            "left": 59,
-            "top": 67,
+            "left": 58,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -2884,8 +2556,8 @@
             "bottom": 1340
           },
           "delta_px": {
-            "left": 42,
-            "top": 47,
+            "left": 41,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -2927,8 +2599,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-09",
       "title": "NINE OF CUPS"
@@ -2974,7 +2645,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -2986,7 +2657,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -3028,8 +2699,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-10",
       "title": "TEN OF CUPS"
@@ -3129,8 +2799,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-ace",
       "title": "ACE OF CUPS"
@@ -3176,7 +2845,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 740,
             "bottom": 1313
           },
@@ -3188,7 +2857,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 16,
             "bottom": 27
           },
@@ -3230,8 +2899,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-king",
       "title": "KING OF CUPS"
@@ -3331,8 +2999,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-knight",
       "title": "KNIGHT OF CUPS"
@@ -3378,8 +3045,8 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
-            "right": 672,
+            "top": 56,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -3390,8 +3057,8 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
-            "right": 84,
+            "top": 36,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -3432,8 +3099,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-page",
       "title": "PAGE OF CUPS"
@@ -3479,7 +3145,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 68,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -3491,7 +3157,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 48,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -3533,8 +3199,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "cups-queen",
       "title": "QUEEN OF CUPS"
@@ -3580,7 +3245,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 68,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -3592,7 +3257,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 48,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -3634,8 +3299,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-02",
       "title": "TWO OF PENTACLES"
@@ -3681,7 +3345,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -3693,7 +3357,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -3735,8 +3399,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-03",
       "title": "THREE OF PENTACLES"
@@ -3782,7 +3445,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -3794,7 +3457,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -3836,8 +3499,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-04",
       "title": "FOUR OF PENTACLES"
@@ -3883,7 +3545,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -3895,7 +3557,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -3937,8 +3599,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-05",
       "title": "FIVE OF PENTACLES"
@@ -4038,8 +3699,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-06",
       "title": "SIX OF PENTACLES"
@@ -4139,8 +3799,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-07",
       "title": "SEVEN OF PENTACLES"
@@ -4186,7 +3845,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
+            "top": 49,
             "right": 740,
             "bottom": 1315
           },
@@ -4198,7 +3857,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
+            "top": 29,
             "right": 16,
             "bottom": 25
           },
@@ -4240,8 +3899,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-08",
       "title": "EIGHT OF PENTACLES"
@@ -4287,7 +3945,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -4299,7 +3957,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -4341,8 +3999,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-09",
       "title": "NINE OF PENTACLES"
@@ -4388,7 +4045,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -4400,7 +4057,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -4442,8 +4099,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-10",
       "title": "TEN OF PENTACLES"
@@ -4489,7 +4145,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -4501,7 +4157,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -4543,8 +4199,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-ace",
       "title": "ACE OF PENTACLES"
@@ -4590,7 +4245,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -4602,7 +4257,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -4644,8 +4299,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-king",
       "title": "KING OF PENTACLES"
@@ -4691,7 +4345,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 68,
+            "top": 56,
             "right": 725,
             "bottom": 1313
           },
@@ -4703,7 +4357,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 48,
+            "top": 36,
             "right": 31,
             "bottom": 27
           },
@@ -4745,8 +4399,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-knight",
       "title": "KNIGHT OF PENTACLES"
@@ -4846,8 +4499,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-page",
       "title": "PAGE OF PENTACLES"
@@ -4892,8 +4544,8 @@
         "rule_peak": {
           "pass": false,
           "measured": {
-            "left": 59,
-            "top": 67,
+            "left": 58,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -4904,8 +4556,8 @@
             "bottom": 1340
           },
           "delta_px": {
-            "left": 42,
-            "top": 47,
+            "left": 41,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -4947,8 +4599,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "pentacles-queen",
       "title": "QUEEN OF PENTACLES"
@@ -4993,9 +4644,9 @@
         "rule_peak": {
           "pass": false,
           "measured": {
-            "left": 103,
-            "top": 67,
-            "right": 672,
+            "left": 58,
+            "top": 49,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -5005,9 +4656,9 @@
             "bottom": 1340
           },
           "delta_px": {
-            "left": 86,
-            "top": 47,
-            "right": 84,
+            "left": 41,
+            "top": 29,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -5048,8 +4699,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-02",
       "title": "TWO OF SWORDS"
@@ -5095,7 +4745,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -5107,7 +4757,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -5149,8 +4799,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-03",
       "title": "THREE OF SWORDS"
@@ -5196,7 +4845,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -5208,7 +4857,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -5250,8 +4899,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-04",
       "title": "FOUR OF SWORDS"
@@ -5297,7 +4945,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 68,
+            "top": 56,
             "right": 725,
             "bottom": 1313
           },
@@ -5309,7 +4957,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 48,
+            "top": 36,
             "right": 31,
             "bottom": 27
           },
@@ -5351,8 +4999,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-05",
       "title": "FIVE OF SWORDS"
@@ -5398,7 +5045,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 68,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -5410,7 +5057,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 48,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -5452,8 +5099,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-06",
       "title": "SIX OF SWORDS"
@@ -5499,7 +5145,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -5511,7 +5157,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -5553,8 +5199,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-07",
       "title": "SEVEN OF SWORDS"
@@ -5600,7 +5245,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 69,
+            "top": 56,
             "right": 725,
             "bottom": 1313
           },
@@ -5612,7 +5257,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 49,
+            "top": 36,
             "right": 31,
             "bottom": 27
           },
@@ -5654,8 +5299,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-08",
       "title": "EIGHT OF SWORDS"
@@ -5701,7 +5345,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -5713,7 +5357,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -5755,8 +5399,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-09",
       "title": "NINE OF SWORDS"
@@ -5802,7 +5445,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -5814,7 +5457,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -5856,8 +5499,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-10",
       "title": "TEN OF SWORDS"
@@ -5957,8 +5599,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-ace",
       "title": "ACE OF SWORDS"
@@ -6004,8 +5645,8 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
-            "right": 672,
+            "top": 49,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -6016,8 +5657,8 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
-            "right": 84,
+            "top": 29,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -6058,8 +5699,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-king",
       "title": "KING OF SWORDS"
@@ -6105,8 +5745,8 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
-            "right": 681,
+            "top": 49,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -6117,8 +5757,8 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
-            "right": 75,
+            "top": 29,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -6159,8 +5799,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-knight",
       "title": "KNIGHT OF SWORDS"
@@ -6206,7 +5845,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -6218,7 +5857,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -6260,8 +5899,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-page",
       "title": "PAGE OF SWORDS"
@@ -6307,8 +5945,8 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 68,
-            "right": 672,
+            "top": 49,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -6319,8 +5957,8 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 48,
-            "right": 84,
+            "top": 29,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -6361,8 +5999,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "swords-queen",
       "title": "QUEEN OF SWORDS"
@@ -6408,7 +6045,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 75,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -6420,7 +6057,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 55,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -6462,8 +6099,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-02",
       "title": "TWO OF WANDS"
@@ -6509,9 +6145,9 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 56,
             "right": 725,
-            "bottom": 1163
+            "bottom": 1313
           },
           "expected": {
             "left": 17,
@@ -6521,9 +6157,9 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 36,
             "right": 31,
-            "bottom": 177
+            "bottom": 27
           },
           "tolerance": 12
         },
@@ -6563,8 +6199,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-03",
       "title": "THREE OF WANDS"
@@ -6664,8 +6299,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-04",
       "title": "FOUR OF WANDS"
@@ -6765,8 +6399,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-05",
       "title": "FIVE OF WANDS"
@@ -6812,7 +6445,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 69,
+            "top": 56,
             "right": 725,
             "bottom": 1313
           },
@@ -6824,7 +6457,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 49,
+            "top": 36,
             "right": 31,
             "bottom": 27
           },
@@ -6866,8 +6499,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-06",
       "title": "SIX OF WANDS"
@@ -6913,7 +6545,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 49,
             "right": 740,
             "bottom": 1313
           },
@@ -6925,7 +6557,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 29,
             "right": 16,
             "bottom": 27
           },
@@ -6967,8 +6599,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-07",
       "title": "SEVEN OF WANDS"
@@ -7014,7 +6645,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
+            "top": 56,
             "right": 725,
             "bottom": 1313
           },
@@ -7026,7 +6657,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
+            "top": 36,
             "right": 31,
             "bottom": 27
           },
@@ -7068,8 +6699,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-08",
       "title": "EIGHT OF WANDS"
@@ -7169,8 +6799,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-09",
       "title": "NINE OF WANDS"
@@ -7216,7 +6845,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 68,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -7228,7 +6857,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 48,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -7270,8 +6899,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-10",
       "title": "TEN OF WANDS"
@@ -7317,7 +6945,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 161,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -7329,7 +6957,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 141,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -7371,8 +6999,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-ace",
       "title": "ACE OF WANDS"
@@ -7418,8 +7045,8 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 67,
-            "right": 672,
+            "top": 49,
+            "right": 725,
             "bottom": 1313
           },
           "expected": {
@@ -7430,8 +7057,8 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 47,
-            "right": 84,
+            "top": 29,
+            "right": 31,
             "bottom": 27
           },
           "tolerance": 12
@@ -7472,8 +7099,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-king",
       "title": "KING OF WANDS"
@@ -7573,8 +7199,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-knight",
       "title": "KNIGHT OF WANDS"
@@ -7620,7 +7245,7 @@
           "pass": false,
           "measured": {
             "left": 42,
-            "top": 67,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -7632,7 +7257,7 @@
           },
           "delta_px": {
             "left": 25,
-            "top": 47,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -7674,8 +7299,7 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-page",
       "title": "PAGE OF WANDS"
@@ -7721,7 +7345,7 @@
           "pass": false,
           "measured": {
             "left": 58,
-            "top": 68,
+            "top": 49,
             "right": 725,
             "bottom": 1313
           },
@@ -7733,7 +7357,7 @@
           },
           "delta_px": {
             "left": 41,
-            "top": 48,
+            "top": 29,
             "right": 31,
             "bottom": 27
           },
@@ -7775,11 +7399,304 @@
         }
       },
       "failed": [
-        "ink_iou",
-        "rule_peak"
+        "ink_iou"
       ],
       "slug": "wands-queen",
       "title": "QUEEN OF WANDS"
+    },
+    {
+      "ok": true,
+      "size_wh": [
+        784,
+        1360
+      ],
+      "checks": {
+        "size": {
+          "pass": true,
+          "measured": [
+            784,
+            1360
+          ],
+          "expected": [
+            784,
+            1360
+          ]
+        },
+        "coverage": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.6336,
+          "expected": 0.1159,
+          "delta": 0.5177,
+          "tolerance": 0.05
+        },
+        "struct_corr": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.4204,
+          "min": 0.9
+        },
+        "ink_iou": {
+          "pass": true,
+          "measured": 0.6455,
+          "min": 0.55
+        },
+        "rule_peak": {
+          "pass": false,
+          "measured": {
+            "left": 25,
+            "top": 0,
+            "right": 768,
+            "bottom": 1340
+          },
+          "expected": {
+            "left": 17,
+            "top": 20,
+            "right": 756,
+            "bottom": 1340
+          },
+          "delta_px": {
+            "left": 8,
+            "top": 20,
+            "right": 12,
+            "bottom": 0
+          },
+          "tolerance": 12
+        },
+        "band": {
+          "pass": false,
+          "gating": false,
+          "measured": {
+            "left": 204,
+            "right": 205,
+            "top": 204,
+            "bottom": 205
+          },
+          "expected": {
+            "left": 32,
+            "right": 33,
+            "top": 35,
+            "bottom": 36
+          },
+          "delta_px": {
+            "left": 172,
+            "right": 172,
+            "top": 169,
+            "bottom": 169
+          },
+          "tolerance": 6
+        },
+        "plates": {
+          "pass": false,
+          "measured": {
+            "medallion": true,
+            "ribbon": true
+          },
+          "expected": {
+            "medallion": false,
+            "ribbon": false
+          }
+        }
+      },
+      "failed": [],
+      "slug": "00-fool",
+      "title": "THE FOOL"
+    },
+    {
+      "ok": true,
+      "size_wh": [
+        784,
+        1360
+      ],
+      "checks": {
+        "size": {
+          "pass": true,
+          "measured": [
+            784,
+            1360
+          ],
+          "expected": [
+            784,
+            1360
+          ]
+        },
+        "coverage": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.3196,
+          "expected": 0.1159,
+          "delta": 0.2037,
+          "tolerance": 0.05
+        },
+        "struct_corr": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.5761,
+          "min": 0.9
+        },
+        "ink_iou": {
+          "pass": true,
+          "measured": 0.912,
+          "min": 0.55
+        },
+        "rule_peak": {
+          "pass": true,
+          "measured": {
+            "left": 25,
+            "top": 23,
+            "right": 768,
+            "bottom": 1340
+          },
+          "expected": {
+            "left": 17,
+            "top": 20,
+            "right": 756,
+            "bottom": 1340
+          },
+          "delta_px": {
+            "left": 8,
+            "top": 3,
+            "right": 12,
+            "bottom": 0
+          },
+          "tolerance": 12
+        },
+        "band": {
+          "pass": false,
+          "gating": false,
+          "measured": {
+            "left": 204,
+            "right": 145,
+            "top": 204,
+            "bottom": 84
+          },
+          "expected": {
+            "left": 32,
+            "right": 33,
+            "top": 35,
+            "bottom": 36
+          },
+          "delta_px": {
+            "left": 172,
+            "right": 112,
+            "top": 169,
+            "bottom": 48
+          },
+          "tolerance": 6
+        },
+        "plates": {
+          "pass": false,
+          "measured": {
+            "medallion": true,
+            "ribbon": false
+          },
+          "expected": {
+            "medallion": false,
+            "ribbon": false
+          }
+        }
+      },
+      "failed": [],
+      "slug": "01-magician",
+      "title": "THE MAGICIAN"
+    },
+    {
+      "ok": true,
+      "size_wh": [
+        784,
+        1360
+      ],
+      "checks": {
+        "size": {
+          "pass": true,
+          "measured": [
+            784,
+            1360
+          ],
+          "expected": [
+            784,
+            1360
+          ]
+        },
+        "coverage": {
+          "pass": true,
+          "gating": false,
+          "measured": 0.1016,
+          "expected": 0.1159,
+          "delta": 0.0143,
+          "tolerance": 0.05
+        },
+        "struct_corr": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.7907,
+          "min": 0.9
+        },
+        "ink_iou": {
+          "pass": true,
+          "measured": 0.9253,
+          "min": 0.55
+        },
+        "rule_peak": {
+          "pass": true,
+          "measured": {
+            "left": 28,
+            "top": 23,
+            "right": 756,
+            "bottom": 1340
+          },
+          "expected": {
+            "left": 17,
+            "top": 20,
+            "right": 756,
+            "bottom": 1340
+          },
+          "delta_px": {
+            "left": 11,
+            "top": 3,
+            "right": 0,
+            "bottom": 0
+          },
+          "tolerance": 12
+        },
+        "band": {
+          "pass": false,
+          "gating": false,
+          "measured": {
+            "left": 117,
+            "right": 118,
+            "top": 35,
+            "bottom": 127
+          },
+          "expected": {
+            "left": 32,
+            "right": 33,
+            "top": 35,
+            "bottom": 36
+          },
+          "delta_px": {
+            "left": 85,
+            "right": 85,
+            "top": 0,
+            "bottom": 91
+          },
+          "tolerance": 6
+        },
+        "plates": {
+          "pass": true,
+          "measured": {
+            "medallion": false,
+            "ribbon": false
+          },
+          "expected": {
+            "medallion": false,
+            "ribbon": false
+          }
+        }
+      },
+      "failed": [],
+      "slug": "02-priestess",
+      "title": "THE HIGH PRIESTESS"
     },
     {
       "ok": true,
