@@ -40,6 +40,7 @@
 | `scripts/build_prompts.py` | Sinh prompt từ `cards.json` sang `prompts/out/` |
 | `scripts/build_gallery.py` | Sinh lại `cards/deck.json` + `cards/index.html` |
 | `scripts/check_card.py` | Kiểm tra kích thước/tỷ lệ |
+| `scripts/compose_fullbleed.py` | Ghép lá **full-bleed** theo họ khung The Star: cảnh 784×1360 + **mực viền vàng tách bằng code từ lá neo** (nét kẻ ±1 px + hoa văn 4 góc dính nét kẻ → ink_iou ≈ 1.0) + tên lá (tách từ lá neo nếu trùng tên, nếu không thì vẽ bằng `variants/fonts/CinzelDecorative-*.ttf`). `--dump-layers DIR` để xem 3 lớp rời |
 
 **Quy trình neo khung** (giữ nội dung của lá mới, lấy khung từ chuẩn): dựng mask "khung dùng chung"
 bằng phương sai pixel của ~10 lá đã đạt chuẩn, chừa vùng nội dung + huy hiệu + tên lá, rồi blend.
@@ -50,3 +51,4 @@ bằng phương sai pixel của ~10 lá đã đạt chuẩn, chừa vùng nội 
 |---|---|---|
 | `wands-03` Three of Wands | Nhân vật ngồi, tóc sai spec | Vẽ lại: đứng, tóc caramel tết dây vàng, đúng 3 gậy |
 | `wands-08` Eight of Wands | Nội dung 7 gậy, huy hiệu 9 vạch | Vẽ lại: đúng 8 gậy có chồi lá + huy hiệu đúng 8 vạch |
+| `17-the-star` The Star (2026-09-03) | Người dùng yêu cầu tạo lại lá; bản cũ tay phải đỡ bình bằng 2 tay ở lần vẽ A (loại), lần vẽ B sinh **8 sao nhỏ** thay vì 7 | Vẽ cảnh full-bleed từ `scene`/`hair`/`age`/`build`/`count` **nguyên văn `cards.json`** (chỉ thay `a nude woman` → khoác lụa mỏng ướt, ghi trong `cards/_regen/17-the-star.sent.txt`); **xoá 1 sao thừa bằng `seamlessClone`** → đúng 1 sao lớn 8 cánh + 7 sao nhỏ (đếm bằng code); ghép khung + chữ THE STAR tách từ chính lá neo bằng `compose_fullbleed.py` → `ink_iou` 0.997, đúng 2 bình mỗi tay một bình. Bản cũ: `git show 7825551:cards/17-the-star.png` |
