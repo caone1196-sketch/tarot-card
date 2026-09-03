@@ -1,5 +1,6 @@
 __pycache__/
 samples/
+.venv/
 
 # vùng staging cho ảnh đang regenerate (không commit trùng với cards/)
 cards/_regen/
