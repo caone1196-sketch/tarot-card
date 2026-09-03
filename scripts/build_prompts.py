@@ -2,7 +2,9 @@
 """
 Build Tarot Card Prompts using the THE STAR ANCHOR STANDARD:
 - Full open window display matching the scale and expansive open space of The Star.
-- Rich, sensual fine-art character poses based on 01-CARD-TABLE.md (The Empress standard).
+- Thông số nhân vật (tuổi · mắt · tóc · vóc A–D · da · nét riêng · không khí) lấy từ
+  `tarot prompt/02-CHARACTER-SPECS.md` — chuẩn nhân vật từ 2026-09-03 (thay cho 01-CARD-TABLE.md).
+  `scene`/`count`/`title`/`emblem` lấy NGUYÊN VĂN từ `cards.json` (không sửa file đó).
 - 100% Female cast aged strictly between 18 and 25 years old.
 - Natural, unconstrained environments without artificial inner column barriers.
 - Symmetrical golden gothic line-art frame border, top medallion emblem, bottom ribbon title.
@@ -18,8 +20,22 @@ import json
 import os
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import card_specs  # noqa: E402  — chuẩn thông số nhân vật: 02-CHARACTER-SPECS.md
+
 CARDS_JSON = "tarot prompt/cards.json"
 OUT_DIR = "prompts/out"
+STANDARD_JSON = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                             "standards", "17-the-star", "standard.json")
+
+
+def load_standard():
+    """Bộ chuẩn khung đo được (standards/17-the-star/standard.json) — có thì dùng, không thì bỏ."""
+    try:
+        with open(STANDARD_JSON, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
 
 def load_data():
     with open(CARDS_JSON, "r", encoding="utf-8") as f:
@@ -33,32 +49,61 @@ def format_count_lock(count_info):
     layout = count_info.get("layout")
     return f"COUNT LOCK (EXACTLY {n} {obj}): {layout}."
 
-def format_character_spec(card):
-    age = card.get("age")
-    hair = card.get("hair")
-    build = card.get("build")
+def format_character_spec(card, specs=None):
+    """Khối CHARACTER SPECIFICATION.
 
-    specs = []
-    if age:
-        specs.append(f"Age: {age} (strictly young adult, aged 18 to 25)")
-    if hair:
-        specs.append(f"Hair: {hair}")
-    if build:
-        specs.append(f"Physique: {build}")
+    Từ 2026-09-03: thông số nhân vật lấy từ `tarot prompt/02-CHARACTER-SPECS.md`
+    (tuổi · mắt · tóc · vóc A–D · da · nét riêng · không khí). `scene`/`title`/
+    `emblem`/`count` vẫn lấy NGUYÊN VĂN từ cards.json — 02 không được sửa cards.json.
+    """
+    specs = card_specs.load_specs() if specs is None else specs
+    eff, _notes = card_specs.merge(card, specs)
+    return card_specs.character_block(eff)
 
-    specs.append(
-        "Sensuality: render with heightened yet tasteful fine-art sensuality — "
-        "confident, poised, soft classical anatomy, painterly skin in warm golden lighting"
-    )
+def frame_clause(std, use_reference=True):
+    """Mô tả khung = đúng những gì đo được ở lá neo (standards/…/standard.json)."""
+    if not use_reference:
+        return ("ornate vintage gothic tarot card composition matching the open window style "
+                "of THE STAR.")
+    if not std:
+        return ("built inside the reference frame, matching the EXACT open window display, scale, "
+                "and lighting style of THE STAR: keep the intricate thin golden line-art border "
+                "in vintage gothic style and aged parchment background texture.")
+    rule_l = std["frame"].get("rule_offset_left_px")
+    band = std["frame"]["band_px"]
+    style = std.get("frame_style", "thin-line-art")
+    plates = std.get("plates", {})
+    no_plate = (not plates.get("medallion", {}).get("present")) and (not plates.get("ribbon", {}).get("present"))
+    parts = [
+        (f"built INSIDE the measured reference frame of THE STAR (style: {style}): the painted scene "
+         f"runs full bleed to all four edges of the card, and only a thin antique-gold rule line "
+         f"inset about {rule_l} px from each edge plus small gothic corner flourishes are painted on "
+         f"top of it — no outer parchment margin, no wide decorative border, no oval medallion plate, "
+         f"no ribbon banner"
+         if (no_plate and rule_l is not None) else
+         "built inside the measured reference frame of THE STAR, matching its open window display, "
+         "scale and lighting"),
+        ("inside that frame everything is pure scene, with the card title lettered directly over the "
+         "lower part of the image" if no_plate else
+         "keep the oval medallion plate at the top and the ribbon banner at the bottom"),
+    ]
+    body = ", ".join(parts).rstrip(".")
+    return body + ". " + ("" if not std else
+                          f"(measured frame spec: {std['card_size_wh'][0]}×{std['card_size_wh'][1]} px, "
+                          f"content window {std['frame']['content_window_xyxy']}, gold coverage "
+                          f"{round(std['frame']['gold_coverage_total'] * 100, 1)}% — see "
+                          f"standards/{std['anchor_card']['slug']}/standard.json).")
 
-    return "CHARACTER SPECIFICATION: " + "; ".join(specs) + "."
 
-def build_card_prompt_star_standard(card, use_reference=True):
+def build_card_prompt_star_standard(card, use_reference=True, specs=None, std=None):
     emblem = card.get("emblem", "an ornate heraldic symbol")
     title = card.get("title", "")
-    scene = card.get("scene", "")
+    scene = card.get("scene", "")           # NGUYÊN VĂN từ cards.json — không file nào được sửa
     count_str = format_count_lock(card.get("count"))
-    char_str = format_character_spec(card)
+    char_str = format_character_spec(card, specs)
+    std = load_standard() if std is None else std
+    framed_like_star = bool(std and not std.get("plates", {}).get("medallion", {}).get("present")
+                            and not std.get("plates", {}).get("ribbon", {}).get("present"))
 
     anatomy_lock = (
         "ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; "
@@ -76,22 +121,31 @@ def build_card_prompt_star_standard(card, use_reference=True):
     extra_directives.append(anatomy_lock)
     extra_text = (" " + " ".join(extra_directives)) if extra_directives else ""
 
-    ref_clause = (
-        "built inside the reference frame, matching the EXACT open window display, scale, and lighting style of THE STAR: "
-        "keep the intricate thin golden line-art border in vintage gothic style and aged parchment background texture."
-        if use_reference
-        else "ornate vintage gothic tarot card composition matching the open window style of THE STAR."
-    )
+    ref_clause = frame_clause(std, use_reference)
+
+    if framed_like_star:
+        emblem_clause = (f"High in the composition, painted directly over the scene, {emblem} rendered "
+                         f"as a small glowing antique-gold line-art motif (no plate, no frame around it). ")
+        title_clause = (f"The title \"{title}\" is painted directly over the lower part of the scene in "
+                        f"clean antique-gold serif capitals, with no banner behind it. ")
+    else:
+        emblem_clause = f"At the TOP: inside the oval medallion plate, {emblem} in glowing antique gold. "
+        title_clause = (f"At the BOTTOM: inside the ribbon banner, the title \"{title}\" in clean "
+                        f"antique gold lettering. ")
 
     return (
         f"A single tarot card \"{title}\" {ref_clause} "
-        f"At the TOP: inside the oval medallion plate, {emblem} in glowing antique gold. "
-        f"At the BOTTOM: inside the ribbon banner, the title \"{title}\" in clean antique gold lettering. "
-        f"In the large open center panel (filling the entire inner window edge to edge and bleeding slightly beneath the golden border, matching the open space of The Star without heavy inner arch barriers): "
-        f"{scene}.{extra_text} "
-        f"Depth layering: enlarge the scene so its edges extend slightly beneath the inner edge of the golden border, then paint the thin golden line-art border, corner flourishes, oval medallion and ribbon banner ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth. "
+        f"{emblem_clause}{title_clause}" +
+        (f"The scene occupies the whole card edge to edge, passing beneath the thin gold rule line, "
+         f"with no inner arch or column barriers: " if framed_like_star else
+         f"In the large open center panel (filling the entire inner window edge to edge and bleeding "
+         f"slightly beneath the golden border, matching the open space of The Star without heavy inner "
+         f"arch barriers): ")
+        + f"{scene}.{extra_text} "
+        f"Depth layering: enlarge the scene so its edges bleed to the very outer edge of the card, then paint "
+        f"{'the thin golden rule line and the four corner flourishes' if framed_like_star else 'the thin golden line-art border, corner flourishes, oval medallion and ribbon banner'} ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth. "
         f"Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, "
-        f"symmetrical golden frame border, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail."
+        f"{'thin symmetrical golden rule line at the card edges' if framed_like_star else 'symmetrical golden frame border'}, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail."
     )
 
 def main():
@@ -103,8 +157,17 @@ def main():
     data = load_data()
     cards = data.get("cards", [])
 
+    specs = card_specs.load_specs()
+
     if cmd == "check":
         print(f"Loaded {len(cards)} cards successfully.")
+        print(f"- Nguon thong so nhan vat: 02-CHARACTER-SPECS.md -> {len(specs)} dong")
+        print(f"- La duoc ghi de thong so tu 02: {len([s for s in specs if s in {c['slug'] for c in cards}])}")
+        print(f"- La khong co trong 02 (giu nguyen cards.json): {len([c for c in cards if c['slug'] not in specs])}")
+        std = load_standard()
+        print("- Chuan khung: " + (f"{std['anchor_card']['slug']} · {std['frame_style']} · "
+              f"rule line {std['frame']['rule_offset_left_px']}px · medallion={std['plates']['medallion']['present']} · "
+              f"ribbon={std['plates']['ribbon']['present']}" if std else "KHONG CO (fallback noi dung cu)"))
         with_age = sum(1 for c in cards if c.get("age"))
         with_hair = sum(1 for c in cards if c.get("hair"))
         with_build = sum(1 for c in cards if c.get("build"))
