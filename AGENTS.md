@@ -72,6 +72,8 @@
 | `scripts/place_wands.py` | Tách sprite khỏi nền trắng, xoay/scale, ghép **đúng n vật thể** theo hàng |
 | `scripts/rebuild_emblem.py` | Vẽ lại huy hiệu medallion với **đúng n vạch** (fit ellipse, inpaint nền plate) |
 | `scripts/check_card.py` | Kiểm tra kích thước/tỷ lệ (cần `identify` của ImageMagick) |
+| `scripts/render_sent.py` | In ra **đúng văn bản gửi model** = `prompts/out/<slug>.txt` nguyên văn, chỉ thay cụm khoả thân → khoác lụa (danh sách trong `SUBS`); ghi `cards/_regen/<slug>.sent.txt` |
+| `scripts/fix_crown_stars.py` | Đếm/ghép **đủ 12 ngôi sao** trên vương miện `03-empress` bằng template-match + dán sprite (nguyên tắc: không tin AI đếm) |
 
 **Quy trình neo khung** (giữ nội dung của lá mới, lấy khung từ chuẩn):
 `python3 scripts/build_frame_standard.py --force` → `standards/17-the-star/frame-mask.png`
@@ -99,6 +101,7 @@ python3 scripts/check_frame_standard.py
 | *File dẫn xuất* (2026-09-03) | `prompts/out/*` của 77 lá thiếu `ANATOMY LOCK`; `01-CARD-TABLE.md` là bản diễn giải 72 nhân vật chứ không phải bảng 78 lá | Regenerate `prompts/out/` + `cards/deck.json` + `cards/index.html` + `01-CARD-TABLE.md` theo `cards.json` hiện tại (`deck.json`/`index.html` không đổi byte nào) |
 | *Batch 1 — 3 lá Ẩn Chính* (2026-09-03) | Lá cũ dùng khung gân vàng dày + medallion + ruy băng → **lệch chuẩn The Star** (ink_iou 0.49) | Vẽ lại `00-fool`, `01-magician`, `02-priestess` full-bleed theo khung The Star: `ink_iou` 0.645 / 0.912 / 0.925 → **ĐẠT**; `01-magician` đúng COUNT LOCK (cốc · kiếm · 1 gậy · tiền). Bản cũ: `git show 9e7635c^:cards/<slug>.png` |
 | *Batch 2 — 3 lá Ẩn Chính* (2026-09-03) | `03-empress`, `04-emperor`, `05-hierophant` vẫn thuộc họ khung cũ (ink_iou 0.49) | Vẽ lại full-bleed theo The Star → **ĐẠT** `ink_iou` 0.584 / 0.632 / 0.616; **huy hiệu**: Empress sinh ra 13 sao → inpaint xoá 1 sao để đúng 12, Hierophant thiếu 2 chìa khoá chéo → vẽ thêm đè lên tường đền. Bản cũ: `git show 0b19cb1^:cards/<slug>.png` |
+| *Tạo lại 6 lá bằng prompt nguyên văn* (2026-09-03) | Người dùng chốt hướng (B): gửi đúng `prompts/out/*.txt`. Kết quả đo được: 3 lá batch 1 tụt `ink_iou` (0.645→0.530, 0.912→0.351, 0.925→0.429) **dưới ngưỡng 0.55** vì mất các câu khoá khung; 3 lá batch 2 vẫn ĐẠT (0.564/0.679/0.582) nhưng `03-empress` sinh 9 sao → ghép bằng code cho đủ 12 | **Nhận 3 lá batch 2 bản mới; trả `00-fool`/`01-magician`/`02-priestess` về bản đạt cũ** (`git checkout` từ commit trước). Deck vẫn **DAT 7/78** |
 | *Cảnh mô tả trong `cards.json`* (batch 1) | `scene` của 3 lá trên vẫn ghi khỏa thân (`nude`, `bare`, `draped only`) trong khi ảnh mới vẽ nàng khoác lụa | **ĐÃ CHỐT: giữ nguyên văn bản `cards.json`.** Prompt vẫn emit `scene` nguyên văn; việc khoác lụa/do sáng xử lý ở bước render, không sửa nguồn |
 | *Nguồn dữ liệu* (2026-09-03) | Đã thử nối `02-CHARACTER-SPECS.md` làm chuẩn nhân vật → hai nguồn tranh nhau (`02` đè 15 chỗ tóc, `cards.json` là file gốc lại bị ghi đè) | **Thu hồi theo yêu cầu "chỉ sử dụng cards.json"**: xoá `scripts/card_specs.py`, `build_prompts.py` + `generate_card_table.py` đọc đúng một nguồn `cards.json`, regenerate 78 file `prompts/out/*` |
 | `scripts/count_wands.py` | Hard-code `root = "<repo>/raw"` + 4 slug → chạy trên fresh clone in `MISSING` cả 4 | **Chưa sửa** — cần bạn quyết (đổi sang argv/`--dir` hay xoá) |

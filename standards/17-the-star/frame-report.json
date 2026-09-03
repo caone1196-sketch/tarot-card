@@ -7419,29 +7419,29 @@
         "coverage": {
           "pass": false,
           "gating": false,
-          "measured": 0.5496,
+          "measured": 0.5462,
           "expected": 0.1159,
-          "delta": 0.4337,
+          "delta": 0.4303,
           "tolerance": 0.05
         },
         "struct_corr": {
           "pass": false,
           "gating": false,
-          "measured": -0.1112,
+          "measured": 0.1528,
           "min": 0.9
         },
         "ink_iou": {
           "pass": true,
-          "measured": 0.5829,
+          "measured": 0.5642,
           "min": 0.55
         },
         "rule_peak": {
           "pass": true,
           "measured": {
-            "left": 11,
-            "top": 17,
-            "right": 764,
-            "bottom": 1332
+            "left": 18,
+            "top": 20,
+            "right": 765,
+            "bottom": 1341
           },
           "expected": {
             "left": 17,
@@ -7450,10 +7450,10 @@
             "bottom": 1340
           },
           "delta_px": {
-            "left": 6,
-            "top": 3,
-            "right": 8,
-            "bottom": 8
+            "left": 1,
+            "top": 0,
+            "right": 9,
+            "bottom": 1
           },
           "tolerance": 12
         },
@@ -7461,7 +7461,7 @@
           "pass": false,
           "gating": false,
           "measured": {
-            "left": 195,
+            "left": 204,
             "right": 205,
             "top": 204,
             "bottom": 205
@@ -7473,7 +7473,7 @@
             "bottom": 36
           },
           "delta_px": {
-            "left": 163,
+            "left": 172,
             "right": 172,
             "top": 169,
             "bottom": 169
@@ -7484,7 +7484,7 @@
           "pass": false,
           "measured": {
             "medallion": true,
-            "ribbon": false
+            "ribbon": true
           },
           "expected": {
             "medallion": false,
@@ -7517,29 +7517,29 @@
         "coverage": {
           "pass": false,
           "gating": false,
-          "measured": 0.339,
+          "measured": 0.4783,
           "expected": 0.1159,
-          "delta": 0.2231,
+          "delta": 0.3624,
           "tolerance": 0.05
         },
         "struct_corr": {
           "pass": false,
           "gating": false,
-          "measured": 0.4265,
+          "measured": 0.1026,
           "min": 0.9
         },
         "ink_iou": {
           "pass": true,
-          "measured": 0.6319,
+          "measured": 0.6794,
           "min": 0.55
         },
         "rule_peak": {
           "pass": true,
           "measured": {
-            "left": 19,
-            "top": 21,
+            "left": 26,
+            "top": 16,
             "right": 767,
-            "bottom": 1338
+            "bottom": 1343
           },
           "expected": {
             "left": 17,
@@ -7548,10 +7548,10 @@
             "bottom": 1340
           },
           "delta_px": {
-            "left": 2,
-            "top": 1,
+            "left": 9,
+            "top": 4,
             "right": 11,
-            "bottom": 2
+            "bottom": 3
           },
           "tolerance": 12
         },
@@ -7559,10 +7559,10 @@
           "pass": false,
           "gating": false,
           "measured": {
-            "left": 34,
+            "left": 177,
             "right": 205,
-            "top": 202,
-            "bottom": 205
+            "top": 204,
+            "bottom": 133
           },
           "expected": {
             "left": 32,
@@ -7571,17 +7571,17 @@
             "bottom": 36
           },
           "delta_px": {
-            "left": 2,
+            "left": 145,
             "right": 172,
-            "top": 167,
-            "bottom": 169
+            "top": 169,
+            "bottom": 97
           },
           "tolerance": 6
         },
         "plates": {
-          "pass": true,
+          "pass": false,
           "measured": {
-            "medallion": false,
+            "medallion": true,
             "ribbon": false
           },
           "expected": {
@@ -7615,29 +7615,29 @@
         "coverage": {
           "pass": false,
           "gating": false,
-          "measured": 0.172,
+          "measured": 0.1731,
           "expected": 0.1159,
-          "delta": 0.0561,
+          "delta": 0.0572,
           "tolerance": 0.05
         },
         "struct_corr": {
           "pass": false,
           "gating": false,
-          "measured": 0.0257,
+          "measured": 0.1697,
           "min": 0.9
         },
         "ink_iou": {
           "pass": true,
-          "measured": 0.6163,
+          "measured": 0.5815,
           "min": 0.55
         },
         "rule_peak": {
           "pass": true,
           "measured": {
-            "left": 20,
-            "top": 17,
+            "left": 23,
+            "top": 22,
             "right": 762,
-            "bottom": 1334
+            "bottom": 1336
           },
           "expected": {
             "left": 17,
@@ -7646,10 +7646,10 @@
             "bottom": 1340
           },
           "delta_px": {
-            "left": 3,
-            "top": 3,
+            "left": 6,
+            "top": 2,
             "right": 6,
-            "bottom": 6
+            "bottom": 4
           },
           "tolerance": 12
         },
@@ -7657,10 +7657,10 @@
           "pass": false,
           "gating": false,
           "measured": {
-            "left": 115,
-            "right": 200,
-            "top": 32,
-            "bottom": 99
+            "left": 28,
+            "right": 83,
+            "top": 30,
+            "bottom": 168
           },
           "expected": {
             "left": 32,
@@ -7669,10 +7669,10 @@
             "bottom": 36
           },
           "delta_px": {
-            "left": 83,
-            "right": 167,
-            "top": 3,
-            "bottom": 63
+            "left": 4,
+            "right": 50,
+            "top": 5,
+            "bottom": 132
           },
           "tolerance": 6
         },
