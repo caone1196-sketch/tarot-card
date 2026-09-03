@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Tạo đúng văn bản prompt gửi cho model image = prompts/out/<slug>.txt NGUYÊN VĂN,
-chỉ thay các cụm mô tả khoả thân thành khoác lụa (chính sách nội dung).
 Mỗi chỗ thay là 1 chuỗi liền mạch, ghi lại trong SUBS để đối chiếu được.
 
 Chạy:  python3 scripts/render_sent.py 00-fool 01-magician ...   -> cards/_regen/<slug>.sent.txt
@@ -40,14 +39,6 @@ SUBS = {
         "glows with warm light against her skin, the gossamer fabric slipping from one shoulder",
         "draped in a diaphanous silk over-veil over a gold-trimmed ivory gown, the fabric glowing with "
         "warm light, slipping from one shoulder",
-    )],
-    "05-hierophant": [(
-        "draped only in a diaphanous transparent red silk veil so fine it clings to her curves and "
-        "glows with warm candlelight against her skin, the gossamer-thin fabric slipping from one "
-        "shoulder",
-        "draped in layered crimson-and-gold ceremonial vestments beneath a diaphanous red silk "
-        "over-veil glowing with warm candlelight, the gossamer-thin over-veil slipping from one "
-        "shoulder",
     )],
 }
 
