@@ -31,7 +31,7 @@ SUBS = {
         "drift of sheer gauze",
     )],
     "03-empress": [(
-        "a slender nude empress, one breast bared",
+        "a slender nude empress, breast bared",
         "a slender empress in a softly draped ivory-and-gold silk gown with a low, covered neckline",
     )],
     "04-emperor": [(
