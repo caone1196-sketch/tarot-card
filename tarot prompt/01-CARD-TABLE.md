@@ -1,92 +1,238 @@
-# Bảng 78 Lá — Đặc Điểm Nhân Vật (Độ Tuổi 18–25, Mái Tóc, Thân Hình) & Bố Cục Chuẩn
+# 🌹 BẢNG THÔNG SỐ NHÂN VẬT — 72 NHÂN VẬT NỮ (QUYẾN RŨ · GỢI CẢM · GOTHIC FINE-ART)
 
-Tất cả các lá bài được chuẩn hóa theo cấu trúc **4 Lớp Chiều Sâu** và **Khóa bố cục The Magician**.
-Nhân vật trên mỗi lá bài đều có nhận diện độc bản với độ tuổi cố định trong khoảng **18 đến 25 tuổi**.
+> File **phát triển từ** `01-CARD-TABLE.md` (bảng chuẩn — nguồn gốc tuổi/tóc/vóc dáng/huy hiệu/tên)
+> và `tarot prompt/cards.json`. Tuổi được **giữ nguyên 100%** so với bảng chuẩn; kiểu tóc **giữ nguyên kiểu dáng & màu**
+> (chỉ gỡ từ ngữ chiến binh/thô cứng khỏi câu mô tả).
+> File này **bổ sung** 4 thuộc tính mới: **Đôi mắt · Màu da · Nét riêng (signature) · Không khí (aura)**,
+> và **chuẩn hóa vóc dáng** vào dải **Thanh mảnh → Trung bình** (không vượt trần "trung bình").
+>
+> **BIÊN TẬP MỚI NHẤT — LOẠI BỎ TÍNH MẠNH MẼ:** toàn bộ 72/72 mô tả được viết lại theo tông
+> **quyến rũ · gợi cảm · uyển chuyển · mê hoặc**. Đã xóa sạch: *chiến binh, cơ bắp, vai rộng, săn chắc,
+> ra lệnh, phòng thủ, tấn công, cảnh giác, canh gác, xét xử, thống trị…* — sức hút nằm ở **đường cong,
+> làn da, tư thế uốn éo và ánh mắt**, không ở sự mạnh mẽ.
 
-## 1. MAJOR ARCANA — 22 Lá Ẩn Chính
+---
 
-| # | Slug | Độ tuổi | Mái tóc (Kiểu dáng & Màu sắc) | Thân hình / Vóc dáng | Huy hiệu (Top) | Tên lá (Bottom) |
-|---|---|---|---|---|---|---|
-| 0 | `00-fool` | **19 years old** | loose wind-tossed honey-blonde waves down to her shoulder blades, sunlit and carefree | petite and lithe, slender waist, youthful energy and light, springy step | a white rose | **THE FOOL** |
-| I | `01-magician` | **22 years old** | jet-black straight hair falling past her waist like a sleek silk curtain, center-parted | statuesque and commanding, elegant elongated proportions with poised posture | an infinity symbol | **THE MAGICIAN** |
-| II | `02-priestess` | **23 years old** | deep auburn hair with soft natural waves, cascading beneath a sheer gossamer veil | serene, slender and graceful, long neck and soft classical feminine curves | a pomegranate | **THE HIGH PRIESTESS** |
-| III | `03-empress` | **24 years old** | thick ripe-wheat golden blonde hair, spilling over both shoulders in soft ropey curls garlanded with flowers | voluptuous and curvaceous, full feminine bust and hips, warm radiant goddess presence | a twelve-star crown | **THE EMPRESS** |
-| IV | `04-emperor` | **25 years old** | sleek dark bronze-brown hair in a sharp warrior braid, crowned with a golden ram-horn circlet | powerful, broad-shouldered, athletic and commanding female sovereign with sculpted physique | a ram's head | **THE EMPEROR** |
-| V | `05-hierophant` | **24 years old** | thick espresso-brown waves falling over embroidered ceremonial vestments | tall, noble and serene female high priestess with graceful dignified poise | two crossed golden keys | **THE HIEROPHANT** |
-| VI | `06-lovers` | **21 years old** | warm chestnut-brown hair gathered in a loose romantic knot with soft wisps framing her cheeks | slender hourglass silhouette, supple waist, graceful gentle curves beside her partner | an apple coiled by a serpent | **THE LOVERS** |
-| VII | `07-chariot` | **22 years old** | dark sable-brown hair tightly plaited in a single thick warrior braid over one shoulder | athletic and toned, sculpted shoulders and taut waist, resolute and heroic stance | a winged sun disk | **THE CHARIOT** |
-| VIII | `08-strength` | **23 years old** | burnished copper-red long wavy hair flowing down like a lion's mane | lithe yet strong, defined muscular tone along the back, soft graceful curves | a red rose | **STRENGTH** |
-| IX | `09-hermit` | **23 years old** | ethereal silver-ash long hair, veiled beneath sheer white cowl gauze | slender, mysterious and delicate silhouette, quiet meditative poise | a glowing lantern | **THE HERMIT** |
-| X | `10-wheel` | **22 years old** | golden-amber braided hair crowned with mystic celestial laurels | statuesque winged female guardian with poised mythological silhouette | a spoked golden wheel | **WHEEL OF FORTUNE** |
-| XI | `11-justice` | **24 years old** | sleek raven-black hair drawn back sharply into a high polished half-ponytail | statuesque and regal, prominent collarbones, straight spine and austere balanced posture | balanced golden scales | **JUSTICE** |
-| XII | `12-hanged` | **21 years old** | golden-brown tousled locks cascading downward with gravity, glowing in ethereal light | lean, lithe and supple young woman dancer physique, serene and peaceful poise | an inverted living branch | **THE HANGED MAN** |
-| XIII | `13-death` | **22 years old** | long bone-platinum hair flowing behind an ornate gothic helm | tall, slender and formidable female dark knight silhouette in polished black armor | a five-petaled white rose | **DEATH** |
-| XIV | `14-temperance` | **22 years old** | pale fine ash-blonde hair floating weightlessly in the air | ethereal and willowy, long slender limbs, arched supple spine, graceful angelic poise | a triangle within a square | **TEMPERANCE** |
-| XV | `15-devil` | **21 years old** | midnight-black wavy hair with deep wine-red undertones, wild and untamed | sultry and curvaceous, arched back and soft full hips, magnetic alluring presence | an inverted pentagram | **THE DEVIL** |
-| XVI | `16-tower` | **20 years old** | storm-dark chestnut hair blown dynamically backward by lightning winds | taut and athletic, dynamic acrobatic physique arched mid-fall | a jagged lightning bolt | **THE TOWER** |
-| XVII | `17-the-star` | **20 years old** | very long pale shimmering gold hair, wet and silky, cascading down past one bare shoulder | slender and lithe, narrow waist, long graceful legs, luminous maiden proportions | an eight-pointed star | **THE STAR** |
-| XVIII | `18-moon` | **21 years old** | ink-blue-black hair with cool silvery highlights, cascading like water to her hips | slender, mysterious water-nymph silhouette, delicate waist and soft curving hips | a crescent moon dripping dew | **THE MOON** |
-| XIX | `19-sun` | **19 years old** | radiant sunflower-blonde hair, bouncing loose curls garlanded in red blossoms | youthful and vibrant, sun-kissed skin, energetic and joyful feminine curves | a radiant sun face | **THE SUN** |
-| XX | `20-judgement` | **22 years old** | rich amber-honey hair in thick luminous waves catching golden rays | statuesque, open-armed posture, noble and reborn classical anatomy | a golden trumpet | **JUDGEMENT** |
-| XXI | `21-world` | **22 years old** | dark chocolate-chestnut hair swirling freely with violet silk ribbons | dancer's perfected physique, long toned legs, narrow waist, supple celebratory poise | a laurel wreath oval | **THE WORLD** |
+## 0. THANG NHÂN VẬT — TỪ THONG THẢ → TRUNG BÌNH
 
-## 2. MINOR ARCANA — 56 Lá Ẩn Phụ
+```
+THONG THẢ (thoáng, duyên, nhẹ)                                        TRUNG BÌNH (đủ, mềm, cân)
+A ──────────────────── B ──────────────────── C ──────────────────── D
+petite · willowy · mảnh            thon gọn · uyển chuyển · thanh     cân đối · mềm mại · cong tự nhiên
+```
 
-| Nhóm | Slug | Độ tuổi | Mái tóc (Kiểu dáng & Màu sắc) | Thân hình / Vóc dáng | Huy hiệu (Top) | Tên lá (Bottom) |
-|---|---|---|---|---|---|---|
-| Wands | `wands-ace` | **—** | — | — | one leafy wand | **ACE OF WANDS** |
-| Wands | `wands-02` | **22 years old** | deep auburn hair falling in long loose ringlets over one shoulder | slender and contemplative, upright posture looking out from the parapet | two crossed leafy wands | **TWO OF WANDS** |
-| Wands | `wands-03` | **23 years old** | warm caramel-brown hair loosely braided with golden cord | tall and statuesque, long back line facing toward the horizon | three leafy wands in a fan | **THREE OF WANDS** |
-| Wands | `wands-04` | **20 years old** | blue-black hair piled high in a floral-pinned braided updo | lithe and celebratory, joyful dancer waist and raised graceful arms | four wands with a garland | **FOUR OF WANDS** |
-| Wands | `wands-05` | **21 years old** | short tousled copper-brown hair damp with exertion | athletic, toned agile muscles, dynamic sparring stance | five wands crossed in a star | **FIVE OF WANDS** |
-| Wands | `wands-06` | **22 years old** | honey-gold hair billowing triumphantly in the wind | commanding and proud, tall equestrian posture on horseback | six slender wands standing side by side in one neat row, one of them crowned with a small laurel wreath — exactly six shafts, no more and no fewer | **SIX OF WANDS** |
-| Wands | `wands-07` | **21 years old** | dark espresso hair cropped close at sides with messy curls on top | lean, wiry and determined, athletic defensive stance | seven wands in a palisade | **SEVEN OF WANDS** |
-| Wands | `wands-08` | **—** | — | — | eight parallel wands | **EIGHT OF WANDS** |
-| Wands | `wands-09` | **24 years old** | dark brown hair pulled back with a simple leather tie | broad, toned and battle-ready, watchful stance | nine wands in a rampart row | **NINE OF WANDS** |
-| Wands | `wands-10` | **23 years old** | damp chestnut hair clinging to brow from labor | strong athletic back, powerful shoulders bearing the bundle | ten wands in a bundle | **TEN OF WANDS** |
-| Wands | `wands-page` | **18 years old** | short tousled ginger-auburn hair cut in a playful textured bob | petite and spirited, lithe youthful frame with eager stance | a wand with a feather plume | **PAGE OF WANDS** |
-| Wands | `wands-knight` | **22 years old** | wind-whipped golden-brown curls peeking beneath a feathered diadem | dashing athletic female knight, lean muscular core on a rearing golden steed | a wand over a horse | **KNIGHT OF WANDS** |
-| Wands | `wands-queen` | **24 years old** | a magnificent mane of rich russet-red waves crowning her head | voluptuous, commanding and fiery, proud posture on lion throne | a sunflower wand between two flames | **QUEEN OF WANDS** |
-| Wands | `wands-king` | **25 years old** | dark bronze hair swept back in an ornate crown braid with fiery orange ribbons | commanding, statuesque high queen with broad noble shoulders and authoritative presence | a flaming wand rising from a lion head | **KING OF WANDS** |
-| Cups | `cups-ace` | **—** | — | — | one overflowing chalice | **ACE OF CUPS** |
-| Cups | `cups-02` | **21 years old** | soft ash-brown hair worn in a low intertwined romantic braid | slender and graceful, gentle curving silhouette leaning in communion | two interlocked rings | **TWO OF CUPS** |
-| Cups | `cups-03` | **20 years old** | rich chocolate-brown, golden-blonde, and copper hair among the three maidens | harmonious, curvaceous, dancing together with joyful feminine grace | three chalices in a triangle | **THREE OF CUPS** |
-| Cups | `cups-04` | **22 years old** | dark wavy hair falling over her shoulder in contemplative thought | slender, relaxed seated posture against a flowering tree | three chalices and one offered | **FOUR OF CUPS** |
-| Cups | `cups-05` | **22 years old** | long mahogany hair unbound and draping over cloaked shoulders | slender, somber silhouette with delicate bowed neck | three spilled, two standing | **FIVE OF CUPS** |
-| Cups | `cups-06` | **19 years old** | pale golden hair styled in a delicate maiden crown knot | petite, innocent and delicate, sweet gentle posture | six chalices with flowers | **SIX OF CUPS** |
-| Cups | `cups-07` | **21 years old** | dark raven curls drifting in mystical haze | slender, mesmerized posture with hands slightly raised | seven chalices on a cloud | **SEVEN OF CUPS** |
-| Cups | `cups-08` | **23 years old** | deep brown hair tucked under a travel cloak | lean wanderer silhouette, resolute back turned toward mountains | eight chalices stacked | **EIGHT OF CUPS** |
-| Cups | `cups-09` | **24 years old** | warm honey-brown hair in a relaxed loose chignon | luxurious, soft feminine curves, content and smiling seated posture | nine chalices in an arc | **NINE OF CUPS** |
-| Cups | `cups-10` | **22 years old** | warm hazel-brown hair cascading in silky ripples | graceful, tender motherly poise with slender loving frame | ten chalices under a rainbow | **TEN OF CUPS** |
-| Cups | `cups-page` | **18 years old** | dark glossy hair in a single side fishtail braid over the collarbone | petite, curious and dreamy, delicate limbs holding the chalice | a chalice with a fish | **PAGE OF CUPS** |
-| Cups | `cups-knight` | **22 years old** | fair sandy-blonde hair falling in soft romantic waves across her brow | poetic, slender and noble athletic female knight offering the chalice | a chalice on a horseshoe | **KNIGHT OF CUPS** |
-| Cups | `cups-queen` | **23 years old** | long shimmering platinum-blonde hair falling straight like water to her thighs | slender and ethereal, narrow waist, serene and mystical queenly beauty | a lidded chalice between waves | **QUEEN OF CUPS** |
-| Cups | `cups-king` | **25 years old** | deep-wave dark espresso hair crowned in sea-gold and pearls | calm, statuesque oceanic sovereign with serene noble presence | a chalice between two fish | **KING OF CUPS** |
-| Swords | `swords-ace` | **—** | — | — | one upright sword with a crown | **ACE OF SWORDS** |
-| Swords | `swords-02` | **21 years old** | jet-black hair drawn back into a sleek, flawless high knot | slender, perfectly balanced, taut core and crossed arms holding dual blades | two crossed swords | **TWO OF SWORDS** |
-| Swords | `swords-03` | **—** | — | — | three swords through a heart | **THREE OF SWORDS** |
-| Swords | `swords-04` | **22 years old** | deep sable hair spread neatly around her resting head on stone | slender, peaceful reclined effigy silhouette in sacred stillness | three swords on a wall, one below | **FOUR OF SWORDS** |
-| Swords | `swords-05` | **22 years old** | wind-blown dark brown hair with a subtle confident smirk | lean, agile and sharp-shouldered, turning with collected blades | five swords, two discarded | **FIVE OF SWORDS** |
-| Swords | `swords-06` | **21 years old** | light ash-brown hair gathered softly in a misty veil | slender, quiet passenger silhouette seated in the ferry boat | six swords in a boat | **SIX OF SWORDS** |
-| Swords | `swords-07` | **20 years old** | mischievous tousled dark chestnut hair | light-footed, slender agile rogue build tiptoeing away | seven swords, two left behind | **SEVEN OF SWORDS** |
-| Swords | `swords-08` | **20 years old** | dark brown hair bound loosely with a crimson ribbon | slender, delicate and vulnerable silhouette surrounded by upright blades | eight swords in a ring | **EIGHT OF SWORDS** |
-| Swords | `swords-09` | **22 years old** | long black hair falling in sorrowful waves over her weeping hands | slender, delicate nightgown silhouette seated in emotional release | nine swords on a wall | **NINE OF SWORDS** |
-| Swords | `swords-10` | **23 years old** | dark silky hair strewn across shoreline sand | lean peaceful reclining maiden silhouette bathed in golden morning horizon light | ten swords along a back | **TEN OF SWORDS** |
-| Swords | `swords-page` | **18 years old** | windswept honey-brown hair cut in a sharp feathered pixie cut | lithe, sharp and vigilant, athletic spring in her stance on rocky hill | a sword with a feather plume | **PAGE OF SWORDS** |
-| Swords | `swords-knight` | **21 years old** | dark hair streaming wildly back from beneath an open winged helmet | fierce, athletic female knight in full gallant charge | a sword over a horse | **KNIGHT OF SWORDS** |
-| Swords | `swords-queen` | **24 years old** | deep mahogany-red hair in an intricate woven crown braid | statuesque, sharp profile, austere elegant collarbones, stern intellectual beauty | a sword wrapped in laurel | **QUEEN OF SWORDS** |
-| Swords | `swords-king` | **25 years old** | clean-cut raven hair crowned with sharp golden circlet | tall, imposing, sharp-eyed judicial female ruler with blade upright | a sword between two wings | **KING OF SWORDS** |
-| Pentacles | `pentacles-ace` | **—** | — | — | one pentacle coin in a hand | **ACE OF PENTACLES** |
-| Pentacles | `pentacles-02` | **19 years old** | tousled sandy-gold curls bouncing with her dance | agile, lithe and flexible young dancer balancing two coins in an infinity ribbon | two pentacles and an infinity ribbon | **TWO OF PENTACLES** |
-| Pentacles | `pentacles-03` | **22 years old** | dark auburn hair coiled in a practical braided crown | focused, toned artisan shoulders, sculpted hands crafting the cathedral | three pentacles in an arch | **THREE OF PENTACLES** |
-| Pentacles | `pentacles-04` | **24 years old** | neatly combed dark brown hair holding gold close | solid, grounded seated posture guarding her wealth | four pentacles, one on the head | **FOUR OF PENTACLES** |
-| Pentacles | `pentacles-05` | **20 years old** | long windswept dark-brown hair catching falling snow | slender, shivering yet enduring silhouette under church window | five pentacles in a church window | **FIVE OF PENTACLES** |
-| Pentacles | `pentacles-06` | **23 years old** | well-groomed golden-brown hair in merchant styling | prosperous, upright dignified posture distributing coins | six pentacles on a scale | **SIX OF PENTACLES** |
-| Pentacles | `pentacles-07` | **22 years old** | sweat-touched warm chestnut hair resting on hoe handle | lean, hardworking farm-toned musculature, patient contemplative stance | seven pentacles on a vine | **SEVEN OF PENTACLES** |
-| Pentacles | `pentacles-08` | **21 years old** | chestnut hair bound in a neat, focused low chignon | slender and meticulous, steady hands engraving coins at the workbench | eight pentacles in a row | **EIGHT OF PENTACLES** |
-| Pentacles | `pentacles-09` | **23 years old** | long vine-dark espresso hair loosely curled with gold thread | graceful, refined aristocratic hourglass build in blooming grape vineyard | nine pentacles on an arbor | **NINE OF PENTACLES** |
-| Pentacles | `pentacles-10` | **22 years old** | warm honey-brown hair in a thick braided crown | content, gentle matriarchal beauty surrounded by familial wealth | ten pentacles in a tree-of-life pyramid | **TEN OF PENTACLES** |
-| Pentacles | `pentacles-page` | **18 years old** | golden-blonde hair falling loose past shoulders, catching meadow sun | petite, earnest scholar-student frame, holding coin aloft with reverence | a pentacle held by two hands | **PAGE OF PENTACLES** |
-| Pentacles | `pentacles-knight` | **23 years old** | dark bronze hair braided under an oak-leaf crested helmet | sturdy, athletic female knight on a calm heavy warhorse | a pentacle on a draft horse | **KNIGHT OF PENTACLES** |
-| Pentacles | `pentacles-queen` | **24 years old** | deep chocolate hair with a ruddy golden sheen, crowned in blooming vines | voluptuous, maternal, generous warm feminine curves on carved beast throne | a pentacle entwined with roses | **QUEEN OF PENTACLES** |
-| Pentacles | `pentacles-king` | **25 years old** | dark wavy hair woven with golden laurel leaves and ripe grapes | robust, wealthy sovereign seated comfortably in lush castle gardens | a pentacle above a bull head | **KING OF PENTACLES** |
+- **A (Thanh mảnh)** — dáng nhẹ như gió, eo nhỏ, ít đường nét nặng → "thong thả" nhất.
+- **B (Thon gọn)** — eo thắt, vai gọn, dáng mềm uyển chuyển như vũ công → "thong thả có chuyển động".
+- **C (Trung bình mềm)** — cân đối, cong tự nhiên vừa phải → ngưỡng "trung bình".
+- **D (Trung bình đầy đặn)** — đầy đặn vừa đủ, cong nữ tính trong ngưỡng trung bình → trần của dải.
+- **KHÔNG có cấp nào vượt quá D**: không béo, không plus-size, không phóng đại.
+- **KHÔNG mô tả cơ bắp / vai rộng / dáng chiến binh ở bất kỳ cấp nào** — toàn dải là dáng nữ tính mềm mại.
+- Sự gợi cảm nằm ở **đường cong tự nhiên, làn da bóng, tư thế uốn éo và ánh mắt** — không nằm ở kích cỡ.
+
+---
+
+## 1. QUY CHUẨN TỔNG (áp dụng cho cả 72 lá)
+
+### 1.1 Màu da — TUYỆT ĐỐI KHÔNG DA ĐEN / DA SẪM MÀU
+Toàn bộ 72 nhân vật chỉ dùng 10 tông da sáng → nâu vàng nhạt (không có tông sẫm, không nâu đen, không đen):
+
+| Tông da | Mô tả |
+|---|---|
+| `porcelain` | trắng sứ, lạnh, gân xanh mờ, ánh ngọc trai |
+| `ivory` | trắng ngà, ấm, mịn như lụa |
+| `fair` | trắng hồng nhạt, bóng mờ như xà cừ (fair pearlescent) |
+| `warm peach` | đào ấm, má hồng tự nhiên, bị nắng làm ửng vàng |
+| `light olive` | ô-liu nhạt, ấm, mịn, hơi vàng ở vai và tay |
+| `sand` | cát ấm, đều màu, mượt |
+| `warm tan` | rám nắng nhẹ, ửng đồng ở vai và gò má |
+| `honey` | mật ong vàng, óng ánh dưới nắng |
+| `light bronze` | đồng nhạt, bóng gợn sáng (vẫn là tông sáng) |
+| `amber-gold` | hổ phách-vàng, rực dưới ánh đèn nến |
+
+> Màu da là **thuộc tính cố định** của từng nhân vật (không được đổi khi tạo hình lại lá).
+> Không bao giờ pha bóng da thành tông nâu sẫm, nâu đen hay đen — kể cả dưới ánh sáng mạnh.
+
+### 1.2 Vóc dáng — 4 CẤP, TRẦN LÀ "TRUNG BÌNH"
+Dải chuẩn: **A (thanh mảnh) → B (thon gọn) → C (trung bình mềm) → D (trung bình đầy đặn)**.
+Không có cấp nào vượt quá trung bình: **không plus-size, không béo, không nặng nề**.
+Gợi cảm nằm ở **đường cong tự nhiên, làn da bóng, tư thế uốn éo và ánh mắt** — không nằm ở kích cỡ phóng đại.
+
+| Cấp | Tên | Đặc điểm |
+|---|---|---|
+| **A** | Thanh mảnh (Slender / Delicate) | petite, willowy, mảnh mai, eo nhỏ, dáng nhẹ như gió |
+| **B** | Thon gọn (Svelte / Graceful) | eo thắt, vai gọn, dáng mềm uyển chuyển, cong nhẹ tự nhiên |
+| **C** | Trung bình mềm (Average soft) | cân đối, cong tự nhiên vừa phải, bụng phẳng-mềm, dáng đứng thong thả |
+| **D** | Trung bình đầy đặn (Average shapely) | đầy đặn vừa, hông và ngực cong nữ tính trong ngưỡng trung bình, không phình |
+
+> Chuyển đổi từ bảng cũ: các mô tả `voluptuous / curvaceous / luxurious curves` cũ
+> (Empress, Devil, Queen of Wands, Queen of Pentacles…) được **hạ xuống cấp D**
+> — vẫn nữ tính, gợi cảm, nhưng **trong ngưỡng trung bình**, không còn phóng đại.
+>
+> Đồng thời: mọi mô tả `athletic / toned / muscular / warrior / broad-shouldered / commanding`
+> từ bảng cũ đã bị **loại bỏ hoàn toàn**, thay bằng tông **quyến rũ · mềm mại · uyển chuyển**.
+
+### 1.3 Đôi mắt — 10 dáng chuẩn + bảng màu
+| Dáng mắt | Mô tả |
+|---|---|
+| `almond` | hạnh nhân, cân đối, cân bằng giữa sắc và dịu |
+| `doe` | tròn to, ngây thơ, long lanh |
+| `heavy-lidded` | mí nặng, khép hờ, quyến rũ |
+| `hooded` | mí che, sâu thẳm, khó đọc |
+| `upturned` | đuôi mắt hếch nhẹ, tinh nghịch / kiêu |
+| `cat` | mắt mèo khêu gợi, đuôi vươn dài |
+| `round` | tròn trong, ngạc nhiên / trong trẻo |
+| `narrow` | hẹp dài, huyền bí, ánh nhìn xoáy sâu |
+| `wide-set` | mắt cách xa nhau, thần thái thanh thoát |
+| `dreamy` | mơ màng, khép hờ, chìm trong suy nghĩ |
+
+Bảng màu dùng: honey-amber · pale violet · sea-green · topaz-amber · storm-grey ·
+moss-green · chestnut-amber · steel-blue · amber-gold · silver-grey · golden-hazel ·
+grey-green · teal · ice-blue · aquamarine · wine-plum · slate-grey · moonstone silver-violet ·
+gold-green · emerald · auburn-brown · honey-brown · dark cherry-violet · hazel-green ·
+golden-amber · dark chestnut · umber · hazel-grey · baby-blue · violet-grey · deep brown ·
+amber-brown · walnut-brown · seal-brown · flint-grey · dark emerald · misty grey ·
+dark brown · fear-bright hazel · grey-brown · honey-hazel · blazing grey-blue · jade ·
+steel-grey · warm brown · icy-grey · deep umber · molten brown · earth-brown · …
+**Mỗi nhân vật có tổ hợp MÀU + DÁNG + ÁNH NHÌN duy nhất** (không cặp nào trùng).
+
+### 1.4 Nét riêng (Signature — mỗi nhân vật chỉ 1 chi tiết)
+Mỗi nhân vật có **đúng một chi tiết không thể nhầm lẫn**: nốt ruồi, vết sẹo nhỏ,
+mảng tàn nhang, hình xăm nhỏ, khuyên tai, lúm đồng tiền, vết bớt, khuyên mũi, dây chuyền…
+Không nhân vật nào dùng chung nét riêng với nhân vật khác.
+
+### 1.5 Phạm vi & độ tuổi
+- 72 nhân vật nữ, **18–25 tuổi** (giữ nguyên bảng chuẩn), 100% nữ.
+- 6 lá **không có nhân vật** (vật thể thuần): `wands-ace`, `wands-08`, `cups-ace`,
+  `swords-ace`, `swords-03`, `pentacles-ace` — không nằm trong file này.
+
+---
+
+## 2. BẢNG PHÂN BỐ VÓC DÁNG (A → D) — 72 NHÂN VẬT
+
+| Cấp | Số lá | Lá |
+|---|---|---|
+| **A** — Thanh mảnh | 29 | 00-fool, 02-priestess, 05-hierophant, 06-lovers, 09-hermit, 12-hanged, 13-death, 14-temperance, 17-the-star, 18-moon, 19-sun, wands-02, wands-07, wands-page, cups-02, cups-04, cups-05, cups-06, cups-07, cups-page, cups-queen, swords-04, swords-06, swords-07, swords-08, swords-09, pentacles-05, pentacles-08, pentacles-page |
+| **B** — Thon gọn | 30 | 01-magician, 04-emperor, 07-chariot, 08-strength, 10-wheel, 11-justice, 16-tower, 20-judgement, 21-world, wands-03, wands-04, wands-05, wands-06, wands-09, wands-10, wands-knight, wands-king, cups-08, cups-knight, swords-02, swords-05, swords-10, swords-page, swords-knight, swords-queen, swords-king, pentacles-02, pentacles-03, pentacles-07, pentacles-knight |
+| **C** — Trung bình mềm | 9 | cups-03, cups-09, cups-10, cups-king, pentacles-04, pentacles-06, pentacles-09, pentacles-10, pentacles-king |
+| **D** — Trung bình đầy đặn | 4 | 03-empress, 15-devil, wands-queen, pentacles-queen |
+
+---
+
+## 3. BẢNG CHÍNH — MAJOR ARCANA · 22 NHÂN VẬT
+
+| Lá | Tuổi | Đôi mắt | Kiểu tóc (chuẩn) | Vóc dáng | Màu da | Nét riêng | Không khí |
+|---|---|---|---|---|---|---|---|
+| **[A]** **THE FOOL** `00-fool` | 19 | honey-amber, doe, tròn long lanh, ngây thơ không phòng bị | loose wind-tossed honey-blonde waves down to her shoulder blades, sunlit and carefree | **A** petite & lithe, eo nhỏ hạt, dáng nhẹ như gió, cong mềm tự nhiên | warm peach | 3 tàn nhang vàng nhỏ dưới mắt trái | gió mai, mật ong, vực thẳm mời gọi |
+| **[I]** **THE MAGICIAN** `01-magician` | 22 | pale violet, hooded, mí hờ quyến rũ, ánh nhìn mê hoặc khó thoát | jet-black straight hair falling past her waist like a sleek silk curtain, center-parted | **B** cao, thon, thanh thoát, dáng đứng uyển chuyển đầy mời gọi | porcelain | sẹo bạc mảnh dọc ngón trỏ tay phải | tĩnh điện, mực đen, bạc lạnh |
+| **[II]** **THE HIGH PRIESTESS** `02-priestess` | 23 | sea-green sâu, heavy-lidded, nửa khép hờ, huyền bí | deep auburn hair with soft natural waves, cascading beneath a sheer gossamer veil | **A** mảnh mai, cổ cao thon, dáng ngồi trầm tĩnh huyền hoặc | ivory | bớt hình lưỡi liềm sau tai trái | ánh trăng, khói trầm, trang giấy cũ |
+| **[III]** **THE EMPRESS** `03-empress` | 24 | topaz-amber, almond ấm, đuôi mắt hếch nhẹ, sà xuống gợi cảm | thick ripe-wheat golden blonde hair, spilling over both shoulders in soft ropey curls garlanded with flowers | **D** đầy đặn vừa, hông-vòng một cong mềm quyến rũ trong ngưỡng trung bình | honey | nốt ruồi nhỏ trên xương đòn trái | lúa chín, mật, hương hoa cam |
+| **[IV]** **THE EMPEROR** `04-emperor` | 25 | storm-grey, hooded, sâu thẳm khó cưỡng, ánh nhìn níu giữ | sleek dark bronze-brown hair in one long glossy braid draped over her shoulder, crowned with a golden ram-horn circlet | **B** cao, thon, dáng hoàng hậu kiêu sa, đường cong thanh nhã | sand | sẹo nhỏ khía chân mày phải | đá granit, nhung đỏ, nến vàng |
+| **[V]** **THE HIEROPHANT** `05-hierophant` | 24 | moss-green, dreamy, ánh mắt dịu dàng biết tuốt, hơi cụp | thick espresso-brown waves falling over embroidered ceremonial vestments | **A** cao, thanh mảnh, dáng đứng duyên dáng trong áo lễ | fair | khuyên vàng nhỏ ở tragus tai trái | chuông xa, da cừu, chữ cổ |
+| **[VI]** **THE LOVERS** `06-lovers` | 21 | chestnut-amber, doe, liếc nghiêng say đắm về phía người kia | warm chestnut-brown hair gathered in a loose romantic knot with soft wisps framing her cheeks | **A** đồng hồ mảnh, eo mềm, uyển chuyển | warm peach | lúm đồng tiền má phải | hoa cam, gió hè, lời hứa |
+| **[VII]** **THE CHARIOT** `07-chariot` | 22 | steel-blue, narrow, ánh nhìn thách thức đượm quyến rũ | dark sable-brown hair in a single thick glossy plait draped over one shoulder | **B** thon gọn, eo thắt, dáng uyển chuyển kiêu sa trên chiến xa | light olive | sẹo nhỏ hình tia chớp trên cẳng tay phải | bụi đường, vó ngựa, cờ |
+| **[VIII]** **STRENGTH** `08-strength` | 23 | amber-gold như mắt sư tử, almond, rực và ôn hòa | burnished copper-red long wavy hair flowing down like a lion's mane | **B** mảnh mai mềm mại, eo thon, cong tự nhiên quyến rũ | warm tan | tàn nhang li ti khắp sống mũi và má | nắng chiều, lông sư tử, hơi thở ấm |
+| **[IX]** **THE HERMIT** `09-hermit` | 23 | silver-grey gần như trong suốt, dreamy, an tĩnh | ethereal silver-ash long hair, veiled beneath sheer white cowl gauze | **A** mảnh, huyền bí, dáng ngồi thiền thanh khiết | porcelain | bớt hình mặt trăng trên cổ tay phải trong | tuyết rơi im lặng, nến |
+| **[X]** **WHEEL OF FORTUNE** `10-wheel` | 22 | golden-hazel, upturned, nhìn xa mơ màng như tiên tri | golden-amber braided hair crowned with mystic celestial laurels | **B** cao, thanh gọn, dáng thiên thần duyên dáng lơ lửng | warm tan | 3 khuyên vàng nhỏ xếp dọc vành tai trái | gió xoáy, tiếng bánh xe, sao |
+| **[XI]** **JUSTICE** `11-justice` | 24 | grey-green, wide-set, ánh nhìn thẳng thắn đằm quyến rũ | sleek raven-black hair drawn back sleekly into a high polished half-ponytail | **B** cao, thanh thoát, xương đòn gợn nhẹ, dáng đứng mềm mại kiêu hãnh | ivory | sẹo mảnh dọc hàm trái | cán cân, đá cẩm thạch, im lặng |
+| **[XII]** **THE HANGED MAN** `12-hanged` | 21 | teal sâu, heavy-lidded, đảo ngược mà vẫn bình thản | golden-brown tousled locks cascading downward with gravity, glowing in ethereal light | **A** mảnh dẻo như vũ công, thân hình uốn éo thanh thoát khi lơ lửng | light olive | hình xăm dây thường xuân quanh mắt cá trái | chạng vạng, rễ cây, nước |
+| **[XIII]** **DEATH** `13-death` | 22 | ice-blue nhạt, hooded, sâu như đêm huyền hoặc | long bone-platinum hair flowing behind an ornate gothic helm | **A** cao, mảnh, bóng dáng gothic thanh thoát mờ ảo | porcelain | xăm hoa hồng trắng trên xương bả vai phải | sương lạnh, bông hoa héo |
+| **[XIV]** **TEMPERANCE** `14-temperance` | 22 | aquamarine, upturned nhẹ, sáng trong như nước | pale fine ash-blonde hair floating weightlessly in the air | **A** sẽ gầy mảnh, tay chân dài, lưng cong mềm | fair | sẹo bạc hình lưỡi liềm trên lòng bàn tay phải | nước chảy, ánh sáng xuyên, sự cân bằng |
+| **[XV]** **THE DEVIL** `15-devil` | 21 | wine-plum, cat, heavy-lidded, đốt mắt | midnight-black wavy hair with deep wine-red undertones, wild and untamed | **D** cong đầy đặn vừa, hông mềm, lưng võng gợi cảm | sand | nốt ruồi đỏ thẫm ở khóe môi | khói ngọt, gỗ đàn hương, dây xích |
+| **[XVI]** **THE TOWER** `16-tower` | 20 | slate-grey, round, mở to kinh ngạc giữa cú rơi | storm-dark chestnut hair blown dynamically backward by lightning winds | **B** thon dẻo, thân hình uyển chuyển lượn mềm giữa cú rơi | fair | sẹo trắng mảnh trên xương đòn trái | sấm, gió giật, đá vụn |
+| **[XVII]** **THE STAR** `17-the-star` | 20 | starlight grey-blue, wide-set, long lanh như nước đêm | very long pale shimmering gold hair, wet and silky, cascading down past one bare shoulder | **A** mảnh, chân dài, thần thái nữ thần thanh khiết | ivory | chòm tàn nhang vàng trên hai vai | nước đêm, sao, làn da ướt |
+| **[XVIII]** **THE MOON** `18-moon` | 21 | moonstone silver-violet, heavy-lidded, mơ màng | ink-blue-black hair with cool silvery highlights, cascading like water to her hips | **A** mảnh như tiên nữ, eo mềm, hông cong nhẹ | porcelain | sẹo lưỡi liềm nhỏ trên gò má trái | sương, hồ tối, tiếng nước |
+| **[XIX]** **THE SUN** `19-sun` | 19 | gold-green (moss-gold), round, cười long lanh | radiant sunflower-blonde hair, bouncing loose curls garlanded in red blossoms | **A** trẻ trung, gầy nhẹ, cong mềm vui vẻ | honey | vệt tàn nhang vàng trên sống mũi | hoa hướng dương, mùa hè |
+| **[XX]** **JUDGEMENT** `20-judgement` | 22 | amber với vệt vàng kim, upturned, mở to như vừa thức giấc | rich amber-honey hair in thick luminous waves catching golden rays | **B** cao thanh thoát, thân hình mềm mại, vòng tay mở đón dâng | warm peach | sẹo nhỏ hình lông phượng sau gáy | đồng vọng, kèn xa, rạng đông |
+| **[XXI]** **THE WORLD** `21-world` | 22 | emerald sâu, wide-set, sáng và đầy đủ | dark chocolate-chestnut hair swirling freely with violet silk ribbons | **B** dáng vũ công hoàn mỹ, chân dài, eo thon | warm tan | khuyên vàng nhỏ ở cánh mũi phải | vũ điệu, gió bốn hướng, hoa dại |
+
+---
+
+## 4. BẢNG CHÍNH — WANDS · 12 NHÂN VẬT (trừ Ace & Eight)
+
+| Lá | Tuổi | Đôi mắt | Kiểu tóc (chuẩn) | Vóc dáng | Màu da | Nét riêng | Không khí |
+|---|---|---|---|---|---|---|---|
+| **TWO OF WANDS** `wands-02` | 22 | auburn-brown, almond, nhìn xa trầm ngâm | deep auburn hair falling in long loose ringlets over one shoulder | **A** mảnh, dáng đứng thong thả trầm tư | fair | nốt ruồi nhỏ trên môi trên bên phải | gió biển, đá ấm, chân trời |
+| **THREE OF WANDS** `wands-03` | 23 | honey-brown, almond, đắm nhìn mơ màng về khơi xa | warm caramel-brown hair loosely braided with golden cord | **B** cao, mảnh, lưng dài thon thả hướng về chân trời | warm tan | khuyên vàng nhỏ ở ngón cái tay phải | hoàng hôn, bến cảng, buồm |
+| **FOUR OF WANDS** `wands-04` | 20 | dark cherry-violet, round, lấp lánh tinh nghịch | blue-black hair piled high in a floral-pinned braided updo | **B** mảnh dẻo, eo vũ công, tay nâng duyên dáng | light olive | chùm tàn nhang hình bông hoa trên vai trái | nến, vũ hội, cánh hoa |
+| **FIVE OF WANDS** `wands-05` | 21 | hazel-green, narrow, ánh nhìn láo liên tinh nghịch | short tousled copper-brown hair, damp tendrils curling at her temples | **B** thon gọn, dáng nhảy múa uyển chuyển đầy sức sống | sand | sẹo mảnh qua khớp ngón tay phải | quảng trường nắng, tiếng gậy chạm nhau như nhịp vũ |
+| **SIX OF WANDS** `wands-06` | 22 | golden-amber, upturned, kiêu hãnh ngẩng cao | honey-gold hair billowing triumphantly in the wind | **B** cao, thanh, dáng cưỡi ngựa duyên dáng, tóc bay trong nắng | warm tan | dãy khuyên vàng nhỏ dọc vành tai trái | reo hò, cờ, nắng thắng trận |
+| **SEVEN OF WANDS** `wands-07` | 21 | dark chestnut, narrow, ánh nhìn ẩn sau mí hờ đầy mê hoặc | dark espresso hair cropped close at sides with messy curls on top | **A** mảnh mai, dáng nghiêng mình duyên dáng giữa rìa rừng đêm | light olive | vết khía nhỏ ở chân mày trái | rìa rừng, đêm, lửa nhỏ |
+| **NINE OF WANDS** `wands-09` | 24 | umber, hooded, khép hờ đượm quyến rũ | dark brown hair pulled back with a simple leather tie | **B** thon cao, dáng tựa mình bên lửa trại thảnh thơi, cong mềm tự nhiên | warm tan | dải sẹo nhỏ hình mào chim trên vai phải | lửa trại, sương đêm, ánh lửa ấm |
+| **TEN OF WANDS** `wands-10` | 23 | deep brown viền amber, heavy-lidded, khép hờ kiêu sa | damp chestnut hair clinging softly to her brow | **B** thon mềm, eo uốn lượn dịu dàng, dáng vác bó củi như dáng vũ | sand | vết sẹo bỏng nhỏ trên cẳng tay trái | nắng vàng, lúa, đất ấm |
+| **PAGE OF WANDS** `wands-page` | 18 | ginger-amber, round, tò mò rực sáng | short tousled ginger-auburn hair cut in a playful textured bob | **A** nhỏ nhắn, nhanh nhẹn, dáng tung tăng duyên dáng | fair | tàn nhang li ti trên hai cẳng tay | nắng non, con đường, trống |
+| **KNIGHT OF WANDS** `wands-knight` | 22 | gold-green, almond, cười tà mi tinh nghịch | wind-whipped golden-brown curls peeking beneath a feathered diadem | **B** mảnh mềm, dáng nghiêng người phi nước đại uyển chuyển | light olive | dây chuyền vàng mảnh ở cổ tay phải | lửa, vó ngựa, lông vũ |
+| **QUEEN OF WANDS** `wands-queen` | 24 | russet-amber, upturned, ấm áp đầy mê hoặc | a magnificent mane of rich russet-red waves crowning her head | **D** đầy đặn vừa, cong nữ tính, dáng ngồi ngai lửa kiêu sa | honey | khuyên vàng hình mặt trời trên chân mày trái | lửa ấm, da báo, gia vị |
+| **KING OF WANDS** `wands-king` | 25 | bronze-gold, hooded, sâu thẳm quyến rũ | dark bronze hair swept back in an ornate crown braid with fiery orange ribbons | **B** cao, thon, dáng quân chủ kiêu hãnh thanh thoát | light bronze | băng tay xăm hình ruy băng cam quanh cổ tay phải | rồng, hoàng kim, gió lửa |
+
+---
+
+## 5. BẢNG CHÍNH — CUPS · 13 NHÂN VẬT (trừ Ace)
+
+| Lá | Tuổi | Đôi mắt | Kiểu tóc (chuẩn) | Vóc dáng | Màu da | Nét riêng | Không khí |
+|---|---|---|---|---|---|---|---|
+| **TWO OF CUPS** `cups-02` | 21 | hazel-green mềm, upturned, say mê nhìn người kia | soft ash-brown hair worn in a low intertwined romantic braid | **A** mảnh, dáng nghiêng giao hòa uyển chuyển | fair | lúm đồng tiền má trái | nước mưa, hứa hẹn, hoa táo |
+| **THREE OF CUPS** `cups-03` | 20 | ba đôi mắt khác nhau: chocolate doe · amber almond · copper-green cat | rich chocolate-brown, golden-blonde, and copper hair among the three maidens | **C** ba dáng hài hòa: mảnh · trung bình mềm · tròn trịa mềm | warm peach · honey · fair | mỗi cô cài một bông: hồng · tím · cúc | tiếng cười, rượu nho, vườn mùa |
+| **FOUR OF CUPS** `cups-04` | 22 | grey-blue mờ, downturned, chán lơ đãng | dark wavy hair falling over her shoulder in contemplative thought | **A** mảnh, dáng ngồi thả lỏng thờ ơ | fair | nốt ruồi nhỏ trên gò má phải | bóng cây, buồn nhẹ, dòng nước |
+| **FIVE OF CUPS** `cups-05` | 22 | watery hazel, downturned, khóe mắt ướt | long mahogany hair unbound and draping over cloaked shoulders | **A** mảnh, dáng cúi cổ thanh mảnh buồn | porcelain | tàn nhang như hạt mưa trên mu bàn tay | mưa phùn, áo choàng ướt |
+| **SIX OF CUPS** `cups-06` | 19 | baby-blue, doe, ngây thơ | pale golden hair styled in a delicate maiden crown knot | **A** nhỏ nhắn, mềm mại, dáng đứng dễ thương | warm peach | bớt màu tím nhạt hình cánh hoa trên vai phải | sân vườn, kẹo mật, ký ức |
+| **SEVEN OF CUPS** `cups-07` | 21 | violet-grey, dreamy, nửa khép trong mê | dark raven curls drifting in mystical haze | **A** mảnh, dáng đứng mê hoặc, tay khẽ nâng | fair | khuyên bạc lưỡi liềm trên sụn tai phải | khói mộng, gương, ảo ảnh |
+| **EIGHT OF CUPS** `cups-08` | 23 | deep brown, narrow, mí hờ đượm buồn xa cách | deep brown hair tucked under a travel cloak | **B** mảnh gọn, bóng dáng lữ khách thanh mảnh mê hoặc | light olive | sẹo nhỏ hình la bàn trên lòng bàn tay trái | mưa, bước chân, núi xa |
+| **NINE OF CUPS** `cups-09` | 24 | amber-brown, upturned, cười cong như trăng | warm honey-brown hair in a relaxed loose chignon | **C** mềm mại cân đối, cong tự nhiên trung bình | honey | khuyên vàng hình hoa hồng nhỏ ở dái tai phải | rượu ngọt, nến, ghế bành ấm |
+| **TEN OF CUPS** `cups-10` | 22 | hazel mềm, warm, dịu dàng | warm hazel-brown hair cascading in silky ripples | **C** thanh-mềm, dáng mẹ trẻ đầy ân cần | warm peach | bớt hình trái tim mờ trên hông trái | tổ ấm, cầu vồng, tiếng trẻ |
+| **PAGE OF CUPS** `cups-page` | 18 | smoky-blue, doe, ngạc nhiên đầy mộng mơ | dark glossy hair in a single side fishtail braid over the collarbone | **A** nhỏ nhắn, tay chân mảnh, dáng cầm chén | fair | khuyên bạc hình ngôi sao trên vành tai phải | giấc mơ, cá bạc, nước |
+| **KNIGHT OF CUPS** `cups-knight` | 22 | sea-blue dịu, almond, lãng mạn | fair sandy-blonde hair falling in soft romantic waves across her brow | **B** mảnh cao, dáng hiệp sĩ thi ca | warm tan | sẹo mảnh hình lông vũ trên vai phải | sông thơ, hoa súng, trăng |
+| **QUEEN OF CUPS** `cups-queen` | 23 | silver-platinum, heavy-lidded, huyền bí | long shimmering platinum-blonde hair falling straight like water to her thighs | **A** mảnh, eo nhỏ, vẻ đẹp nữ hoàng mộng mị | porcelain | bớt lưỡi liềm bạc nhỏ sau gáy | nước ngọc, ánh trăng, thì thầm |
+| **KING OF CUPS** `cups-king` | 25 | ocean-blue sâu, hooded, vị vương giả bình thản | deep-wave dark espresso hair crowned in sea-gold and pearls | **C** cao, đầy-ở-mức-trung-bình, dáng ngồi ung dung như biển lặng | light olive | nhẫn vàng trơn ở ngón giữa tay phải | biển lặng, thủy triều, ngọc trai |
+
+---
+
+## 6. BẢNG CHÍNH — SWORDS · 12 NHÂN VẬT (trừ Ace & Three)
+
+| Lá | Tuổi | Đôi mắt | Kiểu tóc (chuẩn) | Vóc dáng | Màu da | Nét riêng | Không khí |
+|---|---|---|---|---|---|---|---|
+| **TWO OF SWORDS** `swords-02` | 21 | flint-grey, ẩn sau lụa mỏng, thâm trầm huyền hoặc | jet-black hair drawn back into a sleek, flawless high knot | **B** mảnh cân, eo thon, dáng giữ thăng bằng duyên dáng | ivory | khóa vàng nhỏ ở thái dương phải (giữ lụa) | im lặng căng, nước đứng |
+| **FOUR OF SWORDS** `swords-04` | 22 | nhắm — hàng mi dài xám nhạt, nghỉ ngơi | deep sable hair spread neatly around her resting head on stone | **A** mảnh, dáng nằm tạc tượng thanh tịnh | porcelain | sẹo bạc hình thánh giá nhỏ trên cổ tay trái | nhà nguyện, tro, gió chùa |
+| **FIVE OF SWORDS** `swords-05` | 22 | dark emerald, almond, liếc xéo khêu gợi tự tin | wind-blown dark brown hair with a subtle confident smirk | **B** mảnh nhanh, eo thon, dáng xoay người uyển chuyển | light olive | sẹo mảnh xé đôi chân mày phải | gió thắng, lá khô, cười tinh nghịch |
+| **SIX OF SWORDS** `swords-06` | 21 | misty grey mềm, downturned, trầm | light ash-brown hair gathered softly in a misty veil | **A** mảnh, dáng ngồi thuyền lặng lẽ | fair | dây bạc nhỏ hình con thuyền ở mắt cá chân | sông sương, mái chèo, đi xa |
+| **SEVEN OF SWORDS** `swords-07` | 20 | dark brown, cat, ánh mắt láu lỉnh lướt nhanh | mischievous tousled dark chestnut hair | **A** mảnh nhẹ, dáng rón rén tinh nghịch | sand | sẹo trắng mảnh ngang lòng bàn tay phải | bóng tối, bước chân lén, bạc |
+| **EIGHT OF SWORDS** `swords-08` | 20 | fear-bright hazel, doe, viền nước mắt | dark brown hair bound loosely with a crimson ribbon | **A** mảnh mong manh, dáng co lại | fair | vết bớt đỏ nhạt hình dải lụa trên mắt cá phải | hoàng hôn, dây thắt, lưỡi kiếm |
+| **NINE OF SWORDS** `swords-09` | 22 | grey-brown buồn, downturned, ướt | long black hair falling in sorrowful waves over her weeping hands | **A** mảnh, dáng ngồi trong váy ngủ, gầy | porcelain | nốt ruồi hình giọt nước trên má phải | đêm trằn trọc, tiếng khóc, gió |
+| **TEN OF SWORDS** `swords-10` | 23 | nhắm, hàng mi dài, bình yên dưới nắng | dark silky hair strewn across shoreline sand | **B** mảnh thanh thản, dáng nằm hòa vào bờ cát | warm peach | sẹo nhỏ hình ngôi sao trên khuỷu tay phải | bình minh sau bão, sóng, cỏ |
+| **PAGE OF SWORDS** `swords-page` | 18 | honey-hazel, almond, liếc nhanh tinh nghịch | windswept honey-brown hair cut in a sharp feathered pixie cut | **B** mảnh nhanh, dáng đứng trên đồi thảnh thơi trong gió | warm tan | sẹo nhỏ khía cằm | đồi đá, gió sắc, dấu chân |
+| **KNIGHT OF SWORDS** `swords-knight` | 21 | blazing grey-blue, narrow, cháy đam mê rực rỡ | dark hair streaming wildly back from beneath an open winged helmet | **B** mảnh mềm, dáng phi trong gió uốn lượn gợi cảm | sand | xăm nhỏ hình mũ giáp cánh trên vai trái | sấm vó, gió thét, lụa bay |
+| **QUEEN OF SWORDS** `swords-queen` | 24 | jade lạnh, hooded, băng giá quyến rũ | deep mahogany-red hair in an intricate woven crown braid | **B** cao thanh thoát, xương đòn gợn mềm, dáng ngồi kiêu kỳ | ivory | sẹo mảnh hình lưỡi kiếm trên xương đòn phải | sương giá, trí tuệ, hoa băng |
+| **KING OF SWORDS** `swords-king` | 25 | steel-grey, narrow, bình thản đầy mê hoặc | clean-cut raven hair crowned with sharp golden circlet | **B** cao, thon, dáng quân vương uy nghiêm kiêu sa | light olive | sẹo trắng mảnh trên ngón cái phải | tòa án, ánh vàng, công lý |
+
+---
+
+## 7. BẢNG CHÍNH — PENTACLES · 13 NHÂN VẬT (trừ Ace)
+
+| Lá | Tuổi | Đôi mắt | Kiểu tóc (chuẩn) | Vóc dáng | Màu da | Nét riêng | Không khí |
+|---|---|---|---|---|---|---|---|
+| **TWO OF PENTACLES** `pentacles-02` | 19 | hazel-gold vui, round, lấp lánh | tousled sandy-gold curls bouncing with her dance | **B** mảnh dẻo, vũ công cân bằng | fair | bớt tròn như đồng xu sau tai phải | nhạc đường phố, gió, tiếng cười |
+| **THREE OF PENTACLES** `pentacles-03` | 22 | walnut-brown, almond, hạ mí đẫm say | dark auburn hair coiled in a practical braided crown | **B** mảnh thanh, tay khéo léo, dáng cúi mình duyên dáng | light olive | tàn nhang màu đất li ti trên hai bàn tay | đá, phấn, tiếng đục |
+| **FOUR OF PENTACLES** `pentacles-04` | 24 | deep umber, heavy-lidded, khép hờ kín đáo | neatly combed dark brown hair holding gold close | **C** cân đối mềm, dáng ngồi ngả người ung dung | warm tan | nhẫn vàng trơn ở ngón trỏ tay trái | két sắt, im lặng, đất |
+| **FIVE OF PENTACLES** `pentacles-05` | 20 | icy-grey nhạt, doe, run rẩy mệt mỏi | long windswept dark-brown hair catching falling snow | **A** mảnh, dáng co mình dưới cửa sổ nhà thờ | porcelain | bớt trắng như sương trên cổ | tuyết, đói, cửa sổ sáng |
+| **SIX OF PENTACLES** `pentacles-06` | 23 | warm hazel, almond, rộng lượng thẳng thắn | well-groomed golden-brown hair in merchant styling | **C** cân đối tử tế, dáng đứng duyên dáng phân phát | sand | khuyên vàng hình đồng xu ở dái tai trái | chợ, bánh mì, tiếng đồng xu |
+| **SEVEN OF PENTACLES** `pentacles-07` | 22 | hazel-green mỏi mà hy vọng, heavy-lidded | sweat-touched warm chestnut hair resting on hoe handle | **B** thon mềm, dáng tựa cuốc uốn éo dưới nắng | warm tan | sẹo nhỏ hình chiếc lá trên xương bả vai phải | ruộng nắng, đất, mùa vụ |
+| **EIGHT OF PENTACLES** `pentacles-08` | 21 | seal-brown, cúi mắt hạ mí say mê | chestnut hair bound in a neat, focused low chignon | **A** mảnh, tay tỉ mỉ, dáng cúi mình duyên dáng trên bàn | fair | xăm mực vàng hình đồng xu trên cổ tay trái | xưởng đá, tiếng khắc, dầu |
+| **NINE OF PENTACLES** `pentacles-09` | 23 | deep espresso vệt xanh, almond, kiêu hãnh bình thản | long vine-dark espresso hair loosely curled with gold thread | **C** đồng hồ thanh lịch, cong mềm trung bình | honey | nhẫn vàng mảnh ở mắt cá phải | vườn nho, vàng, chim sẻ |
+| **TEN OF PENTACLES** `pentacles-10` | 22 | warm brown, almond, ấm áp trưởng giả | warm honey-brown hair in a thick braided crown | **C** mềm mại, dáng mẫu hệ hiền | warm peach | bớt hình chiếc lá sau tai trái | gia tộc, bàn ăn, mùa gặt |
+| **PAGE OF PENTACLES** `pentacles-page` | 18 | sunny hazel, round, chân thành | golden-blonde hair falling loose past shoulders, catching meadow sun | **A** nhỏ nhắn, dáng học trò duyên dáng | fair | chòm tàn nhang nhỏ trên xương đòn phải | đồng cỏ, sách cũ, hoa |
+| **KNIGHT OF PENTACLES** `pentacles-knight` | 23 | earth-brown, almond, điềm tĩnh bền bỉ | dark bronze hair braided under an oak-leaf crested helmet | **B** thon mềm, dáng kỵ sĩ thong thả uyển chuyển | warm tan | sẹo nhỏ hình lá sồi trên cẳng tay trái | đường đất, bụi, ngựa thở |
+| **QUEEN OF PENTACLES** `pentacles-queen` | 24 | molten brown ấm, upturned, nữ hoàng bao dung | deep chocolate hair with a ruddy golden sheen, crowned in blooming vines | **D** đầy đặn vừa, cong mềm mẫu tính | honey | bớt hình hoa hồng trên vai trái | vườn trái, bơ, tiếng gà |
+| **KING OF PENTACLES** `pentacles-king` | 25 | deep brown ánh amber, hooded, hào phóng | dark wavy hair woven with golden laurel leaves and ripe grapes | **C** cân đối mềm, dáng ngồi ung dung khoan thai | sand | nhẫn vàng lá nguyệt quế ở ngón áp út phải | lâu đài, mùa nho, đồng tiền |
+
+---
+
+## 8. KIỂM TRA NHANH (CHECKLIST)
+
+- [x] 72/72 nhân vật có đủ: tuổi · mắt · tóc (chuẩn) · vóc dáng (A–D) · da · nét riêng · không khí
+- [x] 72/72 mô tả theo tông **quyến rũ · gợi cảm · uyển chuyển** — 0 từ ngữ mạnh mẽ
+      (không: chiến binh, cơ bắp, vai rộng, săn chắc, ra lệnh, phòng thủ, tấn công, cảnh giác, canh gác, xét xử, thống trị)
+- [x] 0 nhân vật da đen / da sẫm — chỉ 10 tông từ porcelain → amber-gold
+- [x] 0 nhân vật vượt trần "trung bình" — không plus-size, không béo (A 29 · B 30 · C 9 · D 4)
+- [x] Mỗi nhân vật 1 tổ hợp mắt (màu + dáng + ánh nhìn) duy nhất
+- [x] Mỗi nhân vật 1 nét riêng duy nhất (không trùng)
+- [x] Tuổi giữ nguyên 100%; kiểu tóc giữ nguyên kiểu dáng & màu (chỉ gỡ từ ngữ chiến binh/thô cứng)
+- [x] 6 lá không nhân vật được loại trừ đúng: wands-ace, wands-08, cups-ace, swords-ace, swords-03, pentacles-ace
