@@ -2,308 +2,8 @@
   "standard": "standards/17-the-star/standard.json",
   "anchor": "17-the-star",
   "total": 78,
-  "pass": 4,
+  "pass": 7,
   "results": [
-    {
-      "ok": false,
-      "size_wh": [
-        784,
-        1360
-      ],
-      "checks": {
-        "size": {
-          "pass": true,
-          "measured": [
-            784,
-            1360
-          ],
-          "expected": [
-            784,
-            1360
-          ]
-        },
-        "coverage": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.6771,
-          "expected": 0.1159,
-          "delta": 0.5612,
-          "tolerance": 0.05
-        },
-        "struct_corr": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.1534,
-          "min": 0.9
-        },
-        "ink_iou": {
-          "pass": false,
-          "measured": 0.4927,
-          "min": 0.55
-        },
-        "rule_peak": {
-          "pass": false,
-          "measured": {
-            "left": 42,
-            "top": 56,
-            "right": 725,
-            "bottom": 1313
-          },
-          "expected": {
-            "left": 17,
-            "top": 20,
-            "right": 756,
-            "bottom": 1340
-          },
-          "delta_px": {
-            "left": 25,
-            "top": 36,
-            "right": 31,
-            "bottom": 27
-          },
-          "tolerance": 12
-        },
-        "band": {
-          "pass": false,
-          "gating": false,
-          "measured": {
-            "left": 204,
-            "right": 205,
-            "top": 204,
-            "bottom": 205
-          },
-          "expected": {
-            "left": 32,
-            "right": 33,
-            "top": 35,
-            "bottom": 36
-          },
-          "delta_px": {
-            "left": 172,
-            "right": 172,
-            "top": 169,
-            "bottom": 169
-          },
-          "tolerance": 6
-        },
-        "plates": {
-          "pass": false,
-          "measured": {
-            "medallion": true,
-            "ribbon": true
-          },
-          "expected": {
-            "medallion": false,
-            "ribbon": false
-          }
-        }
-      },
-      "failed": [
-        "ink_iou"
-      ],
-      "slug": "03-empress",
-      "title": "THE EMPRESS"
-    },
-    {
-      "ok": false,
-      "size_wh": [
-        784,
-        1360
-      ],
-      "checks": {
-        "size": {
-          "pass": true,
-          "measured": [
-            784,
-            1360
-          ],
-          "expected": [
-            784,
-            1360
-          ]
-        },
-        "coverage": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.7963,
-          "expected": 0.1159,
-          "delta": 0.6804,
-          "tolerance": 0.05
-        },
-        "struct_corr": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.0617,
-          "min": 0.9
-        },
-        "ink_iou": {
-          "pass": false,
-          "measured": 0.4927,
-          "min": 0.55
-        },
-        "rule_peak": {
-          "pass": false,
-          "measured": {
-            "left": 42,
-            "top": 49,
-            "right": 725,
-            "bottom": 1313
-          },
-          "expected": {
-            "left": 17,
-            "top": 20,
-            "right": 756,
-            "bottom": 1340
-          },
-          "delta_px": {
-            "left": 25,
-            "top": 29,
-            "right": 31,
-            "bottom": 27
-          },
-          "tolerance": 12
-        },
-        "band": {
-          "pass": false,
-          "gating": false,
-          "measured": {
-            "left": 204,
-            "right": 205,
-            "top": 204,
-            "bottom": 205
-          },
-          "expected": {
-            "left": 32,
-            "right": 33,
-            "top": 35,
-            "bottom": 36
-          },
-          "delta_px": {
-            "left": 172,
-            "right": 172,
-            "top": 169,
-            "bottom": 169
-          },
-          "tolerance": 6
-        },
-        "plates": {
-          "pass": false,
-          "measured": {
-            "medallion": true,
-            "ribbon": true
-          },
-          "expected": {
-            "medallion": false,
-            "ribbon": false
-          }
-        }
-      },
-      "failed": [
-        "ink_iou"
-      ],
-      "slug": "04-emperor",
-      "title": "THE EMPEROR"
-    },
-    {
-      "ok": false,
-      "size_wh": [
-        784,
-        1360
-      ],
-      "checks": {
-        "size": {
-          "pass": true,
-          "measured": [
-            784,
-            1360
-          ],
-          "expected": [
-            784,
-            1360
-          ]
-        },
-        "coverage": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.4791,
-          "expected": 0.1159,
-          "delta": 0.3632,
-          "tolerance": 0.05
-        },
-        "struct_corr": {
-          "pass": false,
-          "gating": false,
-          "measured": 0.1781,
-          "min": 0.9
-        },
-        "ink_iou": {
-          "pass": false,
-          "measured": 0.4927,
-          "min": 0.55
-        },
-        "rule_peak": {
-          "pass": false,
-          "measured": {
-            "left": 58,
-            "top": 49,
-            "right": 725,
-            "bottom": 1313
-          },
-          "expected": {
-            "left": 17,
-            "top": 20,
-            "right": 756,
-            "bottom": 1340
-          },
-          "delta_px": {
-            "left": 41,
-            "top": 29,
-            "right": 31,
-            "bottom": 27
-          },
-          "tolerance": 12
-        },
-        "band": {
-          "pass": false,
-          "gating": false,
-          "measured": {
-            "left": 194,
-            "right": 189,
-            "top": 204,
-            "bottom": 205
-          },
-          "expected": {
-            "left": 32,
-            "right": 33,
-            "top": 35,
-            "bottom": 36
-          },
-          "delta_px": {
-            "left": 162,
-            "right": 156,
-            "top": 169,
-            "bottom": 169
-          },
-          "tolerance": 6
-        },
-        "plates": {
-          "pass": false,
-          "measured": {
-            "medallion": true,
-            "ribbon": true
-          },
-          "expected": {
-            "medallion": false,
-            "ribbon": false
-          }
-        }
-      },
-      "failed": [
-        "ink_iou"
-      ],
-      "slug": "05-hierophant",
-      "title": "THE HIEROPHANT"
-    },
     {
       "ok": false,
       "size_wh": [
@@ -7697,6 +7397,300 @@
       "failed": [],
       "slug": "02-priestess",
       "title": "THE HIGH PRIESTESS"
+    },
+    {
+      "ok": true,
+      "size_wh": [
+        784,
+        1360
+      ],
+      "checks": {
+        "size": {
+          "pass": true,
+          "measured": [
+            784,
+            1360
+          ],
+          "expected": [
+            784,
+            1360
+          ]
+        },
+        "coverage": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.5496,
+          "expected": 0.1159,
+          "delta": 0.4337,
+          "tolerance": 0.05
+        },
+        "struct_corr": {
+          "pass": false,
+          "gating": false,
+          "measured": -0.1112,
+          "min": 0.9
+        },
+        "ink_iou": {
+          "pass": true,
+          "measured": 0.5829,
+          "min": 0.55
+        },
+        "rule_peak": {
+          "pass": true,
+          "measured": {
+            "left": 11,
+            "top": 17,
+            "right": 764,
+            "bottom": 1332
+          },
+          "expected": {
+            "left": 17,
+            "top": 20,
+            "right": 756,
+            "bottom": 1340
+          },
+          "delta_px": {
+            "left": 6,
+            "top": 3,
+            "right": 8,
+            "bottom": 8
+          },
+          "tolerance": 12
+        },
+        "band": {
+          "pass": false,
+          "gating": false,
+          "measured": {
+            "left": 195,
+            "right": 205,
+            "top": 204,
+            "bottom": 205
+          },
+          "expected": {
+            "left": 32,
+            "right": 33,
+            "top": 35,
+            "bottom": 36
+          },
+          "delta_px": {
+            "left": 163,
+            "right": 172,
+            "top": 169,
+            "bottom": 169
+          },
+          "tolerance": 6
+        },
+        "plates": {
+          "pass": false,
+          "measured": {
+            "medallion": true,
+            "ribbon": false
+          },
+          "expected": {
+            "medallion": false,
+            "ribbon": false
+          }
+        }
+      },
+      "failed": [],
+      "slug": "03-empress",
+      "title": "THE EMPRESS"
+    },
+    {
+      "ok": true,
+      "size_wh": [
+        784,
+        1360
+      ],
+      "checks": {
+        "size": {
+          "pass": true,
+          "measured": [
+            784,
+            1360
+          ],
+          "expected": [
+            784,
+            1360
+          ]
+        },
+        "coverage": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.339,
+          "expected": 0.1159,
+          "delta": 0.2231,
+          "tolerance": 0.05
+        },
+        "struct_corr": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.4265,
+          "min": 0.9
+        },
+        "ink_iou": {
+          "pass": true,
+          "measured": 0.6319,
+          "min": 0.55
+        },
+        "rule_peak": {
+          "pass": true,
+          "measured": {
+            "left": 19,
+            "top": 21,
+            "right": 767,
+            "bottom": 1338
+          },
+          "expected": {
+            "left": 17,
+            "top": 20,
+            "right": 756,
+            "bottom": 1340
+          },
+          "delta_px": {
+            "left": 2,
+            "top": 1,
+            "right": 11,
+            "bottom": 2
+          },
+          "tolerance": 12
+        },
+        "band": {
+          "pass": false,
+          "gating": false,
+          "measured": {
+            "left": 34,
+            "right": 205,
+            "top": 202,
+            "bottom": 205
+          },
+          "expected": {
+            "left": 32,
+            "right": 33,
+            "top": 35,
+            "bottom": 36
+          },
+          "delta_px": {
+            "left": 2,
+            "right": 172,
+            "top": 167,
+            "bottom": 169
+          },
+          "tolerance": 6
+        },
+        "plates": {
+          "pass": true,
+          "measured": {
+            "medallion": false,
+            "ribbon": false
+          },
+          "expected": {
+            "medallion": false,
+            "ribbon": false
+          }
+        }
+      },
+      "failed": [],
+      "slug": "04-emperor",
+      "title": "THE EMPEROR"
+    },
+    {
+      "ok": true,
+      "size_wh": [
+        784,
+        1360
+      ],
+      "checks": {
+        "size": {
+          "pass": true,
+          "measured": [
+            784,
+            1360
+          ],
+          "expected": [
+            784,
+            1360
+          ]
+        },
+        "coverage": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.172,
+          "expected": 0.1159,
+          "delta": 0.0561,
+          "tolerance": 0.05
+        },
+        "struct_corr": {
+          "pass": false,
+          "gating": false,
+          "measured": 0.0257,
+          "min": 0.9
+        },
+        "ink_iou": {
+          "pass": true,
+          "measured": 0.6163,
+          "min": 0.55
+        },
+        "rule_peak": {
+          "pass": true,
+          "measured": {
+            "left": 20,
+            "top": 17,
+            "right": 762,
+            "bottom": 1334
+          },
+          "expected": {
+            "left": 17,
+            "top": 20,
+            "right": 756,
+            "bottom": 1340
+          },
+          "delta_px": {
+            "left": 3,
+            "top": 3,
+            "right": 6,
+            "bottom": 6
+          },
+          "tolerance": 12
+        },
+        "band": {
+          "pass": false,
+          "gating": false,
+          "measured": {
+            "left": 115,
+            "right": 200,
+            "top": 32,
+            "bottom": 99
+          },
+          "expected": {
+            "left": 32,
+            "right": 33,
+            "top": 35,
+            "bottom": 36
+          },
+          "delta_px": {
+            "left": 83,
+            "right": 167,
+            "top": 3,
+            "bottom": 63
+          },
+          "tolerance": 6
+        },
+        "plates": {
+          "pass": true,
+          "measured": {
+            "medallion": false,
+            "ribbon": false
+          },
+          "expected": {
+            "medallion": false,
+            "ribbon": false
+          }
+        }
+      },
+      "failed": [],
+      "slug": "05-hierophant",
+      "title": "THE HIEROPHANT"
     },
     {
       "ok": true,

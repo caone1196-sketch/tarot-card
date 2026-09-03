@@ -2,13 +2,10 @@
 
 - Sinh bởi: `scripts/check_frame_standard.py` · chuẩn: `standards/17-the-star/standard.json`
 - Chuẩn: 784×1360 · thin-line-art · độ phủ kim tuyến 11.6%
-- Kết quả: **4/78 ĐẠT**, 74 lá lệch chuẩn
+- Kết quả: **7/78 ĐẠT**, 71 lá lệch chuẩn
 
 | Lá | Kết quả | Phủ kim tuyến | Tương quan cấu trúc | chồng khít mực viền | Lệch dải viền (px) | Plate | Chỉ tiêu lệch |
 |---|---|---|---|---|---|---|---|
-| `03-empress` | ⚠️ lệch | 67.7% | 0.153 | 0.493 | 172 | lệch | ink_iou |
-| `04-emperor` | ⚠️ lệch | 79.6% | 0.062 | 0.493 | 172 | lệch | ink_iou |
-| `05-hierophant` | ⚠️ lệch | 47.9% | 0.178 | 0.493 | 169 | lệch | ink_iou |
 | `06-lovers` | ⚠️ lệch | 63.6% | 0.155 | 0.493 | 172 | lệch | ink_iou |
 | `07-chariot` | ⚠️ lệch | 55.9% | 0.171 | 0.493 | 172 | lệch | ink_iou |
 | `08-strength` | ⚠️ lệch | 53.1% | 0.157 | 0.493 | 172 | lệch | ink_iou |
@@ -83,4 +80,7 @@
 | `00-fool` | ✅ ĐẠT | 63.4% | 0.420 | 0.645 | 172 | lệch | — |
 | `01-magician` | ✅ ĐẠT | 32.0% | 0.576 | 0.912 | 172 | lệch | — |
 | `02-priestess` | ✅ ĐẠT | 10.2% | 0.791 | 0.925 | 91 | khớp | — |
+| `03-empress` | ✅ ĐẠT | 55.0% | -0.111 | 0.583 | 172 | lệch | — |
+| `04-emperor` | ✅ ĐẠT | 33.9% | 0.426 | 0.632 | 172 | khớp | — |
+| `05-hierophant` | ✅ ĐẠT | 17.2% | 0.026 | 0.616 | 167 | khớp | — |
 | `17-the-star` | ✅ ĐẠT | 11.6% | 1.000 | 1.000 | 0 | khớp | — |
