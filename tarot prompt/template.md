@@ -1,6 +1,6 @@
 A single tarot card "{TITLE}" built inside the reference frame, matching the EXACT open window display, scale, and lighting style of THE STAR: the painted scene runs full bleed to all four edges of the card, with only the intricate thin antique-gold line-art border in vintage gothic style painted on top of the image.
 
-NO TOP EMBLEM / NO ICON / NO SYMBOL: do not draw {EMBLEM}, do not draw any oval medallion plate, and do not place any decorative symbol above the scene.
+NO TOP EMBLEM / NO ICON / NO SYMBOL: do not add a separate top emblem, icon, heraldic symbol, oval medallion plate, or decorative symbol above the scene.
 NO TITLE FRAME: do not draw a ribbon banner, plaque, cartouche, box, panel, or frame behind or around the title. The title "{TITLE}" appears only as clean antique-gold serif capital lettering painted directly over the lower part of the scene.
 
 The scene occupies the whole card edge to edge, passing beneath the thin gold rule line, with no inner arch, no inner panel wall, and no column barriers:

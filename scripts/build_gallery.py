@@ -37,7 +37,7 @@ def build_gallery():
             "slug": slug,
             "title": card_info.get("title", ""),
             "image": base,
-            "emblem": card_info.get("emblem", ""),
+            "emblem": card_info.get("emblem") or "",
             "age": card_info.get("age", ""),
             "hair": card_info.get("hair", ""),
             "build": card_info.get("build", ""),
@@ -129,7 +129,7 @@ def build_gallery():
             <img src="{item['image']}" alt="{item['title']}">
             <div class="card-details">
                 <div class="card-title">{item['title']}</div>
-                <div class="card-meta"><strong>Độ tuổi:</strong> {item['age']} &bull; <strong>Huy hiệu:</strong> {item['emblem']}</div>
+                <div class="card-meta"><strong>Độ tuổi:</strong> {item['age']}</div>
                 <div class="card-scene">{item['scene']}</div>
             </div>
         </div>\n"""

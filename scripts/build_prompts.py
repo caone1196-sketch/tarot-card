@@ -100,7 +100,7 @@ def frame_clause(std, use_reference=True):
 
 
 def build_card_prompt_star_standard(card, use_reference=True, std=None):
-    emblem = card.get("emblem", "an ornate heraldic symbol")
+    emblem = (card.get("emblem") or "").strip()
     title = card.get("title", "")
     scene = card.get("scene", "")           # NGUYÊN VĂN từ cards.json — không file nào được sửa
     count_str = format_count_lock(card.get("count"))
@@ -127,8 +127,8 @@ def build_card_prompt_star_standard(card, use_reference=True, std=None):
 
     ref_clause = frame_clause(std, use_reference)
 
-    emblem_clause = (f"NO TOP EMBLEM / NO ICON / NO SYMBOL: do not draw {emblem}, do not draw any "
-                     f"oval medallion plate, and do not place any decorative symbol above the scene. ")
+    emblem_clause = ("NO TOP EMBLEM / NO ICON / NO SYMBOL: do not add a separate top emblem, icon, "
+                     "heraldic symbol, oval medallion plate, or decorative symbol above the scene. ")
     title_clause = (f"NO TITLE FRAME: do not draw a ribbon banner, plaque, cartouche, box, panel, "
                     f"or frame behind or around the title. The title \"{title}\" appears only as clean "
                     f"antique-gold serif capital lettering painted directly over the lower part of the scene. ")

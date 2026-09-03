@@ -19,22 +19,22 @@ Bản chuẩn hóa quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài
    * **Lớp 1 (Nền)**: Giấy da cổ (*Aged parchment/vellum*) nhuốm màu thời gian sepia ấm áp.
    * **Lớp 2 (Nội dung)**: Phối cảnh tự nhiên, thoáng đãng với ánh sáng ấm áp và chiều sâu không gian lùi dần về hậu cảnh. **Nội dung được PHÓNG TO, tràn nhẹ xuống dưới mép trong của khung viền vàng.**
    * **Lớp 3 (Khung viền)**: Khung viền mạ vàng Gothic mỏng, sắc nét, đối xứng hoàn hảo — **lấy chuẩn từ lá The Star**. **Hoa văn viền vàng ĐÈ LÊN TRÊN mép nội dung (foreground ornament over background scene) để tạo chiều sâu phân lớp — khung nổi phía trước, cảnh lùi ra sau.**
-   * **Lớp 4 (Huy hiệu & Tên)**: Oval Medallion ở đỉnh chứa huy hiệu mạ vàng + Dải ruy băng cuộn ở đáy chứa tên lá bài.
+   * **Lớp 4 (Tên trực tiếp, không huy hiệu)**: Không dùng huy hiệu/top emblem/icon/symbol, không oval medallion; tên lá bài là chữ vàng serif đặt trực tiếp trên phần dưới của cảnh, không có ruy băng/banner/plaque/box/frame.
 
 ---
 
 ## Master Prompt Template (Chuẩn The Star)
 
 ```text
-A single tarot card "{TITLE}" built inside the reference frame, matching the EXACT open window display, scale, and lighting style of THE STAR: keep the intricate thin golden line-art border in vintage gothic style and aged parchment background texture.
+A single tarot card "{TITLE}" built inside the reference frame, matching the EXACT open window display, scale, and lighting style of THE STAR: the painted scene runs full bleed to all four edges of the card, with only the intricate thin antique-gold line-art border in vintage gothic style painted on top of the image.
 
-At the TOP: inside the oval medallion plate, {EMBLEM} in glowing antique gold.
-At the BOTTOM: inside the ribbon banner, the title "{TITLE}" in clean antique gold lettering.
+NO TOP EMBLEM / NO ICON / NO SYMBOL: do not add a separate top emblem, icon, heraldic symbol, oval medallion plate, or decorative symbol above the scene.
+NO TITLE FRAME: do not draw a ribbon banner, plaque, cartouche, box, panel, or frame behind or around the title. The title "{TITLE}" appears only as clean antique-gold serif capital lettering painted directly over the lower part of the scene.
 
-In the large open center panel (filling the entire inner window edge to edge and bleeding slightly beneath the golden border, matching the open space of The Star without heavy inner arch barriers):
+The scene occupies the whole card edge to edge, passing beneath the thin gold rule line, with no inner arch, no inner panel wall, and no column barriers:
 {SCENE}. {CHARACTER_SPECIFICATION} {COUNT_LOCK}
 
-Depth layering: enlarge the scene so its edges extend slightly beneath the inner edge of the golden border, then paint the thin golden line-art border, corner flourishes, oval medallion and ribbon banner ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth.
+Depth layering: enlarge the scene so its edges bleed to the very outer edge of the card, then paint only the thin golden rule line and small gothic corner flourishes ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth. Do not add an emblem area or any framed title area.
 
-Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, symmetrical golden frame border, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail.
+Razor-sharp focus, increased fine detail, clean denoised and deblurred finish, no grain, no haze, no soft-focus blur. Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, symmetrical thin golden frame border, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail.
 ```

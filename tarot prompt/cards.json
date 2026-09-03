@@ -1,32 +1,40 @@
 {
   "meta": {
     "deck": "Sensual Tarot — 78 cards",
-    "version": "v2 (count-locked, sensual edition)",
+    "version": "v3 (The Star full-border, no-emblem edition)",
     "refs": [
       "cards/card-blank.jpg (blank template, position 1)",
-      "cards/17-the-star.png (style anchor — inner image & outer border standard, position 2)"
+      "cards/17-the-star.png (THE STAR visual anchor — full-bleed thin gold border, no top emblem, no title frame)"
     ],
-    "note": "count = null -> emits the 'no suit objects' COUNT LOCK. count.n is a HARD constraint."
+    "note": "count = null -> no suit-object COUNT LOCK. count.n is a HARD constraint. emblem = null -> no top emblem/icon/symbol is generated; scene objects remain unchanged.",
+    "visual_theme": {
+      "anchor": "cards/17-the-star.png",
+      "frame": "full-bleed scene to all four edges with thin antique-gold gothic rule line and small corner flourishes painted on top",
+      "top_emblem": "none — no top emblem, icon, symbol, or medallion plate",
+      "title": "plain antique-gold serif capital lettering directly over the lower scene; no ribbon, banner, plaque, cartouche, box, or frame",
+      "quality": "razor-sharp, high detail, denoised/deblurred, natural colors, no grain or haze"
+    }
   },
   "cards": [
     {
       "n": "0",
       "slug": "00-fool",
       "group": "major",
-      "emblem": "a white rose",
+      "emblem": null,
       "title": "THE FOOL",
       "femme": true,
       "count": null,
       "scene": "a carefree 19-year-old woman wanderer draped only in a transparent silk veil so fine it clings and reveals her bare body beneath, the veil slipping from one shoulder and streaming behind her, a white rose lifted in one hand and her eyes lowered to look at it, stepping lightly toward a cliff edge, a small white dog leaping at her heel, distant mountains under a golden morning sun",
       "hair": "loose wind-tossed honey-blonde waves down to her shoulder blades, sunlit and carefree",
       "age": "19 years old",
-      "build": "petite and lithe, slender waist, youthful energy and light, springy step"
+      "build": "petite and lithe, slender waist, youthful energy and light, springy step",
+      "legacy_emblem": "a white rose"
     },
     {
       "n": "I",
       "slug": "01-magician",
       "group": "major",
-      "emblem": "an infinity symbol",
+      "emblem": null,
       "title": "THE MAGICIAN",
       "femme": true,
       "count": {
@@ -37,117 +45,126 @@
       "scene": "a nude young woman magician, bare torso with a length of silk slung low across her hips, one hand raising a wand to the sky and the other pointing down to the earth, the altar table before her laid with a cup, a sword, a wand and a pentacle, a garden of black roses behind her",
       "hair": "jet-black straight hair falling past her waist like a sleek silk curtain, center-parted",
       "age": "22 years old",
-      "build": "statuesque and commanding, elegant elongated proportions with poised posture"
+      "build": "statuesque and commanding, elegant elongated proportions with poised posture",
+      "legacy_emblem": "an infinity symbol"
     },
     {
       "n": "II",
       "slug": "02-priestess",
       "group": "major",
-      "emblem": "a pomegranate",
+      "emblem": null,
       "title": "THE HIGH PRIESTESS",
       "femme": true,
       "count": null,
       "scene": "a serene nude priestess, bare shoulders and the soft line of her breasts veiled only by a drift of sheer gauze, seated between two stone pillars, a scroll of mystery resting in her lap, a silver crescent moon at her feet",
       "hair": "deep auburn hair with soft natural waves, cascading beneath a sheer gossamer veil",
       "age": "23 years old",
-      "build": "serene, slender and graceful, long neck and soft classical feminine curves"
+      "build": "serene, slender and graceful, long neck and soft classical feminine curves",
+      "legacy_emblem": "a pomegranate"
     },
     {
       "n": "III",
       "slug": "03-empress",
       "group": "major",
-      "emblem": "a twelve-star crown",
+      "emblem": null,
       "title": "THE EMPRESS",
       "femme": true,
       "count": null,
       "scene": "a slender nude empress, one breast bared, a crown of flowers in loosened hair, reclining on a velvet throne amid ripe golden wheat and fruits, a heart-shaped shield of Venus leaning beside her",
       "build": "voluptuous and curvaceous, full feminine bust and hips, warm radiant goddess presence",
       "hair": "thick ripe-wheat golden blonde hair, spilling over both shoulders in soft ropey curls garlanded with flowers",
-      "age": "24 years old"
+      "age": "24 years old",
+      "legacy_emblem": "a twelve-star crown"
     },
     {
       "n": "IV",
       "slug": "04-emperor",
       "group": "major",
-      "emblem": "a ram's head",
+      "emblem": null,
       "title": "THE EMPEROR",
       "femme": true,
       "count": null,
       "scene": "a serene 25-year-old female emperor reclining gracefully on a stone throne carved with ram heads, draped only in a diaphanous transparent silk veil so fine it clings to her soft curves and glows with warm light against her skin, the gossamer fabric slipping from one shoulder, holding an ankh scepter loosely in one hand, barren rugged mountains behind her",
       "age": "25 years old",
       "hair": "sleek dark bronze-brown hair in soft loose waves, crowned with a golden ram-horn circlet",
-      "build": "graceful, soft and refined female sovereign with gently sculpted curves and a serene, tender composure"
+      "build": "graceful, soft and refined female sovereign with gently sculpted curves and a serene, tender composure",
+      "legacy_emblem": "a ram's head"
     },
     {
       "n": "V",
       "slug": "05-hierophant",
       "group": "major",
-      "emblem": "two crossed golden keys",
+      "emblem": null,
       "title": "THE HIEROPHANT",
       "femme": true,
       "count": null,
       "scene": "a serene 24-year-old female high mystic priestess draped only in a diaphanous transparent red silk veil so fine it clings to her curves and glows with warm candlelight against her skin, the gossamer-thin fabric slipping from one shoulder, raising one blessing hand, two kneeling female acolytes before her, sacred temple pillars behind",
       "age": "24 years old",
       "hair": "thick espresso-brown waves falling loose over her bare shoulders and back",
-      "build": "tall, noble and serene female high priestess with graceful dignified poise"
+      "build": "tall, noble and serene female high priestess with graceful dignified poise",
+      "legacy_emblem": "two crossed golden keys"
     },
     {
       "n": "VI",
       "slug": "06-lovers",
       "group": "major",
-      "emblem": "an apple coiled by a serpent",
+      "emblem": null,
       "title": "THE LOVERS",
       "femme": true,
       "count": null,
       "scene": "a nude man and a nude woman standing hand in hand beneath a great winged angel, her body turned three-quarters toward the viewer with silk fallen to her hip and his hand at the small of her back, the tree of knowledge with a serpent behind her, the tree of flames behind him",
       "hair": "warm chestnut-brown hair gathered in a loose romantic knot with soft wisps framing her cheeks",
       "age": "21 years old",
-      "build": "slender hourglass silhouette, supple waist, graceful gentle curves beside her partner"
+      "build": "slender hourglass silhouette, supple waist, graceful gentle curves beside her partner",
+      "legacy_emblem": "an apple coiled by a serpent"
     },
     {
       "n": "VII",
       "slug": "07-chariot",
       "group": "major",
-      "emblem": "a winged sun disk",
+      "emblem": null,
       "title": "THE CHARIOT",
       "femme": true,
       "count": null,
       "scene": "a heroic bare-shouldered woman charioteer wrapped in loose sheer white silk with no armor, standing tall in a stone chariot between two sphinxes under a starry canopy, a walled city behind her",
       "hair": "dark sable-brown hair tightly plaited in a single thick warrior braid over one shoulder",
       "age": "22 years old",
-      "build": "athletic and toned, sculpted shoulders and taut waist, resolute and heroic stance"
+      "build": "athletic and toned, sculpted shoulders and taut waist, resolute and heroic stance",
+      "legacy_emblem": "a winged sun disk"
     },
     {
       "n": "VIII",
       "slug": "08-strength",
       "group": "major",
-      "emblem": "a red rose",
+      "emblem": null,
       "title": "STRENGTH",
       "femme": true,
       "count": null,
       "scene": "a nude woman garlanded with roses, one knee raised, leaning in close to calmly close the jaws of a great golden lion, her bare back arched and her hip lit by low sun, an infinity sign glowing above her head",
       "hair": "burnished copper-red long wavy hair flowing down like a lion's mane",
       "age": "23 years old",
-      "build": "lithe yet strong, defined muscular tone along the back, soft graceful curves"
+      "build": "lithe yet strong, defined muscular tone along the back, soft graceful curves",
+      "legacy_emblem": "a red rose"
     },
     {
       "n": "IX",
       "slug": "09-hermit",
       "group": "major",
-      "emblem": "a glowing lantern",
+      "emblem": null,
       "title": "THE HERMIT",
       "femme": true,
       "count": null,
       "scene": "a hermit woman standing on a bare mountain peak under a deep star-filled night sky, holding up a lit lantern with warm golden light pouring out of it, draped only in a loose sheer white silk gauze that slips from her bare shoulders and pools low around her hips, her bare back and the curve of one breast veiled and revealed by the golden lantern light",
       "hair": "ethereal silver-ash long hair falling loose in soft waves",
       "age": "23 years old",
-      "build": "slender, mysterious and delicate silhouette, quiet meditative poise"
+      "build": "slender, mysterious and delicate silhouette, quiet meditative poise",
+      "legacy_emblem": "a glowing lantern"
     },
     {
       "n": "X",
       "slug": "10-wheel",
       "group": "major",
-      "emblem": "a spoked golden wheel",
+      "emblem": null,
       "title": "WHEEL OF FORTUNE",
       "femme": true,
       "count": {
@@ -158,13 +175,14 @@
       "scene": "a great golden wheel of fortune inscribed with mystic letters, a serene winged female sphinx draped only in a diaphanous transparent silk veil that clings to her soft curves and glows with warm light, seated gently atop the wheel holding a single upright sword loosely in one hand, a rising golden serpent on one side and a jackal deity on the other, four graceful winged female watchers in flowing transparent silk reclining softly at the four corners",
       "age": "22 years old",
       "hair": "golden-amber hair in soft loose waves, crowned with delicate celestial laurels",
-      "build": "graceful, soft and serene winged female guardian with gently sculpted curves and a tender, dreamy composure"
+      "build": "graceful, soft and serene winged female guardian with gently sculpted curves and a tender, dreamy composure",
+      "legacy_emblem": "a spoked golden wheel"
     },
     {
       "n": "XI",
       "slug": "11-justice",
       "group": "major",
-      "emblem": "balanced golden scales",
+      "emblem": null,
       "title": "JUSTICE",
       "femme": true,
       "count": {
@@ -175,39 +193,42 @@
       "scene": "a statuesque bare-shouldered queen, a length of sheer silk sliding fully off one shoulder to bare one breast and one hip, a sword upright in one hand and balanced scales in the other, seated on a stone throne between pillars",
       "hair": "sleek raven-black hair drawn back sharply into a high polished half-ponytail",
       "age": "24 years old",
-      "build": "statuesque and regal, prominent collarbones, straight spine and austere balanced posture"
+      "build": "statuesque and regal, prominent collarbones, straight spine and austere balanced posture",
+      "legacy_emblem": "balanced golden scales"
     },
     {
       "n": "XII",
       "slug": "12-hanged",
       "group": "major",
-      "emblem": "an inverted living branch",
+      "emblem": null,
       "title": "THE HANGED",
       "femme": true,
       "count": null,
       "scene": "a serene nude 21-year-old young woman suspended upside-down by one ankle from a living tree shaped like a cross, one leg bent gracefully, a radiant halo of golden light glowing around her head",
       "age": "21 years old",
       "hair": "golden-brown tousled locks cascading downward with gravity, glowing in ethereal light",
-      "build": "lean, lithe and supple young woman dancer physique, serene and peaceful poise"
+      "build": "lean, lithe and supple young woman dancer physique, serene and peaceful poise",
+      "legacy_emblem": "an inverted living branch"
     },
     {
       "n": "XIII",
       "slug": "13-death",
       "group": "major",
-      "emblem": "a five-petaled white rose",
+      "emblem": null,
       "title": "DEATH",
       "femme": true,
       "count": null,
       "scene": "a striking 22-year-old pale female figure draped in sheer black silk that veils and reveals her bare form, riding a calm black charger, holding a black banner adorned with a five-petaled white rose, a golden sunrise glowing between twin distant towers",
       "age": "22 years old",
       "hair": "long bone-platinum hair flowing loose and free",
-      "build": "tall, slender and formidable female silhouette wrapped in sheer black silk"
+      "build": "tall, slender and formidable female silhouette wrapped in sheer black silk",
+      "legacy_emblem": "a five-petaled white rose"
     },
     {
       "n": "XIV",
       "slug": "14-temperance",
       "group": "major",
-      "emblem": "a triangle within a square",
+      "emblem": null,
       "title": "TEMPERANCE",
       "femme": true,
       "count": {
@@ -218,39 +239,42 @@
       "scene": "a graceful winged figure with long loosened hair, draped in a diaphanous transparent silk veil, seated gracefully on a mossy stone by the pool with one leg trailing into the water, pouring from a golden chalice tilted high in her raised hand while her other hand holds a second golden chalice positioned directly beneath the upper chalice's lip so that its open mouth catches the falling water, a single smooth unbroken stream of water pouring straight down from the tilted upper chalice and landing inside the lower chalice's bowl, irises blooming around the pool, warm sepia and ochre light",
       "hair": "pale fine ash-blonde hair floating weightlessly in the air",
       "age": "22 years old",
-      "build": "ethereal and willowy, long slender limbs, arched supple spine, graceful angelic poise"
+      "build": "ethereal and willowy, long slender limbs, arched supple spine, graceful angelic poise",
+      "legacy_emblem": "a triangle within a square"
     },
     {
       "n": "XV",
       "slug": "15-devil",
       "group": "major",
-      "emblem": "an inverted pentagram",
+      "emblem": null,
       "title": "THE DEVIL",
       "femme": true,
       "count": null,
       "scene": "a horned winged female arch-devil draped in sheer black silk upon a dark pedestal; beside her two alluring nude young women arched in golden chains, their bodies glowing in candlelit shadow inside an obsidian cavern",
       "hair": "midnight-black wavy hair with deep wine-red undertones, wild and untamed",
       "age": "21 years old",
-      "build": "sultry and curvaceous, arched back and soft full hips, magnetic alluring presence"
+      "build": "sultry and curvaceous, arched back and soft full hips, magnetic alluring presence",
+      "legacy_emblem": "an inverted pentagram"
     },
     {
       "n": "XVI",
       "slug": "16-tower",
       "group": "major",
-      "emblem": "a jagged lightning bolt",
+      "emblem": null,
       "title": "THE TOWER",
       "femme": true,
       "count": null,
       "scene": "a tall stone tower struck by a jagged bolt of lightning, its golden crown toppling in flames, two graceful young women falling through the storm and ash, their bodies illuminated by the brilliant flash",
       "hair": "storm-dark chestnut hair blown dynamically backward by lightning winds",
       "age": "20 years old",
-      "build": "taut and athletic, dynamic acrobatic physique arched mid-fall"
+      "build": "taut and athletic, dynamic acrobatic physique arched mid-fall",
+      "legacy_emblem": "a jagged lightning bolt"
     },
     {
       "n": "XVII",
       "slug": "17-the-star",
       "group": "major",
-      "emblem": "an eight-pointed star",
+      "emblem": null,
       "title": "THE STAR",
       "femme": true,
       "count": {
@@ -261,13 +285,14 @@
       "scene": "a nude woman standing waist-deep in a clear pool at night, her body arched back and turned three-quarters toward the viewer, wet hair falling down her back, both arms raised pouring water from two jugs, one knee lifted, a great eight-pointed star and seven smaller stars above",
       "hair": "very long pale shimmering gold hair, wet and silky, cascading down past one bare shoulder",
       "age": "20 years old",
-      "build": "slender and lithe, narrow waist, long graceful legs, luminous maiden proportions"
+      "build": "slender and lithe, narrow waist, long graceful legs, luminous maiden proportions",
+      "legacy_emblem": "an eight-pointed star"
     },
     {
       "n": "XVIII",
       "slug": "18-moon",
       "group": "major",
-      "emblem": "a crescent moon dripping dew",
+      "emblem": null,
       "title": "THE MOON",
       "femme": true,
       "count": null,
@@ -275,13 +300,14 @@
       "build": "slender, mysterious water-nymph silhouette, delicate waist and soft curving hips",
       "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
       "hair": "ink-blue-black hair with cool silvery highlights, cascading like water to her hips",
-      "age": "21 years old"
+      "age": "21 years old",
+      "legacy_emblem": "a crescent moon dripping dew"
     },
     {
       "n": "XIX",
       "slug": "19-sun",
       "group": "major",
-      "emblem": "a radiant sun face",
+      "emblem": null,
       "title": "THE SUN",
       "femme": true,
       "count": null,
@@ -289,26 +315,28 @@
       "build": "youthful and vibrant, sun-kissed skin, energetic and joyful feminine curves",
       "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
       "hair": "radiant sunflower-blonde hair, bouncing loose curls garlanded in red blossoms",
-      "age": "19 years old"
+      "age": "19 years old",
+      "legacy_emblem": "a radiant sun face"
     },
     {
       "n": "XX",
       "slug": "20-judgement",
       "group": "major",
-      "emblem": "a golden trumpet",
+      "emblem": null,
       "title": "JUDGEMENT",
       "femme": true,
       "count": null,
       "scene": "a serene winged female angel draped only in a diaphanous transparent silk veil that clings to her soft curves and glows with warm light, gently lifting a golden trumpet with a white banner; below, rising from calm waters, three beautiful young women with softly open arms turning toward the divine light — one fair-skinned with flowing blonde hair, one warm-toned with dark auburn curls, and one fair-skinned with tight dark curls — each with a distinct face and figure, each draped in sheer transparent silk",
       "hair": "rich amber-honey hair in soft luminous waves catching gentle golden rays",
       "age": "22 years old",
-      "build": "graceful, soft and serene winged angel with gently sculpted curves and a tender, uplifting composure"
+      "build": "graceful, soft and serene winged angel with gently sculpted curves and a tender, uplifting composure",
+      "legacy_emblem": "a golden trumpet"
     },
     {
       "n": "XXI",
       "slug": "21-world",
       "group": "major",
-      "emblem": "a laurel wreath oval",
+      "emblem": null,
       "title": "THE WORLD",
       "femme": true,
       "count": {
@@ -320,13 +348,14 @@
       "build": "graceful, soft and serene dancer's physique, gentle curves, supple tender poise",
       "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
       "hair": "dark chocolate-chestnut hair in soft loose waves drifting gently with white silk ribbons",
-      "age": "22 years old"
+      "age": "22 years old",
+      "legacy_emblem": "a laurel wreath oval"
     },
     {
       "n": "A",
       "slug": "wands-ace",
       "group": "wands",
-      "emblem": "one leafy wand",
+      "emblem": null,
       "title": "ACE OF WANDS",
       "femme": false,
       "count": {
@@ -334,13 +363,14 @@
         "obj": "wand",
         "layout": "exactly one wand, sprouting and alive, held by the divine hand; no second staff anywhere, not even in the landscape"
       },
-      "scene": "a graceful feminine divine hand emerging from soft clouds offering a single living sprouting wand, a delicate transparent silk veil fluttering around the wrist, a serene landscape and a distant castle below"
+      "scene": "a graceful feminine divine hand emerging from soft clouds offering a single living sprouting wand, a delicate transparent silk veil fluttering around the wrist, a serene landscape and a distant castle below",
+      "legacy_emblem": "one leafy wand"
     },
     {
       "n": "2",
       "slug": "wands-02",
       "group": "wands",
-      "emblem": "two crossed leafy wands",
+      "emblem": null,
       "title": "TWO OF WANDS",
       "femme": true,
       "count": {
@@ -351,13 +381,14 @@
       "scene": "a serene noblewoman on a battlement, draped in a diaphanous transparent silk veil slipping from one shoulder, a globe of the world resting in one palm with her eyes lowered to look at it, one wand upright in her other hand, the second wand mounted on the wall behind her",
       "hair": "deep auburn hair falling in long loose ringlets over one shoulder",
       "age": "22 years old",
-      "build": "slender, serene and contemplative, gentle upright posture looking out from the parapet"
+      "build": "slender, serene and contemplative, gentle upright posture looking out from the parapet",
+      "legacy_emblem": "two crossed leafy wands"
     },
     {
       "n": "3",
       "slug": "wands-03",
       "group": "wands",
-      "emblem": "three leafy wands in a fan",
+      "emblem": null,
       "title": "THREE OF WANDS",
       "femme": true,
       "count": {
@@ -368,13 +399,14 @@
       "scene": "a serene woman merchant seen from behind on a high rocky headland, standing tall with her long back line turned to us, draped only in a diaphanous transparent silk veil that clings and reveals her soft curves and streams in the sea wind, one hand resting high on the staff beside her and the other raised to shade her eyes as she gazes far out to sea, three staves planted upright in a row around her, sailing ships on a golden sea",
       "hair": "warm caramel-brown hair loosely braided with golden cord",
       "age": "23 years old",
-      "build": "tall and statuesque, long back line facing toward the horizon"
+      "build": "tall and statuesque, long back line facing toward the horizon",
+      "legacy_emblem": "three leafy wands in a fan"
     },
     {
       "n": "4",
       "slug": "wands-04",
       "group": "wands",
-      "emblem": "four wands with a garland",
+      "emblem": null,
       "title": "FOUR OF WANDS",
       "femme": true,
       "count": {
@@ -386,13 +418,14 @@
       "hair": "distinct per dancer: one with flowing honey-gold hair, one with tight black coils",
       "build": "both lithe and celebratory, joyful dancer waists and graceful raised arms, distinct faces and figures",
       "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
-      "age": "20 years old"
+      "age": "20 years old",
+      "legacy_emblem": "four wands with a garland"
     },
     {
       "n": "5",
       "slug": "wands-05",
       "group": "wands",
-      "emblem": "five wands crossed in a star",
+      "emblem": null,
       "title": "FIVE OF WANDS",
       "femme": true,
       "count": {
@@ -403,13 +436,14 @@
       "scene": "five graceful young women draped in diaphanous transparent silk veils standing in a loose circle in a soft meadow, each woman distinct and every one with fair skin tones — one porcelain-skinned with long platinum-blonde hair, one rosy ivory-skinned with copper-red waves, one warm ivory-skinned with deep chocolate-brown hair, one fair-skinned with raven-black straight hair, and one light golden-skinned with strawberry-blonde hair — each holding exactly one wand planted upright beside her",
       "age": "21 years old",
       "hair": "distinct per woman: one blonde, one dark auburn curls, one tight black coils, one straight black, one copper waves",
-      "build": "all slender, graceful and light with distinct faces and figures, gentle dancing stances"
+      "build": "all slender, graceful and light with distinct faces and figures, gentle dancing stances",
+      "legacy_emblem": "five wands crossed in a star"
     },
     {
       "n": "6",
       "slug": "wands-06",
       "group": "wands",
-      "emblem": "six slender wands standing side by side in one neat row, one of them crowned with a small laurel wreath — exactly six shafts, no more and no fewer",
+      "emblem": null,
       "title": "SIX OF WANDS",
       "femme": true,
       "count": {
@@ -420,13 +454,14 @@
       "scene": "a serene woman on a white horse, draped in a diaphanous transparent silk veil, a laurel wreath on her brow, one crowned wand raised gently in her hand, five admirers behind her each holding one wand",
       "hair": "honey-gold hair flowing softly in the breeze",
       "age": "22 years old",
-      "build": "graceful, poised and serene, elegant equestrian posture on horseback"
+      "build": "graceful, poised and serene, elegant equestrian posture on horseback",
+      "legacy_emblem": "six slender wands standing side by side in one neat row, one of them crowned with a small laurel wreath — exactly six shafts, no more and no fewer"
     },
     {
       "n": "7",
       "slug": "wands-07",
       "group": "wands",
-      "emblem": "seven wands in a palisade",
+      "emblem": null,
       "title": "SEVEN OF WANDS",
       "femme": true,
       "count": {
@@ -437,13 +472,14 @@
       "scene": "a serene young woman standing atop a high crag, draped in a diaphanous transparent silk veil, holding one great wand gently with both hands, six wands rising from below",
       "age": "21 years old",
       "hair": "dark espresso hair falling in soft loose curls",
-      "build": "slender, serene and graceful, calm composed stance"
+      "build": "slender, serene and graceful, calm composed stance",
+      "legacy_emblem": "seven wands in a palisade"
     },
     {
       "n": "8",
       "slug": "wands-08",
       "group": "wands",
-      "emblem": "eight parallel wands",
+      "emblem": null,
       "title": "EIGHT OF WANDS",
       "femme": false,
       "count": {
@@ -451,13 +487,14 @@
         "obj": "wands",
         "layout": "exactly eight wands in ONE single parallel diagonal row across the open sky — 1 row of 8, evenly spaced, all eight pointing the same way, none crossing, none cropped by the frame"
       },
-      "scene": "eight wands with leaf tips drifting in one parallel diagonal row across a soft open sky toward a river town below"
+      "scene": "eight wands with leaf tips drifting in one parallel diagonal row across a soft open sky toward a river town below",
+      "legacy_emblem": "eight parallel wands"
     },
     {
       "n": "9",
       "slug": "wands-09",
       "group": "wands",
-      "emblem": "nine wands in a rampart row",
+      "emblem": null,
       "title": "NINE OF WANDS",
       "femme": true,
       "count": {
@@ -468,13 +505,14 @@
       "scene": "a serene young woman draped in a diaphanous transparent silk veil, gently resting her hands on one standing wand, eight wands upright behind her like a palisade",
       "age": "24 years old",
       "hair": "dark brown hair falling loose in soft waves",
-      "build": "slender, serene and watchful, gentle composed stance"
+      "build": "slender, serene and watchful, gentle composed stance",
+      "legacy_emblem": "nine wands in a rampart row"
     },
     {
       "n": "10",
       "slug": "wands-10",
       "group": "wands",
-      "emblem": "ten wands in a bundle",
+      "emblem": null,
       "title": "TEN OF WANDS",
       "femme": true,
       "count": {
@@ -485,13 +523,14 @@
       "scene": "a serene 23-year-old woman reclining gracefully on soft grass, nude but for a sheer transparent silk veil draped across her form, resting beside a boulder; leaning against the boulder behind her is one natural bundle of ten long wooden wands tied loosely at the middle with a thin cord, their upper ends spreading apart in a natural fan like an open hand fan, every wand the same length and thickness, evenly spaced with a clear gap of sky between each shaft, all ten tips clearly separated and countable, the lower ends gathered together in the grass, none crossing, none hidden, a distant sunlit castle beyond",
       "age": "23 years old",
       "hair": "chestnut hair loose in soft waves",
-      "build": "slender, graceful and serene, gentle bearing carrying the bundle"
+      "build": "slender, graceful and serene, gentle bearing carrying the bundle",
+      "legacy_emblem": "ten wands in a bundle"
     },
     {
       "n": "P",
       "slug": "wands-page",
       "group": "wands",
-      "emblem": "a wand with a feather plume",
+      "emblem": null,
       "title": "PAGE OF WANDS",
       "femme": true,
       "count": {
@@ -502,13 +541,14 @@
       "scene": "a serene adult woman page standing farther back in the landscape so her whole figure sits smaller within the wide desert vista, draped in a diaphanous transparent silk veil sliding off one shoulder, holding one living wand, desert dunes and pyramids behind her",
       "hair": "soft ginger-auburn hair in a gentle textured bob",
       "age": "18 years old",
-      "build": "petite and serene, lithe youthful frame with a gentle stance"
+      "build": "petite and serene, lithe youthful frame with a gentle stance",
+      "legacy_emblem": "a wand with a feather plume"
     },
     {
       "n": "N",
       "slug": "wands-knight",
       "group": "wands",
-      "emblem": "a wand over a horse",
+      "emblem": null,
       "title": "KNIGHT OF WANDS",
       "femme": true,
       "count": {
@@ -519,13 +559,14 @@
       "scene": "a serene 22-year-old female knight, nearly bare with only a wisp of sheer transparent silk draped across her form, riding a calm pure-white horse trotting forward, holding one flourishing living wand out before her, a golden meadow and distant hills behind",
       "age": "22 years old",
       "hair": "soft golden-brown curls loose beneath a delicate feathered diadem",
-      "build": "slender, graceful and serene female knight on a calm pure-white steed, nearly bare in only a sheer silk wisp"
+      "build": "slender, graceful and serene female knight on a calm pure-white steed, nearly bare in only a sheer silk wisp",
+      "legacy_emblem": "a wand over a horse"
     },
     {
       "n": "Q",
       "slug": "wands-queen",
       "group": "wands",
-      "emblem": "a sunflower wand between two flames",
+      "emblem": null,
       "title": "QUEEN OF WANDS",
       "femme": true,
       "count": {
@@ -536,13 +577,14 @@
       "scene": "a serene queen with dark loosened hair on a lion-carved throne, draped only in a diaphanous transparent silk veil that clings to her soft curves, one sunflower wand held gently in her hand, a black cat at her feet, her throne set at the edge of a bright spring birch grove — slender white birch trunks, soft green undergrowth and a carpet of wildflowers and sunflowers, dappled sunlight filtering through young leaves",
       "hair": "a magnificent mane of rich russet-red waves falling softly over her shoulders",
       "age": "24 years old",
-      "build": "voluptuous, serene and warm, gentle poised posture on the lion throne"
+      "build": "voluptuous, serene and warm, gentle poised posture on the lion throne",
+      "legacy_emblem": "a sunflower wand between two flames"
     },
     {
       "n": "K",
       "slug": "wands-king",
       "group": "wands",
-      "emblem": "a flaming wand rising from a lion head",
+      "emblem": null,
       "title": "KING OF WANDS",
       "femme": true,
       "count": {
@@ -553,13 +595,14 @@
       "scene": "a serene 25-year-old female sovereign with a lion-carved crown seated on a flame-carved throne, draped in a diaphanous transparent silk veil, holding one blossoming wand gently in her hand, her throne set in a clearing of a majestic ancient oak forest — towering dark oak trunks with warm golden sunlight streaming down through the dense canopy, shafts of amber light and drifting golden embers between the trees",
       "age": "25 years old",
       "hair": "dark bronze hair swept back in a soft crown braid with fiery orange ribbons",
-      "build": "graceful, serene and noble high queen with soft gentle poise"
+      "build": "graceful, serene and noble high queen with soft gentle poise",
+      "legacy_emblem": "a flaming wand rising from a lion head"
     },
     {
       "n": "A",
       "slug": "cups-ace",
       "group": "cups",
-      "emblem": "one overflowing chalice",
+      "emblem": null,
       "title": "ACE OF CUPS",
       "femme": false,
       "count": {
@@ -567,13 +610,14 @@
         "obj": "chalice",
         "layout": "exactly one chalice; the five overflowing streams are water, not cups — do not draw extra chalices in the pool"
       },
-      "scene": "a divine hand offering one ornate chalice, a dove descending, five streams overflowing into a pool of lilies"
+      "scene": "a divine hand offering one ornate chalice, a dove descending, five streams overflowing into a pool of lilies",
+      "legacy_emblem": "one overflowing chalice"
     },
     {
       "n": "2",
       "slug": "cups-02",
       "group": "cups",
-      "emblem": "two interlocked rings",
+      "emblem": null,
       "title": "TWO OF CUPS",
       "femme": true,
       "count": {
@@ -584,13 +628,14 @@
       "scene": "a nude young woman and a nude young man facing one another, her body turned three-quarters toward the viewer with one arm across her breast, each raising one chalice in a toast, a caduceus with a lion head above them",
       "hair": "soft ash-brown hair worn in a low intertwined romantic braid",
       "age": "21 years old",
-      "build": "slender and graceful, gentle curving silhouette leaning in communion"
+      "build": "slender and graceful, gentle curving silhouette leaning in communion",
+      "legacy_emblem": "two interlocked rings"
     },
     {
       "n": "3",
       "slug": "cups-03",
       "group": "cups",
-      "emblem": "three chalices in a triangle",
+      "emblem": null,
       "title": "THREE OF CUPS",
       "femme": true,
       "count": {
@@ -601,13 +646,14 @@
       "scene": "three nude maidens with flower wreaths dancing in a circle, their bodies turned to the light, each raising one chalice, fruits on the ground",
       "hair": "rich chocolate-brown, golden-blonde, and copper hair among the three maidens",
       "age": "20 years old",
-      "build": "harmonious, curvaceous, dancing together with joyful feminine grace"
+      "build": "harmonious, curvaceous, dancing together with joyful feminine grace",
+      "legacy_emblem": "three chalices in a triangle"
     },
     {
       "n": "4",
       "slug": "cups-04",
       "group": "cups",
-      "emblem": "three chalices and one offered",
+      "emblem": null,
       "title": "FOUR OF CUPS",
       "femme": true,
       "count": {
@@ -618,13 +664,14 @@
       "scene": "a contemplative young woman seated beneath a tree, arms crossed, regarding three cups on the grass while a celestial hand offers a fourth cup from a cloud",
       "age": "22 years old",
       "hair": "dark wavy hair falling over her shoulder in contemplative thought",
-      "build": "slender, relaxed seated posture against a flowering tree"
+      "build": "slender, relaxed seated posture against a flowering tree",
+      "legacy_emblem": "three chalices and one offered"
     },
     {
       "n": "5",
       "slug": "cups-05",
       "group": "cups",
-      "emblem": "three spilled, two standing",
+      "emblem": null,
       "title": "FIVE OF CUPS",
       "femme": true,
       "count": {
@@ -635,13 +682,14 @@
       "scene": "a graceful adult woman in a dark cloak slipping off one bare shoulder, standing bowed with her back to the light by the river, three spilled chalices lying emptied and overturned in the foreground at her feet, two full chalices still standing upright on the bank behind her",
       "hair": "long mahogany hair unbound and draping over cloaked shoulders",
       "age": "22 years old",
-      "build": "slender, somber silhouette with delicate bowed neck"
+      "build": "slender, somber silhouette with delicate bowed neck",
+      "legacy_emblem": "three spilled, two standing"
     },
     {
       "n": "6",
       "slug": "cups-06",
       "group": "cups",
-      "emblem": "six chalices with flowers",
+      "emblem": null,
       "title": "SIX OF CUPS",
       "femme": true,
       "count": {
@@ -652,13 +700,14 @@
       "scene": "two graceful young women in sheer summer dresses in an old courtyard garden, exchanging one flower-filled chalice, five more set along the wall behind them",
       "hair": "pale golden hair styled in a delicate maiden crown knot",
       "age": "19 years old",
-      "build": "petite, innocent and delicate, sweet gentle posture"
+      "build": "petite, innocent and delicate, sweet gentle posture",
+      "legacy_emblem": "six chalices with flowers"
     },
     {
       "n": "7",
       "slug": "cups-07",
       "group": "cups",
-      "emblem": "seven chalices on a cloud",
+      "emblem": null,
       "title": "SEVEN OF CUPS",
       "femme": true,
       "count": {
@@ -669,13 +718,14 @@
       "scene": "a mesmerized young woman seen from behind, marveling at seven floating cups within glowing clouds containing mystical treasures",
       "age": "21 years old",
       "hair": "dark raven curls drifting in mystical haze",
-      "build": "slender, mesmerized posture with hands slightly raised"
+      "build": "slender, mesmerized posture with hands slightly raised",
+      "legacy_emblem": "seven chalices on a cloud"
     },
     {
       "n": "8",
       "slug": "cups-08",
       "group": "cups",
-      "emblem": "eight chalices stacked",
+      "emblem": null,
       "title": "EIGHT OF CUPS",
       "femme": true,
       "count": {
@@ -686,13 +736,14 @@
       "scene": "a solitary young woman in a deep crimson cloak walking away with a staff, leaving eight stacked cups behind to journey toward misty moonlit peaks",
       "age": "23 years old",
       "hair": "deep brown hair tucked under a travel cloak",
-      "build": "lean wanderer silhouette, resolute back turned toward mountains"
+      "build": "lean wanderer silhouette, resolute back turned toward mountains",
+      "legacy_emblem": "eight chalices stacked"
     },
     {
       "n": "9",
       "slug": "cups-09",
       "group": "cups",
-      "emblem": "nine chalices in an arc",
+      "emblem": null,
       "title": "NINE OF CUPS",
       "femme": true,
       "count": {
@@ -703,13 +754,14 @@
       "scene": "a content adult woman with bare shoulders seated at a banquet table, silk slipping from one shoulder, before nine golden chalices proudly arranged in a neat grid on a shelf behind her",
       "hair": "warm honey-brown hair in a relaxed loose chignon",
       "age": "24 years old",
-      "build": "luxurious, soft feminine curves, content and smiling seated posture"
+      "build": "luxurious, soft feminine curves, content and smiling seated posture",
+      "legacy_emblem": "nine chalices in an arc"
     },
     {
       "n": "10",
       "slug": "cups-10",
       "group": "cups",
-      "emblem": "ten chalices under a rainbow",
+      "emblem": null,
       "title": "TEN OF CUPS",
       "femme": true,
       "count": {
@@ -720,13 +772,14 @@
       "scene": "a blissful couple embracing in a meadow, she in slipping silk with one bare shoulder and the long line of her back to the light, his arms around her waist, ten chalices along a rainbow arc, a cottage and dancing children beyond",
       "hair": "warm hazel-brown hair cascading in silky ripples",
       "age": "22 years old",
-      "build": "graceful, tender motherly poise with slender loving frame"
+      "build": "graceful, tender motherly poise with slender loving frame",
+      "legacy_emblem": "ten chalices under a rainbow"
     },
     {
       "n": "P",
       "slug": "cups-page",
       "group": "cups",
-      "emblem": "a chalice with a fish",
+      "emblem": null,
       "title": "PAGE OF CUPS",
       "femme": true,
       "count": {
@@ -737,13 +790,14 @@
       "scene": "a graceful young woman page by the sea in an open robe sliding off one shoulder, holding one chalice from which a curious fish looks out",
       "hair": "dark glossy hair in a single side fishtail braid over the collarbone",
       "age": "18 years old",
-      "build": "petite, curious and dreamy, delicate limbs holding the chalice"
+      "build": "petite, curious and dreamy, delicate limbs holding the chalice",
+      "legacy_emblem": "a chalice with a fish"
     },
     {
       "n": "N",
       "slug": "cups-knight",
       "group": "cups",
-      "emblem": "a chalice on a horseshoe",
+      "emblem": null,
       "title": "KNIGHT OF CUPS",
       "femme": true,
       "count": {
@@ -754,13 +808,14 @@
       "scene": "a graceful 22-year-old female knight in winged silver armor riding a calm white steed beside a stream, extending a golden chalice of peace",
       "age": "22 years old",
       "hair": "fair sandy-blonde hair falling in soft romantic waves across her brow",
-      "build": "poetic, slender and noble athletic female knight offering the chalice"
+      "build": "poetic, slender and noble athletic female knight offering the chalice",
+      "legacy_emblem": "a chalice on a horseshoe"
     },
     {
       "n": "Q",
       "slug": "cups-queen",
       "group": "cups",
-      "emblem": "a lidded chalice between waves",
+      "emblem": null,
       "title": "QUEEN OF CUPS",
       "femme": true,
       "count": {
@@ -772,13 +827,14 @@
       "hair": "long shimmering platinum-blonde hair falling straight like water to her thighs",
       "build": "slender and ethereal, narrow waist, serene and mystical queenly beauty",
       "allure": "Raise the allure further: an unmistakably inviting presence. She holds a slow sidelong glance on the viewer, lips softly parted, the body turned to display the long line from shoulder to waist to hip, silk slipping as though about to fall, one hand lingering along her own throat, collarbone or thigh. Warm, sensual and inviting — never crude, never posed like a fashion photograph.",
-      "age": "23 years old"
+      "age": "23 years old",
+      "legacy_emblem": "a lidded chalice between waves"
     },
     {
       "n": "K",
       "slug": "cups-king",
       "group": "cups",
-      "emblem": "a chalice between two fish",
+      "emblem": null,
       "title": "KING OF CUPS",
       "femme": true,
       "count": {
@@ -789,13 +845,14 @@
       "scene": "a serene 25-year-old oceanic queen on a throne floating upon rolling waves, holding a lotus scepter and a golden cup, a dolphin leaping in the distance",
       "age": "25 years old",
       "hair": "deep-wave dark espresso hair crowned in sea-gold and pearls",
-      "build": "calm, statuesque oceanic sovereign with serene noble presence"
+      "build": "calm, statuesque oceanic sovereign with serene noble presence",
+      "legacy_emblem": "a chalice between two fish"
     },
     {
       "n": "A",
       "slug": "swords-ace",
       "group": "swords",
-      "emblem": "one upright sword with a crown",
+      "emblem": null,
       "title": "ACE OF SWORDS",
       "femme": false,
       "count": {
@@ -803,13 +860,14 @@
         "obj": "sword",
         "layout": "exactly one sword, upright in the divine hand; no second blade anywhere"
       },
-      "scene": "a divine hand grasping one upright sword, a jeweled crown hovering at its tip, barren peaks below"
+      "scene": "a divine hand grasping one upright sword, a jeweled crown hovering at its tip, barren peaks below",
+      "legacy_emblem": "one upright sword with a crown"
     },
     {
       "n": "2",
       "slug": "swords-02",
       "group": "swords",
-      "emblem": "two crossed swords",
+      "emblem": null,
       "title": "TWO OF SWORDS",
       "femme": true,
       "count": {
@@ -820,13 +878,14 @@
       "scene": "a blindfolded adult woman in a very thin veil of antique silk gauze, almost transparent, her shoulders bare, seated on a stone seat by the sea, two long swords crossed over her chest, the moon rising behind her",
       "hair": "jet-black hair drawn back into a sleek, flawless high knot",
       "build": "slender, perfectly balanced, taut core and crossed arms holding dual blades",
-      "age": "21 years old"
+      "age": "21 years old",
+      "legacy_emblem": "two crossed swords"
     },
     {
       "n": "3",
       "slug": "swords-03",
       "group": "swords",
-      "emblem": "three swords through a heart",
+      "emblem": null,
       "title": "THREE OF SWORDS",
       "femme": false,
       "count": {
@@ -834,13 +893,14 @@
         "obj": "swords",
         "layout": "exactly three swords through one heart — one vertical from above and two angled from the left and right; three separate hilts clearly countable against the storm sky, 1, 2, 3"
       },
-      "scene": "a large anatomical heart pierced by three swords, rain and storm clouds behind"
+      "scene": "a large anatomical heart pierced by three swords, rain and storm clouds behind",
+      "legacy_emblem": "three swords through a heart"
     },
     {
       "n": "4",
       "slug": "swords-04",
       "group": "swords",
-      "emblem": "three swords on a wall, one below",
+      "emblem": null,
       "title": "FOUR OF SWORDS",
       "femme": true,
       "count": {
@@ -851,13 +911,14 @@
       "scene": "a graceful adult woman in a flowing antique gown lying at rest on a stone tomb in a chapel, her hands folded, three swords mounted on the wall above her and one lying beneath her, a stained-glass window behind",
       "hair": "deep sable hair spread neatly around her resting head on stone",
       "age": "22 years old",
-      "build": "slender, peaceful reclined effigy silhouette in sacred stillness"
+      "build": "slender, peaceful reclined effigy silhouette in sacred stillness",
+      "legacy_emblem": "three swords on a wall, one below"
     },
     {
       "n": "5",
       "slug": "swords-05",
       "group": "swords",
-      "emblem": "five swords, two discarded",
+      "emblem": null,
       "title": "FIVE OF SWORDS",
       "femme": true,
       "count": {
@@ -868,13 +929,14 @@
       "scene": "a confident young woman holding three swords over her shoulder and watching two retreating female companions on a stormy coastline, two swords lying in the sand",
       "age": "22 years old",
       "hair": "wind-blown dark brown hair with a subtle confident smirk",
-      "build": "lean, agile and sharp-shouldered, turning with collected blades"
+      "build": "lean, agile and sharp-shouldered, turning with collected blades",
+      "legacy_emblem": "five swords, two discarded"
     },
     {
       "n": "6",
       "slug": "swords-06",
       "group": "swords",
-      "emblem": "six swords in a boat",
+      "emblem": null,
       "title": "SIX OF SWORDS",
       "femme": true,
       "count": {
@@ -885,13 +947,14 @@
       "scene": "a cloaked woman and a child being poled across a river by a ferryman, six swords upright along the boat",
       "hair": "light ash-brown hair gathered softly in a misty veil",
       "age": "21 years old",
-      "build": "slender, quiet passenger silhouette seated in the ferry boat"
+      "build": "slender, quiet passenger silhouette seated in the ferry boat",
+      "legacy_emblem": "six swords in a boat"
     },
     {
       "n": "7",
       "slug": "swords-07",
       "group": "swords",
-      "emblem": "seven swords, two left behind",
+      "emblem": null,
       "title": "SEVEN OF SWORDS",
       "femme": true,
       "count": {
@@ -902,13 +965,14 @@
       "scene": "a nimble young woman stealthily carrying five swords in her arms while looking back at a military encampment where two swords remain upright",
       "age": "20 years old",
       "hair": "mischievous tousled dark chestnut hair",
-      "build": "light-footed, slender agile rogue build tiptoeing away"
+      "build": "light-footed, slender agile rogue build tiptoeing away",
+      "legacy_emblem": "seven swords, two left behind"
     },
     {
       "n": "8",
       "slug": "swords-08",
       "group": "swords",
-      "emblem": "eight swords in a ring",
+      "emblem": null,
       "title": "EIGHT OF SWORDS",
       "femme": true,
       "count": {
@@ -919,13 +983,14 @@
       "scene": "a blindfolded woman in a flowing gown loosened from one shoulder and loosely bound, standing in a ring of eight swords, a fortress on the cliff behind",
       "hair": "dark brown hair bound loosely with a crimson ribbon",
       "age": "20 years old",
-      "build": "slender, delicate and vulnerable silhouette surrounded by upright blades"
+      "build": "slender, delicate and vulnerable silhouette surrounded by upright blades",
+      "legacy_emblem": "eight swords in a ring"
     },
     {
       "n": "9",
       "slug": "swords-09",
       "group": "swords",
-      "emblem": "nine swords on a wall",
+      "emblem": null,
       "title": "NINE OF SWORDS",
       "femme": true,
       "count": {
@@ -937,13 +1002,14 @@
       "hair": "long black hair falling in sorrowful waves over her weeping hands",
       "allure": "a sorrow that is still deeply desirable: the sheet has slipped so the whole long line of her back and the curve of her hip lie bare, her lips softly parted, her eyes heavy and downcast rather than screwed shut, one hand resting on her own bare thigh or at the hollow of her throat, her body turned to show the line from shoulder to waist to hip even as she bows her head — the beauty of a desirable woman in the small hours, never a contorted grimace, never a wail",
       "age": "22 years old",
-      "build": "slender, delicate nightgown silhouette seated in emotional release"
+      "build": "slender, delicate nightgown silhouette seated in emotional release",
+      "legacy_emblem": "nine swords on a wall"
     },
     {
       "n": "10",
       "slug": "swords-10",
       "group": "swords",
-      "emblem": "ten swords along a back",
+      "emblem": null,
       "title": "TEN OF SWORDS",
       "femme": true,
       "count": {
@@ -954,13 +1020,14 @@
       "scene": "a peaceful young woman lying draped in crimson silk on a shoreline at dawn beneath ten upright swords, golden sunlight breaking across dark waters",
       "age": "23 years old",
       "hair": "dark silky hair strewn across shoreline sand",
-      "build": "lean peaceful reclining maiden silhouette bathed in golden morning horizon light"
+      "build": "lean peaceful reclining maiden silhouette bathed in golden morning horizon light",
+      "legacy_emblem": "ten swords along a back"
     },
     {
       "n": "P",
       "slug": "swords-page",
       "group": "swords",
-      "emblem": "a sword with a feather plume",
+      "emblem": null,
       "title": "PAGE OF SWORDS",
       "femme": true,
       "count": {
@@ -971,13 +1038,14 @@
       "scene": "an alert young woman page in a flowing cape on a windy mound holding one raised sword with both hands",
       "hair": "windswept honey-brown hair cut in a sharp feathered pixie cut",
       "age": "18 years old",
-      "build": "lithe, sharp and vigilant, athletic spring in her stance on rocky hill"
+      "build": "lithe, sharp and vigilant, athletic spring in her stance on rocky hill",
+      "legacy_emblem": "a sword with a feather plume"
     },
     {
       "n": "N",
       "slug": "swords-knight",
       "group": "swords",
-      "emblem": "a sword over a horse",
+      "emblem": null,
       "title": "KNIGHT OF SWORDS",
       "femme": true,
       "count": {
@@ -988,13 +1056,14 @@
       "scene": "a fierce 21-year-old female knight in gleaming steel armor charging on a galloping horse, sword held high into the storm winds",
       "age": "21 years old",
       "hair": "dark hair streaming wildly back from beneath an open winged helmet",
-      "build": "fierce, athletic female knight in full gallant charge"
+      "build": "fierce, athletic female knight in full gallant charge",
+      "legacy_emblem": "a sword over a horse"
     },
     {
       "n": "Q",
       "slug": "swords-queen",
       "group": "swords",
-      "emblem": "a sword wrapped in laurel",
+      "emblem": null,
       "title": "QUEEN OF SWORDS",
       "femme": true,
       "count": {
@@ -1006,13 +1075,14 @@
       "hair": "deep mahogany-red hair in an intricate woven crown braid",
       "allure": "a woman of strong character and unmistakable sensuality at once: she sits tall and unbowed on the throne, chin raised, her gaze level, keen and fearless — a spirited, sharp-eyed sovereign, not a meek one — while the transparent silk slides off one shoulder and over one thigh so the long line of the body shows, her lips softly parted, one hand resting along her own thigh, collarbone or loosened hair. Proud, alive and inviting — a queen with a temperament, never a placid ornament",
       "age": "24 years old",
-      "build": "statuesque, sharp profile, austere elegant collarbones, stern intellectual beauty"
+      "build": "statuesque, sharp profile, austere elegant collarbones, stern intellectual beauty",
+      "legacy_emblem": "a sword wrapped in laurel"
     },
     {
       "n": "K",
       "slug": "swords-king",
       "group": "swords",
-      "emblem": "a sword between two wings",
+      "emblem": null,
       "title": "KING OF SWORDS",
       "femme": true,
       "count": {
@@ -1023,13 +1093,14 @@
       "scene": "a stern and majestic 25-year-old female supreme judge on a high stone throne, holding an upright sword of truth, clear blue skies behind",
       "age": "25 years old",
       "hair": "clean-cut raven hair crowned with sharp golden circlet",
-      "build": "tall, imposing, sharp-eyed judicial female ruler with blade upright"
+      "build": "tall, imposing, sharp-eyed judicial female ruler with blade upright",
+      "legacy_emblem": "a sword between two wings"
     },
     {
       "n": "A",
       "slug": "pentacles-ace",
       "group": "pentacles",
-      "emblem": "one pentacle coin in a hand",
+      "emblem": null,
       "title": "ACE OF PENTACLES",
       "femme": false,
       "count": {
@@ -1037,13 +1108,14 @@
         "obj": "pentacle coin",
         "layout": "exactly one large golden pentacle coin in the divine hand; no other coin, no coins scattered in the garden"
       },
-      "scene": "a divine hand offering one large golden pentacle coin over a lush garden gateway with lilies, mountains beyond"
+      "scene": "a divine hand offering one large golden pentacle coin over a lush garden gateway with lilies, mountains beyond",
+      "legacy_emblem": "one pentacle coin in a hand"
     },
     {
       "n": "2",
       "slug": "pentacles-02",
       "group": "pentacles",
-      "emblem": "two pentacles and an infinity ribbon",
+      "emblem": null,
       "title": "TWO OF PENTACLES",
       "femme": true,
       "count": {
@@ -1054,13 +1126,14 @@
       "scene": "a joyful 19-year-old young woman dancing on a seaside terrace, juggling two golden pentacles looped inside an infinity ribbon with ships in rolling surf behind",
       "age": "19 years old",
       "hair": "tousled sandy-gold curls bouncing with her dance",
-      "build": "agile, lithe and flexible young dancer balancing two coins in an infinity ribbon"
+      "build": "agile, lithe and flexible young dancer balancing two coins in an infinity ribbon",
+      "legacy_emblem": "two pentacles and an infinity ribbon"
     },
     {
       "n": "3",
       "slug": "pentacles-03",
       "group": "pentacles",
-      "emblem": "three pentacles in an arch",
+      "emblem": null,
       "title": "THREE OF PENTACLES",
       "femme": true,
       "count": {
@@ -1071,13 +1144,14 @@
       "scene": "a young woman sculptor in an open workshop apron slipping off one shoulder, hair loose, chiseling a column, a monk and an architect commenting, three coins set in the arch above",
       "hair": "dark auburn hair coiled in a practical braided crown",
       "age": "22 years old",
-      "build": "focused, toned artisan shoulders, sculpted hands crafting the cathedral"
+      "build": "focused, toned artisan shoulders, sculpted hands crafting the cathedral",
+      "legacy_emblem": "three pentacles in an arch"
     },
     {
       "n": "4",
       "slug": "pentacles-04",
       "group": "pentacles",
-      "emblem": "four pentacles, one on the head",
+      "emblem": null,
       "title": "FOUR OF PENTACLES",
       "femme": true,
       "count": {
@@ -1088,13 +1162,14 @@
       "scene": "a wealthy young woman seated on a stone bench, holding one golden pentacle tight to her chest, one on her crown, and two under her feet",
       "age": "24 years old",
       "hair": "neatly combed dark brown hair holding gold close",
-      "build": "solid, grounded seated posture guarding her wealth"
+      "build": "solid, grounded seated posture guarding her wealth",
+      "legacy_emblem": "four pentacles, one on the head"
     },
     {
       "n": "5",
       "slug": "pentacles-05",
       "group": "pentacles",
-      "emblem": "five pentacles in a church window",
+      "emblem": null,
       "title": "FIVE OF PENTACLES",
       "femme": true,
       "count": {
@@ -1105,13 +1180,14 @@
       "scene": "two ragged beggars passing a glowing church in the snow, five coins shining in the tall stained-glass window",
       "hair": "long windswept dark-brown hair catching falling snow",
       "age": "20 years old",
-      "build": "slender, shivering yet enduring silhouette under church window"
+      "build": "slender, shivering yet enduring silhouette under church window",
+      "legacy_emblem": "five pentacles in a church window"
     },
     {
       "n": "6",
       "slug": "pentacles-06",
       "group": "pentacles",
-      "emblem": "six pentacles on a scale",
+      "emblem": null,
       "title": "SIX OF PENTACLES",
       "femme": true,
       "count": {
@@ -1122,13 +1198,14 @@
       "scene": "a prosperous young woman in rich robes holding scales in one hand, distributing golden coins to two kneeling maidens",
       "age": "23 years old",
       "hair": "well-groomed golden-brown hair in merchant styling",
-      "build": "prosperous, upright dignified posture distributing coins"
+      "build": "prosperous, upright dignified posture distributing coins",
+      "legacy_emblem": "six pentacles on a scale"
     },
     {
       "n": "7",
       "slug": "pentacles-07",
       "group": "pentacles",
-      "emblem": "seven pentacles on a vine",
+      "emblem": null,
       "title": "SEVEN OF PENTACLES",
       "femme": true,
       "count": {
@@ -1139,13 +1216,14 @@
       "scene": "a patient young woman leaning on her garden staff, contemplating seven golden pentacles blooming on a lush green vine",
       "age": "22 years old",
       "hair": "sweat-touched warm chestnut hair resting on hoe handle",
-      "build": "lean, hardworking farm-toned musculature, patient contemplative stance"
+      "build": "lean, hardworking farm-toned musculature, patient contemplative stance",
+      "legacy_emblem": "seven pentacles on a vine"
     },
     {
       "n": "8",
       "slug": "pentacles-08",
       "group": "pentacles",
-      "emblem": "eight pentacles in a row",
+      "emblem": null,
       "title": "EIGHT OF PENTACLES",
       "femme": true,
       "count": {
@@ -1156,13 +1234,14 @@
       "scene": "a young woman apprentice in an apron slipping off one shoulder, sleeves rolled, her chestnut hair pinned in a neat low chignon, chiseling a plain stone disc at a bench, eight coins in one row along the bench edge, a town through the window",
       "hair": "chestnut hair bound in a neat, focused low chignon",
       "age": "21 years old",
-      "build": "slender and meticulous, steady hands engraving coins at the workbench"
+      "build": "slender and meticulous, steady hands engraving coins at the workbench",
+      "legacy_emblem": "eight pentacles in a row"
     },
     {
       "n": "9",
       "slug": "pentacles-09",
       "group": "pentacles",
-      "emblem": "nine pentacles on an arbor",
+      "emblem": null,
       "title": "NINE OF PENTACLES",
       "femme": true,
       "count": {
@@ -1173,13 +1252,14 @@
       "scene": "an elegant woman in a sheer flowing gown that clings to breast and hip, a falcon on her gloved hand, her other hand touching ripe grapes, nine coins along the arbor beam, a snail at her feet",
       "hair": "long vine-dark espresso hair loosely curled with gold thread",
       "age": "23 years old",
-      "build": "graceful, refined aristocratic hourglass build in blooming grape vineyard"
+      "build": "graceful, refined aristocratic hourglass build in blooming grape vineyard",
+      "legacy_emblem": "nine pentacles on an arbor"
     },
     {
       "n": "10",
       "slug": "pentacles-10",
       "group": "pentacles",
-      "emblem": "ten pentacles in a tree-of-life pyramid",
+      "emblem": null,
       "title": "TEN OF PENTACLES",
       "femme": true,
       "count": {
@@ -1190,13 +1270,14 @@
       "scene": "a family hall — a patriarch seated, a couple standing with his hand at her waist, a child playing with two dogs — ten coins in a pyramid emblem on the wall behind them",
       "hair": "warm honey-brown hair in a thick braided crown",
       "age": "22 years old",
-      "build": "content, gentle matriarchal beauty surrounded by familial wealth"
+      "build": "content, gentle matriarchal beauty surrounded by familial wealth",
+      "legacy_emblem": "ten pentacles in a tree-of-life pyramid"
     },
     {
       "n": "P",
       "slug": "pentacles-page",
       "group": "pentacles",
-      "emblem": "a pentacle held by two hands",
+      "emblem": null,
       "title": "PAGE OF PENTACLES",
       "femme": true,
       "count": {
@@ -1207,13 +1288,14 @@
       "scene": "a studious young woman page in an open robe studying one large pentacle coin held in both hands, a plowed field behind her",
       "hair": "golden-blonde hair falling loose past shoulders, catching meadow sun",
       "age": "18 years old",
-      "build": "petite, earnest scholar-student frame, holding coin aloft with reverence"
+      "build": "petite, earnest scholar-student frame, holding coin aloft with reverence",
+      "legacy_emblem": "a pentacle held by two hands"
     },
     {
       "n": "N",
       "slug": "pentacles-knight",
       "group": "pentacles",
-      "emblem": "a pentacle on a draft horse",
+      "emblem": null,
       "title": "KNIGHT OF PENTACLES",
       "femme": true,
       "count": {
@@ -1224,13 +1306,14 @@
       "scene": "a steadfast 23-year-old female knight in dark armor holding a golden pentacle with calm reverence in a plowed field",
       "age": "23 years old",
       "hair": "dark bronze hair braided under an oak-leaf crested helmet",
-      "build": "sturdy, athletic female knight on a calm heavy warhorse"
+      "build": "sturdy, athletic female knight on a calm heavy warhorse",
+      "legacy_emblem": "a pentacle on a draft horse"
     },
     {
       "n": "Q",
       "slug": "pentacles-queen",
       "group": "pentacles",
-      "emblem": "a pentacle entwined with roses",
+      "emblem": null,
       "title": "QUEEN OF PENTACLES",
       "femme": true,
       "count": {
@@ -1241,13 +1324,14 @@
       "scene": "a warm nude queen with a flower crown on a goat-carved throne, one breast bared, one pentacle resting in her lap, a rabbit in the garden",
       "hair": "deep chocolate hair with a ruddy golden sheen, crowned in blooming vines",
       "age": "24 years old",
-      "build": "voluptuous, maternal, generous warm feminine curves on carved beast throne"
+      "build": "voluptuous, maternal, generous warm feminine curves on carved beast throne",
+      "legacy_emblem": "a pentacle entwined with roses"
     },
     {
       "n": "K",
       "slug": "pentacles-king",
       "group": "pentacles",
-      "emblem": "a pentacle above a bull head",
+      "emblem": null,
       "title": "KING OF PENTACLES",
       "femme": true,
       "count": {
@@ -1258,7 +1342,8 @@
       "scene": "a wealthy 25-year-old female queen of wealth seated on a bull-carved throne amid blooming grapevines and castle walls, holding a golden pentacle in her lap",
       "age": "25 years old",
       "hair": "dark wavy hair woven with golden laurel leaves and ripe grapes",
-      "build": "robust, wealthy sovereign seated comfortably in lush castle gardens"
+      "build": "robust, wealthy sovereign seated comfortably in lush castle gardens",
+      "legacy_emblem": "a pentacle above a bull head"
     }
   ]
 }

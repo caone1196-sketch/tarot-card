@@ -29,7 +29,7 @@ for c in cards:
         age = c.get("age", "—")
         hair = c.get("hair", "—")
         build = c.get("build", "—")
-        emblem = c.get("emblem", "—")
+        emblem = c.get("emblem") or "—"
         title = c.get("title", "")
         lines.append(f"| {num} | `{slug}` | **{age}** | {hair} | {build} | {emblem} | **{title}** |")
 
@@ -48,7 +48,7 @@ for c in cards:
         age = c.get("age", "—")
         hair = c.get("hair", "—")
         build = c.get("build", "—")
-        emblem = c.get("emblem", "—")
+        emblem = c.get("emblem") or "—"
         title = c.get("title", "")
         lines.append(f"| {group} | `{slug}` | **{age}** | {hair} | {build} | {emblem} | **{title}** |")
 

@@ -229,7 +229,8 @@ if page == "🖼️ Bộ sưu tập":
                 st.image(card_image_src(c), width=360)
             with right:
                 st.subheader(c["title"])
-                st.markdown(f"*Huy hiệu:* {c.get('emblem', '—')}")
+                if c.get("emblem"):
+                    st.markdown(f"*Huy hiệu:* {c.get('emblem')}")
                 st.markdown(f"**Độ tuổi:** {c.get('age', '—')}")
                 st.markdown(f"**Mái tóc:** {c.get('hair', '—')}")
                 st.markdown(f"**Thân hình:** {c.get('build', '—')}")
@@ -332,7 +333,8 @@ elif page == "🎴 Rút một lá":
             st.image(card_image_src(c), width=380)
         with right:
             st.subheader(c["title"])
-            st.markdown(f"*Huy hiệu:* {c.get('emblem', '—')}")
+            if c.get("emblem"):
+                st.markdown(f"*Huy hiệu:* {c.get('emblem')}")
             st.markdown(f"**Độ tuổi:** {c.get('age', '—')}")
             st.markdown(f"**Mái tóc:** {c.get('hair', '—')}")
             st.markdown(f"**Thân hình:** {c.get('build', '—')}")
