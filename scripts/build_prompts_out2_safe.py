@@ -36,12 +36,12 @@ def rewrite(text: str) -> str:
         text = re.sub(pattern, replacement, text)
     text = text.replace("tastefully posed artistic nude", "tastefully posed sensual classical figure")
     text += (
-        "\nSTYLE OVERRIDE: tasteful sensual classical fine-art figure study. The outfit is one lightweight "
-        "translucent silk wrap around the lower body and hips; the upper torso may be visibly uncovered "
-        "in a non-explicit classical composition. Do not add concealment props, foreground covering objects, "
-        "or extra accessories; keep only the original scene objects specified above. Use a natural pose, "
-        "three-quarter or profile angle, elegant lighting, and soft shadow. No genitals, sexual acts, or "
-        "explicit anatomical detail.\n"
+        "\nSTYLE OVERRIDE: tasteful sensual classical fine-art figure study. Use exactly one narrow strip of "
+        "lightweight translucent silk, only as wide as needed to cover intimate areas; do not add a full "
+        "garment, concealment props, foreground covering objects, or extra accessories. The upper torso "
+        "may be visibly uncovered in a non-explicit classical composition. Keep only the original scene "
+        "objects specified above. Use a natural pose, three-quarter or profile angle, elegant lighting, "
+        "and soft shadow. No genitals, sexual acts, or explicit anatomical detail.\n"
     )
     return text
 
