@@ -6,4 +6,4 @@ CHARACTER SPECIFICATION (source: cards.json): Age: 22 (strictly young adult, age
 
 OUTPUT LOCK: exact portrait canvas 784 by 1360 pixels, 7:12 composition. Pure edge-to-edge painted artwork only. No outer margin, no border, no frame, no gold line, no corner flourishes, no inner panel, no medallion, no emblem, no icon, no heraldic symbol, no card suit symbol, no ribbon, no plaque, no title, no letters, no numbers, no watermark, and no typography anywhere. Do not render the card name or any text in the image.
 
-SAFETY OVERRIDE: non-explicit fine-art depiction; all figures are fully tastefully draped; no exposed breasts, genitals, or sexual acts.
+SAFETY OVERRIDE: non-explicit fine-art depiction; lightweight translucent silk provides complete coverage; no exposed breasts, genitals, or sexual acts.

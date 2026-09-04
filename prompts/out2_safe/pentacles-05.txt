@@ -1,9 +1,9 @@
 Create the artwork for "FIVE OF PENTACLES" using the original scene specification. This is an artwork-only illustration, not a finished tarot card. The scene must fill the entire canvas edge to edge with no reserved header or footer.
 
-SCENE: two tastefully draped adult female beggars passing a glowing church in the snow, five coins shining in the tall stained-glass window.
+SCENE: two wrapped in lightweight translucent silk, adult female beggars passing a glowing church in the snow, five coins shining in the tall stained-glass window.
 
 CHARACTER SPECIFICATION (source: cards.json): Age: 20 (strictly young adult, aged 18 to 25); Hair: long windswept dark-brown hair catching falling snow; Physique: slender, shivering yet enduring silhouette under church window; Sensuality: render with refined, non-explicit fine-art beauty — confident, poised, soft classical anatomy, painterly skin in warm golden lighting. COUNT LOCK (EXACTLY 5 pentacle coins): exactly five glowing coins set in the tall stained-glass window in a quincunx — one at the top center, two on the middle row, two on the bottom row, 1 + 2 + 2 = 5; all five discs separate and countable. ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; every joint (shoulder, elbow, wrist, hip, knee, ankle) connects naturally to the body — NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing or amputated arms, NO deformed joints, NO wrong finger counts; keep both arms clearly separated from the torso with visible armpits, elbows and wrists.
 
 OUTPUT LOCK: exact portrait canvas 784 by 1360 pixels, 7:12 composition. Pure edge-to-edge painted artwork only. No outer margin, no border, no frame, no gold line, no corner flourishes, no inner panel, no medallion, no emblem, no icon, no heraldic symbol, no card suit symbol, no ribbon, no plaque, no title, no letters, no numbers, no watermark, and no typography anywhere. Do not render the card name or any text in the image.
 
-SAFETY OVERRIDE: non-explicit fine-art depiction; all figures are fully tastefully draped; no exposed breasts, genitals, or sexual acts.
+SAFETY OVERRIDE: non-explicit fine-art depiction; lightweight translucent silk provides complete coverage; no exposed breasts, genitals, or sexual acts.
