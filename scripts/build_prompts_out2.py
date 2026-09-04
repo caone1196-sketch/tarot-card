@@ -15,7 +15,10 @@ SRC = ROOT / "prompts" / "out"
 DST = ROOT / "prompts" / "out2"
 
 TITLE_RE = re.compile(r'A single tarot card "([^"]+)"')
-SCENE_RE = re.compile(r"The scene occupies the whole card edge to edge,.*?: (.*?) CHARACTER SPECIFICATION ", re.S)
+SCENE_RE = re.compile(
+    r"The scene occupies the whole card edge to edge,.*?: (.*?)(?= (?:CHARACTER SPECIFICATION|COUNT LOCK|ANATOMY LOCK|Depth layering:|Razor-sharp))",
+    re.S,
+)
 
 
 def rewrite(text: str) -> str:
@@ -25,7 +28,7 @@ def rewrite(text: str) -> str:
         raise ValueError("prompt does not match expected generated format")
     title = title_m.group(1)
     scene = scene_m.group(1).strip()
-    rest = text[scene_m.end() - len("CHARACTER SPECIFICATION "):]
+    rest = text[scene_m.end():].lstrip()
     # Keep all character/count/anatomy rules, but discard the old frame-specific tail.
     rest = rest.split("Depth layering:", 1)[0].strip()
     rest = rest.replace("none cropped by the frame", "none cropped by the canvas")
