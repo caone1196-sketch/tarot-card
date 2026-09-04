@@ -1,29 +1,13 @@
-A single tarot card built upon the FIRST reference image (the deck's blank ornamental template): keep its symmetric ornamental golden frame, the four corner filigree flourishes, the top-center medallion and the bottom band with the small skull ornament EXACTLY as they are — do not redraw, move, recolor or resize any part of the frame. The bottom ornament band must be a PIXEL-FAITHFUL COPY of the reference card's bottom band:
-the same ornament shapes in the same places, the same scrollwork, the same small skull ornament,
-the same aged-parchment ground and the same antique-gold tone — nothing added, nothing removed,
-nothing shifted. The golden frame, the four corner filigree and the bottom band must KEEP THE SAME aged-parchment
-tone as the reference card, unaffected by the lighting of the scene: no warm spill from sunlight,
-fire or golden fields, no darkening from a cave or a storm, no color cast of any kind from the
-scene onto the frame or the band. ASPECT RATIO LOCK: the finished image must be PORTRAIT at the exact ratio 848 by 1264
-pixels (2:3, width:height = 0.671) — taller than it is wide, never square, never landscape. FULL BLEED: the card itself fills the entire image EDGE TO EDGE, corner to corner — there is no background, no margin, no dark band, no drop shadow and no second border outside the ornamental frame; every pixel of the image belongs to the card. Fill the empty parchment center with the new scene, painted in the EXACT master art style of the SECOND reference image (a Major Arcana card of the same deck): identical illustration technique and linework, identical muted antique color palette, identical paper grain and vellum texture. REFERENCE DISCIPLINE: the SECOND reference supplies STYLE ONLY — its linework, palette, paper grain and light. Never copy its CONTENT or its composition. Specifically, paint NO pool or standing water, NO kneeling or wading figure, NO pitcher or jug, NO large star or ibis bird, NO poolside reeds and NO borrowed horizon from that card. Invent a fresh backdrop belonging to THIS card's own scene, painted in that same style, and let it fill the parchment from edge to edge of the panel with no leftover ghost of the reference landscape.
+A single tarot card "{TITLE}" built inside the reference frame, matching the EXACT open window display, scale, and lighting style of THE STAR: the painted scene runs full bleed to all four edges of the card, with only the intricate thin antique-gold line-art border in vintage gothic style painted on top of the image.
 
-The THIRD reference image is the cropped bottom title band of THE STAR — it is the mandatory LETTERING SAMPLE for this deck.
+NO TOP EMBLEM / NO ICON / NO SYMBOL: do not add a separate top emblem, icon, heraldic symbol, oval medallion plate, or decorative symbol above the scene.
+NO TITLE FRAME: do not draw a ribbon banner, plaque, cartouche, box, panel, or frame behind or around the title. The title "{TITLE}" appears only as clean antique-gold serif capital lettering painted directly over the lower part of the scene.
 
-LAYOUT (draw in this order):
-— TOP: inside the top-center ornamental medallion place this card's EMBLEM: {EMBLEM} — small antique-gold heraldic emblem, centered, no text, no numerals.
-— MIDDLE (the empty parchment area only): {SCENE}
-— BOTTOM: in the bottom band, directly beneath the small skull ornament, the title "{TITLE}" — centered, on one line, spelled exactly like that.
+The scene occupies the whole card edge to edge, passing beneath the thin gold rule line, with no inner arch, no inner panel wall, and no column barriers:
+{SCENE}. {CHARACTER_SPECIFICATION} {COUNT_LOCK}
 
-TITLE LOCK: the title must be rendered in the EXACT lettering of the title in the THIRD reference image — identical typeface, identical weight, identical letter-spacing and tracking, identical gold tone and shading, identical cap height and stroke width, identical position directly beneath the skull ornament. Copy that letterform character by character for the new words; do not invent a different font, do not use a modern sans-serif, do not outline, emboss or decorate it differently. The only text on the card is this title.
+Depth layering: enlarge the scene so its edges bleed to the very outer edge of the card, then paint only the thin golden rule line and small gothic corner flourishes ON TOP of the scene edges — foreground ornament overlapping the background content for a strong sense of depth. Do not add an emblem area or any framed title area.
 
-{COUNT_LOCK}
+STRICT ANATOMY (HARD RULE): exactly two arms, two legs, one head and one torso per character; every joint (shoulder, elbow, wrist, hip, knee, ankle) must connect naturally to the body — NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing/amputated arms, NO deformed joints, NO wrong finger counts. Keep both arms clearly separated from the torso with visible armpits, elbows and wrists.
 
-{FEMME}
-
-{WING_LOCK}
-
-THEME: sensual classic tarot in the tradition of vintage art-nude tarot decks — elegant adult figures entirely at ease in their bodies, graceful nude and semi-nude poses, silk and sheer gauze that follows the body's line, warm candlelit and low-sun atmosphere, painterly skin in golden light against cool shadow.
-
-NEGATIVE: scene light spilling onto the frame, brightened, yellowed or darkened bottom band, restyled or redrawn bottom band, altered frame ornament, square image, landscape image, wrong aspect ratio, wrong or mismatched title font, modern or sans-serif lettering, extra words, misspelled title, dark margin, empty band, background or mat around the card, drop shadow, vignette, card floating inside the frame, extra or miscounted suit objects, duplicated, fused, cropped or half-hidden objects, extra arm, extra arms, three arms, extra hand, more than two arms, extra limbs, extra fingers, six-fingered hands, extra heads, modern clothing, neon or oversaturated color, glossy 3D render, plastic airbrushed skin, text or numbers anywhere except the bottom title band, watermark, signature, artist name, double border, multiple cards, collage.
-
-No other text, no watermark, single card only.
+Razor-sharp focus, increased fine detail, clean denoised and deblurred finish, no grain, no haze, no soft-focus blur. Sensual fine-art anatomy, painterly warm lighting against subtle shadows, rich atmospheric perspective and depth, symmetrical thin golden frame border, perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail.
