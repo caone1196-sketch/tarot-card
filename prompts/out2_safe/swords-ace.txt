@@ -6,4 +6,4 @@ COUNT LOCK (EXACTLY 1 sword): exactly one sword, upright in the divine hand; no 
 
 OUTPUT LOCK: exact portrait canvas 784 by 1360 pixels, 7:12 composition. Pure edge-to-edge painted artwork only. No outer margin, no border, no frame, no gold line, no corner flourishes, no inner panel, no medallion, no emblem, no icon, no heraldic symbol, no card suit symbol, no ribbon, no plaque, no title, no letters, no numbers, no watermark, and no typography anywhere. Do not render the card name or any text in the image.
 
-SAFETY OVERRIDE: non-explicit classical figure study with implied artistic nudity. Use back view, three-quarter view, profile, careful cropping, flowing hair, props, natural pose, and soft shadow to conceal all sensitive areas. No visible nipples, genitals, sexual acts, or explicit anatomical detail.
+SAFETY OVERRIDE: non-explicit classical figure study. Use back view, three-quarter view, profile, careful cropping, flowing hair, props, natural pose, and soft shadow to conceal all sensitive areas. No visible nipples, genitals, sexual acts, or explicit anatomical detail.
