@@ -2,8 +2,11 @@
 """
 Process raw tarot card images:
 - Auto-trim outer margins with threshold
-- Resize and normalize to 848x1264 (7:12 / 2:3 aspect ratio)
+- Resize and normalize to 784x1360 (7:12 — chuẩn The Star)
 - Compress to JPEG / PNG under target file size
+
+Lá bài mới: dùng `scripts/finish_card.py` (crop 7:12 + dán khung The Star + tên).
+Script này chỉ còn để chuẩn hoá kích thước thô, không ghép khung.
 """
 
 import os
@@ -11,8 +14,8 @@ import sys
 import subprocess
 import glob
 
-TARGET_W = 848
-TARGET_H = 1264
+TARGET_W = 784
+TARGET_H = 1360
 MAX_KB = 800
 
 def process_image(img_path, out_path=None, trim=True, trim_thr="18%"):

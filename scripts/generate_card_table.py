@@ -13,7 +13,7 @@ cards = data["cards"]
 lines = [
     "# Bảng 78 Lá — Đặc Điểm Nhân Vật (Độ Tuổi 18–25, Mái Tóc, Thân Hình) & Bố Cục Chuẩn",
     "",
-    "Tất cả các lá bài được chuẩn hóa theo cấu trúc **4 Lớp Chiều Sâu** và **Khóa bố cục The Magician**.",
+    "Tất cả các lá bài được chuẩn hóa theo khung **The Star** (full-bleed, thin-line-art, không medallion/ruy băng).",
     "Nhân vật trên mỗi lá bài đều có nhận diện độc bản với độ tuổi cố định trong khoảng **18 đến 25 tuổi**.",
     "",
     "## 1. MAJOR ARCANA — 22 Lá Ẩn Chính",

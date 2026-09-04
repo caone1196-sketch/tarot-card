@@ -58,6 +58,68 @@ def gold_mask(img_bgr: np.ndarray) -> np.ndarray:
     return cv2.inRange(hsv, (h_lo, s_lo, v_lo), (h_hi, s_hi, v_hi))
 
 
+# Dải mép + ô góc đủ lớn để lấy nét kẻ và hoa văn góc The Star, không lấy sao/tóc giữa cảnh.
+_OVERLAY_BAND_PX = 42
+_OVERLAY_CORNER_PX = 155
+# Ô tên lá (bên trong cửa sổ nội dung) — loại chữ "THE STAR" để finish_card viết tên mới.
+_OVERLAY_TITLE_XYXY = (155, 1210, 629, 1318)
+_OVERLAY_TITLE_KEEP_FROM_Y = 1324  # giữ nét kẻ đáy (y ≈ 1337)
+
+
+def extract_frame_overlay(anchor_bgr: np.ndarray) -> np.ndarray:
+    """Tách lớp mực viền vàng từ lá neo thành ảnh BGRA (A = mực khung).
+
+    Chỉ giữ kim tuyến nằm trong dải mép / bốn góc — không lấy sao trời, tóc,
+    hay chữ tên lá. `scripts/finish_card.py` dán lớp này lên cảnh full-bleed
+    → `ink_iou` khớp chuẩn mà không cần model vẽ khung.
+    """
+    h, w = anchor_bgr.shape[:2]
+    gold = gold_mask(anchor_bgr) > 0
+    keep = np.zeros((h, w), dtype=bool)
+    b, c = _OVERLAY_BAND_PX, _OVERLAY_CORNER_PX
+    keep[:b, :] = True
+    keep[-b:, :] = True
+    keep[:, :b] = True
+    keep[:, -b:] = True
+    keep[:c, :c] = True
+    keep[:c, -c:] = True
+    keep[-c:, :c] = True
+    keep[-c:, -c:] = True
+    tx0, ty0, tx1, ty1 = _OVERLAY_TITLE_XYXY
+    title = np.zeros((h, w), dtype=bool)
+    title[ty0:ty1, tx0:tx1] = True
+    title[_OVERLAY_TITLE_KEEP_FROM_Y:, :] = False
+    raw = (gold & keep & ~title).astype(np.uint8) * 255
+    raw = cv2.morphologyEx(raw, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8))
+    # Bỏ hạt vàng lẻ (sao trời nằm sát mép) — giữ blob chạm vành 8px hoặc đủ lớn (hoa văn góc).
+    n_cc, lab, st, _ = cv2.connectedComponentsWithStats(raw, 8)
+    rim = np.zeros((h, w), dtype=bool)
+    rim[:8, :] = True
+    rim[-8:, :] = True
+    rim[:, :8] = True
+    rim[:, -8:] = True
+    good = np.zeros((h, w), np.uint8)
+    for i in range(1, n_cc):
+        area = int(st[i, cv2.CC_STAT_AREA])
+        if area < 80:
+            continue
+        comp = lab == i
+        if area >= 400 or comp[rim].any():
+            good[comp] = 255
+    alpha = cv2.GaussianBlur(good, (0, 0), 0.45)
+    return np.dstack([anchor_bgr, alpha])
+
+
+def composite_frame(scene_bgr: np.ndarray, overlay_bgra: np.ndarray) -> np.ndarray:
+    """Dán lớp mực viền (BGRA) lên cảnh BGR cùng kích thước — cảnh tràn mép, khung nổi trên."""
+    if scene_bgr.shape[:2] != overlay_bgra.shape[:2]:
+        raise ValueError(f"size mismatch: scene {scene_bgr.shape[:2]} vs overlay {overlay_bgra.shape[:2]}")
+    a = overlay_bgra[:, :, 3].astype(np.float32) / 255.0
+    a3 = a[..., None]
+    return (scene_bgr.astype(np.float32) * (1.0 - a3)
+            + overlay_bgra[:, :, :3].astype(np.float32) * a3).astype(np.uint8)
+
+
 def runs_of_true(flags) -> list[tuple[int, int]]:
     """[T,T,F,T] -> [(0,1),(3,3)]  (đoạn đóng [begin, end])."""
     out: list[tuple[int, int]] = []

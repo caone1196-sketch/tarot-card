@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Inspect raw tarot card image metrics:
-- Dimensions and aspect ratio (target 848x1264 = 0.671)
+- Dimensions and aspect ratio (target 784x1360 = 7:12 ≈ 0.576)
 - Color metrics and framing consistency
 """
 
@@ -16,7 +16,8 @@ def check_image(path):
     parts = res.stdout.strip().split()
     w, h = int(parts[0]), int(parts[1])
     ratio = w / h
-    status = "OK (7:12)" if abs(ratio - 0.583) < 0.03 else ("OK (2:3)" if abs(ratio - 0.671) < 0.03 else "RATIO MISMATCH (!)")
+    status = ("OK (7:12)" if abs(ratio - 7 / 12) < 0.02
+              else ("OK (2:3)" if abs(ratio - 0.671) < 0.03 else "RATIO MISMATCH (!)"))
     print(f"[{status:<18}] {os.path.basename(path):<22} {w}x{h} (Ratio: {ratio:.3f})")
 
 def main():

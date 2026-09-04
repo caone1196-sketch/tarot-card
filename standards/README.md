@@ -9,6 +9,8 @@ Thư mục này chứa **chuẩn khung** của bộ bài, sinh tự động từ
 |---|---|
 | `standard.json` | Chuẩn máy đọc được: kích thước, độ dày dải viền, vị trí nét kẻ, cửa sổ nội dung, có/không đĩa huy hiệu & ruy băng, **ngưỡng đạt** |
 | `frame-mask.png` | 784×1360 · **trắng = vùng khung được chấm**, đen = cửa sổ nội dung (không chấm) |
+
+`scripts/finish_card.py` **không** blend theo `frame-mask` (làm vậy sẽ dán trời đêm The Star lên mép mọi lá). Nó tách mực vàng ở dải mép + bốn góc của lá neo rồi dán lên cảnh full-bleed.
 | `anchor.sha256` | Hash lá neo **tại thời điểm sinh chuẩn** → QA cảnh báo nếu lá neo bị sửa mà chuẩn chưa regenerate |
 | `profile-cols.csv`, `profile-rows.csv` | Hồ sơ độ phủ kim tuyến theo cột / theo hàng (0–199px từ mép) — chữ ký của viền |
 | `frame-report.md`, `frame-report.json` | Kết quả chấm 78 lá gần nhất |

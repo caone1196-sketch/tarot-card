@@ -168,7 +168,7 @@ with st.sidebar:
     st.caption(f"Bộ bài {deck.get('total', len(deck.get('cards', [])))} lá")
     page = st.radio(
         "Chức năng",
-        ["🖼️ Bộ sưu tập", "📤 Tải lên lá bài", "🎴 Rút một lá", "ℹ️ Kiểm tra khung viền"],
+        ["🖼️ Bộ sưu tập", "📤 Tải lên lá bài", "✨ Hoàn thiện lá", "🎴 Rút một lá", "ℹ️ Kiểm tra khung viền"],
         label_visibility="collapsed",
     )
     st.divider()
@@ -317,6 +317,108 @@ elif page == "📤 Tải lên lá bài":
                     st.success(f"Đã lưu `{target}.png` và cập nhật gallery. {msg}")
                 else:
                     st.error(f"Đã lưu ảnh nhưng cập nhật gallery thất bại: {msg}")
+
+
+# ---------------------------------------------------------------- finish (scene → Star frame + title)
+elif page == "✨ Hoàn thiện lá":
+    st.header("✨ Hoàn thiện lá (khung The Star + tên)")
+    st.write(
+        "Model chỉ cần vẽ **cảnh** (không khung, không chữ). "
+        "Bước này crop 7:12, dán mực viền vàng chuẩn The Star, viết tên lá, rồi chấm QA. "
+        "Ảnh mặc định vào `cards/_regen/` — không đụng bộ bài trừ khi bấm cài vào bộ."
+    )
+
+    slugs = all_slugs()
+    if not slugs:
+        st.warning("Chưa có deck.json — không chọn được lá.")
+        st.stop()
+
+    col_slug, col_mode = st.columns([2, 1])
+    with col_slug:
+        target = st.selectbox(
+            "Lá bài",
+            slugs,
+            format_func=lambda s: f"{slug_to_title(s)}  ({s})",
+        )
+    with col_mode:
+        mode = st.selectbox("Cắt ảnh", ["cover", "letterbox"],
+                            help="cover = cắt giữa cho đúng 7:12; letterbox = thêm viền")
+
+    sys.path.insert(0, os.path.join(ROOT, "scripts"))
+    try:
+        from render_sent import build_scene  # noqa: PLC0415
+        from build_prompts import load_data  # noqa: PLC0415
+        cards_map = {c["slug"]: c for c in load_data().get("cards", [])}
+        sent = build_scene(target, cards_map[target]) if target in cards_map else ""
+    except Exception as e:
+        sent = ""
+        st.caption(f"Không dựng được prompt cảnh-only: {type(e).__name__}: {e}")
+
+    if sent:
+        with st.expander("📋 Prompt cảnh-only (copy để gửi model)", expanded=False):
+            st.code(sent, language=None)
+            st.caption(f"{len(sent)} ký tự · không khung · không tên · khoác lụa lúc gửi · `cards.json` không đổi")
+
+    up = st.file_uploader("Ảnh cảnh thô (png/jpg)", type=["png", "jpg", "jpeg"], key="finish_up")
+    if up is not None:
+        raw = up.getvalue()
+        try:
+            pil = Image.open(io.BytesIO(raw)).convert("RGB")
+        except Exception as e:
+            st.error(f"Không đọc được ảnh: {e}")
+            pil = None
+        if pil is not None:
+            import tempfile
+            import numpy as np
+            st.caption(f"Ảnh tải lên: {pil.size[0]} × {pil.size[1]}")
+            try:
+                from finish_card import finish_bgr, score as qa_score  # noqa: PLC0415
+                import cv2 as _cv2
+                bgr = _cv2.cvtColor(np.asarray(pil), _cv2.COLOR_RGB2BGR)
+                done = finish_bgr(bgr, slug_to_title(target), mode=mode)
+                rgb = _cv2.cvtColor(done, _cv2.COLOR_BGR2RGB)
+                finished = Image.fromarray(rgb)
+            except Exception as e:
+                st.error(f"Hoàn thiện thất bại: {type(e).__name__}: {e}")
+                finished = None
+
+            if finished is not None:
+                c1, c2 = st.columns([1, 1])
+                with c1:
+                    st.subheader("Cảnh thô")
+                    st.image(pil, width=280)
+                with c2:
+                    st.subheader("Sau khi ghép khung + tên")
+                    st.image(finished, width=280)
+
+                with tempfile.TemporaryDirectory(prefix="tarot-fin-") as td:
+                    tmp = os.path.join(td, "done.png")
+                    finished.save(tmp)
+                    fr = qa_score(tmp)
+                if fr:
+                    st.markdown("**Khung viền:** " + ("✅ ĐẠT chuẩn" if fr.get("ok") else "⚠️ LỆCH chuẩn"))
+                    for k, v in (fr.get("checks") or {}).items():
+                        if not k.startswith("_"):
+                            st.caption(("· ✅ " if v.get("pass") else "· ⚠️ ") + f"`{k}`: {_fmt_metric(k, v)}")
+
+                regen_dir = os.path.join(CARDS_DIR, "_regen")
+                b1, b2 = st.columns(2)
+                with b1:
+                    if st.button("💾 Lưu vào `_regen/`"):
+                        os.makedirs(regen_dir, exist_ok=True)
+                        finished.save(os.path.join(regen_dir, target + ".png"))
+                        st.success(f"Đã ghi `cards/_regen/{target}.png`")
+                with b2:
+                    if st.button("📥 Cài vào bộ bài", type="primary"):
+                        dest = os.path.join(CARDS_DIR, target + ".png")
+                        finished.save(dest)
+                        ok, msg = rebuild_gallery()
+                        load_deck.clear()
+                        st.cache_data.clear()
+                        if ok:
+                            st.success(f"Đã lưu `{target}.png` và cập nhật gallery. {msg}")
+                        else:
+                            st.error(f"Đã lưu ảnh nhưng cập nhật gallery thất bại: {msg}")
 
 # ---------------------------------------------------------------- random
 elif page == "🎴 Rút một lá":

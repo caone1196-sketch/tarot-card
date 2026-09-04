@@ -11,7 +11,8 @@ Build Tarot Card Prompts using the THE STAR ANCHOR STANDARD:
 
 Usage:
     python3 scripts/build_prompts.py check
-    python3 scripts/build_prompts.py prompt <slug>
+    python3 scripts/build_prompts.py prompt <slug>     # prompt đầy đủ (khung + cảnh) — lưu prompts/out
+    python3 scripts/build_prompts.py scene <slug>      # prompt CẢNH-ONLY (khung/tên do finish_card.py)
     python3 scripts/build_prompts.py all
     python3 scripts/build_prompts.py md
 """
@@ -21,10 +22,10 @@ import os
 import re
 import sys
 
-CARDS_JSON = "tarot prompt/cards.json"
-OUT_DIR = "prompts/out"
-STANDARD_JSON = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                             "standards", "17-the-star", "standard.json")
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CARDS_JSON = os.path.join(_ROOT, "tarot prompt", "cards.json")
+OUT_DIR = os.path.join(_ROOT, "prompts", "out")
+STANDARD_JSON = os.path.join(_ROOT, "standards", "17-the-star", "standard.json")
 
 
 def load_standard():
@@ -38,6 +39,52 @@ def load_standard():
 def load_data():
     with open(CARDS_JSON, "r", encoding="utf-8") as f:
         return json.load(f)
+
+ANATOMY_LOCK = (
+    "ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; "
+    "every joint (shoulder, elbow, wrist, hip, knee, ankle) connects naturally to the body — "
+    "NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing or amputated arms, "
+    "NO deformed joints, NO wrong finger counts; keep both arms clearly separated from the torso "
+    "with visible armpits, elbows and wrists."
+)
+
+CLOTHING_LOCK = (
+    "CLOTHING LOCK (HARD RULE): every human figure is a young adult woman aged 18 to 25 wearing a "
+    "tasteful floor-length silk or ivory-and-gold gown or draped silk that fully covers the breasts "
+    "and hips; no nudity, no bare breasts, no transparent fabric that reveals the body."
+)
+
+QUALITY_DIRECTIVE = (
+    "Razor-sharp focus, increased fine detail, clean denoised and deblurred finish, no grain, no haze, "
+    "no soft-focus blur. Sensual fine-art anatomy, painterly warm lighting against subtle shadows, "
+    "rich atmospheric perspective and depth, vintage gothic fine-art illustration, high detail."
+)
+
+# Cụm khoả thân trong `scene` — chỉ thay lúc GỬI model (cards.json giữ nguyên văn).
+_VEIL_SUBS = [
+    (re.compile(r"\bone breast bared,?\s*", re.I), ""),
+    (re.compile(r"\bbreast bared,?\s*", re.I), ""),
+    (re.compile(r"\bnude\b", re.I), "silk-draped"),
+    (re.compile(r"\bbare-shouldered\b", re.I), "silk-draped"),
+    (re.compile(r"\bbare torso\b", re.I), "silk-draped torso"),
+    (re.compile(r"\bbare body\b", re.I), "silk-draped body"),
+    (re.compile(r"\bbare breasts?\b", re.I), "silk-covered chest"),
+    (re.compile(r"\bher bare (shoulders?|back|body|torso)\b", re.I), r"her \1"),
+    (re.compile(r"\bbare shoulders?\b", re.I), "shoulders"),
+]
+
+
+def veil_scene(text: str) -> str:
+    """Thay cụm khoả thân → khoác lụa. Không đụng cards.json — chỉ văn bản gửi model."""
+    if not text:
+        return text
+    out = text
+    for pat, repl in _VEIL_SUBS:
+        out = pat.sub(repl, out)
+    out = re.sub(r" {2,}", " ", out)
+    out = re.sub(r"\s+,", ",", out)
+    return out.strip()
+
 
 def format_count_lock(count_info):
     if not count_info:
@@ -109,20 +156,12 @@ def build_card_prompt_star_standard(card, use_reference=True, std=None):
     framed_like_star = bool(std and not std.get("plates", {}).get("medallion", {}).get("present")
                             and not std.get("plates", {}).get("ribbon", {}).get("present"))
 
-    anatomy_lock = (
-        "ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; "
-        "every joint (shoulder, elbow, wrist, hip, knee, ankle) connects naturally to the body — "
-        "NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing or amputated arms, "
-        "NO deformed joints, NO wrong finger counts; keep both arms clearly separated from the torso "
-        "with visible armpits, elbows and wrists."
-    )
-
     extra_directives = []
     if char_str:
         extra_directives.append(char_str)
     if count_str:
         extra_directives.append(count_str)
-    extra_directives.append(anatomy_lock)
+    extra_directives.append(ANATOMY_LOCK)
     extra_text = (" " + " ".join(extra_directives)) if extra_directives else ""
 
     ref_clause = frame_clause(std, use_reference)
@@ -150,6 +189,35 @@ def build_card_prompt_star_standard(card, use_reference=True, std=None):
         f"no soft-focus blur. Sensual fine-art anatomy, painterly warm lighting against subtle shadows, "
         f"rich atmospheric perspective and depth, thin symmetrical golden rule line at the card edges, "
         f"perfectly centered, portrait orientation 7:12 aspect ratio, vintage gothic fine-art illustration, high detail."
+    )
+
+
+def build_scene_prompt(card, scene_text=None):
+    """Prompt CẢNH-ONLY: model không vẽ khung / tên — `finish_card.py` ghép sau.
+
+    `scene_text` đã veil (khoác lụa) thì truyền vào; không thì dùng `card['scene']` nguyên văn
+    (để `all`/`prompt` không đổi). `render_sent.py` mới là chỗ veil.
+    """
+    title = card.get("title", "")
+    scene = scene_text if scene_text is not None else card.get("scene", "")
+    count_str = format_count_lock(card.get("count"))
+    char_str = format_character_spec(card)
+    extras = []
+    if char_str:
+        extras.append(char_str)
+    if count_str:
+        extras.append(count_str)
+    extras.append(ANATOMY_LOCK)
+    extras.append(CLOTHING_LOCK)
+    extra = " ".join(extras)
+    return (
+        f"A single tarot card painting of \"{title}\", portrait 7:12 aspect ratio, "
+        f"the painted scene running full bleed to every edge of the canvas. "
+        f"NO BORDER / NO FRAME / NO TITLE: do not draw any gold rule line, corner ornaments, "
+        f"medallion, ribbon, plaque, caption, letters, numbers or watermark — the frame and "
+        f"the card title will be composited later in code. "
+        f"No inner arch or column barriers. Scene: {scene}. {extra} "
+        f"{QUALITY_DIRECTIVE}"
     )
 
 def main():
@@ -187,6 +255,18 @@ def main():
             sys.exit(1)
         print("=== THE STAR ANCHOR STANDARD PROMPT ===")
         print(build_card_prompt_star_standard(match, use_reference=True))
+
+    elif cmd == "scene":
+        if len(sys.argv) < 3:
+            print("Please specify card slug, e.g. python3 scripts/build_prompts.py scene 00-fool")
+            sys.exit(1)
+        slug = sys.argv[2]
+        match = next((c for c in cards if c["slug"] == slug), None)
+        if not match:
+            print(f"Card '{slug}' not found.")
+            sys.exit(1)
+        print("=== SCENE-ONLY PROMPT (frame+title via finish_card.py) ===")
+        print(build_scene_prompt(match, scene_text=veil_scene(match.get("scene", ""))))
 
     elif cmd == "all":
         os.makedirs(OUT_DIR, exist_ok=True)

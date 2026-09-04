@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Compose individual tarot card regions (panel, emblem, title) onto the standard reference frame.
-Uses panel.json coordinates and ImageMagick for soft feathering and seamless blending.
+LEGACY — bố cục cũ 848×1264 (panel.json, parchment window).
+
+Chuẩn hiện tại là The Star full-bleed 784×1360: dùng `scripts/finish_card.py`
+(dán mực viền The Star lên cảnh, không dán nội dung vào card-blank).
 
 Usage:
     python3 scripts/compose_card.py raw/

@@ -66,18 +66,46 @@
 |---|---|
 | `scripts/build_frame_standard.py` | **Sinh bộ chuẩn khung** từ lá neo (`--anchor`, mặc định 17-the-star) → `standards/<neo>/`; có `--force`, `--copy-anchor` |
 | `scripts/check_frame_standard.py` | **QA khung** theo chuẩn: 6 chỉ tiêu/lá, in bảng hoặc `--json`, ghi `frame-report.{json,md}`; exit 1 nếu có lá lệch (dùng được trong CI) |
-| `scripts/build_prompts.py` | Sinh prompt **chỉ từ `cards.json`** (`scene`/`count`/`age`/`hair`/`build` nguyên văn) + câu khung theo `standards/17-the-star/standard.json` → `prompts/out/` (`all`, `prompt <slug>`, `check`, `md`) |
+| `scripts/build_prompts.py` | Sinh prompt **chỉ từ `cards.json`** (`scene`/`count`/`age`/`hair`/`build` nguyên văn) + câu khung theo `standards/17-the-star/standard.json` → `prompts/out/` (`all`, `prompt <slug>`, `scene <slug>`, `check`, `md`) |
 | `scripts/build_gallery.py` | Sinh lại `cards/deck.json` + `cards/index.html` từ `cards.json` + ảnh trong `cards/` |
 | `scripts/generate_card_table.py` | Sinh lại `tarot prompt/01-CARD-TABLE.md` **từ `cards.json`** |
 | `scripts/place_wands.py` | Tách sprite khỏi nền trắng, xoay/scale, ghép **đúng n vật thể** theo hàng |
 | `scripts/rebuild_emblem.py` | Vẽ lại huy hiệu medallion với **đúng n vạch** (fit ellipse, inpaint nền plate) |
 | `scripts/check_card.py` | Kiểm tra kích thước/tỷ lệ (cần `identify` của ImageMagick) |
-| `scripts/render_sent.py` | In ra **đúng văn bản gửi model** = `prompts/out/<slug>.txt` nguyên văn, chỉ thay cụm khoả thân → khoác lụa (danh sách trong `SUBS`); ghi `cards/_regen/<slug>.sent.txt` |
+| `scripts/render_sent.py` | In **văn bản gửi model**: mặc định prompt **cảnh-only** (veil khoả thân → khoác lụa trên mọi lá, `cards.json` không đổi) → `cards/_regen/<slug>.sent.txt`. `--full` = prompt cũ từ `prompts/out/` |
 | `scripts/fix_crown_stars.py` | Đếm/ghép **đủ 12 ngôi sao** trên vương miện `03-empress` bằng template-match + dán sprite (nguyên tắc: không tin AI đếm) |
+| `scripts/finish_card.py` | **Hoàn thiện lá sau khi sinh:** crop 784×1360 + dán mực viền The Star + viết tên lá + QA `ink_iou`. Model không cần vẽ khung. `--install` mới chép vào `cards/` |
+
+**Quy trình tạo ảnh (tối ưu — khung do code, không do model):**
+
+Model chỉ vẽ CẢNH full-bleed. Khung vàng The Star và chữ tên lá được ghép bằng
+`finish_card.py` từ mực viền đo được của lá neo → `ink_iou` đạt ngưỡng mà không
+cần vẽ-lại vì lệch khung. **Không** dán nội dung vào `cards/card-blank.png`
+(cách đó tạo lề parchment, lệch chuẩn full-bleed).
+
+```bash
+# 1. Prompt cảnh-only (khoác lụa lúc gửi; cards.json không đổi)
+python3 scripts/render_sent.py 06-lovers
+#    → in prompt + ghi cards/_regen/06-lovers.sent.txt
+
+# 2. Sinh ảnh bằng model (generate_image / tool khác)
+#    lưu thô: cards/_regen/06-lovers.raw.png
+#    (không khung, không chữ — finish_card sẽ thêm)
+
+# 3. Crop 7:12 + dán khung The Star + tên + QA
+python3 scripts/finish_card.py cards/_regen/06-lovers.raw.png --slug 06-lovers
+#    → cards/_regen/06-lovers.png   (không đụng cards/ trừ khi --install)
+
+# 4. Chỉ khi người dùng yêu cầu đưa vào bộ:
+python3 scripts/finish_card.py cards/_regen/06-lovers.raw.png --slug 06-lovers --install
+```
+
+Tự kiểm: `python3 scripts/finish_card.py --self-test` (gradient giả → phải ĐẠT size+ink_iou).
 
 **Quy trình neo khung** (giữ nội dung của lá mới, lấy khung từ chuẩn):
 `python3 scripts/build_frame_standard.py --force` → `standards/17-the-star/frame-mask.png`
-là mask "vùng khung" (trắng = khung, đen = cửa sổ nội dung) — dùng mask này để blend,
+là mask "vùng khung" (trắng = khung, đen = cửa sổ nội dung). `finish_card.py`
+tách mực vàng từ lá neo (dải mép + bốn góc, bỏ chữ tên/sao trời) rồi blend,
 không dựng lại mask bằng phương sai mỗi lần.
 Muốn đổi lá neo: `python3 scripts/build_frame_standard.py --anchor cards/<slug>.png --out standards/<slug> --force`
 rồi `python3 scripts/check_frame_standard.py --standard standards/<slug>/standard.json`.
@@ -105,3 +133,4 @@ python3 scripts/check_frame_standard.py
 | *Cảnh mô tả trong `cards.json`* (batch 1) | `scene` của 3 lá trên vẫn ghi khỏa thân (`nude`, `bare`, `draped only`) trong khi ảnh mới vẽ nàng khoác lụa | **ĐÃ CHỐT: giữ nguyên văn bản `cards.json`.** Prompt vẫn emit `scene` nguyên văn; việc khoác lụa/do sáng xử lý ở bước render, không sửa nguồn |
 | *Nguồn dữ liệu* (2026-09-03) | Đã thử nối `02-CHARACTER-SPECS.md` làm chuẩn nhân vật → hai nguồn tranh nhau (`02` đè 15 chỗ tóc, `cards.json` là file gốc lại bị ghi đè) | **Thu hồi theo yêu cầu "chỉ sử dụng cards.json"**: xoá `scripts/card_specs.py`, `build_prompts.py` + `generate_card_table.py` đọc đúng một nguồn `cards.json`, regenerate 78 file `prompts/out/*` |
 | `scripts/count_wands.py` | Hard-code `root = "<repo>/raw"` + 4 slug → chạy trên fresh clone in `MISSING` cả 4 | **Chưa sửa** — cần bạn quyết (đổi sang argv/`--dir` hay xoá) |
+| *Pipeline tạo ảnh* (2026-09-04) | Model vừa vẽ cảnh vừa vẽ khung → `ink_iou` thất thường, phải vẽ-lại | Tách 2 bước: `render_sent.py` gửi prompt **cảnh-only** (veil khoả thân trên mọi lá); `finish_card.py` crop 784×1360 + dán mực viền The Star + viết tên + QA. Self-test `ink_iou` 0.93. **Không** sửa `cards.json` / không vẽ lại lá |

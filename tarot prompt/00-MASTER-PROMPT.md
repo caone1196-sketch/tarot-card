@@ -1,5 +1,8 @@
 # 🔮 SENSUAL TAROT 78 LÁ — MASTER PROMPT SPECIFICATION
 
+> **Pipeline tạo ảnh (2026-09-04):** model chỉ vẽ **cảnh** (`python3 scripts/render_sent.py <slug>`).
+> Khung vàng The Star + tên lá do `python3 scripts/finish_card.py` ghép sau — không nhờ model vẽ viền.
+
 Bản chuẩn hóa quy chuẩn tạo hình và bố cục toàn bộ 78 lá bài Tarot:
 
 1. **Quy chuẩn hiển thị nội dung & khung viền (Visual Anchor Standard — THE STAR)**:
