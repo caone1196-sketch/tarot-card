@@ -1,0 +1,9 @@
+Create the artwork for "PAGE OF WANDS" using the original scene specification. This is an artwork-only illustration, not a finished tarot card. The scene must fill the entire canvas edge to edge with no reserved header or footer.
+
+SCENE: a nude serene adult woman page standing farther back in the landscape so her whole figure sits smaller within the wide desert vista, holding one living wand, desert dunes and pyramids behind her.
+
+CHARACTER SPECIFICATION (source: cards.json): Age: 18 (strictly young adult, aged 18 to 25); Hair: soft ginger-auburn hair in a gentle textured bob; Physique: petite and serene, lithe youthful frame with a gentle stance; Sensuality: render with refined, non-explicit fine-art beauty — confident, poised, soft classical anatomy, painterly skin in warm golden lighting. COUNT LOCK (EXACTLY 1 wand): exactly one living wand; no second staff, no decorative staffs in the dunes. ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; every joint (shoulder, elbow, wrist, hip, knee, ankle) connects naturally to the body — NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing or amputated arms, NO deformed joints, NO wrong finger counts; keep both arms clearly separated from the torso with visible armpits, elbows and wrists.
+
+OUTPUT LOCK: exact portrait canvas 784 by 1360 pixels, 7:12 composition. Pure edge-to-edge painted artwork only. No outer margin, no border, no frame, no gold line, no corner flourishes, no inner panel, no medallion, no emblem, no icon, no heraldic symbol, no card suit symbol, no ribbon, no plaque, no title, no letters, no numbers, no watermark, and no typography anywhere. Do not render the card name or any text in the image.
+
+SAFETY OVERRIDE: non-explicit fine-art depiction; all figures are fully tastefully draped; no exposed breasts, genitals, or sexual acts.
