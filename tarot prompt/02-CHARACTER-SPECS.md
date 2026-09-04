@@ -1,4 +1,4 @@
- # 🌹 BẢNG THÔNG SỐ NHÂN VẬT — 72 NHÂN VẬT NỮ (PHONG CÁCH GỢI CẢM · GOTHIC FINE-ART)
+# 🌹 BẢNG THÔNG SỐ NHÂN VẬT — 72 NHÂN VẬT NỮ (PHONG CÁCH GỢI CẢM · GOTHIC FINE-ART)
 
 > File **phát triển từ** `01-CARD-TABLE.md` (bảng chuẩn — nguồn gốc tuổi/tóc/vóc dáng/huy hiệu/tên)
 > và `tarot prompt/cards.json`. Tuổi + kiểu tóc được **giữ nguyên 100%** so với bảng chuẩn.
@@ -129,7 +129,7 @@ Không nhân vật nào dùng chung nét riêng với nhân vật khác.
 | **[XIV]** **TEMPERANCE** `14-temperance` | 22 | aquamarine, upturned nhẹ, sáng trong như nước | pale fine ash-blonde hair floating weightlessly in the air | **A** sẽ gầy mảnh, tay chân dài, lưng cong mềm | fair | sẹo bạc hình lưỡi liềm trên lòng bàn tay phải | nước chảy, ánh sáng xuyên, sự cân bằng |
 | **[XV]** **THE DEVIL** `15-devil` | 21 | wine-plum, cat, heavy-lidded, đốt mắt | midnight-black wavy hair with deep wine-red undertones, wild and untamed | **D** cong đầy đặn vừa, hông mềm, lưng võng gợi cảm | sand | nốt ruồi đỏ thẫm ở khóe môi | khói ngọt, gỗ đàn hương, dây xích |
 | **[XVI]** **THE TOWER** `16-tower` | 20 | slate-grey, round, mở to kinh ngạc giữa cú rơi | storm-dark chestnut hair blown dynamically backward by lightning winds | **B** săn, dẻo, thân hình nhào lộn | fair | sẹo trắng mảnh trên xương đòn trái | sấm, gió giật, đá vụn |
-| **[XVII]** **THE STAR** `17-the-star` | 20 | starlight grey-blue, wide-set, long lanh như nước đêm | very long pale shimmering gold hair, wet and silky, cascading down past one bare shoulder | **A** mảnh, chân dài, thần thái nữ thần thanh khiết | ivory  | nước đêm, sao, làn da ướt át gợi cảm |
+| **[XVII]** **THE STAR** `17-the-star` | 20 | starlight grey-blue, wide-set, long lanh như nước đêm | very long pale shimmering gold hair, wet and silky, cascading down past one bare shoulder | **A** mảnh, chân dài, thần thái nữ thần thanh khiết | ivory | chòm tàn nhang vàng trên hai vai | nước đêm, sao, làn da ướt |
 | **[XVIII]** **THE MOON** `18-moon` | 21 | moonstone silver-violet, heavy-lidded, mơ màng | ink-blue-black hair with cool silvery highlights, cascading like water to her hips | **A** mảnh như tiên nữ, eo mềm, hông cong nhẹ | porcelain | sẹo lưỡi liềm nhỏ trên gò má trái | sương, hồ tối, tiếng nước |
 | **[XIX]** **THE SUN** `19-sun` | 19 | gold-green (moss-gold), round, cười long lanh | radiant sunflower-blonde hair, bouncing loose curls garlanded in red blossoms | **A** trẻ trung, gầy nhẹ, cong mềm vui vẻ | honey | vệt tàn nhang vàng trên sống mũi | hoa hướng dương, mùa hè |
 | **[XX]** **JUDGEMENT** `20-judgement` | 22 | amber với vệt vàng kim, upturned, mở to như vừa thức giấc | rich amber-honey hair in thick luminous waves catching golden rays | **B** cao thanh thoát, vòng tay mở, dáng tái sinh | warm peach | sẹo nhỏ hình lông phượng sau gáy | đồng vọng, kèn xa, rạng đông |
