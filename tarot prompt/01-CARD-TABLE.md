@@ -52,7 +52,7 @@ Nhân vật trên mỗi lá bài đều có nhận diện độc bản với đ�
 | Cups | `cups-02` | **21 years old** | soft ash-brown hair worn in a low intertwined romantic braid | slender and graceful, gentle curving silhouette leaning in communion | — | **TWO OF CUPS** |
 | Cups | `cups-03` | **20 years old** | rich chocolate-brown, golden-blonde, and copper hair among the three maidens | harmonious, curvaceous, dancing together with joyful feminine grace | — | **THREE OF CUPS** |
 | Cups | `cups-04` | **22 years old** | dark wavy hair falling over her shoulder in contemplative thought | slender, relaxed seated posture against a flowering tree | — | **FOUR OF CUPS** |
-| Cups | `cups-05` | **22 years old** | long mahogany hair unbound and draping over cloaked shoulders | slender, somber silhouette with delicate bowed neck | — | **FIVE OF CUPS** |
+| Cups | `cups-05` | **22 years old** | long mahogany hair unbound | slender, somber silhouette with delicate bowed neck | — | **FIVE OF CUPS** |
 | Cups | `cups-06` | **19 years old** | pale golden hair styled in a delicate maiden crown knot | petite, innocent and delicate, sweet gentle posture | — | **SIX OF CUPS** |
 | Cups | `cups-07` | **21 years old** | dark raven curls drifting in mystical haze | slender, mesmerized posture with hands slightly raised | — | **SEVEN OF CUPS** |
 | Cups | `cups-08` | **23 years old** | deep brown hair tucked under a travel cloak | lean wanderer silhouette, resolute back turned toward mountains | — | **EIGHT OF CUPS** |
