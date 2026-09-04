@@ -1,6 +1,6 @@
 Create the artwork for "THE EMPEROR" using the original scene specification. This is an artwork-only illustration, not a finished tarot card. The scene must fill the entire canvas edge to edge with no reserved header or footer.
 
-SCENE: a serene wrapped in lightweight translucent silk, 25-year-old female emperor reclining gracefully on a stone throne carved with ram heads, holding an ankh scepter loosely in one hand, barren rugged mountains behind her.
+SCENE: a serene 25-year-old female emperor wrapped in lightweight translucent silk reclining gracefully on a stone throne carved with ram heads, holding an ankh scepter loosely in one hand, barren rugged mountains behind her.
 
 CHARACTER SPECIFICATION (source: cards.json): Age: 25 (strictly young adult, aged 18 to 25); Hair: sleek dark bronze-brown hair in soft loose waves, crowned with a golden ram-horn circlet; Physique: graceful, soft and refined female sovereign with gently sculpted curves and a serene, tender composure; Sensuality: render with refined, non-explicit fine-art beauty — confident, poised, soft classical anatomy, painterly skin in warm golden lighting. ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; every joint (shoulder, elbow, wrist, hip, knee, ankle) connects naturally to the body — NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing or amputated arms, NO deformed joints, NO wrong finger counts; keep both arms clearly separated from the torso with visible armpits, elbows and wrists.
 

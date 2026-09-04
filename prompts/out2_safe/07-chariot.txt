@@ -1,6 +1,6 @@
 Create the artwork for "THE CHARIOT" using the original scene specification. This is an artwork-only illustration, not a finished tarot card. The scene must fill the entire canvas edge to edge with no reserved header or footer.
 
-SCENE: a heroic nude bare-shouldered woman charioteer standing tall in a stone chariot between two sphinxes under a starry canopy, a walled city behind her.
+SCENE: a heroic woman with shoulders wrapped in lightweight translucent silk charioteer standing tall in a stone chariot between two sphinxes under a starry canopy, a walled city behind her.
 
 CHARACTER SPECIFICATION (source: cards.json): Age: 22 (strictly young adult, aged 18 to 25); Hair: dark sable-brown hair tightly plaited in a single thick warrior braid over one shoulder; Physique: athletic and toned, sculpted shoulders and taut waist, resolute and heroic stance; Sensuality: render with refined, non-explicit fine-art beauty — confident, poised, soft classical anatomy, painterly skin in warm golden lighting. ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; every joint (shoulder, elbow, wrist, hip, knee, ankle) connects naturally to the body — NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing or amputated arms, NO deformed joints, NO wrong finger counts; keep both arms clearly separated from the torso with visible armpits, elbows and wrists.
 
