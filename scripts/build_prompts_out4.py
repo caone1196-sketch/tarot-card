@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the 77-card neutral prompt set requested for the next image batch.
 
-Source: prompts/out2. The Star is intentionally excluded. Ages are normalized to
+Source: prompts/out2. All 78 cards are included. Ages are normalized to
 20–23, and body descriptions use the neutral silhouette/pose/lighting approach
 that succeeded for the generated Star image.
 """
@@ -59,9 +59,8 @@ def rewrite(text: str) -> str:
 
 
 files = sorted(SRC.glob("*.txt"))
-files = [p for p in files if p.name != "17-the-star.txt"]
-if len(files) != 77:
-    raise SystemExit(f"expected 77 non-Star source prompts, found {len(files)}")
+if len(files) != 78:
+    raise SystemExit(f"expected 78 source prompts, found {len(files)}")
 DST.mkdir(parents=True, exist_ok=True)
 for src in files:
     (DST / src.name).write_text(rewrite(src.read_text(encoding="utf-8")), encoding="utf-8")
