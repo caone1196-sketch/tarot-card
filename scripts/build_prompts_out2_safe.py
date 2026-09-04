@@ -34,11 +34,13 @@ def rewrite(text: str) -> str:
     ]
     for pattern, replacement in patterns:
         text = re.sub(pattern, replacement, text)
-    text = text.replace("tastefully posed artistic nude", "tastefully posed classical figure")
+    text = text.replace("tastefully posed artistic nude", "tastefully posed sensual classical figure")
     text += (
-        "\nSAFETY OVERRIDE: non-explicit classical figure study. Use back view, three-quarter view, "
-        "profile, careful cropping, flowing hair, props, natural pose, and soft shadow to conceal "
-        "all sensitive areas. No visible nipples, genitals, sexual acts, or explicit anatomical detail.\n"
+        "\nSTYLE OVERRIDE: tasteful sensual classical fine-art figure study. A partial upper torso "
+        "or breast may be visible when naturally composed, non-explicit, and not emphasized; use "
+        "back view, three-quarter view, profile, careful cropping, flowing hair, props, natural pose, "
+        "and soft shadow to keep the presentation elegant. No genitals, sexual acts, or explicit "
+        "anatomical detail.\n"
     )
     return text
 
