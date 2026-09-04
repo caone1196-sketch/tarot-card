@@ -2,11 +2,11 @@
 
 78 ảnh Tarot ở kích thước chính xác **784 × 1360 PNG**.
 
-Các ảnh chỉ giữ lại vùng artwork trung tâm đã cắt từ bản gốc và phóng kín canvas:
+Các ảnh chỉ giữ artwork trung tâm, cắt bỏ phần trang trí đầu/cuối của mẫu cũ:
 
 - Không khung viền
 - Không tên lá
-- Không medallion/emblem
+- Không medallion/emblem/ký hiệu đầu lá
 - Không ribbon/title plate
 - Không card-back/card-blank
 
