@@ -1,0 +1,3 @@
+# prompts/out4
+
+77 rewritten prompts derived from `prompts/out2`, excluding `17-the-star`. The successful neutral Star method is applied: body described through silhouette, pose, lighting and atmosphere; one narrow silk strip across the lower body; no explicit body vocabulary; ages normalized to 20–23. Original prompts are unchanged.
