@@ -1,4 +1,4 @@
-Create the artwork for "THE FOOL" using the original scene specification. This is an artwork-only illustration, not a finished tarot card. The scene must fill the entire canvas edge to edge with no reserved header or footer.
+Create THE FOOL using `cards/17-the-star.png` as the visual reference for the exact 784×1360 tarot-card composition, open-window scale, framing language, lighting, color atmosphere and thin antique-gold line-art treatment. Match The Star's measured visual standard while replacing its scene with the Fool scene below. The scene must fill the entire canvas edge to edge.
 
 SCENE: a carefree nude 19-year-old woman wanderer, a white rose lifted in one hand and her eyes lowered to look at it, stepping lightly toward a cliff edge, a small white dog leaping at her heel, distant mountains under a golden morning sun.
 
