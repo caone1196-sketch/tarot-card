@@ -1,10 +1,16 @@
 # cardstarot — Bộ Ẩn Chính từ prompt tiếng Việt
 
-Ngày cập nhật: **05/09/2026**.
+Ngày cập nhật: **06/09/2026**.
+
+## Bản thử mới — The Fool quấn lụa eo/hông
+
+Đã thêm [bản thử The Fool](variants/00-fool-waist-ribbon.png) theo lựa chọn **chỉ quấn eo và hông**, góc nhìn 3/4 từ sau. [Ghi chú và prompt](variants/00-fool-waist-ribbon.md) lưu riêng. **Chưa thay ảnh The Fool chính.**
+
+Mức “95%” trong prompt là hướng dẫn thị giác cho lớp chiffon ngoài, không phải số đo độ xuyên sáng của ảnh; vùng quấn chồng và lớp lót vẫn giữ kín.
 
 ## Bản hiện tại: Empress góc 3/4
 
-Lượt cập nhật mới nhất **chỉ chỉnh The Empress sang góc ngồi 3/4**, theo lựa chọn giữ trang phục hiện tại. Cả thân người và ngai đều có chiều sâu chếch, gương mặt quay nhẹ về người xem. Magician giữ nguyên bản chính diện đã chấp nhận; các lá khác không thay đổi.
+Bản chính The Empress giữ **góc ngồi 3/4** từ lượt chỉnh trước, theo lựa chọn giữ trang phục hiện tại. Cả thân người và ngai đều có chiều sâu chếch, gương mặt quay nhẹ về người xem. Magician giữ nguyên bản chính diện đã chấp nhận; các lá khác không thay đổi.
 
 **Riêng Magician: người dùng đã chấp nhận bản chính diện có lụa dài xuống chân.** Đây là lựa chọn được xác nhận, không phải tự thay khăn ngắn mà không thông báo.
 
@@ -15,7 +21,7 @@ Lượt cập nhật mới nhất **chỉ chỉnh The Empress sang góc ngồi 3
 | 02 — THE HIGH PRIESTESS | Chưa có | — | Không nằm trong lượt sửa này; giữ trạng thái còn thiếu |
 | 03 — THE EMPRESS | [03-empress.png](03-empress.png) | PNG 784 × 1360 | Ngồi góc 3/4; giữ lụa quấn và tà bên |
 
-Vẫn có **3/22 ảnh** trong thư mục chính. Lượt này chỉ thay ảnh Empress hiện có, không tạo thêm lá mới và không tự tạo Priestess hoặc các lá 04–21. Không có tác vụ tạo ảnh chạy ngầm.
+Vẫn có **3/22 ảnh** trong thư mục chính, cùng một bản thử riêng của The Fool. Lượt này không thay ảnh chính nào, không tạo Priestess hoặc các lá 04–21. Không có tác vụ tạo ảnh chạy ngầm.
 
 ## Xem ảnh hiện tại
 
@@ -49,7 +55,7 @@ Vẫn có **3/22 ảnh** trong thư mục chính. Lượt này chỉ thay ảnh 
 | The High Priestess | [02-priestess.next.txt](02-priestess.next.txt) | [02-priestess.sent.txt](02-priestess.sent.txt) — lượt trước, chưa có ảnh |
 | The Empress | [03-empress.next.txt](03-empress.next.txt) | [03-empress.sent.txt](03-empress.sent.txt) |
 
-- Magician giữ nguyên prompt chính diện và lựa chọn lụa dài đã được xác nhận. Chỉ prompt render của Empress được cập nhật trong lượt này: góc ngồi 3/4 và mô tả chính xác kiểu lụa cần giữ từ ảnh đang dùng.
+- Magician giữ nguyên prompt chính diện và lựa chọn lụa dài đã được xác nhận. Ở lượt chỉnh Empress trước đó, prompt render đã được cập nhật với góc ngồi 3/4 và kiểu lụa cần giữ từ ảnh tham chiếu.
 - Tuổi, nhân vật, cảnh và đạo cụ của Empress không thay đổi. Phần mô tả trang phục ở file render được làm rõ để tránh tự thêm váy phủ chân; các prompt tiếng Việt gốc và `cards.json` không bị sửa.
 - `03-empress.sent.txt` là văn bản chính xác của bước chỉnh lụa cuối cùng; văn bản dựng bố cục nằm ở `references/03-empress-three-quarter-layout.sent.txt`. Magician vẫn dùng prompt tạo từ văn bản đã lưu trước; file `.sent.txt` của Priestess vẫn ghi lượt trước chưa có ảnh. `*.next.txt` là mô tả yêu cầu, không phải hàng đợi tự chạy.
 - [manifest.json](manifest.json) ghi trạng thái, kích thước, hash, ảnh tham chiếu, cách hậu kỳ và lựa chọn lụa dài được xác nhận. Kiểm tra kỹ thuật không phải chứng nhận mọi chi tiết giải phẫu đều hoàn hảo.
@@ -69,5 +75,5 @@ Các bản trong `references/` không được tính thành lá mới.
 
 - [Bộ prompt tiếng Việt gốc](../prompts/out6_vi/README.md) và [bản tổng hợp 78 prompt](../prompts/out6_vi/TAT-CA-78-PROMPT.md) không thay đổi.
 - Không sửa `tarot prompt/cards.json`, prompt tiếng Anh, ảnh trong `cards/`, `cards2/`, `cards3/`, chuẩn khung hoặc gallery mặc định.
-- The Fool vẫn trùng byte với `cards_vi/00-fool.png`. Ảnh, prompt và metadata của Magician, Priestess và The Fool không bị sửa trong lượt này.
+- The Fool vẫn trùng byte với `cards_vi/00-fool.png`. Ảnh, prompt và metadata của Magician/Priestess/Empress không bị sửa trong lượt này. Ảnh chính và prompt chính của The Fool giữ nguyên; chỉ thêm mục bản thử vào metadata của The Fool.
 - Tất cả ảnh chính giữ khổ **784 × 1360**, tranh phủ kín ảnh, không khung và không chữ; không áp dụng phép chấm viền vàng của bộ bài gốc.

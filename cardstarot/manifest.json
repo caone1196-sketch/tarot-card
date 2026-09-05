@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-09-05",
+  "updated_on": "2026-09-06",
   "branch": "arena/01a07139-tarot-card",
   "major_arcana_total": 22,
   "images_available": 3,
@@ -23,7 +23,49 @@
         784,
         1360
       ],
-      "image_sha256": "f23eb6ebb12fe75e7980ffa8b83175b7fc80cc853880a7231934a64af77ee2c1"
+      "image_sha256": "f23eb6ebb12fe75e7980ffa8b83175b7fc80cc853880a7231934a64af77ee2c1",
+      "variants": [
+        {
+          "id": "waist-ribbon-preview",
+          "created_on": "2026-09-06",
+          "status": "preview_not_applied_to_main",
+          "image": "variants/00-fool-waist-ribbon.png",
+          "image_size": [
+            784,
+            1360
+          ],
+          "image_sha256": "9708f335868ac68f4573e0739b60a7c2105f318cd57844158a8a9e5310e4542f",
+          "render_prompt": "variants/00-fool-waist-ribbon.sent.txt",
+          "render_prompt_sha256": "6cc18bd01adc320a278dcc61553b8dd340a782d95e85b55c1c3c7ea62a08b6d5",
+          "source_prompt": "prompts/out6_vi/00-fool.txt",
+          "render_reference": "references/01-magician-before-front.png",
+          "render_reference_sha256": "4751d9eb5f93c341e047abe746639e30923cb3a2eb189e16b1f3cbf939e05ba3",
+          "reference_role": "Rear-view composition, painting style and waist-wrap reference only; Magician props not reused.",
+          "requested_wardrobe": {
+            "placement": "waist_and_hips_only",
+            "fabric": "ivory_chiffon_ribbon",
+            "lining": "opaque_warm_skin_tone",
+            "outer_translucency_visual_guide": "95%",
+            "physical_transmittance_measured": false,
+            "note": "The percentage is a prompt convention, not a measured or certified property of the rendered fabric; overlaps and lining remain opaque."
+          },
+          "visual_review": {
+            "rear_three_quarter_view": true,
+            "upper_front_not_visible": true,
+            "waist_hip_wrap": true,
+            "lower_body_covered": true,
+            "held_white_rose_count": 1,
+            "white_dog_count": 1,
+            "full_figure_and_dog_visible": true,
+            "cliff_mountains_and_river_present": true,
+            "frame_or_title_present": false
+          },
+          "postprocessing": {
+            "method": "PNG_RGB_normalization",
+            "body_warped": false
+          }
+        }
+      ]
     },
     {
       "slug": "01-magician",
@@ -318,12 +360,13 @@
   "generation_paused_by_user": false,
   "pause_scope": [],
   "camera_context_updated_on": "2026-09-05",
-  "last_batch_status": "completed_angle_revision",
+  "last_batch_status": "preview_created_main_unchanged",
   "generation_in_progress": false,
   "last_batch_scope": [
-    "03-empress"
+    "00-fool"
   ],
   "wardrobe_overrides": {
     "01-magician": "Long silk wrap accepted by the user for the front-view image."
-  }
+  },
+  "trial_images_available": 1
 }
