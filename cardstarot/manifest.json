@@ -31,58 +31,104 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/01-magician.txt",
       "render_prompt": "01-magician.sent.txt",
-      "render_prompt_sha256": "8ff840025b8c4acb95437b9294661666439121fa9497931fcfaa6b139346b170",
-      "status": "image_ready",
+      "render_prompt_sha256": "e32dbf3bba721802f158dd72c91d33b55dbbcf1967c80078407b62e34a40fe8e",
+      "status": "image_ready_user_approved_variant",
       "image": "01-magician.png",
       "requested_render_prompt": "01-magician.next.txt",
-      "requested_render_prompt_sha256": "8ff840025b8c4acb95437b9294661666439121fa9497931fcfaa6b139346b170",
+      "requested_render_prompt_sha256": "4d0f596c653b0766d37d41fd50bec4478b6ecb41c69cb17c84f5a6b4a6d0fa0e",
       "last_generation_result": "success",
       "camera_context": {
-        "scope": "camera_and_framing_only",
-        "view": "Sau chếch trái, hơi cao, toàn thân và mặt bàn tế.",
-        "base_prompt_bytes": 1727,
-        "base_prompt_sha256": "ecb94365c512e6bbb16323d0c297704a1fa973e9c62c8c0e26813d14e1ce1472",
-        "generation_status": "generated"
+        "scope": "front_view_revision",
+        "view": "Chính diện, máy phía trước ngang tầm mắt.",
+        "base_prompt_bytes": 1746,
+        "base_prompt_sha256": "a744f7f5062450b1c238d6c9a363af92ba09a7a90bc1b46bd4a375d24bbab216",
+        "generation_status": "generated",
+        "upper_body_coverage": "existing_long_hair",
+        "base_prompt_revision": "Long silk wrap explicitly accepted by the user for this card."
       },
       "image_size": [
         784,
         1360
       ],
-      "image_sha256": "4751d9eb5f93c341e047abe746639e30923cb3a2eb189e16b1f3cbf939e05ba3",
-      "selected_original": "references/01-magician-selected-original.png",
-      "selected_original_size": [
-        1776,
-        2368
-      ],
-      "selected_original_sha256": "d3d9d3722992e20e7583e5dd20fa499d362e51f575a952258d6d2000806eff7b",
-      "postprocessing": {
-        "method": "deterministic_pixel_edit_then_crop_and_resize",
-        "table_wand_tip": "Shortened the existing wand by reusing its own rounded tip; the four altar objects remain separate and fully visible.",
-        "held_wand_tip": "Trimmed and closed the existing shaft inside the upper edge, without adding a wand.",
-        "crop_xyxy": [
-          160,
-          0,
-          1525,
+      "image_sha256": "dfecb5f82b8164b2b323f47da9997152b84fea9167dd7fb807547004bd8899fb",
+      "previous_revision": {
+        "commit": "ae226e339139a35883c75a54e77020f89c9ad641",
+        "image": "references/01-magician-before-front.png",
+        "image_sha256": "4751d9eb5f93c341e047abe746639e30923cb3a2eb189e16b1f3cbf939e05ba3",
+        "render_prompt": "references/01-magician-before-front.sent.txt",
+        "render_prompt_sha256": "8ff840025b8c4acb95437b9294661666439121fa9497931fcfaa6b139346b170",
+        "camera_context": {
+          "scope": "camera_and_framing_only",
+          "view": "Sau chếch trái, hơi cao, toàn thân và mặt bàn tế.",
+          "base_prompt_bytes": 1727,
+          "base_prompt_sha256": "ecb94365c512e6bbb16323d0c297704a1fa973e9c62c8c0e26813d14e1ce1472",
+          "generation_status": "generated"
+        },
+        "postprocessing": {
+          "method": "deterministic_pixel_edit_then_crop_and_resize",
+          "table_wand_tip": "Shortened the existing wand by reusing its own rounded tip; the four altar objects remain separate and fully visible.",
+          "held_wand_tip": "Trimmed and closed the existing shaft inside the upper edge, without adding a wand.",
+          "crop_xyxy": [
+            160,
+            0,
+            1525,
+            2368
+          ],
+          "resize_wh": [
+            784,
+            1360
+          ],
+          "body_warped": false
+        },
+        "visual_review": {
+          "rear_view": true,
+          "waist_wrap": true,
+          "altar_objects": [
+            "cup",
+            "sword",
+            "wand",
+            "pentacle_coin"
+          ],
+          "altar_count": 4,
+          "held_wand_separate": true,
+          "frame_or_title_present": false
+        },
+        "selected_original": "references/01-magician-selected-original.png",
+        "selected_original_sha256": "d3d9d3722992e20e7583e5dd20fa499d362e51f575a952258d6d2000806eff7b",
+        "selected_original_size": [
+          1776,
           2368
-        ],
-        "resize_wh": [
-          784,
-          1360
-        ],
-        "body_warped": false
+        ]
       },
       "visual_review": {
-        "rear_view": true,
-        "waist_wrap": true,
+        "front_view": true,
+        "pose": "standing",
+        "upper_body_covered_by_hair": true,
+        "frame_or_title_present": false,
+        "altar_count": 4,
         "altar_objects": [
           "cup",
           "sword",
           "wand",
           "pentacle_coin"
         ],
-        "altar_count": 4,
         "held_wand_separate": true,
-        "frame_or_title_present": false
+        "wardrobe": "long_silk_user_approved"
+      },
+      "render_mode": "text_to_image",
+      "render_reference": null,
+      "generated_size": [
+        952,
+        1652
+      ],
+      "user_approved_variant": "Front view with long silk wrap; explicit user choice.",
+      "postprocessing": {
+        "method": "proportional_Lanczos_resize_and_pixel_rounding_crop",
+        "resize_wh": [
+          784,
+          1360
+        ],
+        "body_warped": false
       }
     },
     {
@@ -113,47 +159,79 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/03-empress.txt",
       "render_prompt": "03-empress.sent.txt",
-      "render_prompt_sha256": "a157a51c9c656e24d73011290d58cc8d08fe5fecf625d449b02f2dfcf0e2cc58",
-      "status": "image_selected_with_deviations",
+      "render_prompt_sha256": "ad561bc4d0f439b61d742dbfbf64b37704b98074b586ab10dc85bca81495f94f",
+      "status": "image_ready",
       "image": "03-empress.png",
       "requested_render_prompt": "03-empress.next.txt",
-      "requested_render_prompt_sha256": "a157a51c9c656e24d73011290d58cc8d08fe5fecf625d449b02f2dfcf0e2cc58",
+      "requested_render_prompt_sha256": "c812ce40147173e781b07145706559155030bcbb6804e31231d545162dc835a2",
       "previous_selection_reference": "references/03-empress-before-waist-silk.png",
       "previous_selection_reference_sha256": "7d7705cba87d2d78ebafc7b77b51744838e7c8996ba908bd9b81e27757207456",
       "previous_selection_note": "Earlier selected long-dress image, retained only as a reference; not the requested minimal-silk result.",
       "last_generation_result": "success",
       "camera_context": {
-        "scope": "camera_and_framing_only",
-        "view": "Sau chếch phải, nhìn qua cạnh ngoài ngai và tay vịn phải.",
+        "scope": "front_view_revision",
+        "view": "Chính diện, máy phía trước ngang tầm mắt.",
         "base_prompt_bytes": 1782,
         "base_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
-        "generation_status": "generated"
+        "generation_status": "generated",
+        "upper_body_coverage": "existing_long_hair"
       },
       "image_size": [
         784,
         1360
       ],
-      "image_sha256": "588dd8bbd479729c6d7b09980e829f4eb8931645a7d440c7ae1ed37e0fd85c95",
-      "selected_original_size": [
-        1440,
-        2560
+      "image_sha256": "948576d3121c4af4febe734807d7d1ad47a4015e6cf8cc8b9f684de2e0855a65",
+      "previous_revision": {
+        "commit": "ae226e339139a35883c75a54e77020f89c9ad641",
+        "image": "references/03-empress-before-front.png",
+        "image_sha256": "588dd8bbd479729c6d7b09980e829f4eb8931645a7d440c7ae1ed37e0fd85c95",
+        "render_prompt": "references/03-empress-before-front.sent.txt",
+        "render_prompt_sha256": "a157a51c9c656e24d73011290d58cc8d08fe5fecf625d449b02f2dfcf0e2cc58",
+        "camera_context": {
+          "scope": "camera_and_framing_only",
+          "view": "Sau chếch phải, nhìn qua cạnh ngoài ngai và tay vịn phải.",
+          "base_prompt_bytes": 1782,
+          "base_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
+          "generation_status": "generated"
+        },
+        "postprocessing": {
+          "method": "proportional_Lanczos_resize_then_minor_center_crop",
+          "resize_wh": [
+            784,
+            1360
+          ],
+          "body_warped": false
+        },
+        "visual_review": {
+          "rear_view": false,
+          "frame_or_title_present": false,
+          "known_deviations": [
+            "Selected image uses a front-oblique view instead of the requested rear view.",
+            "Silk has a longer trailing portion than the minimal short-wrap specification."
+          ],
+          "note": "Kept the user-selected candidate; not marked as fully matching the camera and wardrobe constraints."
+        }
+      },
+      "visual_review": {
+        "front_view": true,
+        "pose": "seated",
+        "upper_body_covered_by_hair": true,
+        "frame_or_title_present": false,
+        "wardrobe": "Side drape retained from the prior selected image; only front view and hair placement were changed."
+      },
+      "render_mode": "image_edit",
+      "render_reference": "references/03-empress-before-front.png",
+      "generated_size": [
+        784,
+        1360
       ],
       "postprocessing": {
-        "method": "proportional_Lanczos_resize_then_minor_center_crop",
+        "method": "PNG_RGB_normalization",
         "resize_wh": [
           784,
           1360
         ],
         "body_warped": false
-      },
-      "visual_review": {
-        "rear_view": false,
-        "frame_or_title_present": false,
-        "known_deviations": [
-          "Selected image uses a front-oblique view instead of the requested rear view.",
-          "Silk has a longer trailing portion than the minimal short-wrap specification."
-        ],
-        "note": "Kept the user-selected candidate; not marked as fully matching the camera and wardrobe constraints."
       }
     }
   ],
@@ -161,6 +239,13 @@
   "generation_paused_by_user": false,
   "pause_scope": [],
   "camera_context_updated_on": "2026-09-05",
-  "last_batch_status": "partial_success",
-  "generation_in_progress": false
+  "last_batch_status": "completed_with_user_approved_wardrobe_variant",
+  "generation_in_progress": false,
+  "last_batch_scope": [
+    "01-magician",
+    "03-empress"
+  ],
+  "wardrobe_overrides": {
+    "01-magician": "Long silk wrap accepted by the user for the front-view image."
+  }
 }
