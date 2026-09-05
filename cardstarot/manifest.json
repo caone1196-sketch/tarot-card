@@ -34,7 +34,9 @@
       "render_prompt_sha256": "39738b37dd3499db44cee637a9dbdafe8708b941755ee53092297c8d699067e9",
       "status": "prompt_prepared_image_pending",
       "image": null,
-      "pending_reason": "Image generation attempts failed; per-turn image generation limit reached."
+      "pending_reason": "Requested minimal waist-wrap revision is not completed; image-generation limit reached after failed/non-matching attempts.",
+      "requested_render_prompt": "01-magician.next.txt",
+      "requested_render_prompt_sha256": "ecb94365c512e6bbb16323d0c297704a1fa973e9c62c8c0e26813d14e1ce1472"
     },
     {
       "slug": "02-priestess",
@@ -45,7 +47,9 @@
       "render_prompt_sha256": "f8b59239bfc184203c697a71f3f8e2c61caffc685aaf7232cd4922491fb82f22",
       "status": "prompt_prepared_image_pending",
       "image": null,
-      "pending_reason": "Image generation attempts failed; per-turn image generation limit reached."
+      "pending_reason": "Requested minimal waist-wrap revision is not completed; image-generation limit reached after failed/non-matching attempts.",
+      "requested_render_prompt": "02-priestess.next.txt",
+      "requested_render_prompt_sha256": "dd69dfae01431419258b6b63a58bcdef1f5d23ba78b589c63cb29dc590291b4c"
     },
     {
       "slug": "03-empress",
@@ -56,7 +60,13 @@
       "render_prompt_sha256": "5e88901d2b1060a0147f66042a02c038496276052ec7e52bae37b6cb3f5aa5ab",
       "status": "prompt_prepared_image_pending",
       "image": null,
-      "pending_reason": "Image generation attempts failed; per-turn image generation limit reached."
+      "pending_reason": "Requested minimal waist-wrap revision is not completed; image-generation limit reached after failed/non-matching attempts.",
+      "requested_render_prompt": "03-empress.next.txt",
+      "requested_render_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
+      "previous_selection_reference": "references/03-empress-before-waist-silk.png",
+      "previous_selection_reference_sha256": "7d7705cba87d2d78ebafc7b77b51744838e7c8996ba908bd9b81e27757207456",
+      "previous_selection_note": "Earlier selected long-dress image, retained only as a reference; not the requested minimal-silk result."
     }
-  ]
+  ],
+  "requested_wardrobe": "Một dải lụa mỏng tối giản quấn sát eo/hông; không áo liền thân hoặc váy dài."
 }
