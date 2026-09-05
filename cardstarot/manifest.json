@@ -35,9 +35,16 @@
       "status": "image_generation_paused_by_user",
       "image": null,
       "requested_render_prompt": "01-magician.next.txt",
-      "requested_render_prompt_sha256": "ecb94365c512e6bbb16323d0c297704a1fa973e9c62c8c0e26813d14e1ce1472",
-      "pause_reason": "User chose to keep the existing wardrobe prompts unchanged and stop image generation after the image service blocked the requests.",
-      "last_generation_result": "blocked_by_image_service"
+      "requested_render_prompt_sha256": "8ff840025b8c4acb95437b9294661666439121fa9497931fcfaa6b139346b170",
+      "pause_reason": "User requested camera-context-only additions and confirmed image generation must remain paused. Original prompt body and wardrobe are unchanged.",
+      "last_generation_result": "blocked_by_image_service",
+      "camera_context": {
+        "scope": "camera_and_framing_only",
+        "view": "Sau chếch trái, hơi cao, toàn thân và mặt bàn tế.",
+        "base_prompt_bytes": 1727,
+        "base_prompt_sha256": "ecb94365c512e6bbb16323d0c297704a1fa973e9c62c8c0e26813d14e1ce1472",
+        "generation_status": "not_attempted"
+      }
     },
     {
       "slug": "02-priestess",
@@ -49,9 +56,16 @@
       "status": "image_generation_paused_by_user",
       "image": null,
       "requested_render_prompt": "02-priestess.next.txt",
-      "requested_render_prompt_sha256": "dd69dfae01431419258b6b63a58bcdef1f5d23ba78b589c63cb29dc590291b4c",
-      "pause_reason": "User chose to keep the existing wardrobe prompts unchanged and stop image generation after the image service blocked the requests.",
-      "last_generation_result": "blocked_by_image_service"
+      "requested_render_prompt_sha256": "56ffdcdf24d29f72b62d46494397eb1f5b8aa35c050bb4e630b0a1e79a4ba1b1",
+      "pause_reason": "User requested camera-context-only additions and confirmed image generation must remain paused. Original prompt body and wardrobe are unchanged.",
+      "last_generation_result": "blocked_by_image_service",
+      "camera_context": {
+        "scope": "camera_and_framing_only",
+        "view": "Sau chếch phải, hơi cao nhìn vào lòng và nền đá trước chân.",
+        "base_prompt_bytes": 1655,
+        "base_prompt_sha256": "dd69dfae01431419258b6b63a58bcdef1f5d23ba78b589c63cb29dc590291b4c",
+        "generation_status": "not_attempted"
+      }
     },
     {
       "slug": "03-empress",
@@ -63,12 +77,19 @@
       "status": "image_generation_paused_by_user",
       "image": null,
       "requested_render_prompt": "03-empress.next.txt",
-      "requested_render_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
+      "requested_render_prompt_sha256": "a157a51c9c656e24d73011290d58cc8d08fe5fecf625d449b02f2dfcf0e2cc58",
       "previous_selection_reference": "references/03-empress-before-waist-silk.png",
       "previous_selection_reference_sha256": "7d7705cba87d2d78ebafc7b77b51744838e7c8996ba908bd9b81e27757207456",
       "previous_selection_note": "Earlier selected long-dress image, retained only as a reference; not the requested minimal-silk result.",
-      "pause_reason": "User chose to keep the existing wardrobe prompts unchanged and stop image generation after the image service blocked the requests.",
-      "last_generation_result": "blocked_by_image_service"
+      "pause_reason": "User requested camera-context-only additions and confirmed image generation must remain paused. Original prompt body and wardrobe are unchanged.",
+      "last_generation_result": "blocked_by_image_service",
+      "camera_context": {
+        "scope": "camera_and_framing_only",
+        "view": "Sau chếch phải, nhìn qua cạnh ngoài ngai và tay vịn phải.",
+        "base_prompt_bytes": 1782,
+        "base_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
+        "generation_status": "not_attempted"
+      }
     }
   ],
   "requested_wardrobe": "Một dải lụa mỏng tối giản quấn sát eo/hông; không áo liền thân hoặc váy dài.",
@@ -77,5 +98,6 @@
     "01-magician",
     "02-priestess",
     "03-empress"
-  ]
+  ],
+  "camera_context_updated_on": "2026-09-05"
 }
