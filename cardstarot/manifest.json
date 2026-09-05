@@ -159,20 +159,22 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/03-empress.txt",
       "render_prompt": "03-empress.sent.txt",
-      "render_prompt_sha256": "ad561bc4d0f439b61d742dbfbf64b37704b98074b586ab10dc85bca81495f94f",
+      "render_prompt_sha256": "5016d92b4169ba71f41188bb615ad1345929d642d41da944b4f14ee047866bda",
       "status": "image_ready",
       "image": "03-empress.png",
       "requested_render_prompt": "03-empress.next.txt",
-      "requested_render_prompt_sha256": "c812ce40147173e781b07145706559155030bcbb6804e31231d545162dc835a2",
+      "requested_render_prompt_sha256": "095488ebd2b72edcf60813ee2826e3782c6b545e9c04b9507f8f92b71fcdc0ff",
       "previous_selection_reference": "references/03-empress-before-waist-silk.png",
       "previous_selection_reference_sha256": "7d7705cba87d2d78ebafc7b77b51744838e7c8996ba908bd9b81e27757207456",
       "previous_selection_note": "Earlier selected long-dress image, retained only as a reference; not the requested minimal-silk result.",
       "last_generation_result": "success",
       "camera_context": {
-        "scope": "front_view_revision",
-        "view": "Chính diện, máy phía trước ngang tầm mắt.",
-        "base_prompt_bytes": 1782,
-        "base_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
+        "scope": "seated_three_quarter_angle_revision",
+        "view": "Ngồi góc 3/4; máy phía trước bên phải ngang tầm mắt, mặt quay nhẹ về người xem.",
+        "target_angle_degrees_approx": 35,
+        "base_prompt_bytes": 1840,
+        "base_prompt_sha256": "d86f671940298ffe59eeeba76ac63341c594aed1e2cbcbeeb37442fa4f33ff8a",
+        "base_prompt_revision": "Render-only wording describes the kept outfit, including thigh coverage and the side drape; original source prompts are unchanged.",
         "generation_status": "generated",
         "upper_body_coverage": "existing_long_hair"
       },
@@ -180,47 +182,51 @@
         784,
         1360
       ],
-      "image_sha256": "948576d3121c4af4febe734807d7d1ad47a4015e6cf8cc8b9f684de2e0855a65",
+      "image_sha256": "9a134f477f633e5392e64b6b510003538644e276be50f88981fc72fb0118e8e1",
       "previous_revision": {
-        "commit": "ae226e339139a35883c75a54e77020f89c9ad641",
-        "image": "references/03-empress-before-front.png",
-        "image_sha256": "588dd8bbd479729c6d7b09980e829f4eb8931645a7d440c7ae1ed37e0fd85c95",
-        "render_prompt": "references/03-empress-before-front.sent.txt",
-        "render_prompt_sha256": "a157a51c9c656e24d73011290d58cc8d08fe5fecf625d449b02f2dfcf0e2cc58",
+        "commit": "dcf4f6f666629232d5d34368142eac06927f2765",
+        "image": "references/03-empress-before-three-quarter.png",
+        "image_sha256": "948576d3121c4af4febe734807d7d1ad47a4015e6cf8cc8b9f684de2e0855a65",
+        "render_prompt": "references/03-empress-before-three-quarter.sent.txt",
+        "render_prompt_sha256": "ad561bc4d0f439b61d742dbfbf64b37704b98074b586ab10dc85bca81495f94f",
         "camera_context": {
-          "scope": "camera_and_framing_only",
-          "view": "Sau chếch phải, nhìn qua cạnh ngoài ngai và tay vịn phải.",
+          "scope": "front_view_revision",
+          "view": "Chính diện, máy phía trước ngang tầm mắt.",
           "base_prompt_bytes": 1782,
           "base_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
-          "generation_status": "generated"
+          "generation_status": "generated",
+          "upper_body_coverage": "existing_long_hair"
         },
+        "visual_review": {
+          "front_view": true,
+          "pose": "seated",
+          "upper_body_covered_by_hair": true,
+          "frame_or_title_present": false,
+          "wardrobe": "Side drape retained from the prior selected image; only front view and hair placement were changed."
+        },
+        "render_mode": "image_edit",
+        "render_reference": "references/03-empress-before-front.png",
         "postprocessing": {
-          "method": "proportional_Lanczos_resize_then_minor_center_crop",
+          "method": "PNG_RGB_normalization",
           "resize_wh": [
             784,
             1360
           ],
           "body_warped": false
-        },
-        "visual_review": {
-          "rear_view": false,
-          "frame_or_title_present": false,
-          "known_deviations": [
-            "Selected image uses a front-oblique view instead of the requested rear view.",
-            "Silk has a longer trailing portion than the minimal short-wrap specification."
-          ],
-          "note": "Kept the user-selected candidate; not marked as fully matching the camera and wardrobe constraints."
         }
       },
       "visual_review": {
-        "front_view": true,
+        "front_view": false,
+        "three_quarter_view": true,
         "pose": "seated",
+        "face_toward_viewer": true,
         "upper_body_covered_by_hair": true,
+        "knees_calves_and_feet_visible": true,
+        "waist_hip_wrap_with_side_drape": true,
         "frame_or_title_present": false,
-        "wardrobe": "Side drape retained from the prior selected image; only front view and hair placement were changed."
+        "wardrobe": "Existing ivory waist/hip wrap, thigh coverage and side drape retained; no full-length gown added."
       },
-      "render_mode": "image_edit",
-      "render_reference": "references/03-empress-before-front.png",
+      "render_mode": "image_edit_with_pose_and_wardrobe_references",
       "generated_size": [
         784,
         1360
@@ -232,17 +238,89 @@
           1360
         ],
         "body_warped": false
-      }
+      },
+      "revision_history": [
+        {
+          "commit": "ae226e339139a35883c75a54e77020f89c9ad641",
+          "image": "references/03-empress-before-front.png",
+          "image_sha256": "588dd8bbd479729c6d7b09980e829f4eb8931645a7d440c7ae1ed37e0fd85c95",
+          "render_prompt": "references/03-empress-before-front.sent.txt",
+          "render_prompt_sha256": "a157a51c9c656e24d73011290d58cc8d08fe5fecf625d449b02f2dfcf0e2cc58",
+          "camera_context": {
+            "scope": "camera_and_framing_only",
+            "view": "Sau chếch phải, nhìn qua cạnh ngoài ngai và tay vịn phải.",
+            "base_prompt_bytes": 1782,
+            "base_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
+            "generation_status": "generated"
+          },
+          "postprocessing": {
+            "method": "proportional_Lanczos_resize_then_minor_center_crop",
+            "resize_wh": [
+              784,
+              1360
+            ],
+            "body_warped": false
+          },
+          "visual_review": {
+            "rear_view": false,
+            "frame_or_title_present": false,
+            "known_deviations": [
+              "Selected image uses a front-oblique view instead of the requested rear view.",
+              "Silk has a longer trailing portion than the minimal short-wrap specification."
+            ],
+            "note": "Kept the user-selected candidate; not marked as fully matching the camera and wardrobe constraints."
+          }
+        }
+      ],
+      "render_references": [
+        "references/03-empress-three-quarter-layout.png",
+        "references/03-empress-before-three-quarter.png"
+      ],
+      "render_steps": [
+        {
+          "name": "pose_layout",
+          "prompt": "references/03-empress-three-quarter-layout.sent.txt",
+          "prompt_sha256": "9163a0253d702a150d506c844d052dddace575f88e9e39be86f824be8f88e393",
+          "references": [
+            {
+              "image": "references/03-empress-before-front.png",
+              "role": "three_quarter_pose_only"
+            },
+            {
+              "image": "references/03-empress-before-three-quarter.png",
+              "role": "current_appearance_and_wardrobe"
+            }
+          ],
+          "output": "references/03-empress-three-quarter-layout.png",
+          "output_sha256": "9cdf5c0b029fb6b6d7be2e6cc3e91b7bb89d55fea51df6dbc4743cc6a473fba1",
+          "note": "Working pose reference, not the final wardrobe; kept only as a dependency of the final edit."
+        },
+        {
+          "name": "restore_selected_wardrobe",
+          "prompt": "03-empress.sent.txt",
+          "prompt_sha256": "5016d92b4169ba71f41188bb615ad1345929d642d41da944b4f14ee047866bda",
+          "references": [
+            {
+              "image": "references/03-empress-three-quarter-layout.png",
+              "role": "retain_seated_three_quarter_pose"
+            },
+            {
+              "image": "references/03-empress-before-three-quarter.png",
+              "role": "retain_existing_silk_and_coverage"
+            }
+          ],
+          "output": "03-empress.png"
+        }
+      ]
     }
   ],
   "requested_wardrobe": "Một dải lụa mỏng tối giản quấn sát eo/hông; không áo liền thân hoặc váy dài.",
   "generation_paused_by_user": false,
   "pause_scope": [],
   "camera_context_updated_on": "2026-09-05",
-  "last_batch_status": "completed_with_user_approved_wardrobe_variant",
+  "last_batch_status": "completed_angle_revision",
   "generation_in_progress": false,
   "last_batch_scope": [
-    "01-magician",
     "03-empress"
   ],
   "wardrobe_overrides": {
