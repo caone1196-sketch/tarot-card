@@ -1,0 +1,11 @@
+REFERENCE STANDARD: use cards/17-the-star.png as the visual reference for the measured 784×1360 composition, open-window scale, lighting, color atmosphere, depth and thin antique-gold line-art treatment. Replace the reference scene with this card's scene.
+
+Create the artwork for "STRENGTH" using the original scene specification. This is an artwork-only illustration, not a finished tarot card. The scene must fill the entire canvas edge to edge with no reserved header or footer.
+
+SCENE: a nude woman garlanded with roses, one knee raised, leaning in close to calmly close the jaws of a great golden lion, her bare back arched and her hip lit by low sun, an infinity sign glowing above her head.
+
+CHARACTER SPECIFICATION (source: cards.json): Age: 23 (strictly young adult, aged 18 to 25); Hair: burnished copper-red long wavy hair flowing down like a lion's mane; Physique: lithe yet strong, defined muscular tone along the back, soft graceful curves; Sensuality: render with heightened yet tasteful fine-art sensuality — confident, poised, soft classical anatomy, painterly skin in warm golden lighting. ANATOMY LOCK (HARD RULE): exactly two arms, two legs, one head and one torso per character; every joint (shoulder, elbow, wrist, hip, knee, ankle) connects naturally to the body — NO extra limbs, NO limbs fused into the ribs, hip, chest or back, NO missing or amputated arms, NO deformed joints, NO wrong finger counts; keep both arms clearly separated from the torso with visible armpits, elbows and wrists.
+
+OUTPUT LOCK: exact portrait canvas 784 by 1360 pixels, 7:12 composition. Pure edge-to-edge painted artwork only. No outer margin, no border, no frame, no gold line, no corner flourishes, no inner panel, no medallion, no emblem, no icon, no heraldic symbol, no card suit symbol, no ribbon, no plaque, no title, no letters, no numbers, no watermark, and no typography anywhere. Do not render the card name or any text in the image.
+
+STAR-REFERENCE OUTPUT: match the reference card's elegant atmosphere and measured frame without copying its objects. Keep the scene readable, realistic and non-explicit; use natural silhouette, pose, light and environment. Keep the card's original count locks and original scene objects only. Exact 784 × 1360 portrait PNG.
