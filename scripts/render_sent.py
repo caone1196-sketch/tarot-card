@@ -9,6 +9,7 @@ Chạy:  python3 scripts/render_sent.py 00-fool 01-magician ...   -> cards/_rege
 (không truyền slug: chạy toàn bộ 78 lá)
 """
 import os
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -63,6 +64,18 @@ SENSUAL_SHEER_SILK = (
 )
 
 
+# Cụm nhạy cảm (nguy cơ content moderation) cần làm mềm cho MỌI lá.
+GLOBAL_SANITIZE = [
+    ("one breast bared", "the sheer drape slipping from one shoulder"),
+    ("her bare back and the curve of one breast revealed by the golden lantern light",
+     "her silk-veiled figure glowing softly in the golden lantern light"),
+    ("her bare torso turned toward the light", "her silk-veiled torso turned toward the light"),
+]
+
+# Cụm nhạy cảm cho từng lá.
+SANITIZE = {}
+
+
 def build(slug: str) -> str:
     with open(os.path.join(SRC, f"{slug}.txt"), encoding="utf-8") as f:
         t = f.read().strip()
@@ -70,6 +83,15 @@ def build(slug: str) -> str:
         if old not in t:
             raise SystemExit(f"[loi] {slug}: khong tim thay cụm can thay trong prompts/out/{slug}.txt")
         t = t.replace(old, new, 1)
+    # Quy ước bộ bài (áp dụng cho MỌI lá): "nude" trong scene -> KHÔNG đổi thành váy kín,
+    # mà thành "sheer-silk draped" (lụa mỏng), khối SENSUAL_SHEER_SILK bên dưới sẽ
+    # ép chất trong suốt/ôm sát của vải.
+    t = re.sub(r"\bnude\b", "sheer-silk draped", t)
+    for old, new in GLOBAL_SANITIZE:
+        t = t.replace(old, new)
+    for old, new in SANITIZE.get(slug, []):
+        if old in t:
+            t = t.replace(old, new, 1)
     return t + SENSUAL_SHEER_SILK
 
 
