@@ -23,7 +23,7 @@ SUBS = {
     "00-fool": [(
         "a carefree nude 19-year-old woman wanderer",
         "a carefree 19-year-old woman wanderer draped only in a diaphanous translucent silk veil "
-        "that clings to her curves and reveals the soft line of her body beneath",
+        "that clings softly to her curves",
     )],
     "01-magician": [(
         "a nude young woman magician",
@@ -53,13 +53,13 @@ SUBS = {
 # việc khoác LỤA MỎNG TRONG SUỐT / non-explicit do bước render xử lý.
 SENSUAL_SHEER_SILK = (
     "\n\nSENSUAL SHEER SILK (render step, deck signature): render every female figure draped "
-    "only in diaphanous TRANSLUCENT sheer silk gossamer — the fabric is transparent, wet-look and "
-    "clinging, softly veiling the body while revealing the graceful feminine curves, warm skin and "
-    "the subtle line of the breasts beneath; classical fine-art sensuality, tasteful, non-explicit. "
-    "Never dress her in opaque clothing, full gowns, armor or closed bodices. Match the provided "
-    "reference image exactly for the frame: thin antique-gold gothic rule-line border, corner "
-    "flourishes, full-bleed scene and the gold serif title placement; same card size and portrait "
-    "aspect as the reference."
+    "only in diaphanous TRANSLUCENT sheer silk gossamer — fabric is soft, transparent and "
+    "clinging, gently veiling the body while letting the elegant feminine silhouette and warm "
+    "skin show through; classical fine-art sensuality, tasteful, non-explicit. Never dress her in "
+    "opaque clothing, full gowns, armor or closed bodices. Match the provided reference image "
+    "exactly for the frame: thin antique-gold gothic rule-line border, corner flourishes, "
+    "full-bleed scene and the gold serif title placement; same card size and portrait aspect as "
+    "the reference."
 )
 
 
