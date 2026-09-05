@@ -3,7 +3,7 @@
   "updated_on": "2026-09-05",
   "branch": "arena/01a07139-tarot-card",
   "major_arcana_total": 22,
-  "images_available": 1,
+  "images_available": 3,
   "target_image_size": [
     784,
     1360
@@ -31,19 +31,58 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/01-magician.txt",
       "render_prompt": "01-magician.sent.txt",
-      "render_prompt_sha256": "39738b37dd3499db44cee637a9dbdafe8708b941755ee53092297c8d699067e9",
-      "status": "image_generation_paused_by_user",
-      "image": null,
+      "render_prompt_sha256": "8ff840025b8c4acb95437b9294661666439121fa9497931fcfaa6b139346b170",
+      "status": "image_ready",
+      "image": "01-magician.png",
       "requested_render_prompt": "01-magician.next.txt",
       "requested_render_prompt_sha256": "8ff840025b8c4acb95437b9294661666439121fa9497931fcfaa6b139346b170",
-      "pause_reason": "User requested camera-context-only additions and confirmed image generation must remain paused. Original prompt body and wardrobe are unchanged.",
-      "last_generation_result": "blocked_by_image_service",
+      "last_generation_result": "success",
       "camera_context": {
         "scope": "camera_and_framing_only",
         "view": "Sau chếch trái, hơi cao, toàn thân và mặt bàn tế.",
         "base_prompt_bytes": 1727,
         "base_prompt_sha256": "ecb94365c512e6bbb16323d0c297704a1fa973e9c62c8c0e26813d14e1ce1472",
-        "generation_status": "not_attempted"
+        "generation_status": "generated"
+      },
+      "image_size": [
+        784,
+        1360
+      ],
+      "image_sha256": "4751d9eb5f93c341e047abe746639e30923cb3a2eb189e16b1f3cbf939e05ba3",
+      "selected_original": "references/01-magician-selected-original.png",
+      "selected_original_size": [
+        1776,
+        2368
+      ],
+      "selected_original_sha256": "d3d9d3722992e20e7583e5dd20fa499d362e51f575a952258d6d2000806eff7b",
+      "postprocessing": {
+        "method": "deterministic_pixel_edit_then_crop_and_resize",
+        "table_wand_tip": "Shortened the existing wand by reusing its own rounded tip; the four altar objects remain separate and fully visible.",
+        "held_wand_tip": "Trimmed and closed the existing shaft inside the upper edge, without adding a wand.",
+        "crop_xyxy": [
+          160,
+          0,
+          1525,
+          2368
+        ],
+        "resize_wh": [
+          784,
+          1360
+        ],
+        "body_warped": false
+      },
+      "visual_review": {
+        "rear_view": true,
+        "waist_wrap": true,
+        "altar_objects": [
+          "cup",
+          "sword",
+          "wand",
+          "pentacle_coin"
+        ],
+        "altar_count": 4,
+        "held_wand_separate": true,
+        "frame_or_title_present": false
       }
     },
     {
@@ -52,20 +91,21 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/02-priestess.txt",
       "render_prompt": "02-priestess.sent.txt",
-      "render_prompt_sha256": "f8b59239bfc184203c697a71f3f8e2c61caffc685aaf7232cd4922491fb82f22",
-      "status": "image_generation_paused_by_user",
+      "render_prompt_sha256": "56ffdcdf24d29f72b62d46494397eb1f5b8aa35c050bb4e630b0a1e79a4ba1b1",
+      "status": "image_pending_after_generation_failure",
       "image": null,
       "requested_render_prompt": "02-priestess.next.txt",
       "requested_render_prompt_sha256": "56ffdcdf24d29f72b62d46494397eb1f5b8aa35c050bb4e630b0a1e79a4ba1b1",
-      "pause_reason": "User requested camera-context-only additions and confirmed image generation must remain paused. Original prompt body and wardrobe are unchanged.",
-      "last_generation_result": "blocked_by_image_service",
+      "last_generation_result": "no_image_returned",
       "camera_context": {
         "scope": "camera_and_framing_only",
         "view": "Sau chếch phải, hơi cao nhìn vào lòng và nền đá trước chân.",
         "base_prompt_bytes": 1655,
         "base_prompt_sha256": "dd69dfae01431419258b6b63a58bcdef1f5d23ba78b589c63cb29dc590291b4c",
-        "generation_status": "not_attempted"
-      }
+        "generation_status": "attempted_no_image"
+      },
+      "last_retry_result": "not_executed_turn_quota_reached",
+      "pending_reason": "The option-generation call returned no image. A later retry was prevented by the per-turn image-generation limit."
     },
     {
       "slug": "03-empress",
@@ -73,31 +113,54 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/03-empress.txt",
       "render_prompt": "03-empress.sent.txt",
-      "render_prompt_sha256": "5e88901d2b1060a0147f66042a02c038496276052ec7e52bae37b6cb3f5aa5ab",
-      "status": "image_generation_paused_by_user",
-      "image": null,
+      "render_prompt_sha256": "a157a51c9c656e24d73011290d58cc8d08fe5fecf625d449b02f2dfcf0e2cc58",
+      "status": "image_selected_with_deviations",
+      "image": "03-empress.png",
       "requested_render_prompt": "03-empress.next.txt",
       "requested_render_prompt_sha256": "a157a51c9c656e24d73011290d58cc8d08fe5fecf625d449b02f2dfcf0e2cc58",
       "previous_selection_reference": "references/03-empress-before-waist-silk.png",
       "previous_selection_reference_sha256": "7d7705cba87d2d78ebafc7b77b51744838e7c8996ba908bd9b81e27757207456",
       "previous_selection_note": "Earlier selected long-dress image, retained only as a reference; not the requested minimal-silk result.",
-      "pause_reason": "User requested camera-context-only additions and confirmed image generation must remain paused. Original prompt body and wardrobe are unchanged.",
-      "last_generation_result": "blocked_by_image_service",
+      "last_generation_result": "success",
       "camera_context": {
         "scope": "camera_and_framing_only",
         "view": "Sau chếch phải, nhìn qua cạnh ngoài ngai và tay vịn phải.",
         "base_prompt_bytes": 1782,
         "base_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
-        "generation_status": "not_attempted"
+        "generation_status": "generated"
+      },
+      "image_size": [
+        784,
+        1360
+      ],
+      "image_sha256": "588dd8bbd479729c6d7b09980e829f4eb8931645a7d440c7ae1ed37e0fd85c95",
+      "selected_original_size": [
+        1440,
+        2560
+      ],
+      "postprocessing": {
+        "method": "proportional_Lanczos_resize_then_minor_center_crop",
+        "resize_wh": [
+          784,
+          1360
+        ],
+        "body_warped": false
+      },
+      "visual_review": {
+        "rear_view": false,
+        "frame_or_title_present": false,
+        "known_deviations": [
+          "Selected image uses a front-oblique view instead of the requested rear view.",
+          "Silk has a longer trailing portion than the minimal short-wrap specification."
+        ],
+        "note": "Kept the user-selected candidate; not marked as fully matching the camera and wardrobe constraints."
       }
     }
   ],
   "requested_wardrobe": "Một dải lụa mỏng tối giản quấn sát eo/hông; không áo liền thân hoặc váy dài.",
-  "generation_paused_by_user": true,
-  "pause_scope": [
-    "01-magician",
-    "02-priestess",
-    "03-empress"
-  ],
-  "camera_context_updated_on": "2026-09-05"
+  "generation_paused_by_user": false,
+  "pause_scope": [],
+  "camera_context_updated_on": "2026-09-05",
+  "last_batch_status": "partial_success",
+  "generation_in_progress": false
 }
