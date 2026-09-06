@@ -105,6 +105,44 @@
             "method": "PNG_RGB_normalization",
             "body_warped": false
           }
+        },
+        {
+          "id": "source-fool-single-silk-study",
+          "created_on": "2026-09-06",
+          "status": "preview_pending_review",
+          "image": "variants/00-fool-source-silk-study.png",
+          "image_size": [
+            784,
+            1360
+          ],
+          "image_sha256": "f864339800bfeb4da9a855d86fa852fb4d9ddd90c9d4af37e09ca5471c292020",
+          "render_prompt": "variants/00-fool-source-silk-study.sent.txt",
+          "render_prompt_sha256": "f4e52c9184a905f51b69fffb014e6d34dffa3b634292504d9d56daefc5bc5b3c",
+          "source_prompt": "prompts/out6_vi/00-fool.txt",
+          "render_mode": "image_edit_from_original_fool",
+          "render_reference": "../cards_vi/00-fool.png",
+          "render_reference_sha256": "f23eb6ebb12fe75e7980ffa8b83175b7fc80cc853880a7231934a64af77ee2c1",
+          "prompt_reference": "../cards_vi/00-fool.sent.txt",
+          "prompt_reference_sha256": "7bc2f1cc372c45c765d58b351664cb1039d4bc8c36827f16a294e02f382a36e3",
+          "reference_use": "Scene, character, natural wind movement, light and painterly atmosphere; the new render prompt adds the single shoulder-to-hip silk treatment and non-explicit coverage, rather than resending the original text verbatim.",
+          "requested_wardrobe": "One continuous white silk drape over one shoulder, diagonally across the torso and around the hips, with a wind-blown end.",
+          "visual_review": {
+            "connected_shoulder_to_hip_drape_appearance": true,
+            "one_shoulder_exposed": true,
+            "wind_blown_silk": true,
+            "chest_and_lower_body_covered": true,
+            "held_white_rose_count": 1,
+            "white_dog_count": 1,
+            "full_figure_and_dog_visible": true,
+            "frame_or_title_present": false,
+            "note": "Visual review of an artistic drape, not a physical measurement of fabric width or transparency."
+          },
+          "postprocessing": {
+            "method": "PNG_RGB_normalization",
+            "body_warped": false
+          },
+          "primary_image_replaced": false,
+          "shared_prompt_edition_changed": false
         }
       ],
       "requested_style_id": "waist-ribbon-v1",
@@ -1528,13 +1566,13 @@
   "generation_paused_by_user": false,
   "pause_scope": [],
   "camera_context_updated_on": "2026-09-05",
-  "last_batch_status": "pose_preview_created_main_and_shared_prompts_unchanged",
+  "last_batch_status": "source_based_silk_preview_created_main_unchanged",
   "generation_in_progress": false,
   "last_batch_scope": [
     "00-fool"
   ],
   "wardrobe_overrides": {},
-  "trial_images_available": 1,
+  "trial_images_available": 2,
   "card_count": 78,
   "images_matching_requested_style": 4,
   "images_pending": 74,
@@ -1558,13 +1596,13 @@
     "01-magician": "Long silk wrap accepted by the user for the front-view image."
   },
   "last_batch": {
-    "type": "art_direction_preview",
+    "type": "source_prompt_reference_preview",
     "scope": [
       "00-fool"
     ],
     "new_main_images": [],
     "new_previews": [
-      "variants/00-fool-three-quarter-study.png"
+      "variants/00-fool-source-silk-study.png"
     ],
     "main_images_changed": false
   },
@@ -1573,12 +1611,12 @@
     "05-hierophant",
     "06-lovers"
   ],
-  "variant_images_available": 2,
+  "variant_images_available": 3,
   "pending_art_direction_review": {
-    "preview": "variants/00-fool-three-quarter-study.png",
+    "preview": "variants/00-fool-source-silk-study.png",
     "status": "awaiting_user_review",
-    "decision_needed": "Keep or reject the added chest/shoulder drape before applying this direction to the adult-card profile.",
-    "standing_pose_not_forced_on_other_cards": true,
-    "shared_prompt_edition_changed": false
+    "decision_needed": "Review this original-Fool-based single white silk drape before replacing the main image or changing the deck-wide adult profile.",
+    "shared_prompt_edition_changed": false,
+    "standing_pose_not_forced_on_other_cards": true
   }
 }

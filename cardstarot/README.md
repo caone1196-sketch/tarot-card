@@ -4,7 +4,9 @@ Cập nhật **06/09/2026** · Quy chuẩn **waist-ribbon-v1**.
 
 ## Mẫu hướng tạo hình mới — chờ duyệt
 
-Đã thêm [mẫu The Fool đứng chếch, nửa kín nửa hở](variants/00-fool-three-quarter-study.png). [Ghi chú mẫu](variants/00-fool-three-quarter-study.md) nêu rõ ảnh có thêm dải lụa che ngực/qua vai, khác quy chuẩn chỉ quấn eo/hông. **Mẫu chưa thay ảnh chính, chưa được áp dụng cho 69 lá người trưởng thành hoặc bộ 78 prompt.** Các ngoại lệ gia đình/biểu tượng giữ nguyên.
+Đã thêm [bản thử The Fool với dải lụa theo nguồn gốc](variants/00-fool-source-silk-study.png), tham chiếu `cards_vi/00-fool.sent.txt` và ảnh tương ứng theo đề nghị của người dùng. [Ghi chú tham chiếu và prompt](variants/00-fool-source-silk-study.md) nêu rõ phần nguồn được giữ và phần mô tả lụa được bổ sung.
+
+Bản này có dải lụa qua một vai, rủ chéo xuống hông và chuyển động trong gió. **Chưa thay ảnh chính hoặc bộ 78 prompt.** [Mẫu tư thế 3/4 trước đó](variants/00-fool-three-quarter-study.md) vẫn được giữ để đối chiếu; các ngoại lệ gia đình/biểu tượng không thay đổi.
 
 ## Đã làm và phần còn lại
 
