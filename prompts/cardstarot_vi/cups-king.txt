@@ -1,0 +1,19 @@
+LÁ KING OF CUPS — BẢN RENDER waist-ribbon-v1 (KHÔNG VẼ DÒNG NÀY VÀO ẢNH).
+
+PHONG CÁCH: tranh Tarot cổ điển tả thực pha fantasy, chất liệu tinh xảo, chiều sâu khí quyển, màu ngà và các điểm nhấn vàng ấm trên nền có sắc độ sâu. Giữ thời điểm, thời tiết, không gian và cảm xúc của cảnh riêng; không tự đổi cảnh đêm, giông bão hoặc biển thành bình minh hay rừng.
+
+THAM CHIẾU: cardstarot/variants/00-fool-waist-ribbon.png chỉ dùng cho chất tranh, dải lụa eo/hông và cách quan sát kín đáo. Không sao chép gương mặt, màu tóc, tư thế, hoa, chó, vách đá hoặc đồ vật của The Fool sang lá khác.
+
+CẢNH: một nữ hoàng biển cả 25 tuổi, thanh thản ngồi trên ngai nổi giữa những đợt sóng cuộn, cầm quyền trượng hoa sen và một chiếc cốc vàng; phía xa có cá heo đang nhảy lên.
+
+NHÂN VẬT CHÍNH: người trưởng thành 25 tuổi. Tóc: tóc nâu cà phê đậm uốn sóng sâu, đội vương miện vàng biển và ngọc trai. Vóc dáng: nữ quân vương biển cả điềm tĩnh, cao đẹp như tượng, thần thái thanh thản và cao quý. Giữ thông số nhân vật riêng; các nhân vật phụ mang hình người trong nhóm này cũng phải rõ ràng là người trưởng thành. Không dùng tỷ lệ trẻ em hoặc phong cách búp bê.
+
+TRANG PHỤC — CHỈ NHÂN VẬT TRƯỞNG THÀNH: một dải lụa chiffon ngà mỏng quấn ngang eo và hông, chiều rộng vừa đủ che kín mông và hạ thân, mép ở phần trên đùi, chỉ có một đầu ngắn rủ nhẹ. Không kéo lên thành áo, bodysuit, váy dài hoặc tà lớn; không quấn dày toàn thân. Lớp chiffon ngoài rất nhẹ theo quy ước thị giác 95%, nhưng các đoạn cần che có lớp lót màu da be ấm hoàn toàn kín, phẳng mịn, nhận ra là vải; không nhìn xuyên qua lớp lót và không mô phỏng chi tiết nhạy cảm trên đó. Tỷ lệ này là hướng dẫn thẩm mỹ, không phải độ xuyên sáng đo được của vật liệu hoặc của toàn bộ trang phục. Dải lụa giữ ổn định khi nhân vật chuyển động. Giữ các phụ kiện nhận diện thuộc cảnh gốc như vòng hoa, voan trên đầu, vương miện hoặc trang bị của ngựa; không tự thêm áo/váy mới cho nhân vật.
+
+GÓC NHÌN KÍN ĐÁO: ưu tiên góc nhìn từ sau vai hoặc 3/4 từ phía sau; chọn vị trí máy để không hiển thị chi tiết nhạy cảm ở mặt trước thân trên. Tóc, góc nhìn và phần khuất tự nhiên của tư thế gốc giữ độ che phủ, không thay bằng tư thế phô bày hoặc thêm đạo cụ để che. Không góc thấp, không cận cảnh cơ thể. Giữ tư thế và hành động đúng cảnh riêng, không thay vai trò nhân vật và không ép tất cả thành cùng một dáng đứng. Mặt nghiêng và bàn tay vẫn đọc được khi cần, mọi đồ vật có khóa số lượng phải tách biệt và nhìn thấy đủ.
+
+KHÓA SỐ LƯỢNG (CHÍNH XÁC 1 chén thánh): đúng một chén thánh; không có chiếc cốc nào khác.
+
+GIẢI PHẪU: số nhân vật giữ đúng cảnh; mỗi người có một đầu, hai tay và hai chân, các khớp nối tự nhiên, bàn tay đúng cấu trúc. Tư thế được diễn đạt bằng phối cảnh, không cắt ghép thêm chi. Động vật giữ hình thể tự nhiên.
+
+ĐẦU RA: một tranh duy nhất, PNG dọc 784 × 1360, tỷ lệ 49:85, phủ kín bốn mép, không kéo giãn hình thể. Không khung, lề trắng, bảng tên, tiêu đề, số thứ tự lá, watermark hoặc chữ trang trí ngoài cảnh. Chỉ giữ những biểu tượng/chữ khắc là đạo cụ có trong cảnh gốc; không bổ sung huy hiệu hoặc vật trang trí của lá tham chiếu. Không hình ghép hay nhiều phiên bản trong cùng ảnh.

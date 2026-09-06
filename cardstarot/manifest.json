@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "updated_on": "2026-09-06",
   "branch": "arena/01a07139-tarot-card",
   "major_arcana_total": 22,
-  "images_available": 3,
+  "images_available": 4,
   "target_image_size": [
     784,
     1360
@@ -16,19 +16,19 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/00-fool.txt",
       "render_prompt": "00-fool.sent.txt",
-      "render_prompt_sha256": "7bc2f1cc372c45c765d58b351664cb1039d4bc8c36827f16a294e02f382a36e3",
+      "render_prompt_sha256": "6cc18bd01adc320a278dcc61553b8dd340a782d95e85b55c1c3c7ea62a08b6d5",
       "status": "image_ready",
       "image": "00-fool.png",
       "image_size": [
         784,
         1360
       ],
-      "image_sha256": "f23eb6ebb12fe75e7980ffa8b83175b7fc80cc853880a7231934a64af77ee2c1",
+      "image_sha256": "9708f335868ac68f4573e0739b60a7c2105f318cd57844158a8a9e5310e4542f",
       "variants": [
         {
           "id": "waist-ribbon-preview",
           "created_on": "2026-09-06",
-          "status": "preview_not_applied_to_main",
+          "status": "applied_to_main_under_deck_style",
           "image": "variants/00-fool-waist-ribbon.png",
           "image_size": [
             784,
@@ -63,9 +63,56 @@
           "postprocessing": {
             "method": "PNG_RGB_normalization",
             "body_warped": false
-          }
+          },
+          "applied_on": "2026-09-06",
+          "applied_style_id": "waist-ribbon-v1"
         }
-      ]
+      ],
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/00-fool.txt",
+      "requested_render_prompt_sha256": "fcd98a2ebc2ff84a8e9c7466dbc9deefc58910e0fc5f67fb728dd4f2ab20c060",
+      "previous_revision": {
+        "commit": "eee750016f87b1c496bdccd5c1322fca4b335581",
+        "manifest_path_at_commit": "cardstarot/manifest.json",
+        "image_path_at_commit": "cardstarot/00-fool.png",
+        "image_sha256": "f23eb6ebb12fe75e7980ffa8b83175b7fc80cc853880a7231934a64af77ee2c1",
+        "render_prompt_path_at_commit": "cardstarot/00-fool.sent.txt",
+        "render_prompt_sha256": "7bc2f1cc372c45c765d58b351664cb1039d4bc8c36827f16a294e02f382a36e3",
+        "status": "image_ready"
+      },
+      "applied_style_id": "waist-ribbon-v1",
+      "style_status": "applied",
+      "last_generation_result": "reused_existing_image",
+      "camera_context": {
+        "scope": "wardrobe_style_application",
+        "view": "Rear/three-quarter view with non-explicit coverage.",
+        "generation_status": "available"
+      },
+      "render_mode": "reuse_existing_preview",
+      "image_origin": {
+        "image": "variants/00-fool-waist-ribbon.png",
+        "image_sha256": "9708f335868ac68f4573e0739b60a7c2105f318cd57844158a8a9e5310e4542f",
+        "render_prompt": "variants/00-fool-waist-ribbon.sent.txt",
+        "render_prompt_sha256": "6cc18bd01adc320a278dcc61553b8dd340a782d95e85b55c1c3c7ea62a08b6d5",
+        "note": "Existing wardrobe sample applied to the collection; no new Fool generation was performed in this batch."
+      },
+      "render_reference": "references/01-magician-before-front.png",
+      "visual_review": {
+        "rear_three_quarter_view": true,
+        "upper_front_not_visible": true,
+        "waist_hip_wrap": true,
+        "lower_body_covered": true,
+        "held_white_rose_count": 1,
+        "white_dog_count": 1,
+        "full_figure_and_dog_visible": true,
+        "cliff_mountains_and_river_present": true,
+        "frame_or_title_present": false
+      },
+      "postprocessing": {
+        "method": "copy_verified_existing_image",
+        "body_warped": false
+      }
     },
     {
       "slug": "01-magician",
@@ -73,40 +120,93 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/01-magician.txt",
       "render_prompt": "01-magician.sent.txt",
-      "render_prompt_sha256": "e32dbf3bba721802f158dd72c91d33b55dbbcf1967c80078407b62e34a40fe8e",
-      "status": "image_ready_user_approved_variant",
+      "render_prompt_sha256": "8ff840025b8c4acb95437b9294661666439121fa9497931fcfaa6b139346b170",
+      "status": "image_ready",
       "image": "01-magician.png",
-      "requested_render_prompt": "01-magician.next.txt",
-      "requested_render_prompt_sha256": "4d0f596c653b0766d37d41fd50bec4478b6ecb41c69cb17c84f5a6b4a6d0fa0e",
-      "last_generation_result": "success",
-      "camera_context": {
-        "scope": "front_view_revision",
-        "view": "Chính diện, máy phía trước ngang tầm mắt.",
-        "base_prompt_bytes": 1746,
-        "base_prompt_sha256": "a744f7f5062450b1c238d6c9a363af92ba09a7a90bc1b46bd4a375d24bbab216",
-        "generation_status": "generated",
-        "upper_body_coverage": "existing_long_hair",
-        "base_prompt_revision": "Long silk wrap explicitly accepted by the user for this card."
-      },
+      "requested_render_prompt": "../prompts/cardstarot_vi/01-magician.txt",
+      "requested_render_prompt_sha256": "b2d30b36d2a1f187785685b737084d86556a411e937e744c272e287a2448f178",
+      "last_generation_result": "reused_existing_image",
       "image_size": [
         784,
         1360
       ],
-      "image_sha256": "dfecb5f82b8164b2b323f47da9997152b84fea9167dd7fb807547004bd8899fb",
+      "image_sha256": "4751d9eb5f93c341e047abe746639e30923cb3a2eb189e16b1f3cbf939e05ba3",
       "previous_revision": {
-        "commit": "ae226e339139a35883c75a54e77020f89c9ad641",
+        "commit": "eee750016f87b1c496bdccd5c1322fca4b335581",
+        "manifest_path_at_commit": "cardstarot/manifest.json",
+        "image_path_at_commit": "cardstarot/01-magician.png",
+        "image_sha256": "dfecb5f82b8164b2b323f47da9997152b84fea9167dd7fb807547004bd8899fb",
+        "render_prompt_path_at_commit": "cardstarot/01-magician.sent.txt",
+        "render_prompt_sha256": "e32dbf3bba721802f158dd72c91d33b55dbbcf1967c80078407b62e34a40fe8e",
+        "status": "image_ready_user_approved_variant"
+      },
+      "render_mode": "reuse_matching_archived_image",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "revision_history": [
+        {
+          "commit": "ae226e339139a35883c75a54e77020f89c9ad641",
+          "image": "references/01-magician-before-front.png",
+          "image_sha256": "4751d9eb5f93c341e047abe746639e30923cb3a2eb189e16b1f3cbf939e05ba3",
+          "render_prompt": "references/01-magician-before-front.sent.txt",
+          "render_prompt_sha256": "8ff840025b8c4acb95437b9294661666439121fa9497931fcfaa6b139346b170",
+          "camera_context": {
+            "scope": "camera_and_framing_only",
+            "view": "Sau chếch trái, hơi cao, toàn thân và mặt bàn tế.",
+            "base_prompt_bytes": 1727,
+            "base_prompt_sha256": "ecb94365c512e6bbb16323d0c297704a1fa973e9c62c8c0e26813d14e1ce1472",
+            "generation_status": "generated"
+          },
+          "postprocessing": {
+            "method": "deterministic_pixel_edit_then_crop_and_resize",
+            "table_wand_tip": "Shortened the existing wand by reusing its own rounded tip; the four altar objects remain separate and fully visible.",
+            "held_wand_tip": "Trimmed and closed the existing shaft inside the upper edge, without adding a wand.",
+            "crop_xyxy": [
+              160,
+              0,
+              1525,
+              2368
+            ],
+            "resize_wh": [
+              784,
+              1360
+            ],
+            "body_warped": false
+          },
+          "visual_review": {
+            "rear_view": true,
+            "waist_wrap": true,
+            "altar_objects": [
+              "cup",
+              "sword",
+              "wand",
+              "pentacle_coin"
+            ],
+            "altar_count": 4,
+            "held_wand_separate": true,
+            "frame_or_title_present": false
+          },
+          "selected_original": "references/01-magician-selected-original.png",
+          "selected_original_sha256": "d3d9d3722992e20e7583e5dd20fa499d362e51f575a952258d6d2000806eff7b",
+          "selected_original_size": [
+            1776,
+            2368
+          ]
+        }
+      ],
+      "applied_style_id": "waist-ribbon-v1",
+      "style_status": "applied",
+      "camera_context": {
+        "scope": "wardrobe_style_application",
+        "view": "Rear/three-quarter view with non-explicit coverage.",
+        "generation_status": "available"
+      },
+      "image_origin": {
         "image": "references/01-magician-before-front.png",
         "image_sha256": "4751d9eb5f93c341e047abe746639e30923cb3a2eb189e16b1f3cbf939e05ba3",
         "render_prompt": "references/01-magician-before-front.sent.txt",
         "render_prompt_sha256": "8ff840025b8c4acb95437b9294661666439121fa9497931fcfaa6b139346b170",
-        "camera_context": {
-          "scope": "camera_and_framing_only",
-          "view": "Sau chếch trái, hơi cao, toàn thân và mặt bàn tế.",
-          "base_prompt_bytes": 1727,
-          "base_prompt_sha256": "ecb94365c512e6bbb16323d0c297704a1fa973e9c62c8c0e26813d14e1ce1472",
-          "generation_status": "generated"
-        },
-        "postprocessing": {
+        "historical_postprocessing": {
           "method": "deterministic_pixel_edit_then_crop_and_resize",
           "table_wand_tip": "Shortened the existing wand by reusing its own rounded tip; the four altar objects remain separate and fully visible.",
           "held_wand_tip": "Trimmed and closed the existing shaft inside the upper edge, without adding a wand.",
@@ -122,54 +222,27 @@
           ],
           "body_warped": false
         },
-        "visual_review": {
-          "rear_view": true,
-          "waist_wrap": true,
-          "altar_objects": [
-            "cup",
-            "sword",
-            "wand",
-            "pentacle_coin"
-          ],
-          "altar_count": 4,
-          "held_wand_separate": true,
-          "frame_or_title_present": false
-        },
-        "selected_original": "references/01-magician-selected-original.png",
-        "selected_original_sha256": "d3d9d3722992e20e7583e5dd20fa499d362e51f575a952258d6d2000806eff7b",
-        "selected_original_size": [
-          1776,
-          2368
-        ]
+        "note": "A new render attempt returned no image; the archived rear-view waist-wrap image already matches the requested clothing."
+      },
+      "last_image_attempt": {
+        "result": "no_image_returned",
+        "action_after_attempt": "reuse_matching_archive"
       },
       "visual_review": {
-        "front_view": true,
-        "pose": "standing",
-        "upper_body_covered_by_hair": true,
-        "frame_or_title_present": false,
-        "altar_count": 4,
+        "rear_view": true,
+        "waist_wrap": true,
         "altar_objects": [
           "cup",
           "sword",
           "wand",
           "pentacle_coin"
         ],
+        "altar_count": 4,
         "held_wand_separate": true,
-        "wardrobe": "long_silk_user_approved"
+        "frame_or_title_present": false
       },
-      "render_mode": "text_to_image",
-      "render_reference": null,
-      "generated_size": [
-        952,
-        1652
-      ],
-      "user_approved_variant": "Front view with long silk wrap; explicit user choice.",
       "postprocessing": {
-        "method": "proportional_Lanczos_resize_and_pixel_rounding_crop",
-        "resize_wh": [
-          784,
-          1360
-        ],
+        "method": "copy_verified_existing_image",
         "body_warped": false
       }
     },
@@ -179,21 +252,74 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/02-priestess.txt",
       "render_prompt": "02-priestess.sent.txt",
-      "render_prompt_sha256": "56ffdcdf24d29f72b62d46494397eb1f5b8aa35c050bb4e630b0a1e79a4ba1b1",
-      "status": "image_pending_after_generation_failure",
-      "image": null,
-      "requested_render_prompt": "02-priestess.next.txt",
-      "requested_render_prompt_sha256": "56ffdcdf24d29f72b62d46494397eb1f5b8aa35c050bb4e630b0a1e79a4ba1b1",
-      "last_generation_result": "no_image_returned",
-      "camera_context": {
-        "scope": "camera_and_framing_only",
-        "view": "Sau chếch phải, hơi cao nhìn vào lòng và nền đá trước chân.",
-        "base_prompt_bytes": 1655,
-        "base_prompt_sha256": "dd69dfae01431419258b6b63a58bcdef1f5d23ba78b589c63cb29dc590291b4c",
-        "generation_status": "attempted_no_image"
+      "render_prompt_sha256": "c77cfeacce46979cfb990ac31100c19807b8e01f20a6995a4d812c69bdb1cfcd",
+      "status": "image_ready_with_review_notes",
+      "image": "02-priestess.png",
+      "requested_render_prompt": "../prompts/cardstarot_vi/02-priestess.txt",
+      "requested_render_prompt_sha256": "3fe9443879fd6bba8604e0ecd2b470e95a9a59724ff3102377b018feee7023f1",
+      "last_generation_result": "success",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "previous_revision": {
+        "commit": "eee750016f87b1c496bdccd5c1322fca4b335581",
+        "manifest_path_at_commit": "cardstarot/manifest.json",
+        "image_path_at_commit": null,
+        "image_sha256": null,
+        "render_prompt_path_at_commit": "cardstarot/02-priestess.sent.txt",
+        "render_prompt_sha256": "56ffdcdf24d29f72b62d46494397eb1f5b8aa35c050bb4e630b0a1e79a4ba1b1",
+        "status": "image_pending_after_generation_failure"
       },
-      "last_retry_result": "not_executed_turn_quota_reached",
-      "pending_reason": "The option-generation call returned no image. A later retry was prevented by the per-turn image-generation limit."
+      "image_size": [
+        784,
+        1360
+      ],
+      "image_sha256": "a9dd9b944579f9b1f13873e79f14241fb37a72a3cadcb3e7af3d267cadb8ebec",
+      "applied_style_id": "waist-ribbon-v1",
+      "style_status": "applied",
+      "camera_context": {
+        "scope": "wardrobe_style_application",
+        "view": "Rear/three-quarter view with non-explicit coverage.",
+        "generation_status": "available"
+      },
+      "render_mode": "image_edit_with_scene_and_wardrobe_references",
+      "render_references": [
+        {
+          "path": "../cards/02-priestess.png",
+          "sha256": "0bda4086e6586c65b7e57321ab770e07579b01712b54d2c9105d36e479dceaec",
+          "role": "scene_and_character"
+        },
+        {
+          "path": "variants/00-fool-waist-ribbon.png",
+          "sha256": "9708f335868ac68f4573e0739b60a7c2105f318cd57844158a8a9e5310e4542f",
+          "role": "wardrobe_and_rear_view"
+        }
+      ],
+      "generated_size": [
+        784,
+        1360
+      ],
+      "postprocessing": {
+        "method": "PNG_RGB_normalization",
+        "body_warped": false
+      },
+      "last_image_attempt": {
+        "initial_result": "no_image_returned",
+        "scene_reference_retry": "success"
+      },
+      "visual_review": {
+        "rear_three_quarter_view": true,
+        "pose": "seated",
+        "waist_hip_wrap": true,
+        "auburn_hair_and_head_veil": true,
+        "two_stone_columns": true,
+        "scroll_present": true,
+        "silver_crescent_present": true,
+        "frame_or_title_present": false,
+        "notes": [
+          "The head veil retains a longer trailing section along the chair than the short-veil render hint.",
+          "One leg is partly obscured by the chair/veil; do not claim that every limb detail was independently verified."
+        ]
+      }
     },
     {
       "slug": "03-empress",
@@ -201,86 +327,30 @@
       "group": "major",
       "source_prompt": "prompts/out6_vi/03-empress.txt",
       "render_prompt": "03-empress.sent.txt",
-      "render_prompt_sha256": "5016d92b4169ba71f41188bb615ad1345929d642d41da944b4f14ee047866bda",
+      "render_prompt_sha256": "1a3a0e41a0c2b47353958d8fa75bb216bfca1d5692bb2c7f83a998c065495057",
       "status": "image_ready",
       "image": "03-empress.png",
-      "requested_render_prompt": "03-empress.next.txt",
-      "requested_render_prompt_sha256": "095488ebd2b72edcf60813ee2826e3782c6b545e9c04b9507f8f92b71fcdc0ff",
+      "requested_render_prompt": "../prompts/cardstarot_vi/03-empress.txt",
+      "requested_render_prompt_sha256": "1a3a0e41a0c2b47353958d8fa75bb216bfca1d5692bb2c7f83a998c065495057",
       "previous_selection_reference": "references/03-empress-before-waist-silk.png",
       "previous_selection_reference_sha256": "7d7705cba87d2d78ebafc7b77b51744838e7c8996ba908bd9b81e27757207456",
       "previous_selection_note": "Earlier selected long-dress image, retained only as a reference; not the requested minimal-silk result.",
       "last_generation_result": "success",
-      "camera_context": {
-        "scope": "seated_three_quarter_angle_revision",
-        "view": "Ngồi góc 3/4; máy phía trước bên phải ngang tầm mắt, mặt quay nhẹ về người xem.",
-        "target_angle_degrees_approx": 35,
-        "base_prompt_bytes": 1840,
-        "base_prompt_sha256": "d86f671940298ffe59eeeba76ac63341c594aed1e2cbcbeeb37442fa4f33ff8a",
-        "base_prompt_revision": "Render-only wording describes the kept outfit, including thigh coverage and the side drape; original source prompts are unchanged.",
-        "generation_status": "generated",
-        "upper_body_coverage": "existing_long_hair"
-      },
       "image_size": [
         784,
         1360
       ],
-      "image_sha256": "9a134f477f633e5392e64b6b510003538644e276be50f88981fc72fb0118e8e1",
+      "image_sha256": "c8b1c3566fcc6df6fe552a7281b58828af05fbdc4754480807e6365c0ba4b4d9",
       "previous_revision": {
-        "commit": "dcf4f6f666629232d5d34368142eac06927f2765",
-        "image": "references/03-empress-before-three-quarter.png",
-        "image_sha256": "948576d3121c4af4febe734807d7d1ad47a4015e6cf8cc8b9f684de2e0855a65",
-        "render_prompt": "references/03-empress-before-three-quarter.sent.txt",
-        "render_prompt_sha256": "ad561bc4d0f439b61d742dbfbf64b37704b98074b586ab10dc85bca81495f94f",
-        "camera_context": {
-          "scope": "front_view_revision",
-          "view": "Chính diện, máy phía trước ngang tầm mắt.",
-          "base_prompt_bytes": 1782,
-          "base_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
-          "generation_status": "generated",
-          "upper_body_coverage": "existing_long_hair"
-        },
-        "visual_review": {
-          "front_view": true,
-          "pose": "seated",
-          "upper_body_covered_by_hair": true,
-          "frame_or_title_present": false,
-          "wardrobe": "Side drape retained from the prior selected image; only front view and hair placement were changed."
-        },
-        "render_mode": "image_edit",
-        "render_reference": "references/03-empress-before-front.png",
-        "postprocessing": {
-          "method": "PNG_RGB_normalization",
-          "resize_wh": [
-            784,
-            1360
-          ],
-          "body_warped": false
-        }
+        "commit": "eee750016f87b1c496bdccd5c1322fca4b335581",
+        "manifest_path_at_commit": "cardstarot/manifest.json",
+        "image_path_at_commit": "cardstarot/03-empress.png",
+        "image_sha256": "9a134f477f633e5392e64b6b510003538644e276be50f88981fc72fb0118e8e1",
+        "render_prompt_path_at_commit": "cardstarot/03-empress.sent.txt",
+        "render_prompt_sha256": "5016d92b4169ba71f41188bb615ad1345929d642d41da944b4f14ee047866bda",
+        "status": "image_ready"
       },
-      "visual_review": {
-        "front_view": false,
-        "three_quarter_view": true,
-        "pose": "seated",
-        "face_toward_viewer": true,
-        "upper_body_covered_by_hair": true,
-        "knees_calves_and_feet_visible": true,
-        "waist_hip_wrap_with_side_drape": true,
-        "frame_or_title_present": false,
-        "wardrobe": "Existing ivory waist/hip wrap, thigh coverage and side drape retained; no full-length gown added."
-      },
-      "render_mode": "image_edit_with_pose_and_wardrobe_references",
-      "generated_size": [
-        784,
-        1360
-      ],
-      "postprocessing": {
-        "method": "PNG_RGB_normalization",
-        "resize_wh": [
-          784,
-          1360
-        ],
-        "body_warped": false
-      },
+      "render_mode": "reference_guided_generation",
       "revision_history": [
         {
           "commit": "ae226e339139a35883c75a54e77020f89c9ad641",
@@ -312,61 +382,1168 @@
             ],
             "note": "Kept the user-selected candidate; not marked as fully matching the camera and wardrobe constraints."
           }
-        }
-      ],
-      "render_references": [
-        "references/03-empress-three-quarter-layout.png",
-        "references/03-empress-before-three-quarter.png"
-      ],
-      "render_steps": [
-        {
-          "name": "pose_layout",
-          "prompt": "references/03-empress-three-quarter-layout.sent.txt",
-          "prompt_sha256": "9163a0253d702a150d506c844d052dddace575f88e9e39be86f824be8f88e393",
-          "references": [
-            {
-              "image": "references/03-empress-before-front.png",
-              "role": "three_quarter_pose_only"
-            },
-            {
-              "image": "references/03-empress-before-three-quarter.png",
-              "role": "current_appearance_and_wardrobe"
-            }
-          ],
-          "output": "references/03-empress-three-quarter-layout.png",
-          "output_sha256": "9cdf5c0b029fb6b6d7be2e6cc3e91b7bb89d55fea51df6dbc4743cc6a473fba1",
-          "note": "Working pose reference, not the final wardrobe; kept only as a dependency of the final edit."
         },
         {
-          "name": "restore_selected_wardrobe",
-          "prompt": "03-empress.sent.txt",
-          "prompt_sha256": "5016d92b4169ba71f41188bb615ad1345929d642d41da944b4f14ee047866bda",
-          "references": [
-            {
-              "image": "references/03-empress-three-quarter-layout.png",
-              "role": "retain_seated_three_quarter_pose"
-            },
-            {
-              "image": "references/03-empress-before-three-quarter.png",
-              "role": "retain_existing_silk_and_coverage"
-            }
-          ],
-          "output": "03-empress.png"
+          "commit": "dcf4f6f666629232d5d34368142eac06927f2765",
+          "image": "references/03-empress-before-three-quarter.png",
+          "image_sha256": "948576d3121c4af4febe734807d7d1ad47a4015e6cf8cc8b9f684de2e0855a65",
+          "render_prompt": "references/03-empress-before-three-quarter.sent.txt",
+          "render_prompt_sha256": "ad561bc4d0f439b61d742dbfbf64b37704b98074b586ab10dc85bca81495f94f",
+          "camera_context": {
+            "scope": "front_view_revision",
+            "view": "Chính diện, máy phía trước ngang tầm mắt.",
+            "base_prompt_bytes": 1782,
+            "base_prompt_sha256": "5bc5fe87a55b623ef5825d6aecdc6836da7ec52b67c282941b7680fd70da26d0",
+            "generation_status": "generated",
+            "upper_body_coverage": "existing_long_hair"
+          },
+          "visual_review": {
+            "front_view": true,
+            "pose": "seated",
+            "upper_body_covered_by_hair": true,
+            "frame_or_title_present": false,
+            "wardrobe": "Side drape retained from the prior selected image; only front view and hair placement were changed."
+          },
+          "render_mode": "image_edit",
+          "render_reference": "references/03-empress-before-front.png",
+          "postprocessing": {
+            "method": "PNG_RGB_normalization",
+            "resize_wh": [
+              784,
+              1360
+            ],
+            "body_warped": false
+          }
         }
-      ]
+      ],
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "applied_style_id": "waist-ribbon-v1",
+      "style_status": "applied",
+      "camera_context": {
+        "scope": "wardrobe_style_application",
+        "view": "Rear/three-quarter view with non-explicit coverage.",
+        "generation_status": "available"
+      },
+      "render_reference": "variants/00-fool-waist-ribbon.png",
+      "generated_size": [
+        784,
+        1360
+      ],
+      "postprocessing": {
+        "method": "PNG_RGB_normalization",
+        "body_warped": false
+      },
+      "visual_review": {
+        "rear_three_quarter_view": true,
+        "pose": "seated_on_velvet_throne",
+        "waist_hip_wrap": true,
+        "flower_crown": true,
+        "heart_shield": true,
+        "wheat_and_fruit": true,
+        "upper_front_not_visible": true,
+        "frame_or_title_present": false,
+        "notes": [
+          "The figure holds a pomegranate taken from the fruit motif; no additional suit object was introduced."
+        ]
+      }
+    },
+    {
+      "slug": "04-emperor",
+      "title": "THE EMPEROR",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/04-emperor.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/04-emperor.txt",
+      "requested_render_prompt_sha256": "e9a53b51f06073adacb3b2b1921d14fd6a5952e252dea35da7ecd9210091e100",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "05-hierophant",
+      "title": "THE HIEROPHANT",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/05-hierophant.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/05-hierophant.txt",
+      "requested_render_prompt_sha256": "e24c8f079e12644ad092ec70f9b74bf376e90dc7de40ccf64bb08bf9b354592b",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "06-lovers",
+      "title": "THE LOVERS",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/06-lovers.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/06-lovers.txt",
+      "requested_render_prompt_sha256": "b9ec09b837433b9881b5264f2eb9285054071d5071a7d4dc1ab6e17f294ba56e",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "07-chariot",
+      "title": "THE CHARIOT",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/07-chariot.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/07-chariot.txt",
+      "requested_render_prompt_sha256": "19b99d1c68c01faf0469853cf73b06e9bc0e2b90727bff0cafe13885b575c3d6",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "08-strength",
+      "title": "STRENGTH",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/08-strength.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/08-strength.txt",
+      "requested_render_prompt_sha256": "5d7741908a95d82db507ec0f312bdbef082997c0b6b8711ded6e5ee7f8b31f49",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "09-hermit",
+      "title": "THE HERMIT",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/09-hermit.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/09-hermit.txt",
+      "requested_render_prompt_sha256": "231e57d51ca2a80ec36d103238177ff52532b0537c57c6b87af8c734ccb5eac9",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "10-wheel",
+      "title": "WHEEL OF FORTUNE",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/10-wheel.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/10-wheel.txt",
+      "requested_render_prompt_sha256": "a0a38a011d2dac8287f20dda519330f4d2af3e6ffa4723fb87b68249bb845957",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "11-justice",
+      "title": "JUSTICE",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/11-justice.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/11-justice.txt",
+      "requested_render_prompt_sha256": "8e1ea0e787b21779115d2b94781c9dcba3df86bc5a8ce10fbc2a186fbdc98991",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "12-hanged",
+      "title": "THE HANGED",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/12-hanged.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/12-hanged.txt",
+      "requested_render_prompt_sha256": "b67199aee8b62a39f90b6339d137b9bfaa7fbfd97d7d32753ac50629935ff85a",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "13-death",
+      "title": "DEATH",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/13-death.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/13-death.txt",
+      "requested_render_prompt_sha256": "af8c17a0c17e7a823696d840aa9f04dda73a3c2dc4dc12b90a8be4268bb041a4",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "14-temperance",
+      "title": "TEMPERANCE",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/14-temperance.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/14-temperance.txt",
+      "requested_render_prompt_sha256": "9c81e5df3b5cd5bd09468cfc134efd08e57dae3f59f26afcde0b7893799a9b2a",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "15-devil",
+      "title": "THE DEVIL",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/15-devil.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/15-devil.txt",
+      "requested_render_prompt_sha256": "f9f4c77090bb98e4e2a86931188044ffd22f5333a125319c6d08d191c30a221f",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "16-tower",
+      "title": "THE TOWER",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/16-tower.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/16-tower.txt",
+      "requested_render_prompt_sha256": "ed4525af5ebf5f2256b042a37971ed16738531002e9040720abc0e89b2e5c854",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "17-the-star",
+      "title": "THE STAR",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/17-the-star.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/17-the-star.txt",
+      "requested_render_prompt_sha256": "761fa2ae3d59318f805ef99f8f8381c47b5c1f38903a23960f80dae0e23cc308",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "18-moon",
+      "title": "THE MOON",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/18-moon.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/18-moon.txt",
+      "requested_render_prompt_sha256": "f62a3a4847be1c1ce7e246bdc323d62fda379fe1bb17b73ac6902e9b13024d63",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "19-sun",
+      "title": "THE SUN",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/19-sun.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/19-sun.txt",
+      "requested_render_prompt_sha256": "e3526c93ef00b788efdb27a4388db3851bd4d3797ae98e4f72334df6feb9e20f",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "20-judgement",
+      "title": "JUDGEMENT",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/20-judgement.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/20-judgement.txt",
+      "requested_render_prompt_sha256": "a3f4613a4457d286fbba26877b0a89a2199fcc5b59d22aff3624aaac9c5e6981",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "21-world",
+      "title": "THE WORLD",
+      "group": "major",
+      "source_prompt": "prompts/out6_vi/21-world.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/21-world.txt",
+      "requested_render_prompt_sha256": "e419d9e4b6e57fd3ac71c001308c1951a1debe7ce399b440ff8e12c66176cbe0",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-ace",
+      "title": "ACE OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-ace.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "symbol_only",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-ace.txt",
+      "requested_render_prompt_sha256": "310c48e59fc3cd54027228bc0c429e72148981738c8185e5b743fe0f5492ecc6",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-02",
+      "title": "TWO OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-02.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-02.txt",
+      "requested_render_prompt_sha256": "91233531539830215c92385e8d55a5f7c8e98e4f8c2d8a00b34676a1ad077d8a",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-03",
+      "title": "THREE OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-03.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-03.txt",
+      "requested_render_prompt_sha256": "d428028f0c17fffee363224c69e470eb1f198d7d50ff9d25871cbc5fabf5afdb",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-04",
+      "title": "FOUR OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-04.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-04.txt",
+      "requested_render_prompt_sha256": "429c5f09db7bd5fd1837869346aaec4603dd7f5c03f5b370ae506a850a90b62d",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-05",
+      "title": "FIVE OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-05.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-05.txt",
+      "requested_render_prompt_sha256": "7f460d7d50d169944038ae1bd2f47db209b42b1e2b19ad6402f338891338e60a",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-06",
+      "title": "SIX OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-06.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-06.txt",
+      "requested_render_prompt_sha256": "b656ad501aaf993c0c9b73fcec0a7c330812a4ce861a8f662cf24477717a1db9",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-07",
+      "title": "SEVEN OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-07.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-07.txt",
+      "requested_render_prompt_sha256": "ee2543ebcb271310a56ccf9931c31468b4634dbcd0edddba578dd5ce199677ef",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-08",
+      "title": "EIGHT OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-08.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "symbol_only",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-08.txt",
+      "requested_render_prompt_sha256": "8329bedc2882f25b7a9f3d911921cf075e9000e4d42fd4fce80af7897575b40d",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-09",
+      "title": "NINE OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-09.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-09.txt",
+      "requested_render_prompt_sha256": "2ea37c924c3a742a7e0d5c3a863c7da987953178c3c516fa7040e21d25d8252a",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-10",
+      "title": "TEN OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-10.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-10.txt",
+      "requested_render_prompt_sha256": "3f2fda3178b61ee2f5660a03e4bd69381704b0cbb7c0d7be80a1fd6c81b6fed0",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-page",
+      "title": "PAGE OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-page.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-page.txt",
+      "requested_render_prompt_sha256": "5a0b4445139dad8aead6f94acbdfb88361f5d127e118fc3eff320e767ff10c61",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-knight",
+      "title": "KNIGHT OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-knight.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-knight.txt",
+      "requested_render_prompt_sha256": "2fa4324f6d205405468dfaaf63fce25e3c2d3894e8fc1204a842b5667b7331e2",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-queen",
+      "title": "QUEEN OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-queen.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-queen.txt",
+      "requested_render_prompt_sha256": "7b157d66762f3f79cb6c9da35676e3ee72b559ab9466d3f47489a729591c4e9d",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "wands-king",
+      "title": "KING OF WANDS",
+      "group": "wands",
+      "source_prompt": "prompts/out6_vi/wands-king.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/wands-king.txt",
+      "requested_render_prompt_sha256": "bff98128ba8526485545b70ad3dac18c4a78e4b5fa04625581e1d1f8ba4626d7",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-ace",
+      "title": "ACE OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-ace.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "symbol_only",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-ace.txt",
+      "requested_render_prompt_sha256": "ddc3b30a8f7511b3d070a446b0ebc6b7a39fa717c0564aca6a8f490e9430544f",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-02",
+      "title": "TWO OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-02.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-02.txt",
+      "requested_render_prompt_sha256": "a2b14508af89a62d043a3879bb39395085fea100cfa681a50bca7c10f44f91be",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-03",
+      "title": "THREE OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-03.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-03.txt",
+      "requested_render_prompt_sha256": "0fde4174f374c2396ce29c7b28d965b892db801407f79efd788cf0cc57fa3154",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-04",
+      "title": "FOUR OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-04.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-04.txt",
+      "requested_render_prompt_sha256": "d4d8b34c9511a1966e91b31a7a7eff486e0a9d5f43832622282efbac8291a509",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-05",
+      "title": "FIVE OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-05.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-05.txt",
+      "requested_render_prompt_sha256": "45c83b0bb22df29bdbe3688b9950a32d91ff69a1a24ff7a1885901eb29cdb070",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-06",
+      "title": "SIX OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-06.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-06.txt",
+      "requested_render_prompt_sha256": "94ea6d8e3af6270020abc01a38a836481b3615d64b2642730ce19cbb389d6fa8",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-07",
+      "title": "SEVEN OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-07.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-07.txt",
+      "requested_render_prompt_sha256": "27fd7d5b06f6f454151b9052de09260e9926815b45103494abffb6c83460a1ed",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-08",
+      "title": "EIGHT OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-08.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-08.txt",
+      "requested_render_prompt_sha256": "419e363dfcb2343e419a7f060573f419fa8649116f695af636f513c28a2c799b",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-09",
+      "title": "NINE OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-09.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-09.txt",
+      "requested_render_prompt_sha256": "2bab066e8138ac3a742704a008b9628dcfbeec66216943a286e5090fe3b4bd52",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-10",
+      "title": "TEN OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-10.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "family_covered",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-10.txt",
+      "requested_render_prompt_sha256": "7cd5afc2e607b87bad478204bad2eeb1e315600a28f68cf5da8a5587ffb0f94e",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-page",
+      "title": "PAGE OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-page.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-page.txt",
+      "requested_render_prompt_sha256": "158a8bb9adcae7d96db1206e9105bf607cb53c0d4fe44ccfd5bd903cf918306d",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-knight",
+      "title": "KNIGHT OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-knight.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-knight.txt",
+      "requested_render_prompt_sha256": "d3d892af6183ffbbe00a9e664cfb95d725c2e9b14344aa0b67a3aa45ff757f3b",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-queen",
+      "title": "QUEEN OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-queen.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-queen.txt",
+      "requested_render_prompt_sha256": "3613fd9cdad1c10b1b13070e14701c2dbbc2b9153aa9399ff4a1468a9871b148",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "cups-king",
+      "title": "KING OF CUPS",
+      "group": "cups",
+      "source_prompt": "prompts/out6_vi/cups-king.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/cups-king.txt",
+      "requested_render_prompt_sha256": "9311566c21239182ce94044cb0ad9f756d12022adfb3cfea77fdabc7c0f975ed",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-ace",
+      "title": "ACE OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-ace.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "symbol_only",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-ace.txt",
+      "requested_render_prompt_sha256": "d9d774bfdf5c1c4e2602fde72b18897831465d22bf0f37770abcb353f7f2b768",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-02",
+      "title": "TWO OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-02.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-02.txt",
+      "requested_render_prompt_sha256": "5a82e8db4844948f34ac67d6d70bb03c0625301f4061ce91a05d004b46b410b0",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-03",
+      "title": "THREE OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-03.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "symbol_only",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-03.txt",
+      "requested_render_prompt_sha256": "840f9fd3585b7f7165b7c1deee085770ddb5285e54c7ff0c8713cd23ac627c92",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-04",
+      "title": "FOUR OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-04.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-04.txt",
+      "requested_render_prompt_sha256": "cc5e514da03565126e6e7083ddc1ef458ae7e94e281647dcbd37ca41badfd0df",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-05",
+      "title": "FIVE OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-05.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-05.txt",
+      "requested_render_prompt_sha256": "2ca4e5749a230c92654855425d749fabddddeb4e1ded8a42dd3b41af9642a22f",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-06",
+      "title": "SIX OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-06.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "family_covered",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-06.txt",
+      "requested_render_prompt_sha256": "66e103f7e6343acb526613dea64eb07da8db7be79c77c8c4d8a3e372fadb614d",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-07",
+      "title": "SEVEN OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-07.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-07.txt",
+      "requested_render_prompt_sha256": "6aec90ff2999a55bb4c1df7d5e35bd54d11ae4d98f34dd77ea1e603c08844bfe",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-08",
+      "title": "EIGHT OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-08.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-08.txt",
+      "requested_render_prompt_sha256": "2ff13adb26e8a977ff1b5b5b20b5cb8e06ca9d54e6af16c0534ea4e79697cea6",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-09",
+      "title": "NINE OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-09.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-09.txt",
+      "requested_render_prompt_sha256": "4f29517904de09155ec6a83a84b15a5a2254829252909ba87aa76bbc8123c752",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-10",
+      "title": "TEN OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-10.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-10.txt",
+      "requested_render_prompt_sha256": "ca9892a2600d7291618542eb29d46a1cb673ac2f58be0a443460f5586769f5e6",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-page",
+      "title": "PAGE OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-page.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-page.txt",
+      "requested_render_prompt_sha256": "9ab8aa31f36a733ecc539869ecffc85a8e7c8390447674d53e6a328ab218e243",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-knight",
+      "title": "KNIGHT OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-knight.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-knight.txt",
+      "requested_render_prompt_sha256": "a286413bf5008acb26b685a7633fb7bc1a07754b62862f2a379695f784b9017f",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-queen",
+      "title": "QUEEN OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-queen.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-queen.txt",
+      "requested_render_prompt_sha256": "fd70dec213132a13fe7dd17077092f96e73f948fc540abf97c950d9cc63ec396",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "swords-king",
+      "title": "KING OF SWORDS",
+      "group": "swords",
+      "source_prompt": "prompts/out6_vi/swords-king.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/swords-king.txt",
+      "requested_render_prompt_sha256": "47bd100adcbc4d250eec14dc3c2751a210cce9a37615d74eb8888875083bb592",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-ace",
+      "title": "ACE OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-ace.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "symbol_only",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-ace.txt",
+      "requested_render_prompt_sha256": "db3c6f32ee7da3161da3808f45f93f197e1d13e7c816d4538504c943233492d1",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-02",
+      "title": "TWO OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-02.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-02.txt",
+      "requested_render_prompt_sha256": "c787309431a7eac90c54a4f8dfe272fe2b44979196d2be738aa7fc915fe98f03",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-03",
+      "title": "THREE OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-03.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-03.txt",
+      "requested_render_prompt_sha256": "75fc2d38826eb67e02a35407ac93f5172e97c276fa77b4d61f000a530852c2d6",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-04",
+      "title": "FOUR OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-04.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-04.txt",
+      "requested_render_prompt_sha256": "f98a272e12ae241848d8bac04aa3f79e49b74ad9e87325e97949a8a1eb235a26",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-05",
+      "title": "FIVE OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-05.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-05.txt",
+      "requested_render_prompt_sha256": "1384a8a23876dfe099eac760b45d135587fed3567ab63626f01f1247f01aab0c",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-06",
+      "title": "SIX OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-06.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-06.txt",
+      "requested_render_prompt_sha256": "c83f9aad27942daf5f7830c8d37e41744673aaf94832af8fbb8a8b9e53ae6eb4",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-07",
+      "title": "SEVEN OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-07.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-07.txt",
+      "requested_render_prompt_sha256": "2c15d56c64c5cb136b19b16129087d0e5edf6dfcbebfc03366865fe983435559",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-08",
+      "title": "EIGHT OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-08.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-08.txt",
+      "requested_render_prompt_sha256": "9e72142327cfb926970a2646f4b42d7b4fd7936a74c82f723d4d1ed9c158bd49",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-09",
+      "title": "NINE OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-09.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-09.txt",
+      "requested_render_prompt_sha256": "602ffa7360017f4bae5df558b64974936d796e510cc50380d33e15226fdc61e5",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-10",
+      "title": "TEN OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-10.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "family_covered",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-10.txt",
+      "requested_render_prompt_sha256": "ed74e8c22caf8a54b9ed98ce9cc060290ee97e94be20f7f06e7a0889ad69d707",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-page",
+      "title": "PAGE OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-page.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-page.txt",
+      "requested_render_prompt_sha256": "f1d8ec3cf0d053d7a24cc794c8816f673648d6ad61457716885b7abd3b1a2103",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-knight",
+      "title": "KNIGHT OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-knight.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-knight.txt",
+      "requested_render_prompt_sha256": "9b61a46b92d7c63877063c1e75634cdea6cbf021552bb3e79684450e4f0c2bcd",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-queen",
+      "title": "QUEEN OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-queen.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-queen.txt",
+      "requested_render_prompt_sha256": "9330727615516f99d880c55af238e2086420f0de796e7eaeb163143be41845e8",
+      "style_status": "not_started"
+    },
+    {
+      "slug": "pentacles-king",
+      "title": "KING OF PENTACLES",
+      "group": "pentacles",
+      "source_prompt": "prompts/out6_vi/pentacles-king.txt",
+      "image": null,
+      "render_prompt": null,
+      "status": "prompt_ready_image_pending",
+      "requested_style_id": "waist-ribbon-v1",
+      "wardrobe_profile": "adult_waist_ribbon",
+      "requested_render_prompt": "../prompts/cardstarot_vi/pentacles-king.txt",
+      "requested_render_prompt_sha256": "15b6302e7905c72fa921231d1e935ac41e4ad1c9c8453eb54b03392835d0e4df",
+      "style_status": "not_started"
     }
   ],
   "requested_wardrobe": "Một dải lụa mỏng tối giản quấn sát eo/hông; không áo liền thân hoặc váy dài.",
   "generation_paused_by_user": false,
   "pause_scope": [],
   "camera_context_updated_on": "2026-09-05",
-  "last_batch_status": "preview_created_main_unchanged",
+  "last_batch_status": "two_new_images_plus_two_verified_reuses",
   "generation_in_progress": false,
   "last_batch_scope": [
-    "00-fool"
+    "01-magician",
+    "02-priestess",
+    "03-empress"
   ],
-  "wardrobe_overrides": {
+  "wardrobe_overrides": {},
+  "trial_images_available": 0,
+  "card_count": 78,
+  "images_matching_requested_style": 4,
+  "images_pending": 74,
+  "style_profile": {
+    "id": "waist-ribbon-v1",
+    "source_prompt_edition": "prompts/cardstarot_vi",
+    "style_document": "prompts/cardstarot_vi/STYLE.md",
+    "reference": "cardstarot/variants/00-fool-waist-ribbon.png",
+    "reference_sha256": "9708f335868ac68f4573e0739b60a7c2105f318cd57844158a8a9e5310e4542f",
+    "profile_counts": {
+      "adult_waist_ribbon": 69,
+      "symbol_only": 6,
+      "family_covered": 3
+    },
+    "scope": "all_78",
+    "physical_transmittance_measured": false,
+    "note": "Only confirmed adult-only scenes use the waist wrap; family scenes are fully clothed and symbol-only scenes gain no people."
+  },
+  "previous_collection_commit": "eee750016f87b1c496bdccd5c1322fca4b335581",
+  "previous_wardrobe_overrides": {
     "01-magician": "Long silk wrap accepted by the user for the front-view image."
   },
-  "trial_images_available": 1
+  "last_batch": {
+    "render_attempt_scope": [
+      "01-magician",
+      "02-priestess",
+      "03-empress"
+    ],
+    "new_images": [
+      "02-priestess",
+      "03-empress"
+    ],
+    "reused_images": [
+      "00-fool",
+      "01-magician"
+    ],
+    "failed_initial_attempts": [
+      "01-magician",
+      "02-priestess"
+    ],
+    "note": "Fool was applied from the preview, and Magician was restored from its matching archived version. Neither is claimed as a newly generated image."
+  },
+  "next_batch": [
+    "04-emperor",
+    "05-hierophant",
+    "06-lovers"
+  ],
+  "variant_images_available": 1
 }

@@ -1,6 +1,6 @@
 # The Fool — bản thử dải lụa quấn eo/hông
 
-Ngày tạo: **06/09/2026**. Đây là **bản thử riêng**, chưa thay `cardstarot/00-fool.png`.
+Ngày tạo: **06/09/2026**. Bản mẫu này đã được áp dụng vào `cardstarot/00-fool.png` khi người dùng yêu cầu quy chuẩn cho đủ 78 lá. Không tạo lại ảnh này trong đợt đầu.
 
 [![The Fool — dải lụa quấn eo/hông](00-fool-waist-ribbon.png)](00-fool-waist-ribbon.png)
 
@@ -17,4 +17,4 @@ Prompt yêu cầu chiffon ngoài rất mỏng, với lớp lót màu da kín ở
 
 [Prompt đã dùng](00-fool-waist-ribbon.sent.txt). Ảnh tham chiếu thực sự: [Magician góc sau trong dự án](../references/01-magician-before-front.png), chỉ dùng cho chất tranh, góc nhìn và cách quấn lụa; không mang bàn tế hoặc gậy sang The Fool.
 
-Ảnh chính The Fool, `cards_vi/00-fool.png`, các lá khác và toàn bộ dữ liệu nguồn vẫn giữ nguyên. Bản này được lưu để xem và so sánh trước khi quyết định áp dụng.
+`cards_vi/00-fool.png` và dữ liệu nguồn vẫn giữ nguyên. The Fool chính trong `cardstarot/` nay dùng ảnh này; phiên bản trước vẫn có trong lịch sử Git và `cards_vi/`. Bản trong thư mục `variants/` được giữ làm ảnh tham chiếu cho quy chuẩn mới.
