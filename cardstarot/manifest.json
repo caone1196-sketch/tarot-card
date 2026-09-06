@@ -66,6 +66,45 @@
           },
           "applied_on": "2026-09-06",
           "applied_style_id": "waist-ribbon-v1"
+        },
+        {
+          "id": "three-quarter-half-drape-study",
+          "created_on": "2026-09-06",
+          "status": "preview_requires_wardrobe_review",
+          "image": "variants/00-fool-three-quarter-study.png",
+          "image_size": [
+            784,
+            1360
+          ],
+          "image_sha256": "b014266b20085cbae5aa8eb5fd937feb4bf293a78db9041947e9bd8004b79491",
+          "render_prompt": "variants/00-fool-three-quarter-study.sent.txt",
+          "render_prompt_sha256": "ddded9949cb59880c37c27767741cfafa53c2415ca9df8d4ec3e10afb3829b41",
+          "source_prompt": "prompts/out6_vi/00-fool.txt",
+          "render_mode": "image_edit",
+          "render_reference": "variants/00-fool-waist-ribbon.png",
+          "render_reference_sha256": "9708f335868ac68f4573e0739b60a7c2105f318cd57844158a8a9e5310e4542f",
+          "requested_art_direction": "Nửa kín nửa hở, tư thế đứng 3/4 với máy quay; non-explicit adult art.",
+          "requested_angle_degrees": [
+            35,
+            45
+          ],
+          "angle_measured": false,
+          "visual_review": {
+            "view": "standing_front_oblique",
+            "held_white_rose_count": 1,
+            "white_dog_count": 1,
+            "full_figure_and_dog_visible": true,
+            "chest_and_lower_body_covered": true,
+            "frame_or_title_present": false,
+            "known_deviations": [
+              "A chest/shoulder silk drape was added despite the prompt requesting hair coverage and no upper garment."
+            ],
+            "note": "Requires a wardrobe decision before replacing the waist-only image or changing the deck-wide profile."
+          },
+          "postprocessing": {
+            "method": "PNG_RGB_normalization",
+            "body_warped": false
+          }
         }
       ],
       "requested_style_id": "waist-ribbon-v1",
@@ -1489,15 +1528,13 @@
   "generation_paused_by_user": false,
   "pause_scope": [],
   "camera_context_updated_on": "2026-09-05",
-  "last_batch_status": "two_new_images_plus_two_verified_reuses",
+  "last_batch_status": "pose_preview_created_main_and_shared_prompts_unchanged",
   "generation_in_progress": false,
   "last_batch_scope": [
-    "01-magician",
-    "02-priestess",
-    "03-empress"
+    "00-fool"
   ],
   "wardrobe_overrides": {},
-  "trial_images_available": 0,
+  "trial_images_available": 1,
   "card_count": 78,
   "images_matching_requested_style": 4,
   "images_pending": 74,
@@ -1521,29 +1558,27 @@
     "01-magician": "Long silk wrap accepted by the user for the front-view image."
   },
   "last_batch": {
-    "render_attempt_scope": [
-      "01-magician",
-      "02-priestess",
-      "03-empress"
+    "type": "art_direction_preview",
+    "scope": [
+      "00-fool"
     ],
-    "new_images": [
-      "02-priestess",
-      "03-empress"
+    "new_main_images": [],
+    "new_previews": [
+      "variants/00-fool-three-quarter-study.png"
     ],
-    "reused_images": [
-      "00-fool",
-      "01-magician"
-    ],
-    "failed_initial_attempts": [
-      "01-magician",
-      "02-priestess"
-    ],
-    "note": "Fool was applied from the preview, and Magician was restored from its matching archived version. Neither is claimed as a newly generated image."
+    "main_images_changed": false
   },
   "next_batch": [
     "04-emperor",
     "05-hierophant",
     "06-lovers"
   ],
-  "variant_images_available": 1
+  "variant_images_available": 2,
+  "pending_art_direction_review": {
+    "preview": "variants/00-fool-three-quarter-study.png",
+    "status": "awaiting_user_review",
+    "decision_needed": "Keep or reject the added chest/shoulder drape before applying this direction to the adult-card profile.",
+    "standing_pose_not_forced_on_other_cards": true,
+    "shared_prompt_edition_changed": false
+  }
 }

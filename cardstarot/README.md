@@ -2,11 +2,15 @@
 
 Cập nhật **06/09/2026** · Quy chuẩn **waist-ribbon-v1**.
 
+## Mẫu hướng tạo hình mới — chờ duyệt
+
+Đã thêm [mẫu The Fool đứng chếch, nửa kín nửa hở](variants/00-fool-three-quarter-study.png). [Ghi chú mẫu](variants/00-fool-three-quarter-study.md) nêu rõ ảnh có thêm dải lụa che ngực/qua vai, khác quy chuẩn chỉ quấn eo/hông. **Mẫu chưa thay ảnh chính, chưa được áp dụng cho 69 lá người trưởng thành hoặc bộ 78 prompt.** Các ngoại lệ gia đình/biểu tượng giữ nguyên.
+
 ## Đã làm và phần còn lại
 
 - **Đã chuẩn bị đủ 78 prompt** tiếng Việt trong [prompts/cardstarot_vi](../prompts/cardstarot_vi/README.md), có bản tổng hợp và bộ kiểm tra.
 - **Đang có 4/78 ảnh theo hướng trang phục mới:** The Fool, The Magician, The High Priestess, The Empress. **Chưa tạo 74 ảnh còn lại.**
-- Đợt này tạo mới **Priestess và Empress**. **Fool dùng lại bản thử quấn lụa; Magician khôi phục bản góc sau đã có đúng kiểu quấn.** Không gọi hai bản tái sử dụng là ảnh mới sinh.
+- Đợt ảnh chính trước tạo mới **Priestess và Empress**. **Fool dùng lại bản thử quấn lụa; Magician khôi phục bản góc sau đã có đúng kiểu quấn.** Không gọi hai bản tái sử dụng là ảnh mới sinh.
 - Đợt tiếp theo: **04 — The Emperor, 05 — The Hierophant, 06 — The Lovers**. Mỗi đợt tối đa 3 lá; không có tác vụ tạo ảnh tự chạy ngầm.
 
 ## Quy chuẩn được áp dụng
